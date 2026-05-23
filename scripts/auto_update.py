@@ -48,13 +48,33 @@ OVERSEAS_KW = [
     "sydney","budapest","las vegas","jakarta","bali",
 ]
 
+# 비식당 영상 제목 키워드 (이 단어 있으면 스킵)
+NON_FOOD_KW = [
+    "회사","사무실","브이로그","vlog","건강검진","위대장","내시경",
+    "냉장고","간식창고","팝업","집공개","구독자","팬","콘서트","공연",
+    "체험단","리뷰","언박싱","개봉기","몸무게","다이어트","운동",
+    "여행","브이로그","일상","생일","감사","감동","몰카","우승","상금",
+    "최초공개","공개","인바디","유전자","혈당","건강",
+]
+
 FOOD_KWS = [
     "떡볶이","냉면","닭갈비","게장","국밥","갈비","곱창","순대","칼국수",
     "돈까스","초밥","짜장","짬뽕","보쌈","족발","삼겹살","치킨","라면",
     "우동","만두","비빔밥","해장국","설렁탕","대창","막창","한우",
-    "쌀국수","감자전","파전","구이","회","곰탕","삼계탕","샤브샤브",
+    "쌀국수","감자전","파전","구이","곰탕","삼계탕","샤브샤브",
     "군만두","김밥","쭈꾸미","낙지","조개","오겹살",
+    # "회"는 "회사","회전" 오탐 방지 — 별도 처리
 ]
+
+def has_food_keyword(title: str) -> str | None:
+    """음식 키워드 추출 (단어 경계 고려)"""
+    for kw in FOOD_KWS:
+        if kw in title:
+            return kw
+    # "회"는 앞뒤에 먹방/집/횟 붙은 경우만 허용
+    if re.search(r"(?:횟집|회먹방|회포장|생선회|활어회|모둠회|회덮|회초밥)", title):
+        return "회"
+    return None
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -223,6 +243,14 @@ def process_new_video(video: dict) -> dict | None:
     # 해외 스킵
     if any(k in title.lower() for k in OVERSEAS_KW): return None
 
+    # 비식당 콘텐츠 스킵 (회사공개, 건강검진, 브이로그 등)
+    if any(k in title for k in NON_FOOD_KW): return None
+
+    # 음식 키워드 있는지 먼저 확인 (없으면 자막도 안 내려받음)
+    food = has_food_keyword(title)
+    if not food and not any(k in title for k in ["먹방","맛집","털기","도전"]):
+        return None  # 음식 관련 영상 아님
+
     # 자막 수집
     sub_text = get_subtitle_text(video["id"])
     region   = find_region(title + " " + sub_text[:500])
@@ -259,10 +287,8 @@ def process_new_video(video: dict) -> dict | None:
 
     # ── 전략 2: 제목 음식 키워드 → Naver 주소 검색 (자막 실패 시) ──────────
     if not address:
-        foods = [kw for kw in FOOD_KWS if kw in title]
-        if not foods: return None
-
-        food  = foods[0]
+        food = has_food_keyword(title)
+        if not food: return None
         query = f"쯔양 {region} {food} 맛집 주소" if region else f"쯔양 {food} 맛집 주소"
         address = naver_search_address(query)
         if not address: return None
@@ -275,7 +301,7 @@ def process_new_video(video: dict) -> dict | None:
     if not lat or not lng: return None
 
     # ── Kakao Local Search로 정확한 가게명 최종 교차검증 ──────────────────
-    food_hint = next((kw for kw in FOOD_KWS if kw in title), "음식점")
+    food_hint = has_food_keyword(title) or "음식점"
     results = kakao_search_nearby(lat, lng, query=food_hint, radius=100)
     if results:
         best = results[0]
