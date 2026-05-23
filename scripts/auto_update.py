@@ -66,8 +66,10 @@ HEADERS = {
 def fetch_channel_videos(url: str, channel_id: str) -> list:
     r = subprocess.run(
         ["yt-dlp", "--flat-playlist", "--dump-json", "--no-warnings",
-         "--extractor-args", "youtube:lang=ko", url],
-        capture_output=True, encoding="utf-8", errors="replace", timeout=120
+         "--extractor-args", "youtube:lang=ko",
+         "--playlist-end", "10",   # 최신 10개만 확인 (이틀치면 충분)
+         url],
+        capture_output=True, encoding="utf-8", errors="replace", timeout=60
     )
     videos = []
     for line in r.stdout.splitlines():
