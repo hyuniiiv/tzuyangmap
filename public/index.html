@@ -64,6 +64,8 @@ body { font-family: 'Noto Sans KR', sans-serif; background: #0a0a0a; color: #fff
 .tag-cat { background: #1a1028; color: #c084fc; }
 .tag-region { background: #0a1a28; color: #60a5fa; }
 .tag-verified { background: #0a2a18; color: #4ade80; }
+.tag-new { background: #ff3366; color: #fff; font-weight: 700; animation: newBlink 2s ease-in-out 3; }
+@keyframes newBlink { 0%,100%{opacity:1} 50%{opacity:0.5} }
 .ri-date { font-size: 10px; color: #a5b4fc; margin-top: 2px; }
 
 #map { position: fixed; left: 340px; top: 52px; right: 0; bottom: 0; }
@@ -399,6 +401,12 @@ async function load() {
   allData = uniq;
   document.getElementById('stats').textContent = `맛집 ${allData.length.toLocaleString()}개`;
   apply();
+
+  // 첫 접속: 최신 맛집 자동 선택
+  if (allData.length > 0) {
+    const latest = [...allData].sort((a,b) => (b.upload_date||'').localeCompare(a.upload_date||''))[0];
+    if (latest) setTimeout(() => selectR(latest, true), 600);
+  }
 }
 
 function getFiltered() {
@@ -436,6 +444,8 @@ function renderList() {
     const key = r.name + r.address;
     div.className = 'ri' + (key === selectedKey ? ' sel' : '');
     const verified = r.source === 'websearch_manual';
+    // 7일 이내 = NEW
+    const isNew = r.upload_date && (new Date() - new Date(r.upload_date)) < 7*24*60*60*1000;
     div.innerHTML = `
       <img class="ri-thumb" src="${r.thumbnail||''}" loading="lazy" onerror="this.style.background='#2a2a2a';this.src=''">
       <div class="ri-info">
@@ -443,6 +453,7 @@ function renderList() {
         <div class="ri-title">${(r.video_title||'').substring(0,48)}</div>
         <div class="ri-addr">${r.address||''}</div>
         <div class="ri-tags">
+          ${isNew ? '<span class="tag tag-new">🆕 NEW</span>' : ''}
           <span class="tag tag-cat">${r.category||'기타'}</span>
           <span class="tag tag-region">${r.region||''}</span>
           ${verified ? '<span class="tag tag-verified">✓ 확인</span>' : ''}
