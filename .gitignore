@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+scripts/subs/
+scripts/geocode_cache.json
+scripts/kakao_geo_cache.json

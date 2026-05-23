@@ -1,0 +1,36 @@
+name: 쯔양맵 자동 업데이트
+
+on:
+  schedule:
+    - cron: '0 15 * * *'   # 매일 한국시간 자정 (UTC 15:00)
+  workflow_dispatch:        # 수동 실행 가능
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: yt-dlp 설치
+        run: pip install yt-dlp
+
+      - name: 자동 업데이트 실행
+        env:
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_JAVASCRIPT_KEY: ${{ secrets.KAKAO_JAVASCRIPT_KEY }}
+        run: python scripts/auto_update.py
+
+      - name: 변경사항 커밋 & 푸시
+        run: |
+          git config user.name  "tzuyangmap-bot"
+          git config user.email "bot@tzuyangmap.com"
+          git add public/data/restaurants_geo.json
+          git diff --staged --quiet || git commit -m "🍜 새 맛집 자동 추가 $(date '+%Y-%m-%d')"
+          git push
