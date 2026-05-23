@@ -1,4 +1,4 @@
-name: 쯔양맵 자동 업데이트
+name: TzuyangMap Auto Update
 
 on:
   schedule:
