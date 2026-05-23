@@ -8,6 +8,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # git push 권한
 
     steps:
       - name: 코드 체크아웃
