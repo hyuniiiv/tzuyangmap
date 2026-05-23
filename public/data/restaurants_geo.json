@@ -21147,5 +21147,20 @@
       "distance_m": 1,
       "similarity": 0.57
     }
+  },
+  {
+    "name": "회",
+    "address": "경남통영시서촌아랫길112",
+    "category": "해산물",
+    "region": "경남",
+    "video_id": "YmD3HG4CwZA",
+    "video_title": "1300만 유튜버 회사 최초공개",
+    "video_url": "https://www.youtube.com/watch?v=YmD3HG4CwZA",
+    "thumbnail": "https://i.ytimg.com/vi/YmD3HG4CwZA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNs3jDEm513ueV8XvCR6fzQjStPA",
+    "upload_date": "2026-05-23",
+    "lat": 34.634565,
+    "lng": 128.264681,
+    "source": "auto_kakao",
+    "channel": "vtzuyang"
   }
 ]
