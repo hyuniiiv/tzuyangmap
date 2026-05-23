@@ -181,6 +181,40 @@ def naver_search_address(query: str) -> str | None:
     except: pass
     return None
 
+# ── 자막 NER (방문 선언 패턴) ─────────────────────────────────────────────
+
+_V = r"(?:가\s*보도록\s*하겠|가보도록\s*하겠|가\s*보겠|가보겠|가겠습니다|왔어요|왔습니다|도착했|들어가겠|먹으러\s*왔|먼저\s*가)"
+_I = r"(?:라는\s*(?:곳|집|식당|가게)|이라는\s*(?:곳|집)|이라고|인데요?|이에요|예요|입니다)"
+
+SUB_PATTERNS = [
+    rf"([가-힣]{{1,6}}(?:\s[가-힣]{{1,6}})?(?:으로|로))\s*(?:먼저\s*)?{_V}",
+    rf"여기(?:가|는)\s+([가-힣]{{1,6}}(?:\s[가-힣]{{1,6}})?)\s*{_I}",
+    r"안녕하세요\.\s*([가-힣]{2,12})(?:입니다|이에요|예요)",
+    r"([가-힣]{2,7}이네)(?:로|에서|에|이에요|입니다|라고)",
+    r"([가-힣]{2,12}(?:본점|지점|분점))\s*(?:에서|에|이|로)",
+]
+
+_NOISE = {
+    "저","나","너","우리","저희","여기","거기","지금","오늘","이번",
+    "맛집","가게","식당","먹방","정말","진짜","완전","엄청","그냥",
+    "삼대","사대","번째","겉바속촉","이제","이렇",
+}
+
+def extract_names_from_sub(text: str) -> list[str]:
+    """자막에서 가게명 후보 추출"""
+    found = []
+    for pat in SUB_PATTERNS:
+        for m in re.finditer(pat, text):
+            name = re.sub(r"(?:으로|로)$", "", m.group(1).strip().replace(" ", ""))
+            if (len(name) >= 2 and name not in _NOISE
+                    and not re.search(r"\d", name)
+                    and not re.search(r"(?:하는|있는|없는|먹는|같은|싶은)$", name)):
+                found.append(name)
+    from collections import Counter
+    cnt = Counter(found)
+    return [n for n, f in cnt.most_common(4) if f >= 1][:3]
+
+
 def process_new_video(video: dict) -> dict | None:
     title = video["title"]
 
@@ -190,37 +224,63 @@ def process_new_video(video: dict) -> dict | None:
     # 자막 수집
     sub_text = get_subtitle_text(video["id"])
     region   = find_region(title + " " + sub_text[:500])
-
-    # 날짜 추정 (오늘)
     upload_date = date.today().strftime("%Y-%m-%d")
 
-    # 음식 키워드 추출
-    foods = [kw for kw in FOOD_KWS if kw in title]
-    if not foods: return None  # 음식 영상이 아님
+    address = None
+    name    = None
+    lat = lng = None
 
-    food = foods[0]
-    query = f"쯔양 {region} {food} 맛집 주소" if region else f"쯔양 {food} 맛집 주소"
+    # ── 전략 1: 자막 NER → 가게명 → Kakao 검색 ──────────────────────────
+    sub_names = extract_names_from_sub(sub_text) if sub_text else []
+    for sub_name in sub_names:
+        # 가게명으로 직접 Kakao 검색 (주소 없이 키워드만)
+        params = {
+            "query": f"{region} {sub_name}" if region else sub_name,
+            "category_group_code": "FD6", "size": 1,
+        }
+        if region:
+            params["y"] = 36.5; params["x"] = 127.8  # 한국 중심
+        url = "https://dapi.kakao.com/v2/local/search/keyword.json?" + urllib.parse.urlencode(params)
+        req = urllib.request.Request(url, headers={"Authorization": f"KakaoAK {KAKAO_REST}"})
+        try:
+            with urllib.request.urlopen(req, timeout=5) as r:
+                docs = json.loads(r.read().decode("utf-8")).get("documents", [])
+            if docs:
+                d = docs[0]
+                name    = d.get("place_name", sub_name)
+                address = d.get("road_address_name") or d.get("address_name", "")
+                lat     = float(d["y"])
+                lng     = float(d["x"])
+                break
+        except: pass
+        time.sleep(0.1)
 
-    # 주소 검색
-    address = naver_search_address(query)
-    if not address: return None
+    # ── 전략 2: 제목 음식 키워드 → Naver 주소 검색 (자막 실패 시) ──────────
+    if not address:
+        foods = [kw for kw in FOOD_KWS if kw in title]
+        if not foods: return None
 
-    # Kakao 지오코딩
-    coords = kakao_geocode(address)
-    if not coords: return None
-    lat, lng = coords
+        food  = foods[0]
+        query = f"쯔양 {region} {food} 맛집 주소" if region else f"쯔양 {food} 맛집 주소"
+        address = naver_search_address(query)
+        if not address: return None
 
-    # Kakao 교차검증으로 정확한 가게명
-    name = f"{region}{food}" if region else food
-    results = kakao_search_nearby(lat, lng, query=food, radius=200)
+        coords = kakao_geocode(address)
+        if not coords: return None
+        lat, lng = coords
+        name = f"{region}{food}" if region else food
+
+    if not lat or not lng: return None
+
+    # ── Kakao Local Search로 정확한 가게명 최종 교차검증 ──────────────────
+    food_hint = next((kw for kw in FOOD_KWS if kw in title), "음식점")
+    results = kakao_search_nearby(lat, lng, query=food_hint, radius=100)
     if results:
         best = results[0]
         dist = ((lat - float(best["y"]))**2 + (lng - float(best["x"]))**2)**0.5 * 111000
-        if dist < 100:
-            kakao_name = best.get("place_name", name)
-            kakao_addr = best.get("road_address_name") or address
-            name    = kakao_name
-            address = kakao_addr
+        if dist < 80:
+            name    = best.get("place_name", name)
+            address = best.get("road_address_name") or address
 
     cat_map = {
         "떡볶이":"분식","냉면":"냉면","닭갈비":"닭갈비","게장":"해산물","국밥":"국밥",
