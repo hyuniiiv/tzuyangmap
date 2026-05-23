@@ -34,8 +34,9 @@ KAKAO_REST = os.environ.get("KAKAO_REST_API_KEY", KAKAO_REST)
 KAKAO_JS   = os.environ.get("KAKAO_JAVASCRIPT_KEY", KAKAO_JS)
 
 CHANNELS = [
-    ("https://www.youtube.com/@tzuyang6145/videos",  "tzuyang",  "쯔양"),
-    ("https://www.youtube.com/@v-tzuyang/videos",    "vtzuyang", "쯔양밖정원"),
+    ("https://www.youtube.com/@tzuyang6145/videos", "tzuyang", "쯔양"),
+    # 밖정원 채널은 비식당 콘텐츠 비중이 높아 메인 채널만 처리
+    # ("https://www.youtube.com/@v-tzuyang/videos", "vtzuyang", "쯔양밖정원"),
 ]
 
 OVERSEAS_KW = [
@@ -48,14 +49,6 @@ OVERSEAS_KW = [
     "sydney","budapest","las vegas","jakarta","bali",
 ]
 
-# 비식당 영상 제목 키워드 (이 단어 있으면 스킵)
-NON_FOOD_KW = [
-    "회사","사무실","브이로그","vlog","건강검진","위대장","내시경",
-    "냉장고","간식창고","팝업","집공개","구독자","팬","콘서트","공연",
-    "체험단","리뷰","언박싱","개봉기","몸무게","다이어트","운동",
-    "여행","브이로그","일상","생일","감사","감동","몰카","우승","상금",
-    "최초공개","공개","인바디","유전자","혈당","건강",
-]
 
 FOOD_KWS = [
     "떡볶이","냉면","닭갈비","게장","국밥","갈비","곱창","순대","칼국수",
@@ -242,14 +235,6 @@ def process_new_video(video: dict) -> dict | None:
 
     # 해외 스킵
     if any(k in title.lower() for k in OVERSEAS_KW): return None
-
-    # 비식당 콘텐츠 스킵 (회사공개, 건강검진, 브이로그 등)
-    if any(k in title for k in NON_FOOD_KW): return None
-
-    # 음식 키워드 있는지 먼저 확인 (없으면 자막도 안 내려받음)
-    food = has_food_keyword(title)
-    if not food and not any(k in title for k in ["먹방","맛집","털기","도전"]):
-        return None  # 음식 관련 영상 아님
 
     # 자막 수집
     sub_text = get_subtitle_text(video["id"])
