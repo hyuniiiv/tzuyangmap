@@ -6,6 +6,8 @@
 - restaurants_geo.json 업데이트
 """
 import json, re, sys, time, subprocess, urllib.request, urllib.parse, random
+sys.stdout.reconfigure(encoding="utf-8", errors="replace") if hasattr(sys.stdout, "reconfigure") else None
+sys.stderr.reconfigure(encoding="utf-8", errors="replace") if hasattr(sys.stderr, "reconfigure") else None
 from pathlib import Path
 from collections import Counter
 from datetime import date, datetime
