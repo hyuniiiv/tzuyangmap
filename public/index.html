@@ -180,6 +180,24 @@ body { font-family: 'Noto Sans KR', sans-serif; background: #0a0a0a; color: #fff
 #vclose { color: #fff; font-size: 14px; cursor: pointer; padding: 9px 22px; background: #333; border-radius: 22px; border: none; font-family: inherit; }
 #vclose:hover { background: #444; }
 
+/* 내 위치 버튼 */
+#my-loc {
+  position: fixed; right: 20px; bottom: 90px; z-index: 1000;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #fff; color: #ff3366;
+  border: 2px solid #ff3366;
+  font-size: 20px; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.15s, background 0.2s;
+}
+#my-loc:hover { transform: scale(1.08); background: #ff3366; color: #fff; }
+#my-loc.loading { animation: spin 1s linear infinite; }
+@keyframes spin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+@media (max-width: 768px) {
+  #my-loc { bottom: 80px; right: 16px; width: 44px; height: 44px; }
+}
+
 /* 모바일 토글 버튼 - 항상 우하단에 표시 */
 #stoggle {
   display: none;
@@ -248,6 +266,7 @@ body { font-family: 'Noto Sans KR', sans-serif; background: #0a0a0a; color: #fff
 </div>
 
 <div id="map"></div>
+<button id="my-loc" onclick="moveToMyLocation()" title="내 위치">📍</button>
 <button id="stoggle" onclick="toggleSidebar()">📋 목록 보기</button>
 
 <!-- 지도 위 팝업 패널 (CustomOverlay 대신) -->
@@ -682,6 +701,60 @@ document.querySelectorAll('[data-sort]').forEach(b => b.addEventListener('click'
 }));
 
 // 카카오맵 SDK 초기화 후 실행
+// 내 위치 마커
+let myLocationMarker = null;
+
+function moveToMyLocation() {
+  if (!navigator.geolocation) {
+    alert('이 브라우저는 위치 기능을 지원하지 않습니다');
+    return;
+  }
+  const btn = document.getElementById('my-loc');
+  btn.classList.add('loading');
+  btn.textContent = '⏳';
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const lat = pos.coords.latitude;
+      const lng = pos.coords.longitude;
+      const here = new kakao.maps.LatLng(lat, lng);
+
+      // 지도 이동
+      map.setLevel(5);
+      map.setCenter(here);
+
+      // 기존 위치 마커 제거
+      if (myLocationMarker) myLocationMarker.setMap(null);
+
+      // 파란 점 + 펄스 원으로 내 위치 표시
+      const el = document.createElement('div');
+      el.style.cssText = `
+        width:18px;height:18px;border-radius:50%;
+        background:#1d4ed8;border:3px solid #fff;
+        box-shadow:0 0 0 0 rgba(29,78,216,0.6);
+        animation:selPulse 1.5s ease-out infinite;
+      `;
+      myLocationMarker = new kakao.maps.CustomOverlay({
+        position: here, content: el,
+        xAnchor: 0.5, yAnchor: 0.5, zIndex: 30,
+      });
+      myLocationMarker.setMap(map);
+
+      btn.classList.remove('loading');
+      btn.textContent = '📍';
+    },
+    (err) => {
+      btn.classList.remove('loading');
+      btn.textContent = '📍';
+      const msg = err.code === 1 ? '위치 권한을 허용해주세요' :
+                  err.code === 2 ? '위치를 가져올 수 없습니다' :
+                                   '시간 초과되었습니다';
+      alert(msg);
+    },
+    { enableHighAccuracy: true, timeout: 8000 }
+  );
+}
+
 function toggleSidebar() {
   const sb = document.getElementById('sidebar');
   const btn = document.getElementById('stoggle');
