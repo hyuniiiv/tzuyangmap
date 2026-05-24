@@ -134,36 +134,41 @@ def get_video_description(vid_id: str) -> str:
         return ""
 
 
-def get_top_pinned_comment(vid_id: str) -> str:
-    """업로더의 고정 댓글 — 설명에 없을 때 백업 (느림: ~30s)"""
+def get_all_top_comments(vid_id: str, max_top: int = 40, max_replies: int = 20) -> str:
+    """상위 댓글 + 답글 모두 텍스트로 합쳐 반환 (LLM 컨텍스트용).
+    팬 댓글에 매장 지점/주소 정보가 자주 나타나서 가장 중요한 신호."""
     info_path = SUB_DIR / f"{vid_id}.info.json"
     try:
         subprocess.run(
             ["yt-dlp", "--skip-download", "--write-info-json", "--write-comments",
              "--no-warnings",
-             "--extractor-args", "youtube:max_comments=20,20;comment_sort=top",
+             "--extractor-args",
+             f"youtube:max_comments={max_top},{max_replies};comment_sort=top",
              "-o", str(SUB_DIR / "%(id)s"),
              f"https://www.youtube.com/watch?v={vid_id}"],
-            capture_output=True, encoding="utf-8", errors="replace", timeout=60
+            capture_output=True, encoding="utf-8", errors="replace", timeout=90
         )
         if not info_path.exists():
             return ""
         info = json.loads(info_path.read_text(encoding="utf-8"))
         comments = info.get("comments") or []
-        # 우선순위: 업로더+고정 > 고정 > 업로더 작성
-        pinned_uploader = pinned_other = uploader_first = ""
+        # 우선순위 정렬: 업로더+고정 → 고정 → 업로더 → 좋아요 많은 순
+        def rank(c):
+            r = 0
+            if c.get("author_is_uploader"): r += 1000
+            if c.get("is_pinned"): r += 500
+            r += c.get("like_count") or 0
+            return -r
+        comments.sort(key=rank)
+        parts = []
         for c in comments:
             text = (c.get("text") or "").strip()
             if not text: continue
-            is_uploader = c.get("author_is_uploader", False)
-            is_pinned   = c.get("is_pinned", False)
-            if is_uploader and is_pinned and not pinned_uploader:
-                pinned_uploader = text
-            elif is_pinned and not pinned_other:
-                pinned_other = text
-            elif is_uploader and not uploader_first:
-                uploader_first = text
-        return pinned_uploader or pinned_other or uploader_first
+            tag = ""
+            if c.get("is_pinned"): tag += "[고정] "
+            if c.get("author_is_uploader"): tag += "[업로더] "
+            parts.append(f"{tag}{text}")
+        return "\n---\n".join(parts)
     except Exception:
         return ""
 
@@ -205,43 +210,47 @@ def naver_search_snippets(query: str, max_chars: int = 2500) -> str:
 
 
 def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
-                           pinned_text: str = "", web_snippets: str = "",
+                           comments_text: str = "", web_snippets: str = "",
                            thumbnail_url: str = "") -> dict | None:
     """OpenAI(GPT-4o-mini Vision)로 영상에서 매장명/주소 추출.
-    - 자막/설명/댓글 + 웹 검색 결과 + 썸네일 이미지 종합 분석
-    - 약칭(엽떡 → 동대문엽기떡볶이) 이해, 메뉴-매장명 구분
+    - 자막/설명/댓글(전부) + 웹 검색 + 썸네일 이미지 종합 분석
+    - 댓글이 가장 중요한 신호 (팬들이 지점/주소 언급)
     - JSON: restaurant_name, brand, address, main_menu, confidence, evidence
     """
     if not OPENAI_KEY: return None
 
     sub  = (sub_text or "")[:2200]
     desc = (desc_text or "")[:700]
-    pin  = (pinned_text or "")[:500]
-    web  = (web_snippets or "")[:2200]
+    com  = (comments_text or "")[:6000]   # 댓글이 핵심 신호 — 더 많이
+    web  = (web_snippets or "")[:2000]
 
     prompt = (
-        "다음 한국 음식 먹방 유튜브 영상이 방문한 실제 매장 정보를 종합 분석해 추출하세요.\n\n"
+        "한국 음식 먹방 유튜브 영상에서 방문한 매장의 정확한 정보를 추출하세요.\n"
+        "**정확도 0순위**. 모든 단서(특히 댓글)를 종합해 분석.\n\n"
         f"[영상 제목]\n{title}\n\n"
-        f"[자막 (앞부분)]\n{sub or '(없음)'}\n\n"
+        f"[자막]\n{sub or '(없음)'}\n\n"
         f"[영상 설명]\n{desc or '(없음)'}\n\n"
-        f"[고정 댓글]\n{pin or '(없음)'}\n\n"
-        f"[웹 검색 결과 — 'YouTube 영상 제목 + 쯔양'으로 검색한 페이지 본문]\n{web or '(없음)'}\n\n"
-        "[썸네일 이미지] (별도 첨부 — 간판/로고/음식/매장 외관 분석)\n\n"
-        "분석 지침:\n"
-        "1. 썸네일 이미지에서 매장 간판, 메뉴판 로고, 브랜드 표시를 읽어 매장명 추론\n"
-        "2. 약칭/별명을 정식 매장명으로 변환 (엽떡→동대문엽기떡볶이, 마라탕집→실제 상호)\n"
-        "3. 메뉴명/일반명사를 매장명으로 쓰지 말 것 (X: '로제떡볶이', '시골마을')\n"
-        "4. 웹 검색 결과의 블로그/뉴스에서 주소/지점 정보 찾기\n"
-        "5. 한국 도로명 주소 형식 (예: '서울 송파구 양재대로62길 16')\n"
-        "6. 체인점이면 지점명 포함 (예: '동대문엽기떡볶이 가락점')\n"
-        "7. 정보 부족하면 null, 단 브랜드만이라도 알 수 있으면 brand에 입력\n\n"
+        f"[댓글 — 상위 + 업로더/고정 우선 정렬]\n{com or '(없음)'}\n\n"
+        f"[웹 검색 결과 (영상 제목+쯔양으로 검색한 페이지)]\n{web or '(없음)'}\n\n"
+        "[썸네일 이미지] — 별도 첨부\n\n"
+        "분석 지침 (중요도 순):\n"
+        "1. **댓글을 최우선으로 분석** — 팬들이 '여기 OO점 맞죠?', 'OO에서 봤어요',\n"
+        "   '주소 어디예요?' → 답글에 주소, '나도 OO지점 가봄' 같은 매장/지점 단서 자주 나옴\n"
+        "2. 자막에서 쯔양/사장님이 직접 매장명/지점/위치 언급한 부분 찾기\n"
+        "3. 썸네일 이미지의 간판/로고/메뉴판/외관에서 매장명 식별\n"
+        "4. 웹 검색 결과 블로그/뉴스에서 주소/지점 정보 확보\n"
+        "5. 약칭→정식 매장명 변환 (엽떡→동대문엽기떡볶이)\n"
+        "6. 체인점은 반드시 지점명 포함 (예: '동대문엽기떡볶이 가락점')\n"
+        "7. 메뉴명/일반명사 금지 (X: '로제떡볶이','시골마을','삼겹살집')\n"
+        "8. 도로명 주소 형식 (예: '서울 송파구 양재대로62길 16')\n"
+        "9. 어느 지점인지 확실하지 않으면 restaurant_name은 brand만, address는 null로\n\n"
         "JSON 형식:\n"
         '{"restaurant_name": "정식 매장명+지점 or null", '
-        '"brand": "프랜차이즈 브랜드명 (있으면) or null", '
+        '"brand": "프랜차이즈 브랜드 or null", '
         '"address": "도로명주소 or null", '
         '"main_menu": "주력 메뉴 or null", '
         '"confidence": "high|medium|low", '
-        '"evidence": "어떤 소스(썸네일/자막/웹)에서 어떤 단서를 얻었는지 간단히"}'
+        '"evidence": "어느 소스의 어떤 문구에서 단서를 얻었는지 (예: \'댓글에서 가락점 언급\')"}'
     )
 
     user_content = [{"type": "text", "text": prompt}]
@@ -477,18 +486,15 @@ def process_new_video(video: dict) -> dict | None:
                 address = web_addr
                 print(f"    [웹검색 주소: {web_addr}]")
 
-    # LLM 통합 분석 (자막 + 설명 + 웹스니펫 + 썸네일 이미지)
+    # 댓글 수집 — 매장 식별의 핵심 신호 (팬들이 지점/주소 언급)
+    comments_text = get_all_top_comments(video["id"], max_top=40, max_replies=20)
+
+    # LLM 통합 분석 (제목 + 자막 + 설명 + 댓글전체 + 웹스니펫 + 썸네일)
     llm_name = None
     llm_brand = None
     if OPENAI_KEY:
         thumb = video.get("thumbnail") or f"https://i.ytimg.com/vi/{video['id']}/hqdefault.jpg"
-        llm = llm_extract_restaurant(title, sub_text, desc_text, "", web_snip, thumb)
-
-        # 첫 시도 confidence 낮으면 고정 댓글 추가 (느려서 fallback만)
-        if not llm or llm.get("confidence") == "low":
-            pinned = get_top_pinned_comment(video["id"])
-            if pinned:
-                llm = llm_extract_restaurant(title, sub_text, desc_text, pinned, web_snip, thumb)
+        llm = llm_extract_restaurant(title, sub_text, desc_text, comments_text, web_snip, thumb)
 
         if llm:
             nm    = (llm.get("restaurant_name") or "").strip()
