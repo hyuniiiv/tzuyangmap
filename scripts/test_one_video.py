@@ -103,13 +103,12 @@ if not au.OPENAI_KEY:
     print("OpenAI 키 없음 — 스킵")
     llm = None
 else:
-    llm = au.llm_extract_restaurant(title, sub_text, desc_text, comments_text, web_snip, thumb_url)
-    print(f"\n결과:")
-    if llm:
-        for k, v in llm.items():
-            print(f"  {k}: {v}")
-    else:
-        print("  (실패)")
+    llm_list = au.llm_extract_restaurant(title, sub_text, desc_text, comments_text, web_snip, thumb_url) or []
+    print(f"\n결과: {len(llm_list)}개 매장 추출")
+    for i, llm in enumerate(llm_list):
+        print(f"\n  [매장 {i+1}/{len(llm_list)}]")
+        for k, val in llm.items():
+            print(f"    {k}: {val}")
 
 # 단계 7: 전체 파이프라인 실행
 print()
@@ -122,15 +121,17 @@ video = {
     "thumbnail": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
     "channel": "tzuyang",
 }
-entry = au.process_new_video(video)
+entries = au.process_new_video(video) or []
 
 print()
 print("=" * 60)
-print("최종 결과")
+print(f"최종 결과 — {len(entries)}개 매장")
 print("=" * 60)
-if entry:
-    for k in ("name","address","category","region","lat","lng","phone","place_url","kakao_category","source"):
-        v = entry.get(k, "")
-        if v: print(f"  {k:<18}: {v}")
+if entries:
+    for i, entry in enumerate(entries):
+        print(f"\n[매장 {i+1}/{len(entries)}]")
+        for k in ("name","address","category","region","lat","lng","phone","place_url","kakao_category","source"):
+            val = entry.get(k, "")
+            if val: print(f"  {k:<18}: {val}")
 else:
     print("  (엔트리 생성 안 됨)")

@@ -110,10 +110,10 @@ for idx, (prio, data_i, r, g) in enumerate(candidates[:args.limit]):
     print(f"[{idx+1}/{min(args.limit, len(candidates))}] [{g}] {title[:50]}")
     print(f"  현재: {r.get('name','')} @ {(r.get('address','') or '')[:35]}")
 
-    # 같은 영상 캐시 활용
+    # 같은 영상 캐시 활용 — list of entries 캐싱
     if vid in llm_cache:
-        new_entry = llm_cache[vid]
-        print(f"  (캐시 재사용)")
+        new_entries_list = llm_cache[vid]
+        print(f"  (캐시 재사용: {len(new_entries_list)}개)")
     else:
         video = {
             "id": vid, "title": title,
@@ -122,13 +122,24 @@ for idx, (prio, data_i, r, g) in enumerate(candidates[:args.limit]):
             "channel": r.get("channel", "tzuyang"),
         }
         try:
-            new_entry = au.process_new_video(video)
+            new_entries_list = au.process_new_video(video) or []
         except Exception as e:
             print(f"  ✗ 예외: {type(e).__name__}: {str(e)[:80]}")
-            new_entry = None
-        llm_cache[vid] = new_entry
+            new_entries_list = []
+        llm_cache[vid] = new_entries_list
 
     processed_ids.add(vid)
+
+    # 다중 매장 영상: 현재 처리 중인 old entry의 이름과 가장 유사한 new entry를 선택
+    new_entry = None
+    if new_entries_list:
+        if len(new_entries_list) == 1:
+            new_entry = new_entries_list[0]
+        else:
+            old_name = r.get("name", "") or ""
+            new_entry = max(new_entries_list,
+                          key=lambda x: au.name_similarity(old_name, x.get("name", "") or ""))
+            print(f"  (다중 매장 중 최적 매칭: {new_entry.get('name')})")
 
     if not new_entry:
         failed += 1

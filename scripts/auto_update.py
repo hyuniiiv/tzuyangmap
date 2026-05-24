@@ -17,8 +17,13 @@ GEO_FILE = ROOT / "public" / "data" / "restaurants_geo.json"
 SUB_DIR  = ROOT / "scripts" / "subs"
 SUB_DIR.mkdir(exist_ok=True)
 
-# .env 읽기
+# .env 읽기 — ROOT 또는 ROOT 부모(workspace 루트)에서 찾음
 ENV_FILE = ROOT / ".env"
+if not ENV_FILE.exists():
+    parent_env = ROOT.parent / ".env"
+    if parent_env.exists():
+        ENV_FILE = parent_env
+
 KAKAO_REST = ""
 KAKAO_JS   = ""
 if ENV_FILE.exists():
@@ -287,13 +292,17 @@ def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
         "- high: 자막/댓글/썸네일 중 2개 이상에서 일치하는 매장명/지점 단서\n"
         "- medium: 한 소스에서만 단서 (예: 댓글에만 언급) 또는 브랜드는 확실하나 지점 불명\n"
         "- low: 매장 식별 신뢰도 낮음 → 가능하면 null로\n\n"
+        "## 다중 매장 영상 처리\n"
+        "한 영상에서 여러 매장을 방문한 경우(예: '망원동 3대빵집 오픈런', '여수 백반집 5곳'):\n"
+        "- restaurants 배열에 모두 추출\n"
+        "- 단일 매장 영상도 restaurants 배열에 1개 원소로\n\n"
         "JSON 형식:\n"
-        '{"restaurant_name": "정식 매장명+지점 or null", '
-        '"brand": "프랜차이즈 브랜드 or null", '
-        '"address": "도로명주소 or null", '
-        '"main_menu": "주력 메뉴 or null", '
-        '"confidence": "high|medium|low", '
-        '"evidence": "어느 소스의 어떤 문구에서 단서를 얻었는지 (예: \'자막에서 사장님이 \"여기 합정동에서 30년\" 발화\')"}'
+        '{"restaurants": ['
+        '{"restaurant_name":"정식 매장명+지점 or null","brand":"프랜차이즈 or null",'
+        '"address":"도로명주소 or null","main_menu":"메뉴 or null"}, '
+        '... (영상에 매장 1개면 1개 원소, 여러 곳이면 모두 추가)],'
+        '"confidence":"high|medium|low",'
+        '"evidence":"어느 소스의 어떤 문구에서 단서를 얻었는지"}'
     )
 
     user_content = [{"type": "text", "text": prompt}]
@@ -303,14 +312,43 @@ def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
             "image_url": {"url": thumbnail_url, "detail": "low"},
         })
 
+    # JSON Schema로 응답 구조 강제 (항상 restaurants 배열 반환)
+    json_schema = {
+        "name": "restaurant_extraction",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "restaurants": {
+                    "type": "array",
+                    "description": "방문 매장(들). 단일 매장이면 1개, 다중 매장이면 N개.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "restaurant_name": {"type": ["string", "null"]},
+                            "brand": {"type": ["string", "null"]},
+                            "address": {"type": ["string", "null"]},
+                            "main_menu": {"type": ["string", "null"]},
+                        },
+                        "required": ["restaurant_name","brand","address","main_menu"],
+                        "additionalProperties": False,
+                    },
+                },
+                "confidence": {"type": "string", "enum": ["high","medium","low"]},
+                "evidence": {"type": "string"},
+            },
+            "required": ["restaurants","confidence","evidence"],
+            "additionalProperties": False,
+        },
+    }
     body = {
-        "model": "gpt-4o-mini",  # vision 지원
+        "model": "gpt-4o-mini",  # vision + structured outputs 지원
         "messages": [
-            {"role": "system", "content": "한국 음식 영상 매장 정보 추출 전문가. 썸네일 이미지도 분석. JSON만 반환."},
+            {"role": "system", "content": "한국 음식 영상 매장 정보 추출 전문가. 썸네일 이미지 분석. 정해진 JSON 스키마만 반환."},
             {"role": "user", "content": user_content},
         ],
         "temperature": 0.0,
-        "response_format": {"type": "json_object"},
+        "response_format": {"type": "json_schema", "json_schema": json_schema},
     }
     try:
         req = urllib.request.Request(
@@ -324,10 +362,23 @@ def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
         with urllib.request.urlopen(req, timeout=45) as r:
             res = json.loads(r.read().decode("utf-8"))
         content = res["choices"][0]["message"]["content"]
-        return json.loads(content)
+        parsed = json.loads(content)
+        # 새 형식: {"restaurants": [...], "confidence": ..., "evidence": ...}
+        # 구 형식 호환: {"restaurant_name": ..., ...} → 1개짜리 list로 wrap
+        if "restaurants" in parsed:
+            restaurants = parsed.get("restaurants") or []
+            conf = parsed.get("confidence", "low")
+            ev = parsed.get("evidence", "")
+            for r in restaurants:
+                r["confidence"] = conf
+                r["evidence"] = ev
+            return restaurants
+        else:
+            # 단일 매장 응답 (구 형식)
+            return [parsed]
     except Exception as e:
         print(f"    [LLM 실패: {type(e).__name__}: {str(e)[:120]}]")
-        return None
+        return []
 
 
 def kakao_search_brand(brand: str, region: str = "", limit: int = 5) -> list:
@@ -483,11 +534,180 @@ def extract_names_from_sub(text: str) -> list[str]:
     return [n for n, f in cnt.most_common(4) if f >= 1][:3]
 
 
-def process_new_video(video: dict) -> dict | None:
+def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str,
+                          region: str, food: str | None, web_snip: str,
+                          llm_r: dict) -> dict | None:
+    """LLM이 추출한 단일 매장 정보를 Naver/Kakao로 검증해서 완성된 entry로 변환.
+    다중 매장 영상의 각 매장을 처리하기 위해 분리됨."""
+    upload_date = date.today().strftime("%Y-%m-%d")
+    address = None
+    name = None
+    lat = lng = None
+    phone = ""
+    place_url = ""
+    kakao_category = ""
+
+    llm_name = (llm_r.get("restaurant_name") or "").strip()
+    llm_brand = (llm_r.get("brand") or "").strip()
+    llm_addr = (llm_r.get("address") or "").strip()
+    conf = llm_r.get("confidence", "?")
+    ev = (llm_r.get("evidence") or "")[:120]
+
+    # 일반명사 제거
+    if llm_name in GENERIC_NAMES:
+        llm_name = ""
+
+    # LLM이 주소 줬으면 지오코딩
+    if llm_addr:
+        coords = kakao_geocode(llm_addr)
+        if coords:
+            lat, lng = coords
+            address = llm_addr
+            if not region: region = find_region(llm_addr) or region
+
+    if llm_name:
+        name = llm_name
+    elif llm_brand:
+        name = llm_brand
+
+    print(f"    [LLM({conf}): {llm_name or llm_brand or '?'} @ {address or '?'} | {ev}]")
+
+    # Naver 보조 검색 (이름은 있는데 주소 없을 때)
+    if (llm_name or llm_brand) and not address:
+        name_q = llm_name or llm_brand
+        queries = []
+        if region:
+            queries.append(f"{name_q} {region} 주소")
+            queries.append(f"쯔양 {name_q} {region}")
+        queries.append(f"{name_q} 주소")
+        queries.append(f"쯔양 {name_q}")
+        for q in queries:
+            naver_addr = naver_search_address(q)
+            if naver_addr:
+                coords = kakao_geocode(naver_addr)
+                if coords:
+                    lat, lng = coords
+                    address = naver_addr
+                    if not region: region = find_region(naver_addr) or region
+                    print(f"    [Naver 보조 주소: '{q}' → {naver_addr}]")
+                    break
+
+    # Kakao 검증 (LLM 이름으로 재검색해서 실제 매장 매칭)
+    if llm_name or llm_brand:
+        candidate = llm_name or llm_brand
+        kakao_results = kakao_search_brand(candidate, region or "", limit=5)
+        best = None
+        best_score = -1
+        for c in kakao_results:
+            try:
+                clat = float(c["y"]); clng = float(c["x"])
+                sim = name_similarity(candidate, c.get("place_name", ""))
+                dist_km = 0
+                if lat and lng:
+                    dist_km = ((clat-lat)**2 + (clng-lng)**2)**0.5 * 111
+                score = sim * 100 - (dist_km * 0.5)
+                if score > best_score:
+                    best_score = score
+                    best = (c, sim, dist_km)
+            except: continue
+        ok = False
+        if best:
+            sim_v, dist_v = best[1], best[2]
+            if sim_v >= 0.85: ok = True
+            elif sim_v >= 0.5 and dist_v <= 30: ok = True
+            elif sim_v >= 0.4 and dist_v <= 10: ok = True
+            elif sim_v >= 0.3 and dist_v <= 5 and lat and lng: ok = True
+        if ok:
+            c, sim, dist_km = best
+            try:
+                lat = float(c["y"])
+                lng = float(c["x"])
+                address = c.get("road_address_name") or c.get("address_name", "") or address
+                name = c.get("place_name", name)
+                phone = c.get("phone", "") or phone
+                place_url = c.get("place_url", "") or place_url
+                kakao_category = c.get("category_name", "") or kakao_category
+                print(f"    [Kakao 검증: {name} @ {address} (sim={sim:.2f}, dist={dist_km:.1f}km)]")
+            except: pass
+
+    if not lat or not lng: return None
+    if not name:
+        name = food or (region + "맛집" if region else "맛집")
+
+    # 추가 cross-verify with food_hint
+    food_hint = food or "음식점"
+    nearby = kakao_search_nearby(lat, lng, query=food_hint, radius=100)
+    if nearby:
+        best_n = nearby[0]
+        try:
+            dist_n = ((lat - float(best_n["y"]))**2 + (lng - float(best_n["x"]))**2)**0.5 * 111000
+            if dist_n < 80:
+                k_name = best_n.get("place_name", "")
+                k_sim = name_similarity(name, k_name)
+                if (name in GENERIC_NAMES) or k_sim >= 0.4:
+                    name = k_name or name
+                address = best_n.get("road_address_name") or address
+                if best_n.get("phone") and not phone: phone = best_n.get("phone", "")
+                if best_n.get("place_url") and not place_url: place_url = best_n.get("place_url", "")
+                if best_n.get("category_name") and not kakao_category: kakao_category = best_n.get("category_name", "")
+        except: pass
+
+    # 카테고리 매핑
+    cat_map = {
+        "떡볶이":"분식","냉면":"냉면","닭갈비":"닭갈비","게장":"해산물","국밥":"국밥",
+        "갈비":"구이","곱창":"구이","순대":"분식","칼국수":"면류","돈까스":"일식",
+        "초밥":"일식","짜장":"중식","짬뽕":"중식","삼겹살":"구이","치킨":"치킨",
+        "라면":"면류","우동":"면류","만두":"분식","해산물":"해산물","구이":"구이",
+        "회":"해산물","보쌈":"한식","족발":"한식","한우":"한식","비빔밥":"한식",
+    }
+    category = cat_map.get(food, "기타")
+
+    region_map = {
+        "서울":"서울","부산":"부산","인천":"인천","대구":"대구","대전":"대전",
+        "광주":"광주","울산":"울산","세종":"세종","제주":"제주",
+        "수원":"경기","성남":"경기","고양":"경기","용인":"경기","안산":"경기",
+        "안양":"경기","파주":"경기","광명":"경기","시흥":"경기",
+        "춘천":"강원","강릉":"강원","원주":"강원","속초":"강원","태백":"강원",
+        "청주":"충북","천안":"충남","아산":"충남","공주":"충남","논산":"충남",
+        "서산":"충남","당진":"충남","보령":"충남","홍성":"충남","태안":"충남",
+        "전주":"전북","군산":"전북","익산":"전북",
+        "여수":"전남","순천":"전남","목포":"전남","광양":"전남","나주":"전남",
+        "포항":"경북","경주":"경북","구미":"경북","안동":"경북","영주":"경북",
+        "창원":"경남","진주":"경남","통영":"경남","거제":"경남",
+    }
+    region_val = region_map.get(region, "기타")
+    if region_val == "기타" and address:
+        for city, r in region_map.items():
+            if city in address: region_val = r; break
+
+    # 최종 품질 검증
+    name_clean = (name or "").strip()
+    if not phone and not place_url and name_clean in GENERIC_NAMES:
+        print(f"    [거부: 검증 실패 + 일반명사 매장명 - {name_clean}]")
+        return None
+
+    return {
+        "name": name, "address": address,
+        "category": category, "region": region_val,
+        "video_id": video["id"], "video_title": title,
+        "video_url": video["url"], "thumbnail": video["thumbnail"],
+        "upload_date": upload_date,
+        "lat": round(lat, 6), "lng": round(lng, 6),
+        "source": "auto_kakao",
+        "channel": video.get("channel", "tzuyang"),
+        "phone": phone,
+        "place_url": place_url,
+        "kakao_category": kakao_category,
+    }
+
+
+def process_new_video(video: dict) -> list[dict]:
+    """영상에서 매장(들)을 추출. 다중 매장 영상도 list로 반환.
+    Returns: list of entry dicts (length 0~N)."""
     title = video["title"]
 
     # 해외 스킵
-    if any(k in title.lower() for k in OVERSEAS_KW): return None
+    if any(k in title.lower() for k in OVERSEAS_KW): return []
 
     # 자막 수집
     sub_text = get_subtitle_text(video["id"])
@@ -532,40 +752,55 @@ def process_new_video(video: dict) -> dict | None:
     # 댓글 수집 — 매장 식별의 핵심 신호 (팬들이 지점/주소 언급)
     comments_text = get_all_top_comments(video["id"], max_n=150)
 
-    # LLM 통합 분석 (제목 + 자막 + 설명 + 댓글전체 + 웹스니펫 + 썸네일)
-    llm_name = None
-    llm_brand = None
+    # LLM 통합 분석 (제목 + 자막 + 설명 + 댓글전체 + 웹스니펫 + 썸네일) — list 반환
+    llm_list = []
     if OPENAI_KEY:
         thumb = video.get("thumbnail") or f"https://i.ytimg.com/vi/{video['id']}/hqdefault.jpg"
-        llm = llm_extract_restaurant(title, sub_text, desc_text, comments_text, web_snip, thumb)
+        llm_list = llm_extract_restaurant(title, sub_text, desc_text, comments_text, web_snip, thumb) or []
 
-        if llm:
-            nm    = (llm.get("restaurant_name") or "").strip()
-            br    = (llm.get("brand") or "").strip()
-            ad    = (llm.get("address") or "").strip()
-            menu  = (llm.get("main_menu") or "").strip()
-            conf  = llm.get("confidence", "?")
-            ev    = (llm.get("evidence") or "")[:120]
+    # ── 다중 매장 영상: LLM이 2개 이상 매장 반환했으면 각각 처리해서 list 반환 ──
+    if len(llm_list) > 1:
+        print(f"    [다중 매장 감지: {len(llm_list)}개]")
+        entries = []
+        for llm_r in llm_list:
+            e = _build_entry_from_llm(video, title, sub_text, desc_text,
+                                       region, food, web_snip, llm_r)
+            if e:
+                entries.append(e)
+        print(f"    [다중 매장 결과: {len(entries)}/{len(llm_list)}개 추출 성공]")
+        return entries
 
-            if nm and nm not in GENERIC_NAMES:
-                llm_name = nm
-            if br:
-                llm_brand = br
+    # ── 단일 매장 (또는 LLM 결과 없음): 기존 흐름 ─────────────────────────
+    llm_name = None
+    llm_brand = None
+    llm = llm_list[0] if llm_list else None
+    if llm:
+        nm    = (llm.get("restaurant_name") or "").strip()
+        br    = (llm.get("brand") or "").strip()
+        ad    = (llm.get("address") or "").strip()
+        menu  = (llm.get("main_menu") or "").strip()
+        conf  = llm.get("confidence", "?")
+        ev    = (llm.get("evidence") or "")[:120]
 
-            # 주소: LLM > web/desc regex > Kakao geocode
-            if ad and not address:
-                coords = kakao_geocode(ad)
-                if coords:
-                    lat, lng = coords
-                    address = ad
-                    if not region: region = find_region(ad) or region
+        if nm and nm not in GENERIC_NAMES:
+            llm_name = nm
+        if br:
+            llm_brand = br
 
-            if llm_name:
-                name = llm_name
-            elif llm_brand and not name:
-                name = llm_brand  # 브랜드라도 placeholder
+        # 주소: LLM > web/desc regex > Kakao geocode
+        if ad and not address:
+            coords = kakao_geocode(ad)
+            if coords:
+                lat, lng = coords
+                address = ad
+                if not region: region = find_region(ad) or region
 
-            print(f"    [LLM({conf}): {llm_name or llm_brand or '?'} @ {address or '?'} | {ev}]")
+        if llm_name:
+            name = llm_name
+        elif llm_brand and not name:
+            name = llm_brand  # 브랜드라도 placeholder
+
+        print(f"    [LLM({conf}): {llm_name or llm_brand or '?'} @ {address or '?'} | {ev}]")
 
     # ── Strategy 1.5: LLM이 매장명 줬는데 주소 없으면 Naver 보조 검색 ─────
     # "고추명가", "우지커피" 같은 LLM이 정확히 잡은 이름을 Naver에서 직접 검색
@@ -675,17 +910,17 @@ def process_new_video(video: dict) -> dict | None:
 
     # ── 전략 2: 제목 음식 키워드 → Naver 주소 검색 (전략 0, 1 모두 실패 시) ─
     if not address:
-        if not food: return None
+        if not food: return []
         query = f"쯔양 {region} {food} 맛집 주소" if region else f"쯔양 {food} 맛집 주소"
         address = naver_search_address(query)
-        if not address: return None
+        if not address: return []
 
         coords = kakao_geocode(address)
-        if not coords: return None
+        if not coords: return []
         lat, lng = coords
         name = f"{region}{food}" if region else food
 
-    if not lat or not lng: return None
+    if not lat or not lng: return []
 
     # 전략 0에서 주소만 얻고 이름 아직 못 채운 경우 → placeholder
     # (다음 cross-verify에서 정확한 매장명으로 교체됨)
@@ -744,9 +979,9 @@ def process_new_video(video: dict) -> dict | None:
     name_clean = (name or "").strip()
     if not phone and not place_url and name_clean in GENERIC_NAMES:
         print(f"    [거부: 검증 실패 + 일반명사 매장명 - {name_clean}]")
-        return None
+        return []
 
-    return {
+    return [{
         "name": name, "address": address,
         "category": category, "region": region_val,
         "video_id": video["id"], "video_title": title,
@@ -758,7 +993,7 @@ def process_new_video(video: dict) -> dict | None:
         "phone": phone,
         "place_url": place_url,
         "kakao_category": kakao_category,
-    }
+    }]
 
 
 # ── 4. 메인 ────────────────────────────────────────────────────────────────
@@ -788,10 +1023,11 @@ def main():
 
         for v in new_videos:
             print(f"  처리: {v['title'][:55]}")
-            entry = process_new_video(v)
-            if entry:
-                new_entries.append(entry)
-                print(f"    → {entry['name']} | {entry['address'][:40]}")
+            entries = process_new_video(v)  # list[dict] 반환 (다중 매장 지원)
+            if entries:
+                new_entries.extend(entries)
+                for entry in entries:
+                    print(f"    → {entry['name']} | {entry['address'][:40]}")
                 existing_ids.add(v["id"])  # 중복 방지
             time.sleep(random.uniform(1.5, 2.5))  # Naver 차단 방지
 
