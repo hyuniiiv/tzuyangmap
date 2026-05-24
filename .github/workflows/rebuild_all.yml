@@ -1,0 +1,61 @@
+name: Rebuild All Entries with LLM
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '이번 실행 최대 처리 개수 (기본 250)'
+        required: false
+        type: string
+        default: '250'
+      grades:
+        description: '처리 등급 (콤마, 기본 D,C,B,A,S = 전체)'
+        required: false
+        type: string
+        default: 'D,C,B,A,S'
+      reset:
+        description: 'state 초기화 (true/false)'
+        required: false
+        type: string
+        default: 'false'
+      force:
+        description: '이미 처리한 항목 재처리 (true/false)'
+        required: false
+        type: string
+        default: 'false'
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340  # 6시간 limit 미만 안전선
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install yt-dlp youtube-comment-downloader
+
+      - name: Run rebuild
+        env:
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_JAVASCRIPT_KEY: ${{ secrets.KAKAO_JAVASCRIPT_KEY }}
+          OPEN_AI_API_KEY: ${{ secrets.OPEN_AI_API_KEY }}
+        run: |
+          ARGS="--limit ${{ inputs.limit }} --grades ${{ inputs.grades }}"
+          if [ "${{ inputs.reset }}" = "true" ]; then ARGS="$ARGS --reset"; fi
+          if [ "${{ inputs.force }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          python scripts/rebuild_all.py $ARGS
+
+      - name: Commit results
+        run: |
+          git config user.name  "tzuyangmap-bot"
+          git config user.email "bot@tzuyangmap.com"
+          git add public/data/restaurants_geo.json scripts/.rebuild_state.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "rebuild: LLM 재처리 배치 $(date '+%Y-%m-%d %H:%M')"
+          git pull --rebase origin master
+          git push
