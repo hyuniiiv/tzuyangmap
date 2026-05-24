@@ -10541,8 +10541,8 @@
     "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
-    "name": "노량진수산시장",
-    "address": "서울 동작구 노량진로 120",
+    "name": "노량진수산시장 청양수산1횟집",
+    "address": "서울 동작구 노들로 674",
     "category": "기타",
     "region": "서울",
     "video_id": "LUWUxyIkDls",
@@ -10550,17 +10550,12 @@
     "video_url": "https://www.youtube.com/watch?v=LUWUxyIkDls",
     "thumbnail": "https://i.ytimg.com/vi/LUWUxyIkDls/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoT4VESQG9iuabV2GcNXGSQYhj7w",
     "upload_date": "2022-06-02",
-    "duplicate": false,
-    "source": "websearch_manual",
-    "lat": 37.512737,
-    "lng": 126.93992,
-    "kakao_verified": {
-      "name": "청록미나리식당 노량진점",
-      "address": "서울 동작구 장승배기로 170",
-      "distance_m": 62,
-      "similarity": 0.27
-    },
-    "place_url": "http://place.map.kakao.com/1391015599",
+    "lat": 37.51461,
+    "lng": 126.938113,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "0503-7150-2813",
+    "place_url": "http://place.map.kakao.com/395450153",
     "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
@@ -10917,7 +10912,7 @@
   },
   {
     "name": "옛집국수",
-    "address": "서울특별시 용산구 한강로1",
+    "address": "서울 용산구 한강대로62길 38",
     "category": "기타",
     "region": "서울",
     "video_id": "-RI5PUiPr3g",
@@ -10925,19 +10920,13 @@
     "video_url": "https://www.youtube.com/watch?v=-RI5PUiPr3g",
     "thumbnail": "https://i.ytimg.com/vi/-RI5PUiPr3g/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAw7zz4-lkw36pkqJoykW__9WmZhA",
     "upload_date": "2022-04-03",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.53361,
-    "lng": 126.977557,
-    "kakao_verified": {
-      "name": "백년토종삼계탕 국방가든점",
-      "address": "서울 용산구 용산동3가 1-105",
-      "distance_m": 96,
-      "similarity": 0.08
-    },
-    "phone": "02-794-8364",
-    "place_url": "http://place.map.kakao.com/13320353",
-    "kakao_category": "음식점 > 한식 > 국수"
+    "lat": 37.533908,
+    "lng": 126.973582,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-798-9911",
+    "place_url": "http://place.map.kakao.com/12978307",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "우리단골집",
@@ -16921,8 +16910,8 @@
     "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
-    "name": "물막국수",
-    "address": "강원특별자치도 철원군 갈말읍 명성로158번길 13",
+    "name": "명가막국수",
+    "address": "강원특별자치도 춘천시 신북읍 상천3길 8",
     "category": "기타",
     "region": "강원",
     "video_id": "bC711I-IPck",
@@ -16930,18 +16919,12 @@
     "video_url": "https://www.youtube.com/watch?v=bC711I-IPck",
     "thumbnail": "https://i.ytimg.com/vi/bC711I-IPck/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_pKBOhFWiVkwVJ5jdlkk5fDvu-w",
     "upload_date": "2019-08-03",
-    "duplicate": false,
-    "source": "search",
-    "lat": 38.146004,
-    "lng": 127.308797,
-    "kakao_verified": {
-      "name": "철원막국수",
-      "address": "강원특별자치도 철원군 갈말읍 명성로158번길 13",
-      "distance_m": 6,
-      "similarity": 0.6
-    },
-    "phone": "033-452-2589",
-    "place_url": "http://place.map.kakao.com/9458545",
+    "lat": 37.932909,
+    "lng": 127.792178,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "033-241-8443",
+    "place_url": "http://place.map.kakao.com/8350588",
     "kakao_category": "음식점 > 한식 > 국수"
   },
   {
