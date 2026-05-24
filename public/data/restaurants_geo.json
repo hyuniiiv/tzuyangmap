@@ -20,7 +20,9 @@
       "similarity": 0.83
     },
     "name_original": "갱이부리마을마국김장훈점",
-    "address_kakao": "서울 강서구 강서로 391"
+    "address_kakao": "서울 강서구 강서로 391",
+    "place_url": "http://place.map.kakao.com/455388326",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "진옥화할매원조닭한마리 본점",
@@ -43,7 +45,10 @@
       "similarity": 1.0
     },
     "name_original": "전주집",
-    "address_kakao": "서울 종로구 종로40가길 18"
+    "address_kakao": "서울 종로구 종로40가길 18",
+    "phone": "02-2275-9666",
+    "place_url": "http://place.map.kakao.com/10785496",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "밴댕이천국연탄구이",
@@ -64,7 +69,10 @@
       "address": "경기 화성시 만세구 향남읍 배터길 4-2",
       "distance_m": 8,
       "similarity": 1.0
-    }
+    },
+    "phone": "031-353-0115",
+    "place_url": "http://place.map.kakao.com/669970863",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "파스타",
@@ -100,7 +108,10 @@
       "address": "서울 용산구 한강대로80길 17",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-793-3598",
+    "place_url": "http://place.map.kakao.com/1228257268",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "삼계옥",
@@ -123,7 +134,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 강남구 테헤란로83길 42",
-    "name_original": "장어집"
+    "name_original": "장어집",
+    "phone": "070-4212-1633",
+    "place_url": "http://place.map.kakao.com/1251663559",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리 > 삼계탕"
   },
   {
     "name": "감자전집",
@@ -144,7 +158,10 @@
       "address": "서울 강남구 학동로2길 47",
       "distance_m": 77,
       "similarity": 0.12
-    }
+    },
+    "phone": "02-544-6007",
+    "place_url": "http://place.map.kakao.com/832441144",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점"
   },
   {
     "name": "한우샤브샤브",
@@ -188,7 +205,10 @@
       "similarity": 0.8
     },
     "name_original": "송주불냉면",
-    "address_kakao": "경기 안양시 만안구 안양로257번길 14"
+    "address_kakao": "경기 안양시 만안구 안양로257번길 14",
+    "phone": "031-468-9298",
+    "place_url": "http://place.map.kakao.com/17174682",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "선참치",
@@ -211,7 +231,10 @@
       "similarity": 0.0
     },
     "address_kakao": "경기 고양시 일산동구 중앙로 1305-56",
-    "name_original": "가맥집"
+    "name_original": "가맥집",
+    "phone": "031-909-1079",
+    "place_url": "http://place.map.kakao.com/27289542",
+    "kakao_category": "음식점 > 일식 > 참치회"
   },
   {
     "name": "만나떡볶이",
@@ -232,7 +255,9 @@
       "address": "서울 성동구 왕십리로24길 27",
       "distance_m": 5,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/21420131",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "돼지갈비",
@@ -254,7 +279,10 @@
       "distance_m": 2,
       "similarity": 0.33
     },
-    "address_kakao": "경기 파주시 문화로 7"
+    "address_kakao": "경기 파주시 문화로 7",
+    "phone": "031-957-4155",
+    "place_url": "http://place.map.kakao.com/9222670",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "왕큰돈까스",
@@ -361,7 +389,10 @@
       "similarity": 0.8
     },
     "name_original": "동대문엽기떡볶이",
-    "address_kakao": "서울 송파구 양재대로62길 16"
+    "address_kakao": "서울 송파구 양재대로62길 16",
+    "phone": "02-402-8592",
+    "place_url": "http://place.map.kakao.com/19004820",
+    "kakao_category": "음식점 > 분식 > 떡볶이 > 동대문엽기떡볶이"
   },
   {
     "name": "토종한우",
@@ -446,7 +477,9 @@
       "distance_m": 3,
       "similarity": 0.22
     },
-    "address_kakao": "부산 기장군 기장읍 차성동로67번길 16"
+    "address_kakao": "부산 기장군 기장읍 차성동로67번길 16",
+    "place_url": "http://place.map.kakao.com/1061705594",
+    "kakao_category": "음식점 > 간식"
   },
   {
     "name": "소문난짬뽕집",
@@ -469,7 +502,10 @@
       "similarity": 0.83
     },
     "name_original": "소문난짬봉집",
-    "address_kakao": "전북특별자치도 부안군 부안읍 오리정로 183"
+    "address_kakao": "전북특별자치도 부안군 부안읍 오리정로 183",
+    "phone": "063-581-0785",
+    "place_url": "http://place.map.kakao.com/1118184671",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "기라성",
@@ -492,7 +528,10 @@
       "similarity": 0.0
     },
     "address_kakao": "전북특별자치도 부안군 계화면 간재로 461",
-    "name_original": "중식집"
+    "name_original": "중식집",
+    "phone": "063-582-1040",
+    "place_url": "http://place.map.kakao.com/24481979",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "경일반점",
@@ -515,7 +554,10 @@
       "similarity": 0.0
     },
     "address_kakao": "전북특별자치도 부안군 변산면 지서로 79",
-    "name_original": "짬봉집"
+    "name_original": "짬봉집",
+    "phone": "063-582-8008",
+    "place_url": "http://place.map.kakao.com/10171675",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "옛날중국집",
@@ -538,7 +580,10 @@
       "similarity": 0.8
     },
     "name_original": "성북동옛날중국집",
-    "address_kakao": "서울 성북구 성북로8길 8"
+    "address_kakao": "서울 성북구 성북로8길 8",
+    "phone": "02-764-0094",
+    "place_url": "http://place.map.kakao.com/20944335",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "한성대옛날중국집",
@@ -559,7 +604,10 @@
       "address": "서울 성북구 성북로 7",
       "distance_m": 111,
       "similarity": 0.09
-    }
+    },
+    "phone": "02-764-0094",
+    "place_url": "http://place.map.kakao.com/20944335",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "대장갈비",
@@ -706,7 +754,10 @@
       "address": "서울 성동구 성수일로8길 53",
       "distance_m": 14,
       "similarity": 0.33
-    }
+    },
+    "phone": "02-464-0425",
+    "place_url": "http://place.map.kakao.com/8416853",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "산골녹차냉면 본점",
@@ -729,7 +780,10 @@
       "similarity": 0.8
     },
     "name_original": "산골녹차냉면",
-    "address_kakao": "서울 용산구 효창원로 147"
+    "address_kakao": "서울 용산구 효창원로 147",
+    "phone": "02-716-1988",
+    "place_url": "http://place.map.kakao.com/13096291",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "우리나라",
@@ -771,7 +825,10 @@
       "address": "경기 수원시 팔달구 권선로741번길 27",
       "distance_m": 42,
       "similarity": 0.33
-    }
+    },
+    "phone": "031-221-8200",
+    "place_url": "http://place.map.kakao.com/1880913908",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "곱창파는고깃집",
@@ -794,7 +851,10 @@
       "similarity": 0.8
     },
     "name_original": "고깃집",
-    "address_kakao": "서울 마포구 마포대로 173-14"
+    "address_kakao": "서울 마포구 마포대로 173-14",
+    "phone": "02-365-9245",
+    "place_url": "http://place.map.kakao.com/151847027",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 삼겹살"
   },
   {
     "name": "고기더",
@@ -881,7 +941,9 @@
       "similarity": 0.0
     },
     "name_original": "룸술집",
-    "address_kakao": "대전 중구 보문로262번길 45"
+    "address_kakao": "대전 중구 보문로262번길 45",
+    "place_url": "http://place.map.kakao.com/1708798924",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점"
   },
   {
     "name": "잔치국수",
@@ -902,7 +964,10 @@
       "address": "대전 동구 계족로 408",
       "distance_m": 115,
       "similarity": 0.0
-    }
+    },
+    "phone": "042-626-7467",
+    "place_url": "http://place.map.kakao.com/994272662",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "기절초풍물닭갈비 상도동점",
@@ -925,7 +990,10 @@
       "similarity": 0.8
     },
     "name_original": "닭갈비",
-    "address_kakao": "서울 동작구 성대로1길 6"
+    "address_kakao": "서울 동작구 성대로1길 6",
+    "phone": "02-824-4636",
+    "place_url": "http://place.map.kakao.com/219304883",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "다행이네",
@@ -967,7 +1035,10 @@
       "address": "경기 광명시 오리로964번길 17",
       "distance_m": 5,
       "similarity": 0.3
-    }
+    },
+    "phone": "02-2688-5150",
+    "place_url": "http://place.map.kakao.com/17079060",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "안면도간장게장맛집 일송꽃게장 본점",
@@ -990,7 +1061,10 @@
       "similarity": 0.8
     },
     "name_original": "간장게장",
-    "address_kakao": "충남 태안군 안면읍 안면대로 2676"
+    "address_kakao": "충남 태안군 안면읍 안면대로 2676",
+    "phone": "041-674-0777",
+    "place_url": "http://place.map.kakao.com/8050698",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "평일오픈",
@@ -1053,7 +1127,10 @@
       "address": "서울 강남구 도산대로11길 34",
       "distance_m": 146,
       "similarity": 0.0
-    }
+    },
+    "phone": "010-2764-9311",
+    "place_url": "http://place.map.kakao.com/332673367",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "조개구이",
@@ -1074,7 +1151,10 @@
       "address": "부산 강서구 르노삼성대로 602",
       "distance_m": 8,
       "similarity": 0.33
-    }
+    },
+    "phone": "051-271-0580",
+    "place_url": "http://place.map.kakao.com/25863654",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개"
   },
   {
     "name": "옛날국수갤러리",
@@ -1095,7 +1175,10 @@
       "address": "제주특별자치도 제주시 한경면 고산로 73",
       "distance_m": 1,
       "similarity": 0.57
-    }
+    },
+    "phone": "064-773-7778",
+    "place_url": "http://place.map.kakao.com/1994421978",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "경동시장 평양냉면",
@@ -1118,7 +1201,10 @@
       "similarity": 0.75
     },
     "name_original": "경동시장냉면",
-    "address_kakao": "서울 동대문구 왕산로29길 4"
+    "address_kakao": "서울 동대문구 왕산로29길 4",
+    "phone": "02-965-8258",
+    "place_url": "http://place.map.kakao.com/810920158",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "명동라면",
@@ -1139,7 +1225,10 @@
       "address": "서울 중구 명동10길 19-10",
       "distance_m": 41,
       "similarity": 0.5
-    }
+    },
+    "phone": "02-756-5477",
+    "place_url": "http://place.map.kakao.com/10904319",
+    "kakao_category": "음식점 > 분식 > 틈새라면"
   },
   {
     "name": "달인군만두",
@@ -1160,7 +1249,10 @@
       "address": "서울 동대문구 전농로2가길 13",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "010-6487-2465",
+    "place_url": "http://place.map.kakao.com/846439834",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "샤브샤브",
@@ -1181,7 +1273,10 @@
       "address": "서울 송파구 올림픽로30길 10",
       "distance_m": 127,
       "similarity": 0.36
-    }
+    },
+    "phone": "02-421-2020",
+    "place_url": "http://place.map.kakao.com/129475538",
+    "kakao_category": "음식점 > 샤브샤브 > 등촌샤브칼국수"
   },
   {
     "name": "모던샤브하우스 GFC점",
@@ -1204,7 +1299,10 @@
       "similarity": 0.8
     },
     "name_original": "모던샤브",
-    "address_kakao": "서울 강남구 테헤란로 152"
+    "address_kakao": "서울 강남구 테헤란로 152",
+    "phone": "02-569-8330",
+    "place_url": "http://place.map.kakao.com/1484187628",
+    "kakao_category": "음식점 > 샤브샤브"
   },
   {
     "name": "술붗뼈구이",
@@ -1246,7 +1344,10 @@
       "address": "서울 서대문구 충정로4길 24",
       "distance_m": 0,
       "similarity": 0.29
-    }
+    },
+    "phone": "02-313-7911",
+    "place_url": "http://place.map.kakao.com/579159440",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "서울곱창",
@@ -1267,7 +1368,10 @@
       "address": "서울 용산구 이태원로 208",
       "distance_m": 47,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-6084-7962",
+    "place_url": "http://place.map.kakao.com/2068696575",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "소고기",
@@ -1351,7 +1455,10 @@
       "address": "서울 은평구 증산로3길 5-5",
       "distance_m": 88,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-302-2214",
+    "place_url": "http://place.map.kakao.com/16327584",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "대왕연어초밥",
@@ -1416,7 +1523,9 @@
       "similarity": 0.8
     },
     "name_original": "함께라면",
-    "address_kakao": "서울 은평구 역말로 100"
+    "address_kakao": "서울 은평구 역말로 100",
+    "place_url": "http://place.map.kakao.com/320139584",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "생소갈비",
@@ -1473,7 +1582,9 @@
     "duplicate": false,
     "source": "search",
     "lat": 37.520292,
-    "lng": 126.91014
+    "lng": 126.91014,
+    "place_url": "http://place.map.kakao.com/434745756",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "메밀국수",
@@ -1536,7 +1647,10 @@
       "address": "경기 양평군 서종면 사랑제길 8",
       "distance_m": 4,
       "similarity": 0.2
-    }
+    },
+    "phone": "031-772-8293",
+    "place_url": "http://place.map.kakao.com/1548676412",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "기장치킨",
@@ -1635,7 +1749,10 @@
       "address": "경북 영양군 영양읍 동서대로 63",
       "distance_m": 7,
       "similarity": 0.22
-    }
+    },
+    "phone": "054-682-5582",
+    "place_url": "http://place.map.kakao.com/136039476",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "오지카피",
@@ -1679,7 +1796,10 @@
       "similarity": 0.8
     },
     "name_original": "1번지옛날통닭",
-    "address_kakao": "경기 의정부시 녹양로 55"
+    "address_kakao": "경기 의정부시 녹양로 55",
+    "phone": "031-855-7676",
+    "place_url": "http://place.map.kakao.com/1859967502",
+    "kakao_category": "음식점 > 치킨"
   },
   {
     "name": "송옥 압구정분점",
@@ -1702,7 +1822,10 @@
       "similarity": 0.8
     },
     "name_original": "분점",
-    "address_kakao": "서울 강남구 언주로172길 62"
+    "address_kakao": "서울 강남구 언주로172길 62",
+    "phone": "02-515-3297",
+    "place_url": "http://place.map.kakao.com/1441213106",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "브라더야끼",
@@ -1725,7 +1848,10 @@
       "similarity": 0.0
     },
     "name_original": "고깃집",
-    "address_kakao": "서울 중랑구 공릉로 38"
+    "address_kakao": "서울 중랑구 공릉로 38",
+    "phone": "02-972-9500",
+    "place_url": "http://place.map.kakao.com/1541856015",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "호랑이쌀국수",
@@ -1789,7 +1915,10 @@
       "distance_m": 21,
       "similarity": 0.29
     },
-    "address_kakao": "서울 강북구 덕릉로 126"
+    "address_kakao": "서울 강북구 덕릉로 126",
+    "phone": "02-985-8866",
+    "place_url": "http://place.map.kakao.com/2105466925",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "백년갈비 신정점",
@@ -1812,7 +1941,10 @@
       "similarity": 0.8
     },
     "name_original": "백년갈비",
-    "address_kakao": "서울 양천구 중앙로46길 1"
+    "address_kakao": "서울 양천구 중앙로46길 1",
+    "phone": "02-2692-9992",
+    "place_url": "http://place.map.kakao.com/789680804",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비 > 백년수갈비"
   },
   {
     "name": "냉동삼겹살",
@@ -1938,7 +2070,10 @@
       "address": "경기 수원시 팔달구 인계로 126",
       "distance_m": 10,
       "similarity": 1.0
-    }
+    },
+    "phone": "031-225-5664",
+    "place_url": "http://place.map.kakao.com/24637464",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "대전떡볶이",
@@ -1959,7 +2094,10 @@
       "address": "대전 중구 계룡로874번길 9",
       "distance_m": 30,
       "similarity": 0.25
-    }
+    },
+    "phone": "042-537-0010",
+    "place_url": "http://place.map.kakao.com/161170759",
+    "kakao_category": "음식점 > 분식 > 떡볶이 > 신전떡볶이"
   },
   {
     "name": "원오뎅집",
@@ -2003,7 +2141,10 @@
       "similarity": 0.09
     },
     "name_original": "오뎅집",
-    "address_kakao": "경기 오산시 내삼미로79번길 22"
+    "address_kakao": "경기 오산시 내삼미로79번길 22",
+    "phone": "031-377-5978",
+    "place_url": "http://place.map.kakao.com/309319474",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "하여튼바",
@@ -2039,7 +2180,10 @@
       "address": "제주특별자치도 서귀포시 성산읍 신양로 69",
       "distance_m": 0,
       "similarity": 0.38
-    }
+    },
+    "phone": "0503-7152-6162",
+    "place_url": "http://place.map.kakao.com/377646203",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "먹었으니까흑돼지",
@@ -2083,7 +2227,10 @@
       "similarity": 0.8
     },
     "name_original": "기영이숯불두마리치킨석촌",
-    "address_kakao": "서울 송파구 석촌호수로18길 10"
+    "address_kakao": "서울 송파구 석촌호수로18길 10",
+    "phone": "02-422-0803",
+    "place_url": "http://place.map.kakao.com/1200855510",
+    "kakao_category": "음식점 > 치킨 > 기영이숯불두마리치킨"
   },
   {
     "name": "교동집",
@@ -2106,7 +2253,10 @@
       "similarity": 1.0
     },
     "name_original": "교동집",
-    "address_kakao": "서울 마포구 동교로 208"
+    "address_kakao": "서울 마포구 동교로 208",
+    "phone": "02-337-3663",
+    "place_url": "http://place.map.kakao.com/8673547",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "청어알낙지",
@@ -2190,7 +2340,10 @@
       "address": "경기 화성시 동탄구 동탄지성로 134",
       "distance_m": 12,
       "similarity": 0.22
-    }
+    },
+    "phone": "031-273-3575",
+    "place_url": "http://place.map.kakao.com/2025126539",
+    "kakao_category": "음식점 > 한식 > 국수 > 망향비빔국수"
   },
   {
     "name": "연탄구이",
@@ -2232,7 +2385,10 @@
       "address": "경기 화성시 동탄구 지산1길 7-6",
       "distance_m": 3,
       "similarity": 0.43
-    }
+    },
+    "phone": "031-895-6996",
+    "place_url": "http://place.map.kakao.com/1013208288",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "짬뽕라면",
@@ -2374,7 +2530,10 @@
       "address": "강원특별자치도 춘천시 신북읍 신샘밭로 771",
       "distance_m": 105,
       "similarity": 0.67
-    }
+    },
+    "phone": "033-241-5505",
+    "place_url": "http://place.map.kakao.com/9369526",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "축제닭갈비막국수",
@@ -2397,7 +2556,10 @@
       "similarity": 0.8
     },
     "name_original": "축제",
-    "address_kakao": "강원특별자치도 춘천시 동내면 외솔길19번길 49"
+    "address_kakao": "강원특별자치도 춘천시 동내면 외솔길19번길 49",
+    "phone": "033-242-0872",
+    "place_url": "http://place.map.kakao.com/12589348",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "콩나무집닭갈비",
@@ -2565,7 +2727,9 @@
       "address": "전북특별자치도 군산시 신금길 18",
       "distance_m": 53,
       "similarity": 0.8
-    }
+    },
+    "place_url": "http://place.map.kakao.com/276397800",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "해장국집",
@@ -2586,7 +2750,10 @@
       "address": "전북특별자치도 군산시 문화로 107",
       "distance_m": 111,
       "similarity": 0.33
-    }
+    },
+    "phone": "0503-7150-6775",
+    "place_url": "http://place.map.kakao.com/444013409",
+    "kakao_category": "음식점 > 한식 > 해장국"
   },
   {
     "name": "산북동달구지 군산본점",
@@ -2609,7 +2776,10 @@
       "similarity": 0.8
     },
     "name_original": "산북동달구지",
-    "address_kakao": "전북특별자치도 군산시 칠성6길 144"
+    "address_kakao": "전북특별자치도 군산시 칠성6길 144",
+    "phone": "063-468-3534",
+    "place_url": "http://place.map.kakao.com/26989246",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "총집",
@@ -2716,7 +2886,10 @@
       "similarity": 0.07
     },
     "address_kakao": "강원특별자치도 원주시 북원로 1843",
-    "name_original": "수육집"
+    "name_original": "수육집",
+    "phone": "033-761-7300",
+    "place_url": "http://place.map.kakao.com/10264806",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "시장떡볶이",
@@ -2737,7 +2910,9 @@
       "address": "강원특별자치도 원주시 중앙시장길 31-1",
       "distance_m": 153,
       "similarity": 0.36
-    }
+    },
+    "place_url": "http://place.map.kakao.com/25849180",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "능동타코집",
@@ -2760,7 +2935,10 @@
       "similarity": 0.8
     },
     "name_original": "타코집",
-    "address_kakao": "서울 광진구 능동로32길 5"
+    "address_kakao": "서울 광진구 능동로32길 5",
+    "phone": "0503-7152-4312",
+    "place_url": "http://place.map.kakao.com/1756087796",
+    "kakao_category": "음식점 > 양식 > 멕시칸,브라질"
   },
   {
     "name": "빨간오뎅집",
@@ -2804,7 +2982,10 @@
       "similarity": 0.8
     },
     "name_original": "선화동소머리해장국",
-    "address_kakao": "대전 중구 선화로 128"
+    "address_kakao": "대전 중구 선화로 128",
+    "phone": "042-637-5529",
+    "place_url": "http://place.map.kakao.com/23585179",
+    "kakao_category": "음식점 > 한식 > 해장국"
   },
   {
     "name": "관련식품",
@@ -2955,7 +3136,10 @@
       "address": "강원특별자치도 춘천시 남산면 종자리로 21",
       "distance_m": 2,
       "similarity": 0.27
-    }
+    },
+    "phone": "033-262-9339",
+    "place_url": "http://place.map.kakao.com/1278308617",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "춘천닭갈비",
@@ -2976,7 +3160,10 @@
       "address": "강원특별자치도 춘천시 시청길10번길 15",
       "distance_m": 164,
       "similarity": 0.5
-    }
+    },
+    "phone": "033-255-1998",
+    "place_url": "http://place.map.kakao.com/20393198",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "해물볶음밥",
@@ -3102,7 +3289,9 @@
       "address": "경기 수원시 팔달구 매산로 7-1",
       "distance_m": 67,
       "similarity": 0.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1977438067",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "짬뽕집",
@@ -3138,7 +3327,10 @@
       "address": "제주특별자치도 서귀포시 천제연로 186-1",
       "distance_m": 1,
       "similarity": 0.5
-    }
+    },
+    "phone": "064-738-4949",
+    "place_url": "http://place.map.kakao.com/27445077",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "키이로",
@@ -3159,7 +3351,9 @@
       "address": "서울 강남구 강남대로 652",
       "distance_m": 4,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1720787888",
+    "kakao_category": "음식점 > 일식"
   },
   {
     "name": "햄피자치즈라면",
@@ -3180,7 +3374,9 @@
       "address": "인천 미추홀구 석정로150번길 43",
       "distance_m": 7,
       "similarity": 0.29
-    }
+    },
+    "place_url": "http://place.map.kakao.com/16513914",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "매울신신신라면",
@@ -3243,7 +3439,9 @@
       "address": "서울 동대문구 전농로3길 1-2",
       "distance_m": 109,
       "similarity": 0.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1900009507",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "설레는마음",
@@ -3287,7 +3485,10 @@
       "similarity": 1.0
     },
     "name_original": "이돈집",
-    "address_kakao": "서울 성동구 마조로3길 6"
+    "address_kakao": "서울 성동구 마조로3길 6",
+    "phone": "02-2292-8885",
+    "place_url": "http://place.map.kakao.com/92127402",
+    "kakao_category": "음식점 > 퓨전요리 > 퓨전한식"
   },
   {
     "name": "백반집",
@@ -3309,7 +3510,10 @@
       "distance_m": 49,
       "similarity": 0.11
     },
-    "address_kakao": "서울 성북구 성북로23길 4"
+    "address_kakao": "서울 성북구 성북로23길 4",
+    "phone": "02-743-0325",
+    "place_url": "http://place.map.kakao.com/23300753",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "호수집 원조닭꼬치",
@@ -3332,7 +3536,10 @@
       "similarity": 0.8
     },
     "name_original": "호수집",
-    "address_kakao": "서울 중구 청파로 443"
+    "address_kakao": "서울 중구 청파로 443",
+    "phone": "02-392-0695",
+    "place_url": "http://place.map.kakao.com/27276847",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "육덕진",
@@ -3398,7 +3605,10 @@
       "similarity": 0.0
     },
     "address_kakao": "인천 미추홀구 토금북로38번길 4",
-    "name_original": "오리집"
+    "name_original": "오리집",
+    "phone": "032-881-7877",
+    "place_url": "http://place.map.kakao.com/455995513",
+    "kakao_category": "음식점 > 한식 > 찌개,전골"
   },
   {
     "name": "부산칼국수",
@@ -3440,7 +3650,10 @@
       "address": "부산 연제구 반송로 18-6",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "051-853-2345",
+    "place_url": "http://place.map.kakao.com/1368195059",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "영진돼지국밥 본점",
@@ -3463,7 +3676,10 @@
       "similarity": 0.8
     },
     "name_original": "돼지국밥",
-    "address_kakao": "부산 사하구 하신번영로157번길 39"
+    "address_kakao": "부산 사하구 하신번영로157번길 39",
+    "phone": "051-206-3820",
+    "place_url": "http://place.map.kakao.com/16867846",
+    "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
     "name": "숙서근처",
@@ -3505,7 +3721,9 @@
       "address": "부산 수영구 민락수변로 7",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/23612090",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개"
   },
   {
     "name": "조개구이",
@@ -3526,7 +3744,10 @@
       "address": "부산 해운대구 청사포로 159",
       "distance_m": 0,
       "similarity": 0.25
-    }
+    },
+    "phone": "051-702-9887",
+    "place_url": "http://place.map.kakao.com/20548611",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개"
   },
   {
     "name": "샤브샤브",
@@ -3547,7 +3768,10 @@
       "address": "부산 부산진구 동천로 71",
       "distance_m": 63,
       "similarity": 0.8
-    }
+    },
+    "phone": "051-804-7141",
+    "place_url": "http://place.map.kakao.com/16463355",
+    "kakao_category": "음식점 > 샤브샤브"
   },
   {
     "name": "꼬치포차",
@@ -3632,7 +3856,10 @@
       "address": "부산 해운대구 우동1로20번길 74",
       "distance_m": 42,
       "similarity": 1.0
-    }
+    },
+    "phone": "051-743-2814",
+    "place_url": "http://place.map.kakao.com/20522414",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "털보감자탕",
@@ -3653,7 +3880,10 @@
       "address": "서울 서초구 나루터로15길 16",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-515-9535",
+    "place_url": "http://place.map.kakao.com/10898044",
+    "kakao_category": "음식점 > 한식 > 감자탕"
   },
   {
     "name": "건강식품",
@@ -3697,7 +3927,9 @@
       "similarity": 1.0
     },
     "name_original": "라면팜외대점",
-    "address_kakao": "서울 동대문구 이문로25길 36"
+    "address_kakao": "서울 동대문구 이문로25길 36",
+    "place_url": "http://place.map.kakao.com/1566501996",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "태안맛집 바다꽃게장",
@@ -3720,7 +3952,10 @@
       "similarity": 0.8
     },
     "name_original": "바다꽃게장",
-    "address_kakao": "충남 태안군 태안읍 능샘1길 45"
+    "address_kakao": "충남 태안군 태안읍 능샘1길 45",
+    "phone": "041-674-5197",
+    "place_url": "http://place.map.kakao.com/10406311",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "딴뚝통나무집식당",
@@ -3743,7 +3978,10 @@
       "similarity": 0.12
     },
     "address_kakao": "충남 태안군 안면읍 조운막터길 23-22",
-    "name_original": "단골집"
+    "name_original": "단골집",
+    "phone": "041-673-1645",
+    "place_url": "http://place.map.kakao.com/12344439",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "된장라면",
@@ -3827,7 +4065,10 @@
       "address": "서울 용산구 원효로41길 54",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-717-3387",
+    "place_url": "http://place.map.kakao.com/27243872",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "이제내고양도",
@@ -3884,7 +4125,10 @@
       "address": "서울 송파구 올림픽로32길 18-21",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "0502-5553-0355",
+    "place_url": "http://place.map.kakao.com/286980666",
+    "kakao_category": "음식점 > 중식 > 양꼬치"
   },
   {
     "name": "고쿠텐 일산점",
@@ -3907,7 +4151,10 @@
       "similarity": 0.2
     },
     "name_original": "찜닭집",
-    "address_kakao": "경기 고양시 일산동구 정발산로 24"
+    "address_kakao": "경기 고양시 일산동구 정발산로 24",
+    "phone": "031-901-6834",
+    "place_url": "http://place.map.kakao.com/613443768",
+    "kakao_category": "음식점 > 일식"
   },
   {
     "name": "록갈비 사당이수점",
@@ -3930,7 +4177,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 동작구 사당로28길 5",
-    "name_original": "옆집"
+    "name_original": "옆집",
+    "phone": "02-522-4445",
+    "place_url": "http://place.map.kakao.com/1896145468",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "천원국수",
@@ -3951,7 +4201,10 @@
       "address": "충남 천안시 동남구 문암로 66",
       "distance_m": 14,
       "similarity": 1.0
-    }
+    },
+    "phone": "041-554-0965",
+    "place_url": "http://place.map.kakao.com/15746761",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "옛날국수집",
@@ -3974,7 +4227,10 @@
       "similarity": 0.8
     },
     "name_original": "옛날국수",
-    "address_kakao": "제주특별자치도 제주시 애월읍 하귀로 56"
+    "address_kakao": "제주특별자치도 제주시 애월읍 하귀로 56",
+    "phone": "064-711-8174",
+    "place_url": "http://place.map.kakao.com/1796418844",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "특집",
@@ -4048,7 +4304,10 @@
       "similarity": 0.8
     },
     "name_original": "동떡이즉석떡볶이",
-    "address_kakao": "경기 수원시 영통구 아주로 22"
+    "address_kakao": "경기 수원시 영통구 아주로 22",
+    "phone": "031-215-0208",
+    "place_url": "http://place.map.kakao.com/26532037",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "청양짜장",
@@ -4113,7 +4372,10 @@
       "similarity": 0.8
     },
     "name_original": "김밥나라",
-    "address_kakao": "충남 논산시 시민로307번길 14-10"
+    "address_kakao": "충남 논산시 시민로307번길 14-10",
+    "phone": "041-735-7510",
+    "place_url": "http://place.map.kakao.com/10194264",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "천원국수",
@@ -4155,7 +4417,10 @@
       "address": "서울 영등포구 여의대방로 383",
       "distance_m": 26,
       "similarity": 0.6
-    }
+    },
+    "phone": "02-780-8191",
+    "place_url": "http://place.map.kakao.com/21423297",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "도중",
@@ -4193,7 +4458,10 @@
       "similarity": 0.0
     },
     "address_kakao": "경기 평택시 고덕국제4길 74",
-    "name_original": "책임집"
+    "name_original": "책임집",
+    "phone": "031-611-4808",
+    "place_url": "http://place.map.kakao.com/1953290667",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점"
   },
   {
     "name": "분이라면",
@@ -4319,7 +4587,10 @@
       "address": "서울 영등포구 영등포로62길 10",
       "distance_m": 6,
       "similarity": 0.56
-    }
+    },
+    "phone": "010-5395-1151",
+    "place_url": "http://place.map.kakao.com/11962368",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "한우곱창",
@@ -4340,7 +4611,10 @@
       "address": "전남 목포시 미항로 87-1",
       "distance_m": 0,
       "similarity": 0.14
-    }
+    },
+    "phone": "061-285-8144",
+    "place_url": "http://place.map.kakao.com/453289976",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "바다포차",
@@ -4361,7 +4635,10 @@
       "address": "전남 목포시 장미로 105",
       "distance_m": 9,
       "similarity": 1.0
-    }
+    },
+    "phone": "061-287-0603",
+    "place_url": "http://place.map.kakao.com/1771439324",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "대창구이",
@@ -4382,7 +4659,9 @@
       "address": "전남 목포시 원형로 2",
       "distance_m": 0,
       "similarity": 0.17
-    }
+    },
+    "place_url": "http://place.map.kakao.com/475900113",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "떡갈비백반",
@@ -4447,7 +4726,10 @@
       "similarity": 0.8
     },
     "name_original": "숯불갈비",
-    "address_kakao": "전남 목포시 남악로 22-14"
+    "address_kakao": "전남 목포시 남악로 22-14",
+    "phone": "061-281-7474",
+    "place_url": "http://place.map.kakao.com/1554411938",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "간장게장",
@@ -4468,7 +4750,10 @@
       "address": "충남 당진시 송악읍 신복운로 173-1",
       "distance_m": 2,
       "similarity": 0.12
-    }
+    },
+    "phone": "041-357-5006",
+    "place_url": "http://place.map.kakao.com/27414603",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "해랑스시",
@@ -4510,7 +4795,10 @@
       "address": "서울 강동구 상암로 86",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-473-9291",
+    "place_url": "http://place.map.kakao.com/16678373",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "즉석우동짜장",
@@ -4533,7 +4821,9 @@
       "similarity": 0.8
     },
     "name_original": "즉석우동",
-    "address_kakao": "서울 영등포구 대방천로 260"
+    "address_kakao": "서울 영등포구 대방천로 260",
+    "place_url": "http://place.map.kakao.com/16535724",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "보일링크랩쉬림프",
@@ -4649,7 +4939,10 @@
       "similarity": 0.8
     },
     "name_original": "한추(한잔의추억)",
-    "address_kakao": "서울 강남구 논현로175길 68"
+    "address_kakao": "서울 강남구 논현로175길 68",
+    "phone": "02-541-0969",
+    "place_url": "http://place.map.kakao.com/12250697",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점"
   },
   {
     "name": "백반집",
@@ -4733,7 +5026,10 @@
       "address": "제주특별자치도 서귀포시 천지로 42",
       "distance_m": 6,
       "similarity": 0.4
-    }
+    },
+    "phone": "064-763-2202",
+    "place_url": "http://place.map.kakao.com/20786749",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "돼지자투리구이",
@@ -4819,7 +5115,10 @@
       "similarity": 0.8
     },
     "name_original": "국수집",
-    "address_kakao": "전북특별자치도 완주군 구이면 상하학길 94"
+    "address_kakao": "전북특별자치도 완주군 구이면 상하학길 94",
+    "phone": "0502-5551-8633",
+    "place_url": "http://place.map.kakao.com/1045096704",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "통돼지구이",
@@ -4840,7 +5139,10 @@
       "address": "대구 수성구 들안로 37",
       "distance_m": 1,
       "similarity": 0.33
-    }
+    },
+    "phone": "053-761-7008",
+    "place_url": "http://place.map.kakao.com/18532862",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "우유라면",
@@ -4903,7 +5205,10 @@
       "address": "강원특별자치도 춘천시 공지로 425-2",
       "distance_m": 0,
       "similarity": 0.31
-    }
+    },
+    "phone": "033-255-8955",
+    "place_url": "http://place.map.kakao.com/1105065636",
+    "kakao_category": "음식점 > 한식 > 찌개,전골 > 땅스부대찌개"
   },
   {
     "name": "생고급양갈비",
@@ -4989,7 +5294,10 @@
       "similarity": 0.0
     },
     "address_kakao": "인천 연수구 아트센터대로168번길 100",
-    "name_original": "단골집"
+    "name_original": "단골집",
+    "phone": "0502-5552-4304",
+    "place_url": "http://place.map.kakao.com/1840313473",
+    "kakao_category": "음식점 > 중식"
   },
   {
     "name": "조개전골",
@@ -5010,7 +5318,10 @@
       "address": "인천 중구 은하수로29번길 36-1",
       "distance_m": 129,
       "similarity": 0.29
-    }
+    },
+    "phone": "010-7246-1170",
+    "place_url": "http://place.map.kakao.com/267664803",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개"
   },
   {
     "name": "사노라면",
@@ -5073,7 +5384,10 @@
       "address": "서울 강남구 강남대로102길 14",
       "distance_m": 45,
       "similarity": 0.18
-    }
+    },
+    "phone": "02-555-4034",
+    "place_url": "http://place.map.kakao.com/1424086789",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "빙그레김밥",
@@ -5094,7 +5408,10 @@
       "address": "강원특별자치도 강릉시 토성로 153",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "033-642-4073",
+    "place_url": "http://place.map.kakao.com/23400262",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "홍게비빔밥",
@@ -5138,7 +5455,9 @@
       "similarity": 0.8
     },
     "name_original": "오징어순대",
-    "address_kakao": "강원특별자치도 강릉시 금성로 4"
+    "address_kakao": "강원특별자치도 강릉시 금성로 4",
+    "place_url": "http://place.map.kakao.com/51051351",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "명화횟집",
@@ -5239,7 +5558,10 @@
       "similarity": 0.0
     },
     "address_kakao": "강원특별자치도 삼척시 근덕면 교가길 13-3",
-    "name_original": "나온집"
+    "name_original": "나온집",
+    "phone": "033-573-7749",
+    "place_url": "http://place.map.kakao.com/23791683",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "석관동떡볶이 수유점",
@@ -5262,7 +5584,10 @@
       "similarity": 1.0
     },
     "name_original": "석관동떡볶이수유점",
-    "address_kakao": "서울 강북구 도봉로87길 14"
+    "address_kakao": "서울 강북구 도봉로87길 14",
+    "phone": "02-993-1674",
+    "place_url": "http://place.map.kakao.com/27219418",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "킹크랩라면",
@@ -5306,7 +5631,10 @@
       "similarity": 0.22
     },
     "address_kakao": "경기 구리시 안골로 100",
-    "name_original": "라멘집"
+    "name_original": "라멘집",
+    "phone": "031-566-6022",
+    "place_url": "http://place.map.kakao.com/16191516",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "상황이라면",
@@ -5371,7 +5699,10 @@
       "similarity": 0.0
     },
     "name_original": "문제집",
-    "address_kakao": "대전 유성구 문지로299번길 86-10"
+    "address_kakao": "대전 유성구 문지로299번길 86-10",
+    "phone": "042-863-1207",
+    "place_url": "http://place.map.kakao.com/2104990491",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "쇠고기",
@@ -5497,7 +5828,10 @@
       "address": "경북 문경시 문경읍 새재로 918",
       "distance_m": 2,
       "similarity": 0.0
-    }
+    },
+    "phone": "054-571-8889",
+    "place_url": "http://place.map.kakao.com/9000907",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "부암동돈가스집1979",
@@ -5520,7 +5854,10 @@
       "similarity": 0.8
     },
     "name_original": "돈가스집",
-    "address_kakao": "서울 종로구 백석동길 5"
+    "address_kakao": "서울 종로구 백석동길 5",
+    "phone": "02-395-3566",
+    "place_url": "http://place.map.kakao.com/1546804829",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "옛날국수맛집",
@@ -5543,7 +5880,10 @@
       "similarity": 0.8
     },
     "name_original": "옛날국수",
-    "address_kakao": "서울 종로구 자하문로 11"
+    "address_kakao": "서울 종로구 자하문로 11",
+    "phone": "02-735-8084",
+    "place_url": "http://place.map.kakao.com/12502196",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "짬뽕라면",
@@ -5564,7 +5904,10 @@
       "address": "서울 종로구 율곡로3길 82",
       "distance_m": 0,
       "similarity": 0.2
-    }
+    },
+    "phone": "02-733-3330",
+    "place_url": "http://place.map.kakao.com/10371445",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "황금포차",
@@ -5585,7 +5928,9 @@
       "address": "서울 중랑구 용마산로115길 72",
       "distance_m": 6,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/16559947",
+    "kakao_category": "음식점 > 술집 > 실내포장마차"
   },
   {
     "name": "원할머니마늘보쌈",
@@ -5627,7 +5972,10 @@
       "address": "제주특별자치도 제주시 관덕로8길 22",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "064-753-3397",
+    "place_url": "http://place.map.kakao.com/12637040",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "진아떡집",
@@ -5648,7 +5996,10 @@
       "address": "제주특별자치도 제주시 동문로4길 7-1",
       "distance_m": 5,
       "similarity": 1.0
-    }
+    },
+    "phone": "064-757-0229",
+    "place_url": "http://place.map.kakao.com/10777503",
+    "kakao_category": "음식점 > 간식 > 떡,한과"
   },
   {
     "name": "사랑분식",
@@ -5669,7 +6020,10 @@
       "address": "제주특별자치도 제주시 동문로4길 12",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "064-757-5058",
+    "place_url": "http://place.map.kakao.com/7915275",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "갈치통구이",
@@ -5690,7 +6044,10 @@
       "address": "제주특별자치도 서귀포시 색달중앙로 22",
       "distance_m": 120,
       "similarity": 0.31
-    }
+    },
+    "phone": "0507-1397-7758",
+    "place_url": "http://place.map.kakao.com/10207672",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "닭고기",
@@ -5712,7 +6069,10 @@
       "distance_m": 45,
       "similarity": 0.17
     },
-    "address_kakao": "경북 안동시 번영길 6"
+    "address_kakao": "경북 안동시 번영길 6",
+    "phone": "054-855-7272",
+    "place_url": "http://place.map.kakao.com/10783088",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "말고기초밥",
@@ -5733,7 +6093,10 @@
       "address": "제주특별자치도 제주시 북성로 43",
       "distance_m": 7,
       "similarity": 0.5
-    }
+    },
+    "phone": "064-758-8250",
+    "place_url": "http://place.map.kakao.com/1597639792",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점"
   },
   {
     "name": "고기초밥",
@@ -5796,7 +6159,9 @@
       "address": "서울 중구 마른내로 74",
       "distance_m": 92,
       "similarity": 0.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/825500104",
+    "kakao_category": "음식점 > 술집 > 와인바"
   },
   {
     "name": "백만불식품",
@@ -5817,7 +6182,10 @@
       "address": "서울 중구 퇴계로51길 27",
       "distance_m": 38,
       "similarity": 0.0
-    }
+    },
+    "phone": "070-8987-6787",
+    "place_url": "http://place.map.kakao.com/530101305",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "제주오겹살",
@@ -5882,7 +6250,10 @@
       "similarity": 0.83
     },
     "name_original": "화룡마라룽샤",
-    "address_kakao": "서울 영등포구 대림로29길 13"
+    "address_kakao": "서울 영등포구 대림로29길 13",
+    "phone": "02-832-1116",
+    "place_url": "http://place.map.kakao.com/1993119440",
+    "kakao_category": "음식점 > 중식"
   },
   {
     "name": "회전초밥집",
@@ -5924,7 +6295,9 @@
       "address": "서울 마포구 와우산로29길 26",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1260873032",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "한식주점",
@@ -6010,7 +6383,10 @@
       "similarity": 0.2
     },
     "name_original": "소바집",
-    "address_kakao": "경기 고양시 일산서구 대화로 362"
+    "address_kakao": "경기 고양시 일산서구 대화로 362",
+    "phone": "031-907-5115",
+    "place_url": "http://place.map.kakao.com/8527115",
+    "kakao_category": "음식점 > 일식"
   },
   {
     "name": "불고기백반",
@@ -6054,7 +6430,10 @@
       "similarity": 0.8
     },
     "name_original": "새집",
-    "address_kakao": "전북특별자치도 순창군 순창읍 순창6길 10"
+    "address_kakao": "전북특별자치도 순창군 순창읍 순창6길 10",
+    "phone": "063-653-6989",
+    "place_url": "http://place.map.kakao.com/2073887919",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "꽃새우영번지 역삼점",
@@ -6077,7 +6456,10 @@
       "similarity": 1.0
     },
     "name_original": "꽃새우영번지역삼점",
-    "address_kakao": "서울 강남구 언주로 536"
+    "address_kakao": "서울 강남구 언주로 536",
+    "phone": "02-501-2050",
+    "place_url": "http://place.map.kakao.com/25968685",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "욕지도해물",
@@ -6098,7 +6480,10 @@
       "address": "경남 통영시 욕지면 욕지일주로 95-6",
       "distance_m": 172,
       "similarity": 0.0
-    }
+    },
+    "phone": "055-644-0277",
+    "place_url": "http://place.map.kakao.com/16251592",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "오다이꼬마김밥이",
@@ -6140,7 +6525,9 @@
       "address": "서울 동대문구 전농로 147",
       "distance_m": 16,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1838820758",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "냄비라면",
@@ -6205,7 +6592,10 @@
       "similarity": 0.4
     },
     "name_original": "국수집",
-    "address_kakao": "충남 청양군 청양읍 중앙로 101"
+    "address_kakao": "충남 청양군 청양읍 중앙로 101",
+    "phone": "041-943-0932",
+    "place_url": "http://place.map.kakao.com/1339094877",
+    "kakao_category": "음식점 > 한식 > 해장국"
   },
   {
     "name": "한촌설렁탕 부천본점",
@@ -6228,7 +6618,10 @@
       "similarity": 0.8
     },
     "name_original": "한촌설렁탕",
-    "address_kakao": "경기 부천시 소사구 경인로 92"
+    "address_kakao": "경기 부천시 소사구 경인로 92",
+    "phone": "032-668-2566",
+    "place_url": "http://place.map.kakao.com/1127245866",
+    "kakao_category": "음식점 > 한식 > 설렁탕 > 한촌설렁탕"
   },
   {
     "name": "양평솥뚜껑닭볶음탕",
@@ -6251,7 +6644,10 @@
       "similarity": 0.8
     },
     "name_original": "뚜껑닭볶음",
-    "address_kakao": "경기 양평군 청운면 오목골길 33-1"
+    "address_kakao": "경기 양평군 청운면 오목골길 33-1",
+    "phone": "010-3253-8677",
+    "place_url": "http://place.map.kakao.com/288702753",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "해물라면",
@@ -6293,7 +6689,10 @@
       "address": "서울 종로구 인사동8길 14-1",
       "distance_m": 0,
       "similarity": 0.5
-    }
+    },
+    "phone": "02-735-3361",
+    "place_url": "http://place.map.kakao.com/11162975",
+    "kakao_category": "음식점 > 한식 > 수제비"
   },
   {
     "name": "달인군만두",
@@ -6440,7 +6839,10 @@
       "address": "충남 아산시 번영로234번길 30",
       "distance_m": 21,
       "similarity": 0.0
-    }
+    },
+    "phone": "041-533-6692",
+    "place_url": "http://place.map.kakao.com/1655363967",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 맛찬들왕소금구이"
   },
   {
     "name": "한방양념구이",
@@ -6524,7 +6926,10 @@
       "address": "인천 미추홀구 경원대로 898",
       "distance_m": 80,
       "similarity": 0.0
-    }
+    },
+    "phone": "032-425-0810",
+    "place_url": "http://place.map.kakao.com/1319638521",
+    "kakao_category": "음식점 > 샤브샤브"
   },
   {
     "name": "등촌칼국수",
@@ -6545,7 +6950,10 @@
       "address": "서울 양천구 목동서로 35",
       "distance_m": 1,
       "similarity": 0.5
-    }
+    },
+    "phone": "02-2646-8666",
+    "place_url": "http://place.map.kakao.com/15536487",
+    "kakao_category": "음식점 > 샤브샤브 > 등촌샤브칼국수"
   },
   {
     "name": "포장마차우동",
@@ -6589,7 +6997,10 @@
       "similarity": 0.25
     },
     "name_original": "고깃집",
-    "address_kakao": "전남 영광군 영광읍 신남로 167"
+    "address_kakao": "전남 영광군 영광읍 신남로 167",
+    "phone": "061-353-8100",
+    "place_url": "http://place.map.kakao.com/10866346",
+    "kakao_category": "음식점 > 한식 > 감자탕"
   },
   {
     "name": "경복냉삼",
@@ -6612,7 +7023,10 @@
       "similarity": 0.5
     },
     "name_original": "냉삼집",
-    "address_kakao": "서울 강남구 언주로108길 12"
+    "address_kakao": "서울 강남구 언주로108길 12",
+    "phone": "02-555-1093",
+    "place_url": "http://place.map.kakao.com/608318822",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 삼겹살"
   },
   {
     "name": "솔밭묵집",
@@ -6635,7 +7049,10 @@
       "similarity": 0.25
     },
     "address_kakao": "대전 유성구 관평동 542-5",
-    "name_original": "백반집"
+    "name_original": "백반집",
+    "phone": "042-935-5686",
+    "place_url": "http://place.map.kakao.com/10550442",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "함흥냉면",
@@ -6757,7 +7174,10 @@
       "similarity": 0.8
     },
     "name_original": "참맛있는집",
-    "address_kakao": "대구 남구 중앙대로 203"
+    "address_kakao": "대구 남구 중앙대로 203",
+    "phone": "053-657-2375",
+    "place_url": "http://place.map.kakao.com/2082510957",
+    "kakao_category": "음식점 > 한식 > 국밥 > 국밥참맛있는집"
   },
   {
     "name": "수제비라면",
@@ -6820,7 +7240,10 @@
       "address": "강원특별자치도 속초시 새마을길 58",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "033-632-0777",
+    "place_url": "http://place.map.kakao.com/102928746",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "장수소머리곰탕",
@@ -6843,7 +7266,10 @@
       "similarity": 0.8
     },
     "name_original": "소머리곰탕",
-    "address_kakao": "강원특별자치도 속초시 온천로 94"
+    "address_kakao": "강원특별자치도 속초시 온천로 94",
+    "phone": "033-637-6780",
+    "place_url": "http://place.map.kakao.com/1497918536",
+    "kakao_category": "음식점 > 한식 > 곰탕"
   },
   {
     "name": "즉석떡볶이",
@@ -6927,7 +7353,10 @@
       "address": "서울 관악구 남부순환로226길 36",
       "distance_m": 95,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-874-7776",
+    "place_url": "http://place.map.kakao.com/1808999164",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "진주집",
@@ -6950,7 +7379,10 @@
       "similarity": 0.33
     },
     "address_kakao": "서울 영등포구 국제금융로6길 33",
-    "name_original": "국숫집"
+    "name_original": "국숫집",
+    "phone": "02-780-6108",
+    "place_url": "http://place.map.kakao.com/8094563",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "밀밀국수",
@@ -6992,7 +7424,10 @@
       "address": "인천 서구 서달로137번길 13",
       "distance_m": 17,
       "similarity": 1.0
-    }
+    },
+    "phone": "032-582-0647",
+    "place_url": "http://place.map.kakao.com/27397182",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 삼겹살"
   },
   {
     "name": "소고기",
@@ -7079,7 +7514,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 마포구 망원로 34",
-    "name_original": "빵집"
+    "name_original": "빵집",
+    "phone": "0503-7153-3709",
+    "place_url": "http://place.map.kakao.com/577421308",
+    "kakao_category": "음식점 > 술집 > 와인바"
   },
   {
     "name": "떡갈비",
@@ -7100,7 +7538,10 @@
       "address": "서울 마포구 포은로8길 25",
       "distance_m": 89,
       "similarity": 0.8
-    }
+    },
+    "phone": "02-332-1618",
+    "place_url": "http://place.map.kakao.com/158970766",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "막국수집",
@@ -7121,7 +7562,10 @@
       "address": "경기 고양시 덕양구 서오릉로 688-1",
       "distance_m": 0,
       "similarity": 0.27
-    }
+    },
+    "phone": "031-927-9962",
+    "place_url": "http://place.map.kakao.com/569755540",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "왕갈비",
@@ -7226,7 +7670,10 @@
       "address": "서울 마포구 마포대로 73",
       "distance_m": 147,
       "similarity": 0.8
-    }
+    },
+    "phone": "02-702-2322",
+    "place_url": "http://place.map.kakao.com/826560438",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "건강기능식품",
@@ -7310,7 +7757,10 @@
       "address": "서울 송파구 백제고분로 420",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-422-5081",
+    "place_url": "http://place.map.kakao.com/17296779",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "금룡",
@@ -7417,7 +7867,10 @@
       "address": "경기 시흥시 오이도로157번길 1",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "010-9612-8245",
+    "place_url": "http://place.map.kakao.com/1004412633",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "원조부산족발",
@@ -7440,7 +7893,10 @@
       "similarity": 0.33
     },
     "address_kakao": "부산 중구 광복로 13-1",
-    "name_original": "족발집"
+    "name_original": "족발집",
+    "phone": "051-245-5359",
+    "place_url": "http://place.map.kakao.com/10465006",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "도전먹방",
@@ -7524,7 +7980,10 @@
       "address": "충북 제천시 남산로5길 13",
       "distance_m": 4,
       "similarity": 1.0
-    }
+    },
+    "phone": "043-645-3939",
+    "place_url": "http://place.map.kakao.com/2048083640",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "소고기집",
@@ -7566,7 +8025,9 @@
       "address": "경북 경산시 청운1로 18",
       "distance_m": 0,
       "similarity": 0.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1488629158",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "한일포장마차",
@@ -7608,7 +8069,10 @@
       "address": "서울 노원구 동일로 1078",
       "distance_m": 10,
       "similarity": 0.18
-    }
+    },
+    "phone": "02-971-9719",
+    "place_url": "http://place.map.kakao.com/584400237",
+    "kakao_category": "음식점 > 뷔페 > 고기뷔페 > 청년고기장수"
   },
   {
     "name": "상국이네",
@@ -7629,7 +8093,10 @@
       "address": "부산 해운대구 구남로41번길 40-1",
       "distance_m": 8,
       "similarity": 1.0
-    }
+    },
+    "phone": "051-742-9001",
+    "place_url": "http://place.map.kakao.com/9089301",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "신전떡볶이",
@@ -7644,7 +8111,10 @@
     "duplicate": false,
     "source": "search",
     "lat": 35.934771,
-    "lng": 128.54012
+    "lng": 128.54012,
+    "phone": "053-321-2282",
+    "place_url": "http://place.map.kakao.com/21652657",
+    "kakao_category": "음식점 > 분식 > 떡볶이 > 신전떡볶이"
   },
   {
     "name": "개미분식",
@@ -7665,7 +8135,10 @@
       "address": "대구 중구 동성로 70-10",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "phone": "053-425-7185",
+    "place_url": "http://place.map.kakao.com/21223549",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "부산떡볶이",
@@ -7722,7 +8195,10 @@
       "address": "부산 해운대구 우동1로20번길 74",
       "distance_m": 42,
       "similarity": 1.0
-    }
+    },
+    "phone": "051-743-2814",
+    "place_url": "http://place.map.kakao.com/20522414",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "별미분식",
@@ -7743,7 +8219,10 @@
       "address": "서울 관악구 남현2길 46",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "0503-7154-1565",
+    "place_url": "http://place.map.kakao.com/18984332",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "가라스시 가경점",
@@ -7766,7 +8245,10 @@
       "similarity": 0.8
     },
     "name_original": "가라스시",
-    "address_kakao": "충북 청주시 흥덕구 풍산로 15"
+    "address_kakao": "충북 청주시 흥덕구 풍산로 15",
+    "phone": "0507-1381-9137",
+    "place_url": "http://place.map.kakao.com/142784783",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "연어국수",
@@ -7808,7 +8290,9 @@
       "address": "충북 충주시 금봉5길 2",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/21528830",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "치즈폭탄오븐스파게티",
@@ -7852,7 +8336,10 @@
       "similarity": 0.8
     },
     "name_original": "송화산시도삭면",
-    "address_kakao": "서울 광진구 뚝섬로27길 48"
+    "address_kakao": "서울 광진구 뚝섬로27길 48",
+    "phone": "02-6052-7826",
+    "place_url": "http://place.map.kakao.com/1467670437",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "피씨나인",
@@ -7894,7 +8381,9 @@
       "address": "인천 미추홀구 석정로 142",
       "distance_m": 107,
       "similarity": 0.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/16513914",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "돼지국밥",
@@ -7915,7 +8404,10 @@
       "address": "전남 여수시 통제영5길 11",
       "distance_m": 80,
       "similarity": 0.2
-    }
+    },
+    "phone": "061-665-7333",
+    "place_url": "http://place.map.kakao.com/1716648703",
+    "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
     "name": "삼학집",
@@ -7938,7 +8430,10 @@
       "similarity": 1.0
     },
     "name_original": "삼학집",
-    "address_kakao": "전남 여수시 이순신광장로 200-3"
+    "address_kakao": "전남 여수시 이순신광장로 200-3",
+    "phone": "061-662-0261",
+    "place_url": "http://place.map.kakao.com/469258366",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "깻잎떡볶이",
@@ -7959,7 +8454,10 @@
       "address": "서울 광진구 자양로43길 42",
       "distance_m": 31,
       "similarity": 0.33
-    }
+    },
+    "phone": "02-455-8090",
+    "place_url": "http://place.map.kakao.com/16084697",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "무한리필집",
@@ -8001,7 +8499,10 @@
       "address": "서울 강남구 강남대로152길 35",
       "distance_m": 2,
       "similarity": 0.5
-    }
+    },
+    "phone": "0507-1432-8869",
+    "place_url": "http://place.map.kakao.com/7781842",
+    "kakao_category": "음식점 > 샤브샤브"
   },
   {
     "name": "고깃집",
@@ -8045,7 +8546,10 @@
       "similarity": 0.0
     },
     "name_original": "편집",
-    "address_kakao": "강원특별자치도 원주시 석경길 29"
+    "address_kakao": "강원특별자치도 원주시 석경길 29",
+    "phone": "033-747-1197",
+    "place_url": "http://place.map.kakao.com/9787098",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "순댓국집",
@@ -8066,7 +8570,10 @@
       "address": "경기 여주시 대신면 윤촌2길 3",
       "distance_m": 5,
       "similarity": 0.25
-    }
+    },
+    "phone": "031-883-3578",
+    "place_url": "http://place.map.kakao.com/16948207",
+    "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
     "name": "식사라면",
@@ -8129,7 +8636,9 @@
       "address": "경기 고양시 덕양구 마상로154번길 34",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/606972245",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "남대문갈치조림골목",
@@ -8171,7 +8680,10 @@
       "address": "서울 종로구 삼청로 136-1",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-739-6742",
+    "place_url": "http://place.map.kakao.com/8193918",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "삼겹살집",
@@ -8192,7 +8704,10 @@
       "address": "광주 광산구 수완로 52",
       "distance_m": 136,
       "similarity": 0.3
-    }
+    },
+    "phone": "062-412-9292",
+    "place_url": "http://place.map.kakao.com/2066028585",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 삼겹살"
   },
   {
     "name": "금성식당삼겹살",
@@ -8372,7 +8887,10 @@
       "similarity": 0.17
     },
     "name_original": "편집",
-    "address_kakao": "충북 청주시 흥덕구 오송읍 궁평1길 18"
+    "address_kakao": "충북 청주시 흥덕구 오송읍 궁평1길 18",
+    "phone": "043-238-1283",
+    "place_url": "http://place.map.kakao.com/12813271",
+    "kakao_category": "음식점 > 한식 > 곰탕"
   },
   {
     "name": "소고기",
@@ -8498,7 +9016,10 @@
       "address": "경남 김해시 덕정로201번길 15",
       "distance_m": 4,
       "similarity": 0.6
-    }
+    },
+    "phone": "055-321-8289",
+    "place_url": "http://place.map.kakao.com/1481045921",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "대성식품",
@@ -8536,7 +9057,10 @@
       "similarity": 0.0
     },
     "address_kakao": "경남 김해시 번화1로84번길 34",
-    "name_original": "훠궈집"
+    "name_original": "훠궈집",
+    "phone": "055-339-9365",
+    "place_url": "http://place.map.kakao.com/722845929",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "서울뼈구이매운족발",
@@ -8622,7 +9146,10 @@
       "similarity": 1.0
     },
     "name_original": "영식품",
-    "address_kakao": "서울 성동구 성수이로 127"
+    "address_kakao": "서울 성동구 성수이로 127",
+    "phone": "0507-1315-5511",
+    "place_url": "http://place.map.kakao.com/1040615354",
+    "kakao_category": "음식점 > 술집 > 일본식주점"
   },
   {
     "name": "오도독갈비",
@@ -8666,7 +9193,10 @@
       "similarity": 0.8
     },
     "name_original": "가정집",
-    "address_kakao": "인천 서구 석곶로 18-1"
+    "address_kakao": "인천 서구 석곶로 18-1",
+    "phone": "070-4409-7400",
+    "place_url": "http://place.map.kakao.com/636257011",
+    "kakao_category": "음식점 > 양식"
   },
   {
     "name": "명륜진사갈비 강남역삼점",
@@ -8689,7 +9219,10 @@
       "similarity": 0.8
     },
     "name_original": "명륜진사갈비",
-    "address_kakao": "서울 강남구 도곡로7길 17"
+    "address_kakao": "서울 강남구 도곡로7길 17",
+    "phone": "02-553-7250",
+    "place_url": "http://place.map.kakao.com/2045551139",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비 > 명륜진사갈비"
   },
   {
     "name": "대장갈비",
@@ -8753,7 +9286,10 @@
       "address": "서울 마포구 도화2길 3",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-719-2005",
+    "place_url": "http://place.map.kakao.com/7865809",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "꼭대기집",
@@ -8810,7 +9346,10 @@
       "address": "충북 제천시 남산로5길 13",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "phone": "043-645-3939",
+    "place_url": "http://place.map.kakao.com/2048083640",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "김팔구 수제삼각김밥 인천송도점",
@@ -8833,7 +9372,10 @@
       "similarity": 0.8
     },
     "name_original": "삼각김밥",
-    "address_kakao": "인천 연수구 신송로 153"
+    "address_kakao": "인천 연수구 신송로 153",
+    "phone": "032-831-5589",
+    "place_url": "http://place.map.kakao.com/1719966792",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "웨스턴차이나 한남본점",
@@ -8856,7 +9398,10 @@
       "similarity": 0.8
     },
     "name_original": "웨스턴차이나",
-    "address_kakao": "서울 용산구 독서당로 73"
+    "address_kakao": "서울 용산구 독서당로 73",
+    "phone": "02-795-6751",
+    "place_url": "http://place.map.kakao.com/8035538",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "일반음식점",
@@ -8877,7 +9422,9 @@
       "address": "서울 종로구 우정국로 6",
       "distance_m": 117,
       "similarity": 0.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1463756326",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "일본식오뎅집",
@@ -8921,7 +9468,10 @@
       "similarity": 0.8
     },
     "name_original": "대머리곱창",
-    "address_kakao": "서울 강북구 숭인로 65-10"
+    "address_kakao": "서울 강북구 숭인로 65-10",
+    "phone": "02-985-7002",
+    "place_url": "http://place.map.kakao.com/10252143",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "한우곱창",
@@ -8942,7 +9492,10 @@
       "address": "경기 평택시 비전5로 20-55",
       "distance_m": 12,
       "similarity": 0.5
-    }
+    },
+    "phone": "031-652-3393",
+    "place_url": "http://place.map.kakao.com/1811450266",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "곱창막창대창",
@@ -8984,7 +9537,10 @@
       "address": "서울 서초구 신반포로47길 33-5",
       "distance_m": 4,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-516-1134",
+    "place_url": "http://place.map.kakao.com/12659868",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "매운곳",
@@ -9047,7 +9603,10 @@
       "address": "서울 광진구 동일로22길 117-16",
       "distance_m": 29,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-465-0417",
+    "place_url": "http://place.map.kakao.com/1212542049",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "고깃집",
@@ -9125,7 +9684,10 @@
       "address": "서울 관악구 봉천로62길 2",
       "distance_m": 4,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-872-8805",
+    "place_url": "http://place.map.kakao.com/16586486",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "돈가스집",
@@ -9146,7 +9708,10 @@
       "address": "대전 중구 중앙로164번길 22-7",
       "distance_m": 140,
       "similarity": 0.33
-    }
+    },
+    "phone": "042-221-6595",
+    "place_url": "http://place.map.kakao.com/10594540",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "정원분식",
@@ -9167,7 +9732,10 @@
       "address": "대전 유성구 대덕대로 594",
       "distance_m": 21,
       "similarity": 0.33
-    }
+    },
+    "phone": "042-867-3555",
+    "place_url": "http://place.map.kakao.com/936546422",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "홍게우동",
@@ -9209,7 +9777,10 @@
       "address": "경기 평택시 안중읍 송담2로 55",
       "distance_m": 36,
       "similarity": 0.2
-    }
+    },
+    "phone": "031-684-9960",
+    "place_url": "http://place.map.kakao.com/415695675",
+    "kakao_category": "음식점 > 치킨 > 후라이드참잘하는집"
   },
   {
     "name": "양재분식",
@@ -9230,7 +9801,10 @@
       "address": "서울 서초구 강남대로 224",
       "distance_m": 82,
       "similarity": 0.18
-    }
+    },
+    "phone": "02-575-5751",
+    "place_url": "http://place.map.kakao.com/1970703529",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "시골마을",
@@ -9281,7 +9855,10 @@
       "address": "경기 여주시 도예로 59",
       "distance_m": 1,
       "similarity": 0.5
-    }
+    },
+    "phone": "031-885-6999",
+    "place_url": "http://place.map.kakao.com/26814887",
+    "kakao_category": "음식점 > 한식 > 한정식"
   },
   {
     "name": "중화가정",
@@ -9386,7 +9963,10 @@
       "address": "서울 동작구 상도로 295",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-6397-4186",
+    "place_url": "http://place.map.kakao.com/1606118061",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "사골라면",
@@ -9422,7 +10002,10 @@
       "address": "서울 종로구 종로8길 15-1",
       "distance_m": 0,
       "similarity": 0.5
-    }
+    },
+    "phone": "02-420-0053",
+    "place_url": "http://place.map.kakao.com/648945279",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "청간막국수",
@@ -9443,7 +10026,10 @@
       "address": "서울 서초구 서초대로78길 22",
       "distance_m": 0,
       "similarity": 0.4
-    }
+    },
+    "phone": "02-523-7304",
+    "place_url": "http://place.map.kakao.com/629532492",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "마라탕집",
@@ -9485,7 +10071,10 @@
       "address": "충북 청주시 흥덕구 2순환로 1124",
       "distance_m": 0,
       "similarity": 0.4
-    }
+    },
+    "phone": "0502-5553-2221",
+    "place_url": "http://place.map.kakao.com/851237414",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "떡볶이집",
@@ -9529,7 +10118,9 @@
       "similarity": 0.8
     },
     "name_original": "태평소국밥",
-    "address_kakao": "대전 중구 태평로 116-1"
+    "address_kakao": "대전 중구 태평로 116-1",
+    "place_url": "http://place.map.kakao.com/24122781",
+    "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
     "name": "대동순대",
@@ -9550,7 +10141,10 @@
       "address": "대전 중구 서문로43번길 70",
       "distance_m": 12,
       "similarity": 1.0
-    }
+    },
+    "phone": "042-584-2928",
+    "place_url": "http://place.map.kakao.com/9707918",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "오문창순대국밥",
@@ -9573,7 +10167,10 @@
       "similarity": 0.8
     },
     "name_original": "순대국밥",
-    "address_kakao": "대전 대덕구 한밭대로 1153"
+    "address_kakao": "대전 대덕구 한밭대로 1153",
+    "phone": "042-621-4325",
+    "place_url": "http://place.map.kakao.com/26975999",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "시골미꾸라지매운탕",
@@ -9594,7 +10191,10 @@
       "address": "충북 청주시 흥덕구 직지대로 10-1",
       "distance_m": 14,
       "similarity": 1.0
-    }
+    },
+    "phone": "043-233-1789",
+    "place_url": "http://place.map.kakao.com/9183428",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 추어"
   },
   {
     "name": "고추장불고기",
@@ -9636,7 +10236,10 @@
       "address": "전북특별자치도 익산시 부송1로 14",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "063-916-9533",
+    "place_url": "http://place.map.kakao.com/1030277148",
+    "kakao_category": "음식점 > 아시아음식"
   },
   {
     "name": "예정이라면",
@@ -9741,7 +10344,10 @@
       "address": "충남 천안시 서북구 성거읍 돌다리길 23-37",
       "distance_m": 93,
       "similarity": 0.23
-    }
+    },
+    "phone": "041-557-4000",
+    "place_url": "http://place.map.kakao.com/261903559",
+    "kakao_category": "음식점 > 간식 > 도넛 > 던킨"
   },
   {
     "name": "다이어트식품",
@@ -9798,7 +10404,9 @@
       "address": "서울 강남구 테헤란로1길 20",
       "distance_m": 8,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/8341662",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "일미간장게장",
@@ -9819,7 +10427,10 @@
       "address": "서울 동대문구 장한로24길 7",
       "distance_m": 12,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-2242-4338",
+    "place_url": "http://place.map.kakao.com/21360025",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "이봉원의 봉짬뽕",
@@ -9842,7 +10453,10 @@
       "similarity": 0.71
     },
     "name_original": "이봉원짬뽕집",
-    "address_kakao": "충남 천안시 서북구 성정두정로 70"
+    "address_kakao": "충남 천안시 서북구 성정두정로 70",
+    "phone": "041-551-0026",
+    "place_url": "http://place.map.kakao.com/5501446",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "더덕백반",
@@ -9905,7 +10519,10 @@
       "address": "부산 해운대구 청사포로 157",
       "distance_m": 7,
       "similarity": 0.0
-    }
+    },
+    "phone": "051-703-2188",
+    "place_url": "http://place.map.kakao.com/372190561",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개"
   },
   {
     "name": "지존소곱창 동래점",
@@ -9928,7 +10545,10 @@
       "similarity": 0.0
     },
     "name_original": "갈빗집",
-    "address_kakao": "부산 동래구 명륜로129번다길 15-1"
+    "address_kakao": "부산 동래구 명륜로129번다길 15-1",
+    "phone": "051-556-3247",
+    "place_url": "http://place.map.kakao.com/1427421810",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "취밍",
@@ -9951,7 +10571,10 @@
       "similarity": 0.0
     },
     "address_kakao": "부산 북구 금곡대로285번길 16",
-    "name_original": "중국집"
+    "name_original": "중국집",
+    "phone": "051-362-3376",
+    "place_url": "http://place.map.kakao.com/17546222",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "천하보쌈",
@@ -9974,7 +10597,10 @@
       "similarity": 0.5
     },
     "name_original": "보쌈집",
-    "address_kakao": "서울 종로구 창덕궁1길 8"
+    "address_kakao": "서울 종로구 창덕궁1길 8",
+    "phone": "02-744-1614",
+    "place_url": "http://place.map.kakao.com/10848372",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "매운낙지",
@@ -10018,7 +10644,10 @@
       "similarity": 0.12
     },
     "address_kakao": "경남 창원시 진해구 해원로 34",
-    "name_original": "뒤집"
+    "name_original": "뒤집",
+    "phone": "055-552-9286",
+    "place_url": "http://place.map.kakao.com/157613093",
+    "kakao_category": "음식점 > 치킨 > BBQ"
   },
   {
     "name": "청담동마녀김밥 서울시청점",
@@ -10041,7 +10670,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 중구 을지로 6",
-    "name_original": "수집"
+    "name_original": "수집",
+    "phone": "02-318-9890",
+    "place_url": "http://place.map.kakao.com/700191547",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "이웃나라",
@@ -10083,7 +10715,10 @@
       "address": "서울 서초구 서초대로25길 55",
       "distance_m": 32,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-537-7972",
+    "place_url": "http://place.map.kakao.com/15450268",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "특양구이",
@@ -10127,7 +10762,10 @@
       "similarity": 0.8
     },
     "name_original": "닭갈비",
-    "address_kakao": "강원특별자치도 태백시 중앙남1길 10"
+    "address_kakao": "강원특별자치도 태백시 중앙남1길 10",
+    "phone": "033-553-8119",
+    "place_url": "http://place.map.kakao.com/9974986",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "청수",
@@ -10150,7 +10788,10 @@
       "similarity": 0.8
     },
     "name_original": "청수우동메밀냉면",
-    "address_kakao": "서울 영등포구 국제금융로 112"
+    "address_kakao": "서울 영등포구 국제금융로 112",
+    "phone": "02-784-1559",
+    "place_url": "http://place.map.kakao.com/20746105",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "엄마집",
@@ -10194,7 +10835,10 @@
       "distance_m": 30,
       "similarity": 0.0
     },
-    "address_kakao": "경기 수원시 영통구 영통로174번길 9"
+    "address_kakao": "경기 수원시 영통구 영통로174번길 9",
+    "phone": "031-273-1599",
+    "place_url": "http://place.map.kakao.com/8393683",
+    "kakao_category": "음식점 > 퓨전요리 > 퓨전한식 > 본죽&비빔밥cafe"
   },
   {
     "name": "한강라면",
@@ -10232,7 +10876,9 @@
       "similarity": 0.8
     },
     "name_original": "진주집",
-    "address_kakao": "경남 진주시 에나로 103-5"
+    "address_kakao": "경남 진주시 에나로 103-5",
+    "place_url": "http://place.map.kakao.com/232846686",
+    "kakao_category": "음식점 > 술집 > 실내포장마차"
   },
   {
     "name": "돼지갈비집",
@@ -10253,7 +10899,10 @@
       "address": "경기 고양시 일산서구 호수로856번길 73-12",
       "distance_m": 0,
       "similarity": 0.4
-    }
+    },
+    "phone": "031-925-0181",
+    "place_url": "http://place.map.kakao.com/77000487",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "무인라면",
@@ -10310,7 +10959,10 @@
       "address": "서울 강북구 숭인로 65-3",
       "distance_m": 77,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-945-4145",
+    "place_url": "http://place.map.kakao.com/25115860",
+    "kakao_category": "음식점 > 분식 > 떡볶이 > 신전떡볶이"
   },
   {
     "name": "시민이라면",
@@ -10354,7 +11006,10 @@
       "similarity": 0.8
     },
     "name_original": "막장집",
-    "address_kakao": "대전 중구 선화서로 48-1"
+    "address_kakao": "대전 중구 선화서로 48-1",
+    "phone": "042-222-0324",
+    "place_url": "http://place.map.kakao.com/316976275",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "해물라면",
@@ -10375,7 +11030,10 @@
       "address": "대전 유성구 문화원로 86",
       "distance_m": 99,
       "similarity": 0.0
-    }
+    },
+    "phone": "042-824-5498",
+    "place_url": "http://place.map.kakao.com/1892850524",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "김치볶음밥",
@@ -10417,7 +11075,10 @@
       "address": "서울 광진구 영화사로 54-1",
       "distance_m": 3,
       "similarity": 0.58
-    }
+    },
+    "phone": "010-5512-9777",
+    "place_url": "http://place.map.kakao.com/1381873158",
+    "kakao_category": "음식점 > 중식 > 양꼬치"
   },
   {
     "name": "오장동냉면",
@@ -10438,7 +11099,10 @@
       "address": "서울 중구 마른내로 114",
       "distance_m": 74,
       "similarity": 0.38
-    }
+    },
+    "phone": "02-2267-9500",
+    "place_url": "http://place.map.kakao.com/20747449",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "인생초밥집",
@@ -10459,7 +11123,10 @@
       "address": "충남 공주시 공주대학로 95",
       "distance_m": 6,
       "similarity": 1.0
-    }
+    },
+    "phone": "041-881-1303",
+    "place_url": "http://place.map.kakao.com/1958279141",
+    "kakao_category": "음식점 > 일식"
   },
   {
     "name": "낙지칼국수",
@@ -10480,7 +11147,10 @@
       "address": "경기 이천시 중리천로21번길 9",
       "distance_m": 62,
       "similarity": 0.0
-    }
+    },
+    "phone": "031-635-6102",
+    "place_url": "http://place.map.kakao.com/10563611",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "김밥나라 남성역점",
@@ -10503,7 +11173,10 @@
       "similarity": 0.8
     },
     "name_original": "김밥나라",
-    "address_kakao": "서울 동작구 사당로 196"
+    "address_kakao": "서울 동작구 사당로 196",
+    "phone": "02-598-7182",
+    "place_url": "http://place.map.kakao.com/17304590",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "미스터피자이대점",
@@ -10547,7 +11220,10 @@
       "similarity": 0.8
     },
     "name_original": "뚝방닭구이",
-    "address_kakao": "서울 중랑구 신내로14길 9"
+    "address_kakao": "서울 중랑구 신내로14길 9",
+    "phone": "02-3421-7255",
+    "place_url": "http://place.map.kakao.com/1335492490",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "성서중심지장",
@@ -10610,7 +11286,10 @@
       "address": "서울 종로구 종로35길 34",
       "distance_m": 10,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-762-7491",
+    "place_url": "http://place.map.kakao.com/26967162",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "곱창전골",
@@ -10631,7 +11310,10 @@
       "address": "서울 동대문구 전농로14길 14",
       "distance_m": 3,
       "similarity": 0.6
-    }
+    },
+    "phone": "02-2248-6191",
+    "place_url": "http://place.map.kakao.com/12998369",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "개똥이네",
@@ -10673,7 +11355,10 @@
       "address": "충남 태안군 태안읍 능샘1길 45",
       "distance_m": 1,
       "similarity": 0.22
-    }
+    },
+    "phone": "041-674-5591",
+    "place_url": "http://place.map.kakao.com/10906738",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "기똥차게",
@@ -10694,7 +11379,10 @@
       "address": "대구 수성구 수성로76길 32",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "010-2468-5647",
+    "place_url": "http://place.map.kakao.com/1765023214",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "늦어집",
@@ -10835,7 +11523,10 @@
       "address": "강원특별자치도 홍천군 서면 한치골길 75-6",
       "distance_m": 54,
       "similarity": 0.17
-    }
+    },
+    "phone": "010-9603-6322",
+    "place_url": "http://place.map.kakao.com/26914013",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "홍천닭갈비",
@@ -10856,7 +11547,10 @@
       "address": "강원특별자치도 홍천군 홍천읍 연봉로 44-1",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "033-434-5064",
+    "place_url": "http://place.map.kakao.com/1864150417",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "순두부우동",
@@ -10900,7 +11594,10 @@
       "similarity": 0.8
     },
     "name_original": "우동국수",
-    "address_kakao": "서울 은평구 서오릉로 242"
+    "address_kakao": "서울 은평구 서오릉로 242",
+    "phone": "02-388-5929",
+    "place_url": "http://place.map.kakao.com/1052646340",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "오백빵집",
@@ -10963,7 +11660,10 @@
       "address": "서울 강남구 압구정로 216",
       "distance_m": 22,
       "similarity": 0.22
-    }
+    },
+    "phone": "02-515-1245",
+    "place_url": "http://place.map.kakao.com/620066371",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "국물떡볶이",
@@ -11007,7 +11707,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 강남구 압구정로 165",
-    "name_original": "고급집"
+    "name_original": "고급집",
+    "phone": "02-3449-5864",
+    "place_url": "http://place.map.kakao.com/23068927",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "매운갈비",
@@ -11028,7 +11731,10 @@
       "address": "서울 중구 동호로7길 14",
       "distance_m": 50,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-2234-4544",
+    "place_url": "http://place.map.kakao.com/7870369",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "모듬구이",
@@ -11072,7 +11778,10 @@
       "similarity": 0.17
     },
     "address_kakao": "경기 광명시 신기로 7",
-    "name_original": "라멘집"
+    "name_original": "라멘집",
+    "phone": "02-899-7881",
+    "place_url": "http://place.map.kakao.com/2127490934",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동 > 경양카츠"
   },
   {
     "name": "우대갈비",
@@ -11213,7 +11922,10 @@
       "address": "서울 강북구 숭인로 65-3",
       "distance_m": 11,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-985-7333",
+    "place_url": "http://place.map.kakao.com/16624169",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "청국장닭볶음",
@@ -11278,7 +11990,10 @@
       "similarity": 0.8
     },
     "name_original": "철수네매운갈비",
-    "address_kakao": "대전 유성구 대학로 31"
+    "address_kakao": "대전 유성구 대학로 31",
+    "phone": "042-824-8085",
+    "place_url": "http://place.map.kakao.com/8536307",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "오씨칼국수",
@@ -11299,7 +12014,10 @@
       "address": "대전 동구 옛신탄진로 13",
       "distance_m": 5,
       "similarity": 1.0
-    }
+    },
+    "phone": "042-627-9972",
+    "place_url": "http://place.map.kakao.com/16302660",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "교동닭칼국수 부산본점",
@@ -11322,7 +12040,10 @@
       "similarity": 0.8
     },
     "name_original": "닭칼국수",
-    "address_kakao": "부산 사하구 다대로 331"
+    "address_kakao": "부산 사하구 다대로 331",
+    "phone": "051-715-9191",
+    "place_url": "http://place.map.kakao.com/1696509646",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "소소라면닭꼬치",
@@ -11345,7 +12066,10 @@
       "similarity": 0.8
     },
     "name_original": "소소라면",
-    "address_kakao": "서울 용산구 한강대로 268-1"
+    "address_kakao": "서울 용산구 한강대로 268-1",
+    "phone": "0503-7153-3483",
+    "place_url": "http://place.map.kakao.com/18513961",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "순댓국집",
@@ -11366,7 +12090,10 @@
       "address": "경기 파주시 중앙로 270",
       "distance_m": 2,
       "similarity": 0.25
-    }
+    },
+    "phone": "031-944-8894",
+    "place_url": "http://place.map.kakao.com/12084924",
+    "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
     "name": "노량진수산시장",
@@ -11387,7 +12114,9 @@
       "address": "서울 동작구 장승배기로 170",
       "distance_m": 62,
       "similarity": 0.27
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1391015599",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "수타우동",
@@ -11452,7 +12181,9 @@
       "similarity": 0.8
     },
     "name_original": "외갓집",
-    "address_kakao": "충북 제천시 풍양로17길 4"
+    "address_kakao": "충북 제천시 풍양로17길 4",
+    "place_url": "http://place.map.kakao.com/17685586",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "자장라면",
@@ -11517,7 +12248,10 @@
       "similarity": 0.2
     },
     "address_kakao": "경기 광명시 기아로 56",
-    "name_original": "단골집"
+    "name_original": "단골집",
+    "phone": "02-805-9407",
+    "place_url": "http://place.map.kakao.com/17948208",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 불고기,두루치기"
   },
   {
     "name": "된찌족발",
@@ -11559,7 +12293,10 @@
       "address": "서울 중랑구 봉화산로 20",
       "distance_m": 3,
       "similarity": 0.42
-    }
+    },
+    "phone": "02-439-1656",
+    "place_url": "http://place.map.kakao.com/26989775",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "분이라면",
@@ -11624,7 +12361,10 @@
       "similarity": 0.8
     },
     "name_original": "굴비정식",
-    "address_kakao": "전남 영광군 법성면 법성포로 7"
+    "address_kakao": "전남 영광군 법성면 법성포로 7",
+    "phone": "061-356-7575",
+    "place_url": "http://place.map.kakao.com/17649920",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "즉석떡볶이",
@@ -11645,7 +12385,10 @@
       "address": "서울 송파구 송파대로36길 5-13",
       "distance_m": 6,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-418-0887",
+    "place_url": "http://place.map.kakao.com/494194173",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "돌깨마을",
@@ -11687,7 +12430,9 @@
       "address": "서울 송파구 성내천로23길 22",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/16529697",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "남영탉",
@@ -11788,7 +12533,10 @@
       "similarity": 0.8
     },
     "name_original": "대선칼국수",
-    "address_kakao": "대전 서구 둔산중로40번길 28"
+    "address_kakao": "대전 서구 둔산중로40번길 28",
+    "phone": "042-471-0316",
+    "place_url": "http://place.map.kakao.com/7825433",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "대림국수성수점",
@@ -11830,7 +12578,10 @@
       "address": "서울 용산구 용산동3가 1-105",
       "distance_m": 96,
       "similarity": 0.08
-    }
+    },
+    "phone": "02-794-8364",
+    "place_url": "http://place.map.kakao.com/13320353",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "우리단골집",
@@ -11853,7 +12604,10 @@
       "similarity": 0.8
     },
     "name_original": "단골집",
-    "address_kakao": "서울 강남구 학동로4길 26"
+    "address_kakao": "서울 강남구 학동로4길 26",
+    "phone": "02-549-2751",
+    "place_url": "http://place.map.kakao.com/20024169",
+    "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
     "name": "농림축산식품",
@@ -11891,7 +12645,10 @@
       "similarity": 0.0
     },
     "name_original": "찬양집",
-    "address_kakao": "서울 종로구 율곡로 6"
+    "address_kakao": "서울 종로구 율곡로 6",
+    "phone": "02-6329-0630",
+    "place_url": "http://place.map.kakao.com/2134704002",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "원조포차",
@@ -11948,7 +12705,10 @@
     "duplicate": false,
     "source": "websearch_manual",
     "lat": 37.518085,
-    "lng": 127.109173
+    "lng": 127.109173,
+    "phone": "02-414-8307",
+    "place_url": "http://place.map.kakao.com/15606743",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "앞쪽집",
@@ -12013,7 +12773,10 @@
       "similarity": 0.8
     },
     "name_original": "나폴리해물탕",
-    "address_kakao": "경남 통영시 도천상가안길 18"
+    "address_kakao": "경남 통영시 도천상가안길 18",
+    "phone": "055-645-8173",
+    "place_url": "http://place.map.kakao.com/517277943",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 매운탕,해물탕"
   },
   {
     "name": "태국인이라면",
@@ -12290,7 +13053,10 @@
       "address": "충남 아산시 배방읍 배방로14번길 20-3",
       "distance_m": 2,
       "similarity": 0.33
-    }
+    },
+    "phone": "041-545-3223",
+    "place_url": "http://place.map.kakao.com/1341079738",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리 > 삼계탕"
   },
   {
     "name": "시골마을",
@@ -12311,7 +13077,10 @@
       "address": "충남 아산시 탕정면 탕정면로8번길 97-9",
       "distance_m": 93,
       "similarity": 0.2
-    }
+    },
+    "phone": "041-531-8821",
+    "place_url": "http://place.map.kakao.com/18028397",
+    "kakao_category": "음식점 > 한식 > 찌개,전골"
   },
   {
     "name": "저스트스테이크",
@@ -12355,7 +13124,10 @@
       "similarity": 0.8
     },
     "name_original": "오봉집",
-    "address_kakao": "서울 종로구 종로8길 20"
+    "address_kakao": "서울 종로구 종로8길 20",
+    "phone": "02-3210-0555",
+    "place_url": "http://place.map.kakao.com/1651090727",
+    "kakao_category": "음식점 > 한식 > 오봉집"
   },
   {
     "name": "와빠니덮밥",
@@ -12399,7 +13171,9 @@
       "similarity": 0.0
     },
     "address_kakao": "강원특별자치도 양양군 현남면 인구중앙길 103-2",
-    "name_original": "빙수집"
+    "name_original": "빙수집",
+    "place_url": "http://place.map.kakao.com/547551823",
+    "kakao_category": "음식점 > 양식 > 햄버거"
   },
   {
     "name": "진미평양냉면",
@@ -12521,7 +13295,10 @@
       "similarity": 1.0
     },
     "name_original": "제비집",
-    "address_kakao": "서울 성동구 왕십리로4길 13-1"
+    "address_kakao": "서울 성동구 왕십리로4길 13-1",
+    "phone": "02-469-0527",
+    "place_url": "http://place.map.kakao.com/340271612",
+    "kakao_category": "음식점 > 일식"
   },
   {
     "name": "노포중국집",
@@ -12563,7 +13340,10 @@
       "address": "경기 수원시 팔달구 갓매산로 51",
       "distance_m": 11,
       "similarity": 1.0
-    }
+    },
+    "phone": "031-257-7171",
+    "place_url": "http://place.map.kakao.com/201073296",
+    "kakao_category": "음식점 > 한식 > 찌개,전골"
   },
   {
     "name": "열탄불고기",
@@ -12601,7 +13381,10 @@
       "similarity": 0.25
     },
     "address_kakao": "서울 서초구 서초대로73길 9",
-    "name_original": "훠궈집"
+    "name_original": "훠궈집",
+    "phone": "02-534-5300",
+    "place_url": "http://place.map.kakao.com/22716674",
+    "kakao_category": "음식점 > 한식 > 한정식"
   },
   {
     "name": "숯불라면",
@@ -12706,7 +13489,10 @@
       "address": "서울 성동구 왕십리로21길 14",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-2297-8522",
+    "place_url": "http://place.map.kakao.com/874989672",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "쟁반국수",
@@ -12769,7 +13555,10 @@
       "address": "서울 광진구 군자로 103",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-469-6684",
+    "place_url": "http://place.map.kakao.com/19183006",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "휴게음식점",
@@ -12853,7 +13642,10 @@
       "address": "서울 중구 무교로 17-13",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-776-7361",
+    "place_url": "http://place.map.kakao.com/7855268",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "불막열삼 합정점",
@@ -12876,7 +13668,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 마포구 양화로6길 57-22",
-    "name_original": "고깃집"
+    "name_original": "고깃집",
+    "phone": "02-336-9376",
+    "place_url": "http://place.map.kakao.com/418805702",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창 > 불막열삼"
   },
   {
     "name": "마포곱창타운",
@@ -12899,7 +13694,10 @@
       "similarity": 0.8
     },
     "name_original": "마포곱창",
-    "address_kakao": "서울 마포구 동교로27길 20"
+    "address_kakao": "서울 마포구 동교로27길 20",
+    "phone": "02-336-4496",
+    "place_url": "http://place.map.kakao.com/10341266",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "모둠곱창",
@@ -12958,7 +13756,10 @@
       "similarity": 0.8
     },
     "name_original": "할머니포장마차",
-    "address_kakao": "서울 송파구 오금로11길 59"
+    "address_kakao": "서울 송파구 오금로11길 59",
+    "phone": "02-416-6698",
+    "place_url": "http://place.map.kakao.com/15967605",
+    "kakao_category": "음식점 > 술집 > 실내포장마차"
   },
   {
     "name": "행운돈까스",
@@ -12979,7 +13780,10 @@
       "address": "서울 성동구 마조로1길 2",
       "distance_m": 6,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-2296-3406",
+    "place_url": "http://place.map.kakao.com/8675374",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "버터구이",
@@ -13086,7 +13890,10 @@
       "similarity": 0.8
     },
     "name_original": "상감한우",
-    "address_kakao": "경북 상주시 영남제일로 1119-9"
+    "address_kakao": "경북 상주시 영남제일로 1119-9",
+    "phone": "054-531-9911",
+    "place_url": "http://place.map.kakao.com/668606087",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "뮤즈온",
@@ -13109,7 +13916,10 @@
       "similarity": 0.18
     },
     "address_kakao": "서울 강남구 봉은사로4길 24",
-    "name_original": "라멘집"
+    "name_original": "라멘집",
+    "phone": "02-514-4541",
+    "place_url": "http://place.map.kakao.com/19175443",
+    "kakao_category": "음식점 > 술집 > 칵테일바"
   },
   {
     "name": "일광쪽갈비",
@@ -13130,7 +13940,10 @@
       "address": "부산 기장군 일광읍 해빛6로 85-5",
       "distance_m": 1,
       "similarity": 0.33
-    }
+    },
+    "phone": "051-722-7770",
+    "place_url": "http://place.map.kakao.com/635600393",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "비빔국수",
@@ -13172,7 +13985,10 @@
       "address": "서울 마포구 성미산로 71",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-334-6200",
+    "place_url": "http://place.map.kakao.com/18257463",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "고추장구이",
@@ -13210,7 +14026,10 @@
       "similarity": 0.88
     },
     "name_original": "테그42용산역점",
-    "address_kakao": "서울 용산구 한강대로 95"
+    "address_kakao": "서울 용산구 한강대로 95",
+    "phone": "02-790-4442",
+    "place_url": "http://place.map.kakao.com/257850973",
+    "kakao_category": "음식점 > 간식 > 토스트 > 테그42"
   },
   {
     "name": "은하집",
@@ -13269,7 +14088,10 @@
       "similarity": 1.0
     },
     "name_original": "김밥천국건대2호점",
-    "address_kakao": "서울 광진구 능동로13길 21"
+    "address_kakao": "서울 광진구 능동로13길 21",
+    "phone": "02-499-0308",
+    "place_url": "http://place.map.kakao.com/2141404953",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "유부초밥",
@@ -13334,7 +14156,10 @@
       "similarity": 0.8
     },
     "name_original": "한방족발",
-    "address_kakao": "경기 구리시 안골로 61"
+    "address_kakao": "경기 구리시 안골로 61",
+    "phone": "031-557-3338",
+    "place_url": "http://place.map.kakao.com/16186449",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "꽃게라면",
@@ -13376,7 +14201,10 @@
       "address": "경기 구리시 장자대로86번길 14-11",
       "distance_m": 57,
       "similarity": 0.1
-    }
+    },
+    "phone": "010-3258-2028",
+    "place_url": "http://place.map.kakao.com/1804957231",
+    "kakao_category": "음식점 > 일식"
   },
   {
     "name": "초밥뷔페",
@@ -13441,7 +14269,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 강북구 수유로 4",
-    "name_original": "불고기"
+    "name_original": "불고기",
+    "phone": "02-988-6697",
+    "place_url": "http://place.map.kakao.com/21338283",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "곱창막창구이",
@@ -13525,7 +14356,10 @@
       "address": "충북 충주시 연수서편2길 35",
       "distance_m": 1,
       "similarity": 0.5
-    }
+    },
+    "phone": "043-845-2480",
+    "place_url": "http://place.map.kakao.com/317033531",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "창원치킨",
@@ -13609,7 +14443,10 @@
       "address": "서울 강북구 도봉로8길 37",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-988-1014",
+    "place_url": "http://place.map.kakao.com/15656713",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개"
   },
   {
     "name": "쯔왕돈까스",
@@ -13651,7 +14488,10 @@
       "address": "서울 송파구 문정로1길 33",
       "distance_m": 4,
       "similarity": 0.5
-    }
+    },
+    "phone": "02-3402-3452",
+    "place_url": "http://place.map.kakao.com/11831381",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "만두전골",
@@ -13735,7 +14575,10 @@
       "address": "경북 안동시 풍천면 수호로 97-7",
       "distance_m": 1,
       "similarity": 0.2
-    }
+    },
+    "phone": "054-841-8482",
+    "place_url": "http://place.map.kakao.com/1965322467",
+    "kakao_category": "음식점 > 한식 > 한정식"
   },
   {
     "name": "순대국밥집",
@@ -13821,7 +14664,10 @@
       "similarity": 0.8
     },
     "name_original": "BBQ패밀리타운",
-    "address_kakao": "서울 송파구 중대로 64"
+    "address_kakao": "서울 송파구 중대로 64",
+    "phone": "02-404-8480",
+    "place_url": "http://place.map.kakao.com/266652655",
+    "kakao_category": "음식점 > 치킨 > BBQ"
   },
   {
     "name": "멸치국수",
@@ -13907,7 +14753,10 @@
       "similarity": 1.0
     },
     "name_original": "고동경양문래본점",
-    "address_kakao": "서울 영등포구 경인로72길 4"
+    "address_kakao": "서울 영등포구 경인로72길 4",
+    "phone": "02-2671-7123",
+    "place_url": "http://place.map.kakao.com/1475914998",
+    "kakao_category": "음식점 > 양식"
   },
   {
     "name": "노량진라면",
@@ -13928,7 +14777,9 @@
       "address": "서울 동작구 만양로16길 4",
       "distance_m": 103,
       "similarity": 0.4
-    }
+    },
+    "place_url": "http://place.map.kakao.com/148313046",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "오도독갈비",
@@ -13970,7 +14821,10 @@
       "address": "경기 여주시 대신면 천서리길 26",
       "distance_m": 1,
       "similarity": 0.43
-    }
+    },
+    "phone": "031-884-9852",
+    "place_url": "http://place.map.kakao.com/166378355",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "비빔막국수",
@@ -13991,7 +14845,10 @@
       "address": "경기 여주시 대신면 여양로 1974",
       "distance_m": 14,
       "similarity": 0.38
-    }
+    },
+    "phone": "031-882-8259",
+    "place_url": "http://place.map.kakao.com/8159489",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "느껴집",
@@ -14033,7 +14890,9 @@
       "address": "서울 강북구 노해로17길 21",
       "distance_m": 17,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/20749382",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "신사한우곱창전문점",
@@ -14056,7 +14915,10 @@
       "similarity": 0.8
     },
     "name_original": "신사한우곱창",
-    "address_kakao": "서울 은평구 갈현로 30"
+    "address_kakao": "서울 은평구 갈현로 30",
+    "phone": "010-3239-2834",
+    "place_url": "http://place.map.kakao.com/27134327",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "좋아서여기",
@@ -14134,7 +14996,10 @@
       "address": "서울 동대문구 왕산로 247-1",
       "distance_m": 6,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-967-6918",
+    "place_url": "http://place.map.kakao.com/16937330",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "회전초밥",
@@ -14178,7 +15043,9 @@
       "similarity": 0.14
     },
     "address_kakao": "강원특별자치도 동해시 중앙로 236-1",
-    "name_original": "중국집"
+    "name_original": "중국집",
+    "place_url": "http://place.map.kakao.com/2068573458",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "한우연탄구이",
@@ -14222,7 +15089,10 @@
       "similarity": 0.25
     },
     "address_kakao": "강원특별자치도 원주시 동부순환로 2-7",
-    "name_original": "알탕집"
+    "name_original": "알탕집",
+    "phone": "033-761-0558",
+    "place_url": "http://place.map.kakao.com/583177177",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리 > 삼계탕"
   },
   {
     "name": "고든램지버거롯데월드몰",
@@ -14243,7 +15113,10 @@
       "address": "서울 송파구 올림픽로 300",
       "distance_m": 99,
       "similarity": 0.45
-    }
+    },
+    "phone": "02-3213-4797",
+    "place_url": "http://place.map.kakao.com/356763550",
+    "kakao_category": "음식점 > 양식 > 햄버거"
   },
   {
     "name": "매운갈비",
@@ -14285,7 +15158,10 @@
       "address": "경북 포항시 북구 죽도시장13길 12",
       "distance_m": 134,
       "similarity": 0.25
-    }
+    },
+    "phone": "010-3443-0130",
+    "place_url": "http://place.map.kakao.com/597480108",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "오도독갈비",
@@ -14411,7 +15287,10 @@
       "address": "강원특별자치도 춘천시 보안길 15",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "033-242-6677",
+    "place_url": "http://place.map.kakao.com/655915386",
+    "kakao_category": "음식점 > 술집 > 실내포장마차"
   },
   {
     "name": "정해집",
@@ -14449,7 +15328,9 @@
       "similarity": 0.0
     },
     "address_kakao": "전남 장성군 삼계면 능성로 548",
-    "name_original": "달라집"
+    "name_original": "달라집",
+    "place_url": "http://place.map.kakao.com/1715134722",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "쌀밥집",
@@ -14508,7 +15389,10 @@
       "similarity": 0.8
     },
     "name_original": "우리나라",
-    "address_kakao": "경기 이천시 마장면 둔터로 5"
+    "address_kakao": "경기 이천시 마장면 둔터로 5",
+    "phone": "031-635-7897",
+    "place_url": "http://place.map.kakao.com/26571569",
+    "kakao_category": "음식점 > 뷔페 > 한식뷔페"
   },
   {
     "name": "돈사돈 성산점",
@@ -14531,7 +15415,10 @@
       "similarity": 0.0
     },
     "name_original": "고깃집",
-    "address_kakao": "제주특별자치도 서귀포시 성산읍 성산등용로 13-1"
+    "address_kakao": "제주특별자치도 서귀포시 성산읍 성산등용로 13-1",
+    "phone": "064-782-7760",
+    "place_url": "http://place.map.kakao.com/45235883",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "오장동흥남집 본점",
@@ -14554,7 +15441,10 @@
       "similarity": 0.8
     },
     "name_original": "오장동흥남집",
-    "address_kakao": "서울 중구 마른내로 114"
+    "address_kakao": "서울 중구 마른내로 114",
+    "phone": "02-2266-0735",
+    "place_url": "http://place.map.kakao.com/8174854",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "팔도보쌈",
@@ -14575,7 +15465,10 @@
       "address": "서울 중구 퇴계로31길 11",
       "distance_m": 78,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-2266-7573",
+    "place_url": "http://place.map.kakao.com/8113189",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "원조기계우동짜장",
@@ -14598,7 +15491,10 @@
       "similarity": 0.8
     },
     "name_original": "기계우동",
-    "address_kakao": "경기 수원시 팔달구 권선로 753"
+    "address_kakao": "경기 수원시 팔달구 권선로 753",
+    "phone": "031-237-7144",
+    "place_url": "http://place.map.kakao.com/14489680",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "용매골항아리바베큐",
@@ -14621,7 +15517,10 @@
       "similarity": 0.0
     },
     "address_kakao": "전남 장성군 삼계면 용매골길 46",
-    "name_original": "고깃집"
+    "name_original": "고깃집",
+    "phone": "010-8804-1935",
+    "place_url": "http://place.map.kakao.com/1530679729",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "대장갈비",
@@ -14642,7 +15541,10 @@
       "address": "전남 장성군 삼계면 주산2길 13-8",
       "distance_m": 28,
       "similarity": 0.5
-    }
+    },
+    "phone": "061-951-9888",
+    "place_url": "http://place.map.kakao.com/1341767001",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "서두산딤섬만두",
@@ -14665,7 +15567,10 @@
       "similarity": 0.8
     },
     "name_original": "서두산딤섬",
-    "address_kakao": "서울 송파구 올림픽로32길 18-23"
+    "address_kakao": "서울 송파구 올림픽로32길 18-23",
+    "phone": "02-422-4588",
+    "place_url": "http://place.map.kakao.com/1396116679",
+    "kakao_category": "음식점 > 중식"
   },
   {
     "name": "느껴집",
@@ -14701,7 +15606,10 @@
       "address": "인천 중구 신포로 32-16",
       "distance_m": 2,
       "similarity": 0.5
-    }
+    },
+    "phone": "032-762-5930",
+    "place_url": "http://place.map.kakao.com/21373373",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "김치볶음밥",
@@ -14758,7 +15666,10 @@
       "address": "서울 광진구 광나루로36길 70",
       "distance_m": 125,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-433-2001",
+    "place_url": "http://place.map.kakao.com/655179421",
+    "kakao_category": "음식점 > 한식 > 찌개,전골"
   },
   {
     "name": "지금바",
@@ -14801,7 +15712,10 @@
       "address": "서울 중구 을지로38길 14",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-2273-2445",
+    "place_url": "http://place.map.kakao.com/8573461",
+    "kakao_category": "음식점 > 술집 > 실내포장마차"
   },
   {
     "name": "한신포차 건대점",
@@ -14824,7 +15738,10 @@
       "similarity": 0.8
     },
     "name_original": "한신포차",
-    "address_kakao": "서울 광진구 동일로22길 69-3"
+    "address_kakao": "서울 광진구 동일로22길 69-3",
+    "phone": "02-461-0410",
+    "place_url": "http://place.map.kakao.com/1798901075",
+    "kakao_category": "음식점 > 술집 > 실내포장마차 > 한신포차"
   },
   {
     "name": "중화비빔밥",
@@ -14868,7 +15785,10 @@
       "similarity": 0.8
     },
     "name_original": "따개비칼국수",
-    "address_kakao": "경북 울릉군 서면 울릉순환로 1278"
+    "address_kakao": "경북 울릉군 서면 울릉순환로 1278",
+    "phone": "054-791-5617",
+    "place_url": "http://place.map.kakao.com/8107057",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "우진이네",
@@ -14889,7 +15809,10 @@
       "address": "경북 울릉군 서면 태하길 174",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "010-6823-9374",
+    "place_url": "http://place.map.kakao.com/579485501",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "사노라면",
@@ -15004,7 +15927,10 @@
       "address": "경북 울릉군 울릉읍 울릉순환로 212-20",
       "distance_m": 84,
       "similarity": 0.0
-    }
+    },
+    "phone": "054-791-7919",
+    "place_url": "http://place.map.kakao.com/1911602165",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "천금수산",
@@ -15025,7 +15951,9 @@
       "address": "경북 울릉군 울릉읍 봉래길 6",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/27236982",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "국장이네",
@@ -15151,7 +16079,9 @@
       "address": "광주 동구 제봉로194번길 15",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/18936696",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "떡갈비",
@@ -15229,7 +16159,10 @@
       "address": "경기 구리시 이문안로113번길 5",
       "distance_m": 3,
       "similarity": 0.4
-    }
+    },
+    "phone": "031-556-9998",
+    "place_url": "http://place.map.kakao.com/2144502036",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "보배곱창",
@@ -15250,7 +16183,10 @@
       "address": "경기 구리시 안골로103번길 42",
       "distance_m": 87,
       "similarity": 0.8
-    }
+    },
+    "phone": "031-568-6562",
+    "place_url": "http://place.map.kakao.com/1339974992",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "연하동",
@@ -15294,7 +16230,10 @@
       "similarity": 0.8
     },
     "name_original": "불고기",
-    "address_kakao": "인천 미추홀구 학익소로 67"
+    "address_kakao": "인천 미추홀구 학익소로 67",
+    "phone": "032-872-2292",
+    "place_url": "http://place.map.kakao.com/1857322630",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "사기꾼이라면",
@@ -15336,7 +16275,10 @@
       "address": "강원특별자치도 강릉시 송정길2번길 13",
       "distance_m": 2,
       "similarity": 0.4
-    }
+    },
+    "phone": "033-652-1007",
+    "place_url": "http://place.map.kakao.com/26602512",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "틈새라면 명동본점",
@@ -15359,7 +16301,10 @@
       "similarity": 0.8
     },
     "name_original": "틈새라면",
-    "address_kakao": "서울 중구 명동10길 19-10"
+    "address_kakao": "서울 중구 명동10길 19-10",
+    "phone": "02-756-5477",
+    "place_url": "http://place.map.kakao.com/10904319",
+    "kakao_category": "음식점 > 분식 > 틈새라면"
   },
   {
     "name": "처음이네",
@@ -15401,7 +16346,10 @@
       "address": "대구 중구 동성로 19-7",
       "distance_m": 4,
       "similarity": 0.5
-    }
+    },
+    "phone": "053-424-8716",
+    "place_url": "http://place.map.kakao.com/16978404",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "막창순대",
@@ -15422,7 +16370,10 @@
       "address": "대전 중구 서문로43번길 70",
       "distance_m": 12,
       "similarity": 0.5
-    }
+    },
+    "phone": "042-584-2928",
+    "place_url": "http://place.map.kakao.com/9707918",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "아산밀면",
@@ -15445,7 +16396,10 @@
       "similarity": 0.5
     },
     "name_original": "밀면집",
-    "address_kakao": "충남 아산시 번영로234번길 18"
+    "address_kakao": "충남 아산시 번영로234번길 18",
+    "phone": "041-533-6539",
+    "place_url": "http://place.map.kakao.com/1088100710",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "옛날돈까스",
@@ -15466,7 +16420,10 @@
       "address": "충남 아산시 둔포면 아산밸리북로 29",
       "distance_m": 4,
       "similarity": 0.21
-    }
+    },
+    "phone": "041-415-0606",
+    "place_url": "http://place.map.kakao.com/1087699849",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "한우등심구이",
@@ -15525,7 +16482,10 @@
       "similarity": 0.29
     },
     "address_kakao": "경기 파주시 산내로104번길 4",
-    "name_original": "초밥집"
+    "name_original": "초밥집",
+    "phone": "031-947-3105",
+    "place_url": "http://place.map.kakao.com/1795381590",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "신사한우곱창",
@@ -15567,7 +16527,10 @@
       "address": "서울 강서구 마곡중앙로 161-22",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "0507-1482-3384",
+    "place_url": "http://place.map.kakao.com/397374542",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "곱창구이",
@@ -15588,7 +16551,10 @@
       "address": "서울 마포구 마포대로 173-14",
       "distance_m": 3,
       "similarity": 0.29
-    }
+    },
+    "phone": "02-312-3373",
+    "place_url": "http://place.map.kakao.com/654303629",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "고추만두국",
@@ -15609,7 +16575,10 @@
       "address": "충북 청주시 상당구 상당로 40-8",
       "distance_m": 81,
       "similarity": 0.0
-    }
+    },
+    "phone": "043-253-4260",
+    "place_url": "http://place.map.kakao.com/8751538",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "메가삼겹살",
@@ -15630,7 +16599,10 @@
       "address": "서울 구로구 가마산로 286",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-855-3841",
+    "place_url": "http://place.map.kakao.com/415690504",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 삼겹살"
   },
   {
     "name": "카미동집",
@@ -15674,7 +16646,9 @@
       "similarity": 0.0
     },
     "address_kakao": "경기 이천시 중리천로21번길 18",
-    "name_original": "닭똥집"
+    "name_original": "닭똥집",
+    "place_url": "http://place.map.kakao.com/2081530745",
+    "kakao_category": "음식점 > 술집 > 실내포장마차"
   },
   {
     "name": "해물라면",
@@ -15716,7 +16690,10 @@
       "address": "충남 천안시 서북구 입장면 성진로 637",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "041-585-8959",
+    "place_url": "http://place.map.kakao.com/21482912",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "한국인이라면",
@@ -15758,7 +16735,10 @@
       "address": "충남 당진시 신평면 삽교천3길 84",
       "distance_m": 132,
       "similarity": 0.5
-    }
+    },
+    "phone": "041-363-4640",
+    "place_url": "http://place.map.kakao.com/16656850",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개"
   },
   {
     "name": "이삭버거신사역키친",
@@ -15902,7 +16882,10 @@
       "similarity": 0.8
     },
     "name_original": "망원동즉석우동",
-    "address_kakao": "서울 마포구 동교로 83"
+    "address_kakao": "서울 마포구 동교로 83",
+    "phone": "02-336-1330",
+    "place_url": "http://place.map.kakao.com/15526158",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "가래떡볶이",
@@ -15923,7 +16906,10 @@
       "address": "충북 청주시 청원구 율량로189번길 7",
       "distance_m": 6,
       "similarity": 0.2
-    }
+    },
+    "phone": "043-263-3850",
+    "place_url": "http://place.map.kakao.com/866726995",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "까르보나라",
@@ -15959,7 +16945,10 @@
       "address": "대전 중구 중앙로138번길 48",
       "distance_m": 24,
       "similarity": 0.29
-    }
+    },
+    "phone": "042-226-8999",
+    "place_url": "http://place.map.kakao.com/14904846",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "철판닭갈비",
@@ -15980,7 +16969,10 @@
       "address": "경기 가평군 가평읍 북한강변로 1083",
       "distance_m": 23,
       "similarity": 0.6
-    }
+    },
+    "phone": "031-581-5402",
+    "place_url": "http://place.map.kakao.com/26807865",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   },
   {
     "name": "그엄마의그딸떡볶이",
@@ -16001,7 +16993,10 @@
       "address": "경북 구미시 옥계북로 28",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "054-471-0805",
+    "place_url": "http://place.map.kakao.com/1864903643",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "평화족발",
@@ -16045,7 +17040,10 @@
       "similarity": 0.18
     },
     "address_kakao": "전남 순천시 오천6길 48",
-    "name_original": "족발집"
+    "name_original": "족발집",
+    "phone": "061-741-3805",
+    "place_url": "http://place.map.kakao.com/9764909",
+    "kakao_category": "음식점 > 한식 > 감자탕"
   },
   {
     "name": "특양구이",
@@ -16066,7 +17064,10 @@
       "address": "전남 순천시 장선배기길 10",
       "distance_m": 7,
       "similarity": 0.33
-    }
+    },
+    "phone": "061-721-9246",
+    "place_url": "http://place.map.kakao.com/10971695",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "주문진명화횟집",
@@ -16129,7 +17130,10 @@
       "address": "강원특별자치도 횡성군 우천면 경강로 2885",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "033-342-2693",
+    "place_url": "http://place.map.kakao.com/8667158",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "청주만두",
@@ -16150,7 +17154,10 @@
       "address": "충북 청주시 상당구 상당로1번길 36",
       "distance_m": 0,
       "similarity": 0.25
-    }
+    },
+    "phone": "043-252-1195",
+    "place_url": "http://place.map.kakao.com/367735226",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "대구떡볶이",
@@ -16222,7 +17229,10 @@
       "address": "경기 고양시 덕양구 북한산로368번길 85",
       "distance_m": 9,
       "similarity": 0.22
-    }
+    },
+    "phone": "0502-5551-2660",
+    "place_url": "http://place.map.kakao.com/1883860685",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "별미곱창 본점",
@@ -16245,7 +17255,10 @@
       "similarity": 0.8
     },
     "name_original": "별미곱창",
-    "address_kakao": "서울 송파구 오금로11길 11"
+    "address_kakao": "서울 송파구 오금로11길 11",
+    "phone": "02-413-3610",
+    "place_url": "http://place.map.kakao.com/1018661438",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "대전막장집",
@@ -16373,7 +17386,10 @@
       "similarity": 0.8
     },
     "name_original": "삼첩분식",
-    "address_kakao": "인천 남동구 하촌로51번길 13-2"
+    "address_kakao": "인천 남동구 하촌로51번길 13-2",
+    "phone": "032-719-3789",
+    "place_url": "http://place.map.kakao.com/873832359",
+    "kakao_category": "음식점 > 분식 > 삼첩분식"
   },
   {
     "name": "혜암성우",
@@ -16411,7 +17427,10 @@
       "similarity": 0.8
     },
     "name_original": "미아리우동집",
-    "address_kakao": "서울 성북구 종암로 176"
+    "address_kakao": "서울 성북구 종암로 176",
+    "phone": "02-918-1112",
+    "place_url": "http://place.map.kakao.com/20549279",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "석쇠구이",
@@ -16504,7 +17523,9 @@
       "address": "인천 서구 청마로 145",
       "distance_m": 3,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/408586106",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "무늬오징어",
@@ -16570,7 +17591,10 @@
       "similarity": 0.0
     },
     "name_original": "혼밥집",
-    "address_kakao": "서울 마포구 신촌로 94"
+    "address_kakao": "서울 마포구 신촌로 94",
+    "phone": "070-5157-8431",
+    "place_url": "http://place.map.kakao.com/27048302",
+    "kakao_category": "음식점 > 양식 > 피자 > 피자몰"
   },
   {
     "name": "김치볶음밥",
@@ -16591,7 +17615,10 @@
       "address": "전북특별자치도 완주군 삼례읍 삼봉로 9",
       "distance_m": 141,
       "similarity": 0.4
-    }
+    },
+    "phone": "063-291-0789",
+    "place_url": "http://place.map.kakao.com/1540751777",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "닭꼬치집",
@@ -16656,7 +17683,10 @@
       "similarity": 1.0
     },
     "name_original": "해뜬집",
-    "address_kakao": "전북특별자치도 순창군 순창읍 경천1로 78"
+    "address_kakao": "전북특별자치도 순창군 순창읍 경천1로 78",
+    "phone": "063-653-1008",
+    "place_url": "http://place.map.kakao.com/26157347",
+    "kakao_category": "음식점 > 한식 > 한정식"
   },
   {
     "name": "이사한집",
@@ -16734,7 +17764,10 @@
       "address": "세종특별자치시 장군면 장기초교길 8",
       "distance_m": 5,
       "similarity": 0.5
-    }
+    },
+    "phone": "044-715-5225",
+    "place_url": "http://place.map.kakao.com/1553847481",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "커피집",
@@ -16770,7 +17803,10 @@
       "address": "대전 중구 선화서로 48-1",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "042-222-0324",
+    "place_url": "http://place.map.kakao.com/316976275",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "해물라면",
@@ -16812,7 +17848,10 @@
       "address": "강원특별자치도 양양군 양양읍 남문3길 7",
       "distance_m": 10,
       "similarity": 1.0
-    }
+    },
+    "phone": "033-671-3447",
+    "place_url": "http://place.map.kakao.com/13614140",
+    "kakao_category": "음식점 > 치킨"
   },
   {
     "name": "싱글벙글떡볶이",
@@ -16877,7 +17916,10 @@
       "similarity": 0.8
     },
     "name_original": "연희네돈까스",
-    "address_kakao": "서울 광진구 천호대로 573"
+    "address_kakao": "서울 광진구 천호대로 573",
+    "phone": "02-455-6757",
+    "place_url": "http://place.map.kakao.com/239751549",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동"
   },
   {
     "name": "성게덮밥",
@@ -16921,7 +17963,10 @@
       "similarity": 0.8
     },
     "name_original": "팔백집",
-    "address_kakao": "서울 성북구 보문로30길 46"
+    "address_kakao": "서울 성북구 보문로30길 46",
+    "phone": "0507-1339-0032",
+    "place_url": "http://place.map.kakao.com/335111559",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "이사한집",
@@ -16986,7 +18031,10 @@
       "similarity": 0.8
     },
     "name_original": "남애횟집",
-    "address_kakao": "강원특별자치도 양양군 현남면 안남애길 45-3"
+    "address_kakao": "강원특별자치도 양양군 현남면 안남애길 45-3",
+    "phone": "033-671-7265",
+    "place_url": "http://place.map.kakao.com/138115962",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "간장게장",
@@ -17030,7 +18078,10 @@
       "similarity": 0.0
     },
     "address_kakao": "서울 서대문구 연세로5다길 22-8",
-    "name_original": "중국집"
+    "name_original": "중국집",
+    "phone": "070-4179-3819",
+    "place_url": "http://place.map.kakao.com/1705674698",
+    "kakao_category": "음식점 > 퓨전요리"
   },
   {
     "name": "신전떡볶이 일산웨돔점",
@@ -17053,7 +18104,10 @@
       "similarity": 0.8
     },
     "name_original": "신전떡볶이",
-    "address_kakao": "경기 고양시 일산동구 정발산로 15"
+    "address_kakao": "경기 고양시 일산동구 정발산로 15",
+    "phone": "031-907-1550",
+    "place_url": "http://place.map.kakao.com/1900590168",
+    "kakao_category": "음식점 > 분식 > 떡볶이 > 신전떡볶이"
   },
   {
     "name": "홍연재",
@@ -17076,7 +18130,10 @@
       "similarity": 0.0
     },
     "name_original": "편집",
-    "address_kakao": "경기 의정부시 청사로47번길 7-10"
+    "address_kakao": "경기 의정부시 청사로47번길 7-10",
+    "phone": "0502-5552-9876",
+    "place_url": "http://place.map.kakao.com/1530039759",
+    "kakao_category": "음식점 > 한식 > 곰탕"
   },
   {
     "name": "돼지갈비집",
@@ -17119,7 +18176,10 @@
       "distance_m": 4,
       "similarity": 0.0
     },
-    "address_kakao": "서울 중랑구 봉우재로 159"
+    "address_kakao": "서울 중랑구 봉우재로 159",
+    "phone": "02-494-4774",
+    "place_url": "http://place.map.kakao.com/26920292",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "짜장",
@@ -17162,7 +18222,10 @@
       "address": "서울 용산구 한강대로84길 11-9",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-749-0395",
+    "place_url": "http://place.map.kakao.com/27246805",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점"
   },
   {
     "name": "양푼비빔밥",
@@ -17183,7 +18246,10 @@
       "address": "경기 구리시 경춘로244번길 12",
       "distance_m": 0,
       "similarity": 0.17
-    }
+    },
+    "phone": "031-558-8592",
+    "place_url": "http://place.map.kakao.com/21322543",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "신난낙지닭",
@@ -17206,7 +18272,10 @@
       "similarity": 0.8
     },
     "name_original": "신난낙지",
-    "address_kakao": "경기 고양시 일산동구 강송로87번길 53-2"
+    "address_kakao": "경기 고양시 일산동구 강송로87번길 53-2",
+    "phone": "031-906-6668",
+    "place_url": "http://place.map.kakao.com/210718985",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "한우대창",
@@ -17227,7 +18296,10 @@
       "address": "경기 고양시 일산동구 무궁화로 19-14",
       "distance_m": 21,
       "similarity": 0.25
-    }
+    },
+    "phone": "010-2044-2251",
+    "place_url": "http://place.map.kakao.com/427522493",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "구들짱황소곱창 원흥삼송점",
@@ -17250,7 +18322,10 @@
       "similarity": 0.8
     },
     "name_original": "구들짱황소곱창",
-    "address_kakao": "경기 고양시 덕양구 삼송로 12"
+    "address_kakao": "경기 고양시 덕양구 삼송로 12",
+    "phone": "031-967-0358",
+    "place_url": "http://place.map.kakao.com/1636624221",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "회전초밥",
@@ -17313,7 +18388,10 @@
       "address": "서울 구로구 디지털로32길 97-27",
       "distance_m": 146,
       "similarity": 0.25
-    }
+    },
+    "phone": "02-833-3089",
+    "place_url": "http://place.map.kakao.com/15735864",
+    "kakao_category": "음식점 > 샤브샤브"
   },
   {
     "name": "돼지집",
@@ -17334,7 +18412,10 @@
       "address": "서울 구로구 경인로 572",
       "distance_m": 99,
       "similarity": 0.0
-    }
+    },
+    "phone": "02-6345-2727",
+    "place_url": "http://place.map.kakao.com/9777466",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "별미분식",
@@ -17439,7 +18520,10 @@
       "address": "강원특별자치도 양양군 양양읍 양양로 57",
       "distance_m": 2,
       "similarity": 0.43
-    }
+    },
+    "phone": "033-673-0301",
+    "place_url": "http://place.map.kakao.com/203087425",
+    "kakao_category": "음식점 > 간식 > 닭강정"
   },
   {
     "name": "그늘집",
@@ -17477,7 +18561,10 @@
       "similarity": 0.0
     },
     "name_original": "대감집",
-    "address_kakao": "충남 공주시 반포면 계룡대로 1391"
+    "address_kakao": "충남 공주시 반포면 계룡대로 1391",
+    "phone": "042-822-0712",
+    "place_url": "http://place.map.kakao.com/562293366",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "들기름막국수",
@@ -17604,7 +18691,10 @@
       "address": "경기 고양시 일산동구 고봉로770번길 26-4",
       "distance_m": 18,
       "similarity": 0.5
-    }
+    },
+    "phone": "031-977-3608",
+    "place_url": "http://place.map.kakao.com/13019696",
+    "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
     "name": "석쇠오징어",
@@ -17709,7 +18799,10 @@
       "address": "경기 구리시 경춘로266번길 10",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "031-551-5552",
+    "place_url": "http://place.map.kakao.com/1095368309",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "고향옥얼큰순대",
@@ -17730,7 +18823,10 @@
       "address": "경기 구리시 갈매순환로166번길 46",
       "distance_m": 106,
       "similarity": 0.8
-    }
+    },
+    "phone": "031-869-2390",
+    "place_url": "http://place.map.kakao.com/634957946",
+    "kakao_category": "음식점 > 한식 > 국밥 > 고향옥얼큰순대국"
   },
   {
     "name": "갈비덮밥",
@@ -17774,7 +18870,10 @@
       "similarity": 0.0
     },
     "name_original": "누리집",
-    "address_kakao": "충북 옥천군 옥천읍 동부로 16"
+    "address_kakao": "충북 옥천군 옥천읍 동부로 16",
+    "phone": "043-731-6566",
+    "place_url": "http://place.map.kakao.com/1463975438",
+    "kakao_category": "음식점 > 한식 > 감자탕"
   },
   {
     "name": "떡하니문어떡볶이",
@@ -17797,7 +18896,10 @@
       "similarity": 0.8
     },
     "name_original": "문어떡볶이",
-    "address_kakao": "제주특별자치도 제주시 구좌읍 행원로9길 9-5"
+    "address_kakao": "제주특별자치도 제주시 구좌읍 행원로9길 9-5",
+    "phone": "064-782-7566",
+    "place_url": "http://place.map.kakao.com/27492060",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "해녀포차",
@@ -17818,7 +18920,9 @@
       "address": "경남 통영시 욕지면 동항리 560-20",
       "distance_m": 31,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1607479434",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "멍게비빔밥",
@@ -17860,7 +18964,10 @@
       "address": "경남 통영시 욕지면 욕지일주로 95-6",
       "distance_m": 0,
       "similarity": 1.0
-    }
+    },
+    "phone": "055-642-6777",
+    "place_url": "http://place.map.kakao.com/9732565",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "새우초밥",
@@ -17923,7 +19030,10 @@
       "address": "서울 노원구 공릉로32길 4",
       "distance_m": 4,
       "similarity": 0.25
-    }
+    },
+    "phone": "02-979-5090",
+    "place_url": "http://place.map.kakao.com/1923191806",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "꼬막비빔밥",
@@ -18135,7 +19245,9 @@
       "similarity": 0.0
     },
     "address_kakao": "경기 구리시 갈매중앙로 190",
-    "name_original": "편집"
+    "name_original": "편집",
+    "place_url": "http://place.map.kakao.com/390270274",
+    "kakao_category": "음식점 > 구내식당"
   },
   {
     "name": "닭강정집",
@@ -18156,7 +19268,10 @@
       "address": "충남 태안군 태안읍 시장5길 43-1",
       "distance_m": 124,
       "similarity": 0.6
-    }
+    },
+    "phone": "041-675-7739",
+    "place_url": "http://place.map.kakao.com/1554394923",
+    "kakao_category": "음식점 > 간식 > 닭강정"
   },
   {
     "name": "샤브샤브",
@@ -18177,7 +19292,10 @@
       "address": "대전 중구 대흥로165번길 43",
       "distance_m": 0,
       "similarity": 0.57
-    }
+    },
+    "phone": "0507-1393-0540",
+    "place_url": "http://place.map.kakao.com/1930019107",
+    "kakao_category": "음식점 > 샤브샤브 > 로운샤브샤브"
   },
   {
     "name": "김치볶음밥",
@@ -18262,7 +19380,10 @@
       "address": "경남 통영시 중앙시장1길 2",
       "distance_m": 1,
       "similarity": 0.67
-    }
+    },
+    "phone": "055-643-5171",
+    "place_url": "http://place.map.kakao.com/10834962",
+    "kakao_category": "음식점 > 한식 > 순대"
   },
   {
     "name": "제가먹으므",
@@ -18348,7 +19469,10 @@
       "similarity": 0.8
     },
     "name_original": "고깃집",
-    "address_kakao": "울산 남구 달삼로 57"
+    "address_kakao": "울산 남구 달삼로 57",
+    "phone": "052-258-7005",
+    "place_url": "http://place.map.kakao.com/26878626",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "와규몽 구월점",
@@ -18371,7 +19495,10 @@
       "similarity": 0.0
     },
     "address_kakao": "인천 남동구 인하로511번길 10-3",
-    "name_original": "이집"
+    "name_original": "이집",
+    "phone": "032-834-4282",
+    "place_url": "http://place.map.kakao.com/737188776",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "양푼비빔밥",
@@ -18451,7 +19578,10 @@
       "similarity": 0.33
     },
     "address_kakao": "경남 양산시 물금읍 화합8길 17-1",
-    "name_original": "참치집"
+    "name_original": "참치집",
+    "phone": "010-7658-1352",
+    "place_url": "http://place.map.kakao.com/1828335342",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "비빔라면",
@@ -18493,7 +19623,10 @@
       "address": "강원특별자치도 철원군 갈말읍 명성로158번길 13",
       "distance_m": 6,
       "similarity": 0.6
-    }
+    },
+    "phone": "033-452-2589",
+    "place_url": "http://place.map.kakao.com/9458545",
+    "kakao_category": "음식점 > 한식 > 국수"
   },
   {
     "name": "진맛시골집",
@@ -18516,7 +19649,10 @@
       "similarity": 0.8
     },
     "name_original": "시골집",
-    "address_kakao": "강원특별자치도 철원군 동송읍 동송시장길 7-1"
+    "address_kakao": "강원특별자치도 철원군 동송읍 동송시장길 7-1",
+    "phone": "010-4589-8622",
+    "place_url": "http://place.map.kakao.com/185846042",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "되길뭐",
@@ -18604,7 +19740,10 @@
       "similarity": 0.8
     },
     "name_original": "엽기떡볶이",
-    "address_kakao": "충남 태안군 태안읍 중앙로 129"
+    "address_kakao": "충남 태안군 태안읍 중앙로 129",
+    "phone": "041-674-8592",
+    "place_url": "http://place.map.kakao.com/27522096",
+    "kakao_category": "음식점 > 분식 > 떡볶이 > 동대문엽기떡볶이"
   },
   {
     "name": "양꼬치집",
@@ -18625,7 +19764,10 @@
       "address": "서울 강서구 화곡로 119",
       "distance_m": 25,
       "similarity": 0.6
-    }
+    },
+    "phone": "02-2699-0777",
+    "place_url": "http://place.map.kakao.com/393030552",
+    "kakao_category": "음식점 > 중식 > 양꼬치"
   },
   {
     "name": "즉석떡볶이집",
@@ -18688,7 +19830,10 @@
       "address": "전북특별자치도 부안군 상서면 부안로 1567",
       "distance_m": 0,
       "similarity": 0.5
-    }
+    },
+    "phone": "063-582-2313",
+    "place_url": "http://place.map.kakao.com/1270005409",
+    "kakao_category": "음식점 > 한식 > 곰탕"
   },
   {
     "name": "약속이라면",
@@ -18732,7 +19877,10 @@
       "similarity": 0.0
     },
     "address_kakao": "충남 아산시 시민로409번길 18",
-    "name_original": "노포집"
+    "name_original": "노포집",
+    "phone": "041-545-7500",
+    "place_url": "http://place.map.kakao.com/1756080110",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "간장닭갈비덮밥",
@@ -18768,7 +19916,10 @@
       "address": "서울 광진구 능동로38길 10",
       "distance_m": 0,
       "similarity": 0.4
-    }
+    },
+    "phone": "0502-5551-7633",
+    "place_url": "http://place.map.kakao.com/1120392333",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
     "name": "매운갈비",
@@ -18853,7 +20004,9 @@
       "address": "인천 연수구 청량로97번길 59",
       "distance_m": 18,
       "similarity": 0.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1597744860",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "본가진미간장게장",
@@ -18874,7 +20027,10 @@
       "address": "서울 송파구 백제고분로 420",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "phone": "02-422-5081",
+    "place_url": "http://place.map.kakao.com/17296779",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "친구이",
@@ -19031,7 +20187,10 @@
       "address": "경기 안양시 동안구 시민대로 190",
       "distance_m": 0,
       "similarity": 0.5
-    }
+    },
+    "phone": "070-8834-5558",
+    "place_url": "http://place.map.kakao.com/1891230501",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "두툼",
@@ -19053,7 +20212,10 @@
       "distance_m": 47,
       "similarity": 0.14
     },
-    "address_kakao": "서울 중구 중림로 10"
+    "address_kakao": "서울 중구 중림로 10",
+    "phone": "02-392-8592",
+    "place_url": "http://place.map.kakao.com/26939037",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "버터구이",
@@ -19120,7 +20282,10 @@
       "similarity": 1.0
     },
     "name_original": "단골집",
-    "address_kakao": "경기 여주시 대신면 여양로 1460"
+    "address_kakao": "경기 여주시 대신면 여양로 1460",
+    "phone": "031-884-7607",
+    "place_url": "http://place.map.kakao.com/24199650",
+    "kakao_category": "음식점 > 한식 > 찌개,전골"
   },
   {
     "name": "닭볶음탕집",
@@ -19162,7 +20327,9 @@
       "address": "경남 통영시 욕지면 동항리 560-20",
       "distance_m": 1,
       "similarity": 1.0
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1607479434",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
     "name": "쯔양라면",
@@ -19204,7 +20371,10 @@
       "address": "충남 예산군 덕산면 수덕사안길 33-6",
       "distance_m": 65,
       "similarity": 0.5
-    }
+    },
+    "phone": "010-2123-9275",
+    "place_url": "http://place.map.kakao.com/913945028",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "시민초밥",
@@ -19227,7 +20397,10 @@
       "similarity": 0.0
     },
     "address_kakao": "대구 북구 고성로 206-1",
-    "name_original": "좋아집"
+    "name_original": "좋아집",
+    "phone": "053-351-8377",
+    "place_url": "http://place.map.kakao.com/2146629368",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "해녀포차",
@@ -19313,7 +20486,10 @@
       "similarity": 0.0
     },
     "address_kakao": "충남 태안군 태안읍 시장5길 43",
-    "name_original": "중국집"
+    "name_original": "중국집",
+    "phone": "041-673-8901",
+    "place_url": "http://place.map.kakao.com/10604998",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "해녀포차",
@@ -19356,7 +20532,10 @@
       "distance_m": 0,
       "similarity": 0.25
     },
-    "address_kakao": "경기 김포시 양촌읍 김포한강4로 317"
+    "address_kakao": "경기 김포시 양촌읍 김포한강4로 317",
+    "phone": "031-986-1223",
+    "place_url": "http://place.map.kakao.com/2104977470",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
   },
   {
     "name": "해물포차",
@@ -19415,7 +20594,10 @@
       "similarity": 0.0
     },
     "address_kakao": "부산 기장군 기장읍 기장해안로 208",
-    "name_original": "군만두"
+    "name_original": "군만두",
+    "phone": "051-723-0944",
+    "place_url": "http://place.map.kakao.com/16239175",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "해물라면",
@@ -19480,7 +20662,10 @@
       "similarity": 0.8
     },
     "name_original": "즉석떡볶이",
-    "address_kakao": "경기 성남시 수정구 위례광장로 328"
+    "address_kakao": "경기 성남시 수정구 위례광장로 328",
+    "phone": "031-757-0451",
+    "place_url": "http://place.map.kakao.com/1038719211",
+    "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
     "name": "해장라면",
@@ -19522,7 +20707,9 @@
       "address": "서울 구로구 구로중앙로 152",
       "distance_m": 1,
       "similarity": 0.4
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1384063928",
+    "kakao_category": "음식점 > 한식 > 한옥마을"
   },
   {
     "name": "스시앤 구로점",
@@ -19545,7 +20732,10 @@
       "similarity": 0.0
     },
     "name_original": "대포집",
-    "address_kakao": "서울 구로구 남부순환로105가길 7"
+    "address_kakao": "서울 구로구 남부순환로105가길 7",
+    "phone": "02-830-1056",
+    "place_url": "http://place.map.kakao.com/477915823",
+    "kakao_category": "음식점 > 일식 > 초밥,롤"
   },
   {
     "name": "자연식품",
@@ -19646,7 +20836,10 @@
       "similarity": 0.7
     },
     "name_original": "반올림피자샵홍천",
-    "address_kakao": "강원특별자치도 홍천군 홍천읍 갈마로7길 8"
+    "address_kakao": "강원특별자치도 홍천군 홍천읍 갈마로7길 8",
+    "phone": "033-433-3777",
+    "place_url": "http://place.map.kakao.com/161320288",
+    "kakao_category": "음식점 > 양식 > 피자 > 반올림피자"
   },
   {
     "name": "육회비빔밥",
@@ -19752,7 +20945,10 @@
       "distance_m": 18,
       "similarity": 0.0
     },
-    "address_kakao": "세종특별자치시 한누리대로 291"
+    "address_kakao": "세종특별자치시 한누리대로 291",
+    "phone": "044-998-0420",
+    "place_url": "http://place.map.kakao.com/1958467199",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 조개 > 갯벌의조개"
   },
   {
     "name": "동해러시아대게마을",
@@ -19773,7 +20969,10 @@
       "address": "강원특별자치도 동해시 추암택지길 2",
       "distance_m": 5,
       "similarity": 1.0
-    }
+    },
+    "phone": "033-522-4774",
+    "place_url": "http://place.map.kakao.com/2106798820",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "보조식품",
@@ -19836,7 +21035,10 @@
       "address": "경기 양평군 서종면 사랑제길 8",
       "distance_m": 4,
       "similarity": 0.2
-    }
+    },
+    "phone": "031-772-8293",
+    "place_url": "http://place.map.kakao.com/1548676412",
+    "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
     "name": "연어초밥",
@@ -19974,7 +21176,10 @@
       "address": "대구 중구 국채보상로125길 4-1",
       "distance_m": 3,
       "similarity": 0.2
-    }
+    },
+    "phone": "053-424-9389",
+    "place_url": "http://place.map.kakao.com/10466328",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "줄서는식당",
@@ -20016,7 +21221,10 @@
       "similarity": 0.8
     },
     "name_original": "옛날우렁이식당",
-    "address_kakao": "충남 당진시 신평면 서해로 7434-1"
+    "address_kakao": "충남 당진시 신평면 서해로 7434-1",
+    "phone": "041-363-0868",
+    "place_url": "http://place.map.kakao.com/10639247",
+    "kakao_category": "음식점 > 한식 > 쌈밥"
   },
   {
     "name": "정원분식",
@@ -20058,7 +21266,10 @@
       "similarity": 0.89
     },
     "name_original": "당진옛날우렁이식당",
-    "address_kakao": "충남 당진시 신평면 서해로 7434-1"
+    "address_kakao": "충남 당진시 신평면 서해로 7434-1",
+    "phone": "041-363-0868",
+    "place_url": "http://place.map.kakao.com/10639247",
+    "kakao_category": "음식점 > 한식 > 쌈밥"
   },
   {
     "name": "중세식당",
@@ -20092,7 +21303,10 @@
       "address": "제주특별자치도 서귀포시 이어도로 598",
       "distance_m": 2,
       "similarity": 1.0
-    }
+    },
+    "phone": "064-739-1542",
+    "place_url": "http://place.map.kakao.com/10333833",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 복어"
   },
   {
     "name": "금성식당",
@@ -20112,7 +21326,10 @@
       "address": "광주 동구 제봉로222번길 2",
       "distance_m": 8,
       "similarity": 1.0
-    }
+    },
+    "phone": "062-227-4717",
+    "place_url": "http://place.map.kakao.com/21224205",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "숨은찐맛집",
@@ -20192,7 +21409,10 @@
       "address": "경기 평택시 통복시장로6번길 2",
       "distance_m": 11,
       "similarity": 1.0
-    }
+    },
+    "phone": "031-655-2225",
+    "place_url": "http://place.map.kakao.com/11039136",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "너구리식당",
@@ -20274,7 +21494,10 @@
       "similarity": 0.0
     },
     "address_kakao": "충북 영동군 심천면 초강로1안길 8-16",
-    "name_original": "또간집"
+    "name_original": "또간집",
+    "phone": "043-742-2163",
+    "place_url": "http://place.map.kakao.com/10256508",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "고창맛집",
@@ -20294,7 +21517,9 @@
       "address": "전북특별자치도 고창군 해리면 하련1길 4",
       "distance_m": 2,
       "similarity": 0.5
-    }
+    },
+    "place_url": "http://place.map.kakao.com/152923216",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "멘보샤맛집",
@@ -20334,7 +21559,10 @@
       "address": "서울 송파구 올림픽로32길 22-19",
       "distance_m": 3,
       "similarity": 0.33
-    }
+    },
+    "phone": "02-423-3336",
+    "place_url": "http://place.map.kakao.com/1807395886",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "금성식당",
@@ -20354,7 +21582,10 @@
       "address": "광주 동구 제봉로222번길 2",
       "distance_m": 8,
       "similarity": 1.0
-    }
+    },
+    "phone": "062-227-4717",
+    "place_url": "http://place.map.kakao.com/21224205",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "압구정맛집",
@@ -20374,7 +21605,10 @@
       "address": "서울 강남구 도산대로35길 39",
       "distance_m": 119,
       "similarity": 0.33
-    }
+    },
+    "phone": "02-545-6154",
+    "place_url": "http://place.map.kakao.com/66544493",
+    "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
     "name": "구리수택동맛집",
@@ -20394,7 +21628,10 @@
       "address": "경기 구리시 안골로77번길 36-2",
       "distance_m": 102,
       "similarity": 0.25
-    }
+    },
+    "phone": "031-557-9119",
+    "place_url": "http://place.map.kakao.com/10309258",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
     "name": "본점원조뼈다귀 구리본점",
@@ -20416,7 +21653,10 @@
       "similarity": 0.0
     },
     "address_kakao": "경기 구리시 수택천로 7",
-    "name_original": "시맛집"
+    "name_original": "시맛집",
+    "phone": "031-566-5709",
+    "place_url": "http://place.map.kakao.com/27344486",
+    "kakao_category": "음식점 > 한식 > 감자탕"
   },
   {
     "name": "다산신도시맛집",
@@ -20456,7 +21696,10 @@
       "address": "경기 구리시 원수택로64번길 9",
       "distance_m": 129,
       "similarity": 0.22
-    }
+    },
+    "phone": "031-558-2456",
+    "place_url": "http://place.map.kakao.com/410464389",
+    "kakao_category": "음식점 > 분식"
   },
   {
     "name": "별내동맛집",
@@ -20516,7 +21759,10 @@
       "address": "경기 수원시 권선구 세권로 185",
       "distance_m": 35,
       "similarity": 1.0
-    }
+    },
+    "phone": "031-233-7094",
+    "place_url": "http://place.map.kakao.com/15971668",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "평양냉면",
@@ -20536,7 +21782,9 @@
       "address": "서울 마포구 월드컵북로5길 41",
       "distance_m": 1,
       "similarity": 0.14
-    }
+    },
+    "place_url": "http://place.map.kakao.com/1868555634",
+    "kakao_category": "음식점 > 한식 > 냉면"
   },
   {
     "name": "욱이네식당 영일대점",
@@ -20558,7 +21806,10 @@
       "similarity": 0.8
     },
     "name_original": "욱이네식당",
-    "address_kakao": "경북 포항시 북구 삼호로 211"
+    "address_kakao": "경북 포항시 북구 삼호로 211",
+    "phone": "054-241-5882",
+    "place_url": "http://place.map.kakao.com/1648375440",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "용삼식당 을지로",
@@ -20580,7 +21831,10 @@
       "similarity": 0.8
     },
     "name_original": "용삼식당",
-    "address_kakao": "서울 중구 충무로7길 3"
+    "address_kakao": "서울 중구 충무로7길 3",
+    "phone": "02-2272-0359",
+    "place_url": "http://place.map.kakao.com/375801766",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 삼겹살"
   },
   {
     "name": "좁은식당",
@@ -20654,7 +21908,10 @@
       "address": "충남 태안군 원북면 원이로 447-15",
       "distance_m": 3,
       "similarity": 0.14
-    }
+    },
+    "phone": "0502-5553-6849",
+    "place_url": "http://place.map.kakao.com/10904963",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
     "name": "진짜파스타",
@@ -20696,7 +21953,10 @@
       "similarity": 0.8
     },
     "name_original": "정육식당",
-    "address_kakao": "경북 경주시 안강읍 호국로 2620"
+    "address_kakao": "경북 경주시 안강읍 호국로 2620",
+    "phone": "054-763-6789",
+    "place_url": "http://place.map.kakao.com/108304123",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "노포맛집",
@@ -20778,7 +22038,10 @@
       "similarity": 0.14
     },
     "address_kakao": "서울 마포구 토정로 313-1",
-    "name_original": "갈빗집"
+    "name_original": "갈빗집",
+    "phone": "02-712-7462",
+    "place_url": "http://place.map.kakao.com/20526340",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "중앙시장맛집",
@@ -20879,7 +22142,10 @@
       "address": "강원특별자치도 인제군 인제읍 자작나무숲길 1037",
       "distance_m": 5,
       "similarity": 0.4
-    }
+    },
+    "phone": "033-463-3566",
+    "place_url": "http://place.map.kakao.com/396685839",
+    "kakao_category": "음식점 > 한식"
   },
   {
     "name": "한양식당",
@@ -20919,7 +22185,10 @@
       "address": "부산 기장군 기장읍 연화리 119-10",
       "distance_m": 49,
       "similarity": 0.3
-    }
+    },
+    "phone": "010-5340-5799",
+    "place_url": "http://place.map.kakao.com/1563993843",
+    "kakao_category": "음식점 > 술집 > 실내포장마차"
   },
   {
     "name": "원주도래미시장만두",

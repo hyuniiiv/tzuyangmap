@@ -245,6 +245,11 @@ def process_new_video(video: dict) -> dict | None:
     name    = None
     lat = lng = None
 
+    # 추가 메타데이터
+    phone = ""
+    place_url = ""
+    kakao_category = ""
+
     # ── 전략 1: 자막 NER → 가게명 → Kakao 검색 ──────────────────────────
     sub_names = extract_names_from_sub(sub_text) if sub_text else []
     for sub_name in sub_names:
@@ -266,6 +271,9 @@ def process_new_video(video: dict) -> dict | None:
                 address = d.get("road_address_name") or d.get("address_name", "")
                 lat     = float(d["y"])
                 lng     = float(d["x"])
+                phone   = d.get("phone", "") or ""
+                place_url = d.get("place_url", "") or ""
+                kakao_category = d.get("category_name", "") or ""
                 break
         except: pass
         time.sleep(0.1)
@@ -294,6 +302,10 @@ def process_new_video(video: dict) -> dict | None:
         if dist < 80:
             name    = best.get("place_name", name)
             address = best.get("road_address_name") or address
+            # 교차검증으로 매칭된 매장의 메타데이터 우선
+            if best.get("phone"):     phone = best.get("phone", "")
+            if best.get("place_url"): place_url = best.get("place_url", "")
+            if best.get("category_name"): kakao_category = best.get("category_name", "")
 
     cat_map = {
         "떡볶이":"분식","냉면":"냉면","닭갈비":"닭갈비","게장":"해산물","국밥":"국밥",
@@ -332,6 +344,9 @@ def process_new_video(video: dict) -> dict | None:
         "lat": round(lat, 6), "lng": round(lng, 6),
         "source": "auto_kakao",
         "channel": video.get("channel", "tzuyang"),
+        "phone": phone,
+        "place_url": place_url,
+        "kakao_category": kakao_category,
     }
 
 

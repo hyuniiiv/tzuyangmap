@@ -459,6 +459,23 @@ body {
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 #panel-date { font-size: 11px; color: var(--ink-muted-48); margin-bottom: 12px; }
+#panel-meta {
+  display: none;
+  flex-wrap: wrap; gap: 10px;
+  font-size: 12px;
+  margin: 6px 0 12px;
+  color: var(--ink-muted-80);
+  letter-spacing: -0.01em;
+}
+#panel-meta.show { display: flex; }
+#panel-meta a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+#panel-meta a:hover { text-decoration: underline; }
+#panel-meta .meta-sep { color: var(--ink-muted-30); }
 #panel-btns { display: flex; gap: 8px; }
 
 @media (max-width: 768px) {
@@ -754,6 +771,7 @@ body {
     <div id="panel-addr"></div>
     <div id="panel-title"></div>
     <div id="panel-date"></div>
+    <div id="panel-meta"></div>
     <div id="panel-btns">
       <button id="panel-yt" class="kp-btn p">▶ 영상보기</button>
       <button id="panel-navi" class="kp-btn s">길찾기</button>
@@ -1151,6 +1169,23 @@ function openPanel(r) {
   document.getElementById('panel-addr').textContent  = r.address || '';
   document.getElementById('panel-title').textContent = (r.video_title||'').substring(0,55);
   document.getElementById('panel-date').textContent  = r.upload_date ? fmtDate(r.upload_date) : '';
+
+  // 전화번호 + 카카오맵 상세 링크
+  const metaEl = document.getElementById('panel-meta');
+  const metaParts = [];
+  if (r.phone) {
+    metaParts.push(`<a href="tel:${r.phone}">📞 ${r.phone}</a>`);
+  }
+  if (r.place_url) {
+    metaParts.push(`<a href="${r.place_url}" target="_blank" rel="noopener">🗺 카카오맵</a>`);
+  }
+  if (metaParts.length) {
+    metaEl.innerHTML = metaParts.join('<span class="meta-sep">·</span>');
+    metaEl.classList.add('show');
+  } else {
+    metaEl.innerHTML = '';
+    metaEl.classList.remove('show');
+  }
 
   // 방문 토글 버튼 상태
   const visitBtn = document.getElementById('panel-visited');
