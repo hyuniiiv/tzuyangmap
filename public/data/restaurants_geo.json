@@ -10898,8 +10898,8 @@
     "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
   },
   {
-    "name": "대림국수성수점",
-    "address": "서울 성동구 연무장7가길 5-1 1층",
+    "name": "대림국수",
+    "address": "서울 성동구 연무장7가길 6",
     "category": "기타",
     "region": "서울",
     "video_id": "1xtDsmbE91k",
@@ -10907,16 +10907,13 @@
     "video_url": "https://www.youtube.com/watch?v=1xtDsmbE91k",
     "thumbnail": "https://i.ytimg.com/vi/1xtDsmbE91k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-WQhrOgBPTJRMH7j3AdJlEzbKmg",
     "upload_date": "2022-04-06",
-    "duplicate": false,
-    "source": "websearch_manual",
     "lat": 37.543153,
     "lng": 127.055085,
-    "kakao_verified": {
-      "name": "소바식당 성수점",
-      "address": "서울 성동구 연무장7가길 6",
-      "distance_m": 18,
-      "similarity": 0.57
-    }
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-6339-1552",
+    "place_url": "http://place.map.kakao.com/1155031193",
+    "kakao_category": "음식점 > 일식"
   },
   {
     "name": "옛집국수",
