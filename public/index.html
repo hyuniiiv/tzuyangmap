@@ -1498,13 +1498,10 @@ function syncToggleButton() {
 
 function toggleSidebar() {
   const sb = document.getElementById('sidebar');
-  const wasOpen = sb.classList.contains('open');
-  const isOpen = sb.classList.toggle('open');
+  sb.classList.toggle('open');
   syncToggleButton();
-  // 모바일: 지도 보기로 전환 시 (목록→지도) 팝업도 닫아서 지도 가리지 않게
-  if (wasOpen && !isOpen) {
-    clearSelection();
-  }
+  // 모바일: 어느 방향이든 전환 시 팝업 닫아서 가리지 않게
+  clearSelection();
 }
 
 kakao.maps.load(function() {
