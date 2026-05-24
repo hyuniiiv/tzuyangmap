@@ -445,6 +445,7 @@ def process_new_video(video: dict) -> dict | None:
     address = None
     name    = None
     lat = lng = None
+    food = has_food_keyword(title)  # 함수 전반에서 사용 (category 매핑 등)
 
     # 추가 메타데이터
     phone = ""
@@ -568,7 +569,6 @@ def process_new_video(video: dict) -> dict | None:
 
     # ── 전략 2: 제목 음식 키워드 → Naver 주소 검색 (전략 0, 1 모두 실패 시) ─
     if not address:
-        food = has_food_keyword(title)
         if not food: return None
         query = f"쯔양 {region} {food} 맛집 주소" if region else f"쯔양 {food} 맛집 주소"
         address = naver_search_address(query)
@@ -584,7 +584,6 @@ def process_new_video(video: dict) -> dict | None:
     # 전략 0에서 주소만 얻고 이름 아직 못 채운 경우 → placeholder
     # (다음 cross-verify에서 정확한 매장명으로 교체됨)
     if not name:
-        food = has_food_keyword(title)
         name = food or (region + "맛집" if region else "맛집")
 
     # ── Kakao Local Search로 정확한 가게명 최종 교차검증 ──────────────────
