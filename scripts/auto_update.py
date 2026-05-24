@@ -33,6 +33,14 @@ import os
 KAKAO_REST = os.environ.get("KAKAO_REST_API_KEY", KAKAO_REST)
 KAKAO_JS   = os.environ.get("KAKAO_JAVASCRIPT_KEY", KAKAO_JS)
 
+# OpenAI (LLM 매장명 추출용)
+OPENAI_KEY = os.environ.get("OPEN_AI_API_KEY") or os.environ.get("OPENAI_API_KEY", "")
+# .env에서도 시도
+if not OPENAI_KEY and ENV_FILE.exists():
+    for line in ENV_FILE.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"(?:OPEN_AI_API_KEY|OPENAI_API_KEY)\s*=\s*(.+)", line.strip())
+        if m: OPENAI_KEY = m.group(1).strip(); break
+
 CHANNELS = [
     ("https://www.youtube.com/@tzuyang6145/videos", "tzuyang", "쯔양"),
     # 밖정원 채널은 비식당 콘텐츠 비중이 높아 메인 채널만 처리
@@ -112,6 +120,146 @@ def get_existing_video_ids() -> set:
 
 
 # ── 3. 매장명+주소 수집 ────────────────────────────────────────────────────
+
+def get_video_description(vid_id: str) -> str:
+    """영상 설명란 — 주소가 가장 자주 명시되는 신뢰도 높은 소스"""
+    try:
+        r = subprocess.run(
+            ["yt-dlp", "--print", "description", "--skip-download", "--no-warnings",
+             f"https://www.youtube.com/watch?v={vid_id}"],
+            capture_output=True, encoding="utf-8", errors="replace", timeout=20
+        )
+        return (r.stdout or "").strip()
+    except Exception:
+        return ""
+
+
+def get_top_pinned_comment(vid_id: str) -> str:
+    """업로더의 고정 댓글 — 설명에 없을 때 백업 (느림: ~30s)"""
+    info_path = SUB_DIR / f"{vid_id}.info.json"
+    try:
+        subprocess.run(
+            ["yt-dlp", "--skip-download", "--write-info-json", "--write-comments",
+             "--no-warnings",
+             "--extractor-args", "youtube:max_comments=20,20;comment_sort=top",
+             "-o", str(SUB_DIR / "%(id)s"),
+             f"https://www.youtube.com/watch?v={vid_id}"],
+            capture_output=True, encoding="utf-8", errors="replace", timeout=60
+        )
+        if not info_path.exists():
+            return ""
+        info = json.loads(info_path.read_text(encoding="utf-8"))
+        comments = info.get("comments") or []
+        # 우선순위: 업로더+고정 > 고정 > 업로더 작성
+        pinned_uploader = pinned_other = uploader_first = ""
+        for c in comments:
+            text = (c.get("text") or "").strip()
+            if not text: continue
+            is_uploader = c.get("author_is_uploader", False)
+            is_pinned   = c.get("is_pinned", False)
+            if is_uploader and is_pinned and not pinned_uploader:
+                pinned_uploader = text
+            elif is_pinned and not pinned_other:
+                pinned_other = text
+            elif is_uploader and not uploader_first:
+                uploader_first = text
+        return pinned_uploader or pinned_other or uploader_first
+    except Exception:
+        return ""
+
+
+# 한국 주소 정규식 (시/도 + 시군구 + 도로명 + 번지)
+KOREAN_ADDR_RE = re.compile(
+    r"((?:서울|부산|인천|대구|대전|광주|울산|세종|경기|강원|충북|충남|전북|전남|경북|경남|제주)"
+    r"(?:특별시|광역시|특별자치시|특별자치도|도)?\s*"
+    r"(?:[가-힣]{1,6}(?:시|군|구|읍|면)\s*)+"
+    r"[가-힣\d]+(?:로|길|번길)\s*\d{1,5}(?:-\d+)?)"
+)
+
+def extract_address_from_text(text: str) -> str | None:
+    """텍스트(설명/댓글)에서 한국 주소 추출 — 가장 많이 등장한 패턴 선택"""
+    if not text: return None
+    ms = KOREAN_ADDR_RE.findall(text)
+    if not ms: return None
+    return re.sub(r"\s+", " ", Counter(ms).most_common(1)[0][0]).strip()
+
+
+def llm_extract_restaurant(title: str, sub_text: str, desc_text: str, pinned_text: str = "") -> dict | None:
+    """OpenAI(GPT-4o-mini)로 영상에서 매장명/주소 동시 추출.
+    - 메뉴와 매장명 자연어 구분
+    - 약칭(엽떡 → 동대문엽기떡볶이) 이해
+    - JSON 응답: restaurant_name, address, main_menu, confidence
+    """
+    if not OPENAI_KEY: return None
+
+    sub  = (sub_text or "")[:2500]
+    desc = (desc_text or "")[:800]
+    pin  = (pinned_text or "")[:500]
+
+    prompt = (
+        "다음 한국 음식 먹방 유튜브 영상에서 방문한 실제 매장 정보를 추출하세요.\n\n"
+        f"[영상 제목]\n{title}\n\n"
+        f"[자막 (앞부분)]\n{sub}\n\n"
+        f"[영상 설명]\n{desc}\n\n"
+        f"[고정 댓글]\n{pin}\n\n"
+        "규칙:\n"
+        "- restaurant_name은 실제 매장명 (예: '동대문엽기떡볶이 가락점', '곰탕한그릇')\n"
+        "- 메뉴명/일반명사 절대 금지 (X: '로제떡볶이', '분식', '삼겹살집', '시골마을')\n"
+        "- 매장명 못 찾으면 null (추측 금지)\n"
+        "- address는 한국 도로명 주소 (예: '서울 송파구 양재대로62길 16')\n"
+        "- confidence: high(영상에 명확) / medium(추론 가능) / low(불확실)\n\n"
+        'JSON 형식만 출력:\n{"restaurant_name": "...", "address": "...", "main_menu": "...", "confidence": "high|medium|low"}'
+    )
+
+    body = {
+        "model": "gpt-4o-mini",
+        "messages": [
+            {"role": "system", "content": "한국 음식 영상 매장 정보 추출 전문가. JSON만 반환."},
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": 0.0,
+        "response_format": {"type": "json_object"},
+    }
+    try:
+        req = urllib.request.Request(
+            "https://api.openai.com/v1/chat/completions",
+            data=json.dumps(body).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {OPENAI_KEY}",
+                "Content-Type": "application/json",
+            }
+        )
+        with urllib.request.urlopen(req, timeout=30) as r:
+            res = json.loads(r.read().decode("utf-8"))
+        content = res["choices"][0]["message"]["content"]
+        return json.loads(content)
+    except Exception as e:
+        print(f"    [LLM 실패: {type(e).__name__}: {str(e)[:80]}]")
+        return None
+
+
+def name_similarity(a: str, b: str) -> float:
+    """매장명 유사도 (cross-verify에서 LLM 결과 보존 판단용)"""
+    if not a or not b: return 0
+    a, b = a.replace(" ", ""), b.replace(" ", "")
+    if a == b: return 1.0
+    if a in b or b in a: return 0.85
+    common = sum(1 for ch in set(a) if ch in b)
+    return common / max(len(set(a)), len(set(b)))
+
+
+# 일반명사/메뉴명 (Kakao 검증 실패 시 거부 대상)
+GENERIC_NAMES = {
+    "맛집","음식점","분식","구이","냉면","해산물","중식","일식","한식","양식","국밥",
+    "떡볶이","로제떡볶이","즉석떡볶이","파스타","우동","칼국수","돈까스","초밥","마라탕",
+    "삼겹살","갈비","곱창","대창","막창","치킨","피자","피자집","면류","면집","고깃집",
+    "회","사시미","활어회","쭈꾸미","낙지","조개","오겹살",
+    "시골마을","우리집","추천한집","이사한집","고기집","술집","해녀촌식당","해녀포차",
+    "한국인이라면","분이라면","차량이라면","오징어라면","청어알낙지","매운낙지",
+    "삼겹살집","돼지국밥","간장게장","숯불구이","모듬구이","모듬떡볶이",
+    "곱창막창대창","튀김칼국수","국물떡볶이","커피집","몽땅식품","두번째",
+}
+
 
 def get_subtitle_text(vid_id: str) -> str:
     vtt_path = SUB_DIR / f"{vid_id}.ko.vtt"
@@ -250,6 +398,46 @@ def process_new_video(video: dict) -> dict | None:
     place_url = ""
     kakao_category = ""
 
+    # ── 전략 0: 영상 설명 + (필요 시) 고정댓글 + 자막 → LLM에 통합 추출 ────
+    desc_text = get_video_description(video["id"])
+
+    # 정규식으로 description에서 먼저 주소 시도 (LLM 호출 절약 가능)
+    addr_from_desc = extract_address_from_text(desc_text)
+    if addr_from_desc:
+        coords = kakao_geocode(addr_from_desc)
+        if coords:
+            lat, lng = coords
+            address = addr_from_desc
+            if not region: region = find_region(addr_from_desc) or region
+            print(f"    [description 주소: {addr_from_desc}]")
+
+    # LLM 추출 (가장 정확) — 설명/자막 모두 활용
+    llm_name = None
+    if OPENAI_KEY:
+        llm = llm_extract_restaurant(title, sub_text, desc_text, "")
+        # 첫 시도 실패 또는 confidence 낮으면 고정 댓글 추가해서 재시도
+        if not llm or llm.get("confidence") == "low":
+            pinned = get_top_pinned_comment(video["id"])
+            if pinned:
+                llm = llm_extract_restaurant(title, sub_text, desc_text, pinned)
+
+        if llm and llm.get("confidence") in ("high", "medium"):
+            nm = (llm.get("restaurant_name") or "").strip()
+            ad = (llm.get("address") or "").strip()
+            conf = llm.get("confidence")
+            if nm and nm not in GENERIC_NAMES:
+                llm_name = nm
+            # LLM이 주소도 제공하면 사용 (description regex 결과보다 우선)
+            if ad and not address:
+                coords = kakao_geocode(ad)
+                if coords:
+                    lat, lng = coords
+                    address = ad
+                    if not region: region = find_region(ad) or region
+            if llm_name:
+                name = llm_name
+            print(f"    [LLM({conf}): {llm_name or '?'} @ {address or '?'}]")
+
     # ── 전략 1: 자막 NER → 가게명 → Kakao 검색 ──────────────────────────
     sub_names = extract_names_from_sub(sub_text) if sub_text else []
     for sub_name in sub_names:
@@ -258,8 +446,12 @@ def process_new_video(video: dict) -> dict | None:
             "query": f"{region} {sub_name}" if region else sub_name,
             "category_group_code": "FD6", "size": 1,
         }
-        if region:
-            params["y"] = 36.5; params["x"] = 127.8  # 한국 중심
+        # description/comment에서 얻은 좌표가 있으면 좁은 반경 안에서 검색 (정확도↑)
+        if lat and lng:
+            params["y"] = lat; params["x"] = lng
+            params["radius"] = 3000  # 3km
+        elif region:
+            params["y"] = 36.5; params["x"] = 127.8
         url = "https://dapi.kakao.com/v2/local/search/keyword.json?" + urllib.parse.urlencode(params)
         req = urllib.request.Request(url, headers={"Authorization": f"KakaoAK {KAKAO_REST}"})
         try:
@@ -278,7 +470,7 @@ def process_new_video(video: dict) -> dict | None:
         except: pass
         time.sleep(0.1)
 
-    # ── 전략 2: 제목 음식 키워드 → Naver 주소 검색 (자막 실패 시) ──────────
+    # ── 전략 2: 제목 음식 키워드 → Naver 주소 검색 (전략 0, 1 모두 실패 시) ─
     if not address:
         food = has_food_keyword(title)
         if not food: return None
@@ -293,6 +485,12 @@ def process_new_video(video: dict) -> dict | None:
 
     if not lat or not lng: return None
 
+    # 전략 0에서 주소만 얻고 이름 아직 못 채운 경우 → placeholder
+    # (다음 cross-verify에서 정확한 매장명으로 교체됨)
+    if not name:
+        food = has_food_keyword(title)
+        name = food or (region + "맛집" if region else "맛집")
+
     # ── Kakao Local Search로 정확한 가게명 최종 교차검증 ──────────────────
     food_hint = has_food_keyword(title) or "음식점"
     results = kakao_search_nearby(lat, lng, query=food_hint, radius=100)
@@ -300,9 +498,14 @@ def process_new_video(video: dict) -> dict | None:
         best = results[0]
         dist = ((lat - float(best["y"]))**2 + (lng - float(best["x"]))**2)**0.5 * 111000
         if dist < 80:
-            name    = best.get("place_name", name)
+            kakao_name = best.get("place_name", "")
+            sim = name_similarity(name or "", kakao_name)
+            # LLM/NER가 잡은 이름과 Kakao 이름이 매우 다르면 LLM 이름 보존
+            # (현재 name이 generic이거나, 유사도가 어느 정도 있으면 Kakao로 표준화)
+            if (name or "") in GENERIC_NAMES or not name or sim >= 0.4:
+                name = kakao_name or name
+            # 주소/메타데이터는 항상 Kakao 우선 (포맷 표준화 + 메타 정확)
             address = best.get("road_address_name") or address
-            # 교차검증으로 매칭된 매장의 메타데이터 우선
             if best.get("phone"):     phone = best.get("phone", "")
             if best.get("place_url"): place_url = best.get("place_url", "")
             if best.get("category_name"): kakao_category = best.get("category_name", "")
@@ -334,6 +537,13 @@ def process_new_video(video: dict) -> dict | None:
     if region_val == "기타":
         for city, r in region_map.items():
             if city in address: region_val = r; break
+
+    # ── 최종 품질 검증 ──────────────────────────────────────────────────
+    # Kakao 메타데이터(전화/URL)도 없고 매장명이 일반명사면 거부
+    name_clean = (name or "").strip()
+    if not phone and not place_url and name_clean in GENERIC_NAMES:
+        print(f"    [거부: 검증 실패 + 일반명사 매장명 - {name_clean}]")
+        return None
 
     return {
         "name": name, "address": address,

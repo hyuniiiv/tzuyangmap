@@ -75,21 +75,6 @@
     "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
-    "name": "파스타",
-    "address": "서울특별시 용산구 한강로2",
-    "category": "양식",
-    "region": "서울",
-    "video_id": "ZxwXeF5p3sg",
-    "video_title": "메뉴판에 있는거 다주세요를 해봤습니다😎 타코와 파스타 그리고 고수에이드?? 먹방",
-    "video_url": "https://www.youtube.com/watch?v=ZxwXeF5p3sg",
-    "thumbnail": "https://i.ytimg.com/vi/ZxwXeF5p3sg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1OzAHkTaGQcpT7jErj-11k0vbZw",
-    "upload_date": "2026-05-14",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.533387,
-    "lng": 126.968835
-  },
-  {
     "name": "남영돈",
     "address": "서울 용산구 한강대로80길 17",
     "category": "기타",
@@ -306,27 +291,6 @@
     }
   },
   {
-    "name": "원조쯔왕돈까스",
-    "address": "서울 동작구 동작대로 23",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "xZGiIBCygGc",
-    "video_title": "엄마 몰래 집에서 고기 3kg 구워먹다가 걸렸습니다..",
-    "video_url": "https://www.youtube.com/watch?v=xZGiIBCygGc",
-    "thumbnail": "https://i.ytimg.com/vi/xZGiIBCygGc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8rvAIsujugyCpA1-JF4yym9grEw",
-    "upload_date": "2025-12-20",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.514269,
-    "lng": 126.936295,
-    "kakao_verified": {
-      "name": "노량진101",
-      "address": "서울 동작구 노들로 674",
-      "distance_m": 118,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "매운닭발집",
     "address": "부산광역시 남구 수영로 219",
     "category": "구이",
@@ -344,27 +308,6 @@
       "name": "명륜진사갈비 부산대연점",
       "address": "부산 남구 수영로 224",
       "distance_m": 60,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "로제떡볶이",
-    "address": "서울 마포구 어울마당로 143-3",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "xFGP21Xmn2w",
-    "video_title": "엽떡 먹고싶어지는 영상",
-    "video_url": "https://www.youtube.com/watch?v=xFGP21Xmn2w",
-    "thumbnail": "https://i.ytimg.com/vi/xFGP21Xmn2w/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAP5H74BdnnmT3hpfQAIGtFXTixbA",
-    "upload_date": "2026-04-09",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.556614,
-    "lng": 126.92564,
-    "kakao_verified": {
-      "name": "누구나홀딱반한닭 홍대점",
-      "address": "서울 마포구 어울마당로 129",
-      "distance_m": 176,
       "similarity": 0.0
     }
   },
@@ -434,27 +377,6 @@
       "address": "충북 청주시 흥덕구 직지대로 308",
       "distance_m": 51,
       "similarity": 0.07
-    }
-  },
-  {
-    "name": "서울식불고기",
-    "address": "서울특별시 종로구 세종대로23길 54",
-    "category": "한식",
-    "region": "서울",
-    "video_id": "sMHukuYv5bE",
-    "video_title": "산더미로 쌓아주는 서울식불고기?😳 5단 불고기탑 쌓았습니다",
-    "video_url": "https://www.youtube.com/watch?v=sMHukuYv5bE",
-    "thumbnail": "https://i.ytimg.com/vi/sMHukuYv5bE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBwPxvdmgcSXpHvvDMIJBTs14VK5A",
-    "upload_date": "2026-03-29",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.571839,
-    "lng": 126.973285,
-    "kakao_verified": {
-      "name": "일일향 광화문점",
-      "address": "서울 종로구 새문안로3길 15",
-      "distance_m": 110,
-      "similarity": 0.0
     }
   },
   {
@@ -610,27 +532,6 @@
     "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
-    "name": "대장갈비",
-    "address": "경기도 성남시 수정구 시민로 172",
-    "category": "일식",
-    "region": "경기",
-    "video_id": "7-BpFy4N2Fk",
-    "video_title": "4년만에 재도전🔥 디진다 돈까스",
-    "video_url": "https://www.youtube.com/watch?v=7-BpFy4N2Fk",
-    "thumbnail": "https://i.ytimg.com/vi/7-BpFy4N2Fk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEJOGxEp2qEoFmdfeoQoXTlek1hQ",
-    "upload_date": "2026-03-21",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.44353,
-    "lng": 127.143008,
-    "kakao_verified": {
-      "name": "또또와분식",
-      "address": "경기 성남시 수정구 시민로175번길 8",
-      "distance_m": 123,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "디진다돈까스",
     "address": "서울 관악구 조원로 60",
     "category": "일식",
@@ -648,27 +549,6 @@
       "name": "어느밤",
       "address": "서울 관악구 조원로 64",
       "distance_m": 48,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "삼겹살집",
-    "address": "서울 동대문구 장한로9길 8",
-    "category": "구이",
-    "region": "서울",
-    "video_id": "tX4IaSPGylw",
-    "video_title": "유나님과 삼겹살 15인분",
-    "video_url": "https://www.youtube.com/watch?v=tX4IaSPGylw",
-    "thumbnail": "https://i.ytimg.com/vi/tX4IaSPGylw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDeDxZI0HKdZBnrlYxy2vZDBzrjTg",
-    "upload_date": "2026-03-18",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.565792,
-    "lng": 127.06684,
-    "kakao_verified": {
-      "name": "고오기",
-      "address": "서울 동대문구 천호대로83길 66",
-      "distance_m": 128,
       "similarity": 0.0
     }
   },
@@ -712,27 +592,6 @@
       "address": "서울 마포구 신촌로 94",
       "distance_m": 66,
       "similarity": 0.17
-    }
-  },
-  {
-    "name": "매운라면",
-    "address": "서울 관악구 신림로59길 15-13",
-    "category": "면류",
-    "region": "서울",
-    "video_id": "IwT20Dxf54Y",
-    "video_title": "서울에서 가장 유명한 매운라면 3곳에서 라면 10개 정도 먹었습니다. 10단계 매운라면 먹방",
-    "video_url": "https://www.youtube.com/watch?v=IwT20Dxf54Y",
-    "thumbnail": "https://i.ytimg.com/vi/IwT20Dxf54Y/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQ4VMMr6FYe9dGCUpxGF3pkuDs5w",
-    "upload_date": "2026-03-12",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.482724,
-    "lng": 126.929421,
-    "kakao_verified": {
-      "name": "오첨지",
-      "address": "서울 관악구 남부순환로176길 18",
-      "distance_m": 109,
-      "similarity": 0.0
     }
   },
   {
@@ -1374,27 +1233,6 @@
     "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
-    "name": "소고기",
-    "address": "인천광역시 연수구 하모니로 158",
-    "category": "기타",
-    "region": "인천",
-    "video_id": "W2rczdVqpPU",
-    "video_title": "구독자님들과 만났습니다🥹 1인 25만원 소고기 풀코스 대접드렸더니..",
-    "video_url": "https://www.youtube.com/watch?v=W2rczdVqpPU",
-    "thumbnail": "https://i.ytimg.com/vi/W2rczdVqpPU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKGVhRzC0GJaLrLgHqYiG_YpwcXQ",
-    "upload_date": "2025-12-31",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.383295,
-    "lng": 126.642256,
-    "kakao_verified": {
-      "name": "화룽 송도점",
-      "address": "인천 연수구 하모니로 158",
-      "distance_m": 129,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "오징어라면",
     "address": "전북 남원시 역재1길 9",
     "category": "기타",
@@ -1549,27 +1387,6 @@
     }
   },
   {
-    "name": "육회비빔밥",
-    "address": "서울 종로구 종로5",
-    "category": "구이",
-    "region": "서울",
-    "video_id": "9EpgVDwUqp4",
-    "video_title": "새벽6시에 소고기 3kg 먹을수 있을까?🤔 아침 최고매출 xxx만원 찍고왔습니다. 초대왕 갈비살 먹방",
-    "video_url": "https://www.youtube.com/watch?v=9EpgVDwUqp4",
-    "thumbnail": "https://i.ytimg.com/vi/9EpgVDwUqp4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvObyfVCvKqdoyy-ojJavKqH-itA",
-    "upload_date": "2025-12-18",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.569765,
-    "lng": 126.984087,
-    "kakao_verified": {
-      "name": "한우공방",
-      "address": "서울 종로구 종로9길 8",
-      "distance_m": 116,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "짜장",
     "address": "서울 특별시 영등포구 영등포로53길 23",
     "category": "중식",
@@ -1585,48 +1402,6 @@
     "lng": 126.91014,
     "place_url": "http://place.map.kakao.com/434745756",
     "kakao_category": "음식점 > 중식 > 중국요리"
-  },
-  {
-    "name": "메밀국수",
-    "address": "서울특별시 강남구 도산대로15길 32-10",
-    "category": "일식",
-    "region": "서울",
-    "video_id": "PcwjmL-aJxg",
-    "video_title": "강남에서 왕돈까스2장+메밀국수+계란+밥 =9000원?!😱 말도 안되는 가격.. 제육 김볶 오무라이스 먹방",
-    "video_url": "https://www.youtube.com/watch?v=PcwjmL-aJxg",
-    "thumbnail": "https://i.ytimg.com/vi/PcwjmL-aJxg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhQESiWU6OQZQDPrdwmUANPncAmg",
-    "upload_date": "2025-12-12",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.52093,
-    "lng": 127.023528,
-    "kakao_verified": {
-      "name": "고쥬",
-      "address": "서울 강남구 논현로153길 49",
-      "distance_m": 104,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "컵라면",
-    "address": "서울 광진구 아차산로31길 37",
-    "category": "구이",
-    "region": "서울",
-    "video_id": "cgVRNBLTHaM",
-    "video_title": "지는 사람이 밥 사주기!🔥 XXX만 원?!😱 제가 못이겼습니다.. 충격적인 결과의 곱창대결",
-    "video_url": "https://www.youtube.com/watch?v=cgVRNBLTHaM",
-    "thumbnail": "https://i.ytimg.com/vi/cgVRNBLTHaM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCi_2jTWnH-NIp8UDjsq2zo7Bmt2g",
-    "upload_date": "2025-12-07",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.542638,
-    "lng": 127.069928,
-    "kakao_verified": {
-      "name": "츠나토리",
-      "address": "서울 광진구 동일로24길 61",
-      "distance_m": 164,
-      "similarity": 0.0
-    }
   },
   {
     "name": "철판산낙지",
@@ -1968,27 +1743,6 @@
     }
   },
   {
-    "name": "중식집",
-    "address": "서울 종로구 종로2",
-    "category": "중식",
-    "region": "서울",
-    "video_id": "GeRkd99WZbU",
-    "video_title": "75년 역사의 중식집..여기 진짜 맛있습니다👍이문동 영화장 짜장면 짬뽕 탕수육 먹방",
-    "video_url": "https://www.youtube.com/watch?v=GeRkd99WZbU",
-    "thumbnail": "https://i.ytimg.com/vi/GeRkd99WZbU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEXydC6fjhRO6ac2xg25dJvhkETw",
-    "upload_date": "2023-05-19",
-    "duplicate": true,
-    "source": "search",
-    "lat": 37.570624,
-    "lng": 127.00041,
-    "kakao_verified": {
-      "name": "삼성원",
-      "address": "서울 종로구 종로 199",
-      "distance_m": 116,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "덕후라면",
     "address": "서울특별시 강남구 선릉로 822",
     "category": "중식",
@@ -2259,27 +2013,6 @@
     "kakao_category": "음식점 > 한식 > 해물,생선"
   },
   {
-    "name": "청어알낙지",
-    "address": "서울 강남구 삼성로85길 43",
-    "category": "분식",
-    "region": "서울",
-    "video_id": "TuZddCVF-yw",
-    "video_title": "회식 자리에서 얼마나 먹었을까?😅 매콤한 면낙지와 수육 칼국수 만두국 파전 먹방",
-    "video_url": "https://www.youtube.com/watch?v=TuZddCVF-yw",
-    "thumbnail": "https://i.ytimg.com/vi/TuZddCVF-yw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZ1eOSzxHlEINfhdEm4ge-7MXaCw",
-    "upload_date": "2025-09-29",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.504191,
-    "lng": 127.053898,
-    "kakao_verified": {
-      "name": "신동궁감자탕뼈숯불구이 선릉직영점",
-      "address": "서울 강남구 선릉로86길 39",
-      "distance_m": 112,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "오도독갈비",
     "address": "서울 중구 남대문시장길 29",
     "category": "분식",
@@ -2297,27 +2030,6 @@
       "name": "진주집",
       "address": "서울 중구 남대문시장길 22-2",
       "distance_m": 70,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "메밀국수",
-    "address": "서울특별시 서대문구 명물길 50-9",
-    "category": "분식",
-    "region": "서울",
-    "video_id": "TuZddCVF-yw",
-    "video_title": "회식 자리에서 얼마나 먹었을까?😅 매콤한 면낙지와 수육 칼국수 만두국 파전 먹방",
-    "video_url": "https://www.youtube.com/watch?v=TuZddCVF-yw",
-    "thumbnail": "https://i.ytimg.com/vi/TuZddCVF-yw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZ1eOSzxHlEINfhdEm4ge-7MXaCw",
-    "upload_date": "2025-09-29",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.558775,
-    "lng": 126.939459,
-    "kakao_verified": {
-      "name": "엠브로돈까스 신촌점",
-      "address": "서울 서대문구 명물길 26",
-      "distance_m": 171,
       "similarity": 0.0
     }
   },
@@ -2583,27 +2295,6 @@
     }
   },
   {
-    "name": "쟁반국수",
-    "address": "경기 안산시 상록구 광덕1로 382",
-    "category": "피자",
-    "region": "경기",
-    "video_id": "SSAkcsiJDak",
-    "video_title": "족발 시키면 피자와 막국수 찌개까지 공짜?!😱 통째로 먹는 레전드 화덕 통족발 먹방",
-    "video_url": "https://www.youtube.com/watch?v=SSAkcsiJDak",
-    "thumbnail": "https://i.ytimg.com/vi/SSAkcsiJDak/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDABH0-J5Jdx4ny7nQ8iH344kD4fQ",
-    "upload_date": "2025-08-22",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.308262,
-    "lng": 126.852028,
-    "kakao_verified": {
-      "name": "보약족발 본점",
-      "address": "경기 안산시 상록구 광덕1로 375",
-      "distance_m": 119,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "쯔양족발",
     "address": "서울 동작구 동작대로23길 21",
     "category": "피자",
@@ -2780,27 +2471,6 @@
     "phone": "063-468-3534",
     "place_url": "http://place.map.kakao.com/26989246",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
-  },
-  {
-    "name": "총집",
-    "address": "경상북도 영양군 영양읍 동서대로 52",
-    "category": "면류",
-    "region": "경북",
-    "video_id": "lk1SPPsutWQ",
-    "video_title": "영양군에서 라면먹방 했더니..🤣 영양고추와 해외 매운고추 총집합🔥 매운 열라면 먹방",
-    "video_url": "https://www.youtube.com/watch?v=lk1SPPsutWQ",
-    "thumbnail": "https://i.ytimg.com/vi/lk1SPPsutWQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmb2QRn8VFZsWSxHsSn6KJtAO0-g",
-    "upload_date": "2025-07-31",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.662461,
-    "lng": 129.114524,
-    "kakao_verified": {
-      "name": "사시사철애",
-      "address": "경북 영양군 영양읍 중앙로 116-7",
-      "distance_m": 102,
-      "similarity": 0.0
-    }
   },
   {
     "name": "차량이라면",
@@ -3080,27 +2750,6 @@
     "source": "search",
     "lat": 34.912907,
     "lng": 128.271854
-  },
-  {
-    "name": "울트라라면",
-    "address": "경기도 여주시 여흥로69번길 26-13",
-    "category": "면류",
-    "region": "경기",
-    "video_id": "oRWZAJN4ZFQ",
-    "video_title": "할머니가 끓여주시는 울트라라면?!🔥동네분들도 몰려온 전주 30년전통 대성식품 먹방",
-    "video_url": "https://www.youtube.com/watch?v=oRWZAJN4ZFQ",
-    "thumbnail": "https://i.ytimg.com/vi/oRWZAJN4ZFQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqz-SPcsV6XIMhk2G8OZkj1f6Wwg",
-    "upload_date": "2025-06-25",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.298709,
-    "lng": 127.633227,
-    "kakao_verified": {
-      "name": "여주나루",
-      "address": "경기 여주시 청심로 121-12",
-      "distance_m": 114,
-      "similarity": 0.0
-    }
   },
   {
     "name": "대성식품",
@@ -3886,27 +3535,6 @@
     "kakao_category": "음식점 > 한식 > 감자탕"
   },
   {
-    "name": "건강식품",
-    "address": "충청남도 청양군 청양읍 칠갑산로 245-3",
-    "category": "기타",
-    "region": "충남",
-    "video_id": "ZddLoGspggw",
-    "video_title": "예상못한 결과..😨 헬스트레이너 3명 VS 쯔양 닭가슴살 대결! 과연 이길수 있을까..?",
-    "video_url": "https://www.youtube.com/watch?v=ZddLoGspggw",
-    "thumbnail": "https://i.ytimg.com/vi/ZddLoGspggw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7BHbK2rjelBgMHsUzfg9OnR7Grg",
-    "upload_date": "2025-03-24",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.451011,
-    "lng": 126.8036,
-    "kakao_verified": {
-      "name": "엉터리아구",
-      "address": "충남 청양군 청양읍 칠갑산로열길 4",
-      "distance_m": 105,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "라면팜 외대점",
     "address": "서울 동대문구 이문로25길 36 1층",
     "category": "면류",
@@ -4685,27 +4313,6 @@
     }
   },
   {
-    "name": "전통떡갈비",
-    "address": "전남 목포시 옥암로46번길 9",
-    "category": "구이",
-    "region": "전남",
-    "video_id": "5-QUaEhtAvA",
-    "video_title": "목포2탄) 65년 전통 떡갈비 백반?!🤔 3.6kg 시켰더니 사장님이.. 성식당 떡갈비 먹방",
-    "video_url": "https://www.youtube.com/watch?v=5-QUaEhtAvA",
-    "thumbnail": "https://i.ytimg.com/vi/5-QUaEhtAvA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIq54UKfljvp5dS1HIlfOZDxaHKw",
-    "upload_date": "2025-01-01",
-    "duplicate": false,
-    "source": "search",
-    "lat": 34.804284,
-    "lng": 126.430137,
-    "kakao_verified": {
-      "name": "남도랑",
-      "address": "전남 목포시 옥암로54번길 5",
-      "distance_m": 102,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "하늘천숯불갈비 목포점",
     "address": "전라남도 목포시 남악로 22-14",
     "category": "구이",
@@ -5345,27 +4952,6 @@
     }
   },
   {
-    "name": "매운갈비",
-    "address": "대전광역시 중구 오류로 31",
-    "category": "구이",
-    "region": "대전",
-    "video_id": "l8-RIG3yEb8",
-    "video_title": "단골분들께 죄송합니다..😭 동네사람도 3시간 줄서기로 악명높은 대전 매운갈비찜 먹방",
-    "video_url": "https://www.youtube.com/watch?v=l8-RIG3yEb8",
-    "thumbnail": "https://i.ytimg.com/vi/l8-RIG3yEb8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjUbXX_zXdgNnEvg4eIMh04BezTw",
-    "upload_date": "2024-10-14",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.323191,
-    "lng": 127.403954,
-    "kakao_verified": {
-      "name": "무겐",
-      "address": "대전 중구 오류로 26",
-      "distance_m": 118,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "강남초밥",
     "address": "서울특별시 강남구 봉은사로4길 40",
     "category": "일식",
@@ -5703,27 +5289,6 @@
     "phone": "042-863-1207",
     "place_url": "http://place.map.kakao.com/2104990491",
     "kakao_category": "음식점 > 한식 > 육류,고기"
-  },
-  {
-    "name": "쇠고기",
-    "address": "서울 강남구 봉은사로 632",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "C_8zXGpHb6s",
-    "video_title": "부다페스트5탄) 정육점에서 먹을수있는 특이한 식당?!🤔 헝가리 줄서서 먹는 정육점 먹방",
-    "video_url": "https://www.youtube.com/watch?v=C_8zXGpHb6s",
-    "thumbnail": "https://i.ytimg.com/vi/C_8zXGpHb6s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAP-zSNr0owFdELMnMKzwfNGstggA",
-    "upload_date": "2024-09-08",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.514755,
-    "lng": 127.064507,
-    "kakao_verified": {
-      "name": "이남장 삼성점",
-      "address": "서울 강남구 봉은사로108길 21",
-      "distance_m": 132,
-      "similarity": 0.0
-    }
   },
   {
     "name": "김치볶음밥",
@@ -6300,27 +5865,6 @@
     "kakao_category": "음식점 > 분식 > 떡볶이"
   },
   {
-    "name": "한식주점",
-    "address": "충청남도 청양군 청양읍 칠갑산로 244-1",
-    "category": "기타",
-    "region": "충남",
-    "video_id": "TAsK5DHQPqQ",
-    "video_title": "무한리필에서 4시간동안 먹었습니다😂   하루종일 웨이팅이 있는 핫플레이스?! 샤브 무한먹방",
-    "video_url": "https://www.youtube.com/watch?v=TAsK5DHQPqQ",
-    "thumbnail": "https://i.ytimg.com/vi/TAsK5DHQPqQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJM_jfhebBv5WAfRPn6XKG-ujHbQ",
-    "upload_date": "2024-06-26",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.450671,
-    "lng": 126.803408,
-    "kakao_verified": {
-      "name": "엉터리아구",
-      "address": "충남 청양군 청양읍 칠갑산로열길 4",
-      "distance_m": 110,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "정원분식",
     "address": "경기도 고양시 덕양구 중앙로558번길 16-12",
     "category": "면류",
@@ -6387,27 +5931,6 @@
     "phone": "031-907-5115",
     "place_url": "http://place.map.kakao.com/8527115",
     "kakao_category": "음식점 > 일식"
-  },
-  {
-    "name": "불고기백반",
-    "address": "광주광역시 서구 천변좌로 224-1",
-    "category": "한식",
-    "region": "광주",
-    "video_id": "YV4Z94DvWdA",
-    "video_title": "사장님한테 주문거부 당했습니다..😢 광주 44년전통 시장 불고기백반 먹방",
-    "video_url": "https://www.youtube.com/watch?v=YV4Z94DvWdA",
-    "thumbnail": "https://i.ytimg.com/vi/YV4Z94DvWdA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfFFq8j0LmxJH4WZDz4HvB-aTY8g",
-    "upload_date": "2024-06-18",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.155094,
-    "lng": 126.901365,
-    "kakao_verified": {
-      "name": "한국회관",
-      "address": "광주 서구 천변좌로 238",
-      "distance_m": 114,
-      "similarity": 0.0
-    }
   },
   {
     "name": "장인족발",
@@ -6716,27 +6239,6 @@
     }
   },
   {
-    "name": "우리집",
-    "address": "세종 특별자치시 새롬중앙1로 13",
-    "category": "기타",
-    "region": "세종",
-    "video_id": "iyUTkrVrdKs",
-    "video_title": "1M 대왕 닭꼬치 도전했습니다!!🔥 난생 처음보는 엄청 큰 닭꼬치 먹방",
-    "video_url": "https://www.youtube.com/watch?v=iyUTkrVrdKs",
-    "thumbnail": "https://i.ytimg.com/vi/iyUTkrVrdKs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_7htaCo5fptR2jWW067bzmX6oaA",
-    "upload_date": "2024-04-08",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.483725,
-    "lng": 127.249882,
-    "kakao_verified": {
-      "name": "BBQ 세종새롬점",
-      "address": "세종특별자치시 새롬남로 17",
-      "distance_m": 104,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "연어초밥",
     "address": "세종특별자치시 소담로 93",
     "category": "기타",
@@ -6754,27 +6256,6 @@
       "name": "스시레스토",
       "address": "세종특별자치시 소담로 93",
       "distance_m": 27,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "즉석떡볶이",
-    "address": "경기도 여주시 여흥로109번길 4",
-    "category": "분식",
-    "region": "경기",
-    "video_id": "iRVsSHvinkk",
-    "video_title": "1인분에 2000원?! 사장님이 음식 맛없대요😂 과연.. 천호동 2천원 즉석떡볶이 먹방",
-    "video_url": "https://www.youtube.com/watch?v=iRVsSHvinkk",
-    "thumbnail": "https://i.ytimg.com/vi/iRVsSHvinkk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoOmbS7UmKZBvT76DsGg8sB3i7Gg",
-    "upload_date": "2024-04-05",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.295985,
-    "lng": 127.635772,
-    "kakao_verified": {
-      "name": "부뚜막삼겹살",
-      "address": "경기 여주시 여흥로109번길 10",
-      "distance_m": 56,
       "similarity": 0.0
     }
   },
@@ -7108,27 +6589,6 @@
       "name": "정가대박집 중동점",
       "address": "대구 수성구 수성로 267",
       "distance_m": 98,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "실내포차",
-    "address": "대구광역시 중구 북성로5길 22",
-    "category": "기타",
-    "region": "대구",
-    "video_id": "07lbVa_QEpw",
-    "video_title": "제 인생 역대급 해산물포차를 찾았습니다🥺 대구 산지직송 가성비 최고 실내포차! 대게 통오징어찜 삼배체굴 먹방",
-    "video_url": "https://www.youtube.com/watch?v=07lbVa_QEpw",
-    "thumbnail": "https://i.ytimg.com/vi/07lbVa_QEpw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfAlFKJZo5Q7R6tIOUZGpAK6t_7Q",
-    "upload_date": "2024-02-24",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.874601,
-    "lng": 128.585176,
-    "kakao_verified": {
-      "name": "덤브치킨 대구수창점",
-      "address": "대구 중구 달성로26길 70",
-      "distance_m": 100,
       "similarity": 0.0
     }
   },
@@ -7568,27 +7028,6 @@
     "kakao_category": "음식점 > 한식 > 국수"
   },
   {
-    "name": "왕갈비",
-    "address": "경기도 수원시 영통구 센트럴파크로 6",
-    "category": "구이",
-    "region": "경기",
-    "video_id": "Sj2mblusg3o",
-    "video_title": "2m넘는 외국인 운동선수와의 5대1 대결🔥 수원 왕갈비 대결먹방",
-    "video_url": "https://www.youtube.com/watch?v=Sj2mblusg3o",
-    "thumbnail": "https://i.ytimg.com/vi/Sj2mblusg3o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJVkq-AWs6lT8pqOOBfGLA9ro9og",
-    "upload_date": "2024-01-01",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.286717,
-    "lng": 127.064944,
-    "kakao_verified": {
-      "name": "우대포 광교점",
-      "address": "경기 수원시 영통구 센트럴파크로 6",
-      "distance_m": 136,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "치즈구이",
     "address": "인천 중구 연안부두로 75",
     "category": "기타",
@@ -7607,27 +7046,6 @@
       "address": "인천 남동구 구월로 125",
       "distance_m": 55,
       "similarity": 0.0
-    }
-  },
-  {
-    "name": "시골마을",
-    "address": "전남 영광군 대마면 영장로 272",
-    "category": "기타",
-    "region": "전남",
-    "video_id": "NksEaXk7e3c",
-    "video_title": "박명수님이 드시다가 도망가셨어요..😂 명수님과 소고기 3kg먹방",
-    "video_url": "https://www.youtube.com/watch?v=NksEaXk7e3c",
-    "thumbnail": "https://i.ytimg.com/vi/NksEaXk7e3c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOttIeBvZYFyQiTJBzLyA9-Pmrig",
-    "upload_date": "2023-12-23",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.301946,
-    "lng": 126.580869,
-    "kakao_verified": {
-      "name": "대마반점",
-      "address": "전남 영광군 대마면 영장로 272",
-      "distance_m": 3,
-      "similarity": 0.25
     }
   },
   {
@@ -7825,27 +7243,6 @@
       "address": "경기 여주시 가남읍 가남로 151",
       "distance_m": 0,
       "similarity": 0.0
-    }
-  },
-  {
-    "name": "추천한집",
-    "address": "경기도 여주시 강천면 강문로 252",
-    "category": "중식",
-    "region": "경기",
-    "video_id": "387DTnvUyTg",
-    "video_title": "아침부터 줄서서 먹는 여주 매운짬뽕먹다 기절할뻔 했습니다😵‍💫 단계별 도전먹방",
-    "video_url": "https://www.youtube.com/watch?v=387DTnvUyTg",
-    "thumbnail": "https://i.ytimg.com/vi/387DTnvUyTg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCANN2D0CC0TV88kuzUSi3sRLPQ3Q",
-    "upload_date": "2023-11-12",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.287269,
-    "lng": 127.683029,
-    "kakao_verified": {
-      "name": "남한강매운탕",
-      "address": "경기 여주시 강천면 강문로 254",
-      "distance_m": 53,
-      "similarity": 0.17
     }
   },
   {
@@ -8725,27 +8122,6 @@
     "lng": 126.857237
   },
   {
-    "name": "삼겹살김치전골",
-    "address": "광주광역시 동구 무등로307번길 11",
-    "category": "기타",
-    "region": "광주",
-    "video_id": "rQ2DqshSvCg",
-    "video_title": "200명 앞에서 먹방했습니다..😂 광주 푸드트럭 20가지 음식 먹방",
-    "video_url": "https://www.youtube.com/watch?v=rQ2DqshSvCg",
-    "thumbnail": "https://i.ytimg.com/vi/rQ2DqshSvCg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfsQdCLjxVkZ0lgTCjuQoYsdTjtA",
-    "upload_date": "2023-07-26",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.163252,
-    "lng": 126.917307,
-    "kakao_verified": {
-      "name": "지은초밥 푸른길점",
-      "address": "광주 동구 무등로307번길 20-40",
-      "distance_m": 111,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "대신우동",
     "address": "강원 춘천시 영서로 3069",
     "category": "닭갈비",
@@ -8935,27 +8311,6 @@
     }
   },
   {
-    "name": "숯불구이",
-    "address": "충청북도 영동군 황간면 남성2길 14",
-    "category": "기타",
-    "region": "충북",
-    "video_id": "Zfan5Rmea3k",
-    "video_title": "한끼에 200만원 나왔습니다..😱 살아있는 장어를 40만원에?! 꽃새우 참치 먹방",
-    "video_url": "https://www.youtube.com/watch?v=Zfan5Rmea3k",
-    "thumbnail": "https://i.ytimg.com/vi/Zfan5Rmea3k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvph_cHjPoI6rh_Cmwepw3VX8imw",
-    "upload_date": "2023-07-09",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.22798,
-    "lng": 127.911069,
-    "kakao_verified": {
-      "name": "토종식당",
-      "address": "충북 영동군 황간면 남성2길 5",
-      "distance_m": 110,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "돌판구이",
     "address": "서울 강남구 영동대로 85",
     "category": "기타",
@@ -9080,27 +8435,6 @@
       "name": "다사리아",
       "address": "서울 동대문구 전농로 239",
       "distance_m": 96,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "소금구이",
-    "address": "경상남도 산청군 시천면 남명로 213-1",
-    "category": "구이",
-    "region": "경남",
-    "video_id": "JAh27fYryjw",
-    "video_title": "대기만 127명 ㅎㄷㄷ..😳 을지로 핫플레이스라는 산청 삼겹살 소금구이 먹방",
-    "video_url": "https://www.youtube.com/watch?v=JAh27fYryjw",
-    "thumbnail": "https://i.ytimg.com/vi/JAh27fYryjw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-bKedjhW0eUK98EtYeXgwbImAug",
-    "upload_date": "2023-06-26",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.277328,
-    "lng": 127.840129,
-    "kakao_verified": {
-      "name": "보현갈비식당",
-      "address": "경남 산청군 시천면 남명로 223",
-      "distance_m": 110,
       "similarity": 0.0
     }
   },
@@ -9498,27 +8832,6 @@
     "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
-    "name": "곱창막창대창",
-    "address": "경기도 평택시 고덕여염11길 86",
-    "category": "기타",
-    "region": "경기",
-    "video_id": "zXlveWbjCls",
-    "video_title": "유명한 빵집 다 털었습니다👊 경기도 유명 빵집 14곳 먹방",
-    "video_url": "https://www.youtube.com/watch?v=zXlveWbjCls",
-    "thumbnail": "https://i.ytimg.com/vi/zXlveWbjCls/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxggW0bbIOOmXAP2HkTMRMVjR7UA",
-    "upload_date": "2023-05-10",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.042438,
-    "lng": 127.051616,
-    "kakao_verified": {
-      "name": "짬뽕전문점",
-      "address": "경기 평택시 고덕여염11길 170",
-      "distance_m": 95,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "서울쭈꾸미",
     "address": "서울 서초구 신반포로47길 33-5",
     "category": "기타",
@@ -9738,27 +9051,6 @@
     "kakao_category": "음식점 > 분식"
   },
   {
-    "name": "홍게우동",
-    "address": "대전 서구 둔산중로 20",
-    "category": "분식",
-    "region": "대전",
-    "video_id": "fsxL5bd7xoE",
-    "video_title": "구독자님 분식집 찾아가서 털었습니다😅 대전 떡볶이 분식 먹방 (Feat.소방관님들)",
-    "video_url": "https://www.youtube.com/watch?v=fsxL5bd7xoE",
-    "thumbnail": "https://i.ytimg.com/vi/fsxL5bd7xoE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7hPokc7BX18NvcsRqe8YmwdgCiQ",
-    "upload_date": "2023-04-29",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.348408,
-    "lng": 127.387254,
-    "kakao_verified": {
-      "name": "수정자갈치꼼장어",
-      "address": "대전 서구 둔산남로 96",
-      "distance_m": 116,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "참잘하는집",
     "address": "경기도 평택시 안중읍 송담6길 50-25",
     "category": "분식",
@@ -9805,21 +9097,6 @@
     "phone": "02-575-5751",
     "place_url": "http://place.map.kakao.com/1970703529",
     "kakao_category": "음식점 > 분식"
-  },
-  {
-    "name": "시골마을",
-    "address": "경기도 여주시 강천면 부평로 368",
-    "category": "기타",
-    "region": "경기",
-    "video_id": "vp8qfiWf6-I",
-    "video_title": "6명 vs 먹방유튜버 누가 이길까?🤔 선수들이 합숙하는 숙소에서 먹방 대결🔥",
-    "video_url": "https://www.youtube.com/watch?v=vp8qfiWf6-I",
-    "thumbnail": "https://i.ytimg.com/vi/vp8qfiWf6-I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqOGW6tSHriQ0EZcOBAvXTLll4_A",
-    "upload_date": "2023-04-18",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.284463,
-    "lng": 127.740546
   },
   {
     "name": "건강기능식품",
@@ -10032,27 +9309,6 @@
     "kakao_category": "음식점 > 한식 > 국수"
   },
   {
-    "name": "마라탕집",
-    "address": "충북 청주시 상당구 북문로1",
-    "category": "분식",
-    "region": "충북",
-    "video_id": "waeLgP8c0cA",
-    "video_title": "청주사람은 다안다는 3대째 내려온 떡볶이집?!😳 50년 전통 apm떡볶이 먹방",
-    "video_url": "https://www.youtube.com/watch?v=waeLgP8c0cA",
-    "thumbnail": "https://i.ytimg.com/vi/waeLgP8c0cA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnypsBoz4NucJGBrTcWfhii0HnnA",
-    "upload_date": "2023-03-11",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.644201,
-    "lng": 127.489639,
-    "kakao_verified": {
-      "name": "소영칼국수",
-      "address": "충북 청주시 상당구 교동로3번길 146",
-      "distance_m": 113,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "양념갈비",
     "address": "충청북도 청주시 흥덕구 2순환로 1124",
     "category": "분식",
@@ -10075,27 +9331,6 @@
     "phone": "0502-5553-2221",
     "place_url": "http://place.map.kakao.com/851237414",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
-  },
-  {
-    "name": "떡볶이집",
-    "address": "충북 청주시 상당구 북문로2",
-    "category": "분식",
-    "region": "충북",
-    "video_id": "waeLgP8c0cA",
-    "video_title": "청주사람은 다안다는 3대째 내려온 떡볶이집?!😳 50년 전통 apm떡볶이 먹방",
-    "video_url": "https://www.youtube.com/watch?v=waeLgP8c0cA",
-    "thumbnail": "https://i.ytimg.com/vi/waeLgP8c0cA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnypsBoz4NucJGBrTcWfhii0HnnA",
-    "upload_date": "2023-03-11",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.640306,
-    "lng": 127.48739,
-    "kakao_verified": {
-      "name": "소로리 본점",
-      "address": "충북 청주시 상당구 중앙로 37",
-      "distance_m": 114,
-      "similarity": 0.0
-    }
   },
   {
     "name": "원조태평소국밥 본점",
@@ -10459,27 +9694,6 @@
     "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
-    "name": "더덕백반",
-    "address": "전라남도 순천시 승주읍 승암교길 6",
-    "category": "기타",
-    "region": "전남",
-    "video_id": "NrLPC4raEh4",
-    "video_title": "200만원으로 시장 털었습니다?😳 순천재래시장 먹방",
-    "video_url": "https://www.youtube.com/watch?v=NrLPC4raEh4",
-    "thumbnail": "https://i.ytimg.com/vi/NrLPC4raEh4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9XhC7hCX6AGqrGdP_ULt-Q9LQeQ",
-    "upload_date": "2023-01-13",
-    "duplicate": false,
-    "source": "search",
-    "lat": 34.991843,
-    "lng": 127.344139,
-    "kakao_verified": {
-      "name": "장원식당",
-      "address": "전남 순천시 승주읍 승암교길 15",
-      "distance_m": 102,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "정원분식",
     "address": "부산광역시 수영구 남천바다로10번길 70",
     "category": "분식",
@@ -10603,27 +9817,6 @@
     "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈"
   },
   {
-    "name": "매운낙지",
-    "address": "서울특별시 종로구 종로 19",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "Zmntr44QJGg",
-    "video_title": "🔥지옥의 4단계 매운맛🔥 무교동 매운낙지 단계별 먹방",
-    "video_url": "https://www.youtube.com/watch?v=Zmntr44QJGg",
-    "thumbnail": "https://i.ytimg.com/vi/Zmntr44QJGg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRdQQEY3B7eWDWMhM3u-lbHM_TZA",
-    "upload_date": "2021-12-04",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.570844,
-    "lng": 126.979924,
-    "kakao_verified": {
-      "name": "일품진진수라 광화문점",
-      "address": "서울 종로구 종로5길 7",
-      "distance_m": 73,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "BBQ 진해이동점",
     "address": "경상남도 창원시 진해구 동진로 9",
     "category": "분식",
@@ -10719,27 +9912,6 @@
     "phone": "02-537-7972",
     "place_url": "http://place.map.kakao.com/15450268",
     "kakao_category": "음식점 > 중식 > 중국요리"
-  },
-  {
-    "name": "특양구이",
-    "address": "서울 중구 남대문로9",
-    "category": "일식",
-    "region": "서울",
-    "video_id": "4X078jlC35k",
-    "video_title": "하루매출 최대 1000만원 이라는 경쟁업체 돈까스집 사장님 놀래키기🤣 돈까스 먹방",
-    "video_url": "https://www.youtube.com/watch?v=4X078jlC35k",
-    "thumbnail": "https://i.ytimg.com/vi/4X078jlC35k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCI8KSjYz8CWKm9jJrYgrUPAga_GA",
-    "upload_date": "2022-12-16",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.5612,
-    "lng": 126.976882,
-    "kakao_verified": {
-      "name": "화포식당 시청점",
-      "address": "서울 중구 남대문로1길 16",
-      "distance_m": 104,
-      "similarity": 0.0
-    }
   },
   {
     "name": "태백닭갈비 본점",
@@ -11427,27 +10599,6 @@
     }
   },
   {
-    "name": "치즈라면",
-    "address": "서울특별시 마포구 양화로7길 12",
-    "category": "분식",
-    "region": "서울",
-    "video_id": "bLU28fVWX_s",
-    "video_title": "간단하게 만두 70개..?🤔 갈비만두로 유명한 마포만두에서 만두 치즈라면 먹방",
-    "video_url": "https://www.youtube.com/watch?v=bLU28fVWX_s",
-    "thumbnail": "https://i.ytimg.com/vi/bLU28fVWX_s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQoM6Hok8x_256Kc-piHwVcsWoXA",
-    "upload_date": "2022-09-06",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.55141,
-    "lng": 126.915192,
-    "kakao_verified": {
-      "name": "김밥가미 서교",
-      "address": "서울 마포구 양화로11길 45",
-      "distance_m": 122,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "메밀국수",
     "address": "서울 강남구 논현로151길 26",
     "category": "일식",
@@ -11666,27 +10817,6 @@
     "kakao_category": "음식점 > 분식"
   },
   {
-    "name": "국물떡볶이",
-    "address": "서울특별시 강남구 압구정로30길 12",
-    "category": "분식",
-    "region": "서울",
-    "video_id": "skXGx1pIam8",
-    "video_title": "팔뚝만한 노란김밥?😳 압구정 라면과 키토김밥 먹방",
-    "video_url": "https://www.youtube.com/watch?v=skXGx1pIam8",
-    "thumbnail": "https://i.ytimg.com/vi/skXGx1pIam8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZqzqlX8h9-ZfNsqrQlkQYNTjGDw",
-    "upload_date": "2022-08-07",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.526702,
-    "lng": 127.029081,
-    "kakao_verified": {
-      "name": "싸다김밥 압구정역점",
-      "address": "서울 강남구 논현로171길 4",
-      "distance_m": 164,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "크리스탈제이드 압구정본점",
     "address": "서울특별시 강남구 압구정로 165",
     "category": "분식",
@@ -11859,27 +10989,6 @@
       "address": "서울 송파구 백제고분로 401",
       "distance_m": 14,
       "similarity": 0.25
-    }
-  },
-  {
-    "name": "석촌동중국집",
-    "address": "서울특별시 송파구 백제고분로40길 27",
-    "category": "중식",
-    "region": "서울",
-    "video_id": "CopqpabihGk",
-    "video_title": "짜장면 몇그릇 먹었을까..?🤔 오는 손님마다 놀란 옛날짜장 먹방",
-    "video_url": "https://www.youtube.com/watch?v=CopqpabihGk",
-    "thumbnail": "https://i.ytimg.com/vi/CopqpabihGk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPA7G9N42fZb1OD0rQt4dPOTeyMw",
-    "upload_date": "2022-07-16",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.502347,
-    "lng": 127.107624,
-    "kakao_verified": {
-      "name": "옛날맛짜장",
-      "address": "서울 송파구 가락로 113",
-      "distance_m": 138,
-      "similarity": 0.0
     }
   },
   {
@@ -12186,27 +11295,6 @@
     "kakao_category": "음식점 > 한식"
   },
   {
-    "name": "자장라면",
-    "address": "서울 강남구 강남대로120길 11",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "gP4EGuEia1I",
-    "video_title": "짜파게티와 파김치..🥺 짜계치와 김치3종 먹방",
-    "video_url": "https://www.youtube.com/watch?v=gP4EGuEia1I",
-    "thumbnail": "https://i.ytimg.com/vi/gP4EGuEia1I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgXwTlMSctiDmQ9PfYuqb8oGsH6g",
-    "upload_date": "2022-05-22",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.507261,
-    "lng": 127.02437,
-    "kakao_verified": {
-      "name": "후문포차",
-      "address": "서울 강남구 강남대로120길 28",
-      "distance_m": 162,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "순삭이네",
     "address": "경기 화성시 병점구 효행로 1037",
     "category": "기타",
@@ -12252,27 +11340,6 @@
     "phone": "02-805-9407",
     "place_url": "http://place.map.kakao.com/17948208",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 불고기,두루치기"
-  },
-  {
-    "name": "된찌족발",
-    "address": "서울 영등포구 양평동 3가",
-    "category": "한식",
-    "region": "서울",
-    "video_id": "gbVrYovcd7g",
-    "video_title": "이런건 처음봐요 특이한 족발수육..?🤔 양평동 된찌족발 12인분 먹방",
-    "video_url": "https://www.youtube.com/watch?v=gbVrYovcd7g",
-    "thumbnail": "https://i.ytimg.com/vi/gbVrYovcd7g/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTcw8ic2WsepL1853t8EwRO70Z8w",
-    "upload_date": "2022-05-14",
-    "duplicate": false,
-    "source": "websearch_manual",
-    "lat": 37.529368,
-    "lng": 126.891016,
-    "kakao_verified": {
-      "name": "본푸드서비스 본사",
-      "address": "서울 영등포구 선유로 165",
-      "distance_m": 101,
-      "similarity": 0.0
-    }
   },
   {
     "name": "중화닭갈비",
@@ -12477,27 +11544,6 @@
     }
   },
   {
-    "name": "곱창전골",
-    "address": "서울 성북구 삼양로 13",
-    "category": "구이",
-    "region": "서울",
-    "video_id": "6KDmeK_6qsI",
-    "video_title": "대창 4kg 먹었더니 사장님이 보고도 안믿긴대요..🤣 소대창과 곱창전골 먹방",
-    "video_url": "https://www.youtube.com/watch?v=6KDmeK_6qsI",
-    "thumbnail": "https://i.ytimg.com/vi/6KDmeK_6qsI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANV7fYop2TwNQKICJGPx_Og7f52w",
-    "upload_date": "2022-04-17",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.604454,
-    "lng": 127.024815,
-    "kakao_verified": {
-      "name": "보승회관 길음역점",
-      "address": "서울 성북구 길음로 11",
-      "distance_m": 155,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "대전한빛야시장",
     "address": "대전 유성구 대덕대로512번길 30",
     "category": "기타",
@@ -12672,27 +11718,6 @@
     }
   },
   {
-    "name": "제육불고기",
-    "address": "서울 중구 을지로 3",
-    "category": "한식",
-    "region": "서울",
-    "video_id": "fmat4NG1X7E",
-    "video_title": "35년 노포 신기록 달성했습니다🤣 을지로 꽁꽁숨은 골목맛집! 제육불고기 먹방",
-    "video_url": "https://www.youtube.com/watch?v=fmat4NG1X7E",
-    "thumbnail": "https://i.ytimg.com/vi/fmat4NG1X7E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCGTAsYdakP2nwpHa07Bcqo_Byreg",
-    "upload_date": "2022-03-18",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.563303,
-    "lng": 126.997331,
-    "kakao_verified": {
-      "name": "한솥도시락 충무로4가점",
-      "address": "서울 중구 퇴계로 235",
-      "distance_m": 127,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "환희분식",
     "address": "서울 송파구 올림픽로35길 일대",
     "category": "기타",
@@ -12836,21 +11861,6 @@
     }
   },
   {
-    "name": "시골마을",
-    "address": "경북 영주시 안정면 안정로 490-32",
-    "category": "일식",
-    "region": "경북",
-    "video_id": "rRAEFB6CiD0",
-    "video_title": "쯔양 vs 운동선수 6명?!🔥 초밥 300개 대결먹방 (특별출연:??)",
-    "video_url": "https://www.youtube.com/watch?v=rRAEFB6CiD0",
-    "thumbnail": "https://i.ytimg.com/vi/rRAEFB6CiD0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAx8CDMMqqwWvnpFPNZquco8iT1WQ",
-    "upload_date": "2022-02-05",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.872932,
-    "lng": 128.590923
-  },
-  {
     "name": "짜장떡볶이",
     "address": "서울 송파구 송파대로 36",
     "category": "분식",
@@ -12892,27 +11902,6 @@
       "similarity": 0.0
     },
     "address_kakao": "전남 완도군 완도읍 청해진로 1565-4"
-  },
-  {
-    "name": "오징어라면",
-    "address": "강원특별자치도 원주시 능라동길 72",
-    "category": "기타",
-    "region": "강원",
-    "video_id": "SCTo9K3Acq8",
-    "video_title": "솥뚜껑 알폭탄 대왕알탕?!😳 볶음밥까지 먹방",
-    "video_url": "https://www.youtube.com/watch?v=SCTo9K3Acq8",
-    "thumbnail": "https://i.ytimg.com/vi/SCTo9K3Acq8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARtPcYd4xR5Iru-44Aukwe85NTkw",
-    "upload_date": "2022-01-25",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.333524,
-    "lng": 127.929727,
-    "kakao_verified": {
-      "name": "카쿠레가 원주본점",
-      "address": "강원특별자치도 원주시 능라동길 37",
-      "distance_m": 105,
-      "similarity": 0.0
-    }
   },
   {
     "name": "더미식오징어라면",
@@ -13010,27 +11999,6 @@
       "name": "양산함흥냉면",
       "address": "경남 양산시 양주5길 3",
       "distance_m": 51,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "김치볶음밥",
-    "address": "충청남도 아산시 탕정면 한들물빛4로 22",
-    "category": "기타",
-    "region": "충남",
-    "video_id": "QvqRsI7-3Wc",
-    "video_title": "사장님이 이렇게 먹으면 혼난대요😂 30년 전통 솥뚜껑 부대찌개 먹방",
-    "video_url": "https://www.youtube.com/watch?v=QvqRsI7-3Wc",
-    "thumbnail": "https://i.ytimg.com/vi/QvqRsI7-3Wc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtVhGGdw3Uoxe36ucF5atZ76xSxg",
-    "upload_date": "2022-01-14",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.785801,
-    "lng": 127.081406,
-    "kakao_verified": {
-      "name": "샤브올데이 아산탕정점",
-      "address": "충남 아산시 탕정면 매곡한들15길 34",
-      "distance_m": 98,
       "similarity": 0.0
     }
   },
@@ -13195,21 +12163,6 @@
       "distance_m": 99,
       "similarity": 0.25
     }
-  },
-  {
-    "name": "두번째",
-    "address": "경기도 양평군 용문면 은고갯길 112",
-    "category": "냉면",
-    "region": "경기",
-    "video_id": "gHE7_aGHE8I",
-    "video_title": "생애 두번째 도전!🙂미슐랭맛집 논현동 진미평양냉면,불고기 먹방",
-    "video_url": "https://www.youtube.com/watch?v=gHE7_aGHE8I",
-    "thumbnail": "https://i.ytimg.com/vi/gHE7_aGHE8I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkzXy8Ppw8PIm3BZlOFVSOLtoTjg",
-    "upload_date": "2022-01-03",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.515417,
-    "lng": 127.628822
   },
   {
     "name": "손칼국수",
@@ -13493,27 +12446,6 @@
     "phone": "02-2297-8522",
     "place_url": "http://place.map.kakao.com/874989672",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
-  },
-  {
-    "name": "쟁반국수",
-    "address": "충청남도 아산시 배방읍 월천2길 9",
-    "category": "기타",
-    "region": "충남",
-    "video_id": "LrEsV9zHau4",
-    "video_title": "40년 전통의 막국수는 무슨맛일까?😋 이북식 찜닭과 막국수 먹방",
-    "video_url": "https://www.youtube.com/watch?v=LrEsV9zHau4",
-    "thumbnail": "https://i.ytimg.com/vi/LrEsV9zHau4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC5G3uN_BIEd26GQXwqN4hIXUE2oQ",
-    "upload_date": "2021-11-01",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.773921,
-    "lng": 127.076238,
-    "kakao_verified": {
-      "name": "기대만족 아산배방월천점",
-      "address": "충남 아산시 배방읍 월천2길 34-1",
-      "distance_m": 144,
-      "similarity": 0.0
-    }
   },
   {
     "name": "평양냉면",
@@ -13828,27 +12760,6 @@
     }
   },
   {
-    "name": "별미분식",
-    "address": "충북 음성군 대소면 성본산단로 48",
-    "category": "면류",
-    "region": "충북",
-    "video_id": "z9mx_MHP9Eg",
-    "video_title": "차돌라면이 유명한 동네 분식집🤤 남현동 별미분식 10메뉴 먹방",
-    "video_url": "https://www.youtube.com/watch?v=z9mx_MHP9Eg",
-    "thumbnail": "https://i.ytimg.com/vi/z9mx_MHP9Eg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2g9jzgaD03eEJWYLwYcc3cVApcA",
-    "upload_date": "2021-10-02",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.967169,
-    "lng": 127.535802,
-    "kakao_verified": {
-      "name": "명륜진사갈비 음성성본점",
-      "address": "충북 음성군 대소읍 성본산단1로 104",
-      "distance_m": 113,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "알곤이칼국수",
     "address": "서울 영등포구 양평로 68",
     "category": "면류",
@@ -13944,27 +12855,6 @@
     "phone": "051-722-7770",
     "place_url": "http://place.map.kakao.com/635600393",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
-  },
-  {
-    "name": "비빔국수",
-    "address": "전라남도 영광군 영광읍 천년로11길 37",
-    "category": "분식",
-    "region": "전남",
-    "video_id": "Zp9NXHZnNBg",
-    "video_title": "줄서서 먹는 만두집?😲 시아버지와 며느리도 놀란 만두 냉모밀 먹방",
-    "video_url": "https://www.youtube.com/watch?v=Zp9NXHZnNBg",
-    "thumbnail": "https://i.ytimg.com/vi/Zp9NXHZnNBg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC4jOcaWR9a2HP_Ft0BB9M79Wrmtw",
-    "upload_date": "2021-08-30",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.275646,
-    "lng": 126.499434,
-    "kakao_verified": {
-      "name": "해뜨는집",
-      "address": "전남 영광군 영광읍 천년로12길 49",
-      "distance_m": 103,
-      "similarity": 0.0
-    }
   },
   {
     "name": "나랑가",
@@ -14515,27 +13405,6 @@
     }
   },
   {
-    "name": "김치볶음밥",
-    "address": "충청북도 음성군 맹동면 장성4길 5",
-    "category": "구이",
-    "region": "충북",
-    "video_id": "GPBfFGgLQSs",
-    "video_title": "오랜만에 20인분 먹고 오케이 받았어요👌🏻역대급 양갈비 소곱창 먹방",
-    "video_url": "https://www.youtube.com/watch?v=GPBfFGgLQSs",
-    "thumbnail": "https://i.ytimg.com/vi/GPBfFGgLQSs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZY05c4GyhPHZmxpPOF3IWZN-GUg",
-    "upload_date": "2021-06-14",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.905388,
-    "lng": 127.545924,
-    "kakao_verified": {
-      "name": "제주올래고기국수",
-      "address": "충북 음성군 맹동면 원중로 1374",
-      "distance_m": 86,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "전복라면",
     "address": "경남 통영시 욕지면 서촌아랫길 112",
     "category": "면류",
@@ -14602,48 +13471,6 @@
     }
   },
   {
-    "name": "소고기",
-    "address": "경기도 안양시 동안구 평촌대로223번길 36",
-    "category": "기타",
-    "region": "경기",
-    "video_id": "z7YR9ftkwB0",
-    "video_title": "소고기+짜파게티 조합😋 방배동 명랑식당 소고기 특수부위 먹방",
-    "video_url": "https://www.youtube.com/watch?v=z7YR9ftkwB0",
-    "thumbnail": "https://i.ytimg.com/vi/z7YR9ftkwB0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDnDiYI8_WYmKCCdKCJbZ2Gw-_QyA",
-    "upload_date": "2021-06-03",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.391015,
-    "lng": 126.953656,
-    "kakao_verified": {
-      "name": "키친폿",
-      "address": "경기 안양시 동안구 평촌대로217번길 45",
-      "distance_m": 118,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "훼드라",
-    "address": "서울 서대문구 연세로5길 32",
-    "category": "면류",
-    "region": "서울",
-    "video_id": "BTkB2PiuKeA",
-    "video_title": "50년째 끓여온 매운라면?🔥 신촌 최루탄 해장라면 먹방",
-    "video_url": "https://www.youtube.com/watch?v=BTkB2PiuKeA",
-    "thumbnail": "https://i.ytimg.com/vi/BTkB2PiuKeA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-T54-IBcyYxNa2BtW7tuwrGoNrw",
-    "upload_date": "2021-06-01",
-    "duplicate": false,
-    "source": "websearch_manual",
-    "lat": 37.556364,
-    "lng": 126.935364,
-    "kakao_verified": {
-      "name": "정육면체",
-      "address": "서울 서대문구 연세로5다길 22-8",
-      "distance_m": 101,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "BBQ 패밀리타운점",
     "address": "서울 송파구 중대로 64",
     "category": "치킨",
@@ -14687,27 +13514,6 @@
       "name": "허니돈 의정부점",
       "address": "경기 의정부시 평화로536번길 5",
       "distance_m": 3,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "비빔국수",
-    "address": "경기도 의정부시 범골로145번길 21",
-    "category": "기타",
-    "region": "경기",
-    "video_id": "rOVZ4kDCWmw",
-    "video_title": "미친가격..🔥 국수가 1000원? 의정부 허니돈 분식 먹방",
-    "video_url": "https://www.youtube.com/watch?v=rOVZ4kDCWmw",
-    "thumbnail": "https://i.ytimg.com/vi/rOVZ4kDCWmw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBexSSw63cFNvjQixbanW4JXjIBvw",
-    "upload_date": "2021-05-23",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.736943,
-    "lng": 127.041275,
-    "kakao_verified": {
-      "name": "치치 의정부신시가지점",
-      "address": "경기 의정부시 범골로157번길 11",
-      "distance_m": 165,
       "similarity": 0.0
     }
   },
@@ -14936,27 +13742,6 @@
     "lng": 126.535742
   },
   {
-    "name": "대왕닭갈비",
-    "address": "서울 중랑구 용마산로115길 30",
-    "category": "닭갈비",
-    "region": "서울",
-    "video_id": "CBhRIsc_14A",
-    "video_title": "서울에서 제일 큰 대왕닭갈비?😳 중곡동 특이한 낙지닭갈비 10인분 먹방",
-    "video_url": "https://www.youtube.com/watch?v=CBhRIsc_14A",
-    "thumbnail": "https://i.ytimg.com/vi/CBhRIsc_14A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsWLIdkUJC_gK4ichbqnYe2w9Gfg",
-    "upload_date": "2021-04-23",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.598932,
-    "lng": 127.098639,
-    "kakao_verified": {
-      "name": "강원도 동강오리 본점",
-      "address": "서울 중랑구 용마산로115길 10",
-      "distance_m": 123,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "낙지닭갈비",
     "address": "서울특별시 광진구 아차산로 221",
     "category": "닭갈비",
@@ -15119,27 +13904,6 @@
     "kakao_category": "음식점 > 양식 > 햄버거"
   },
   {
-    "name": "매운갈비",
-    "address": "서울특별시 관악구 신림로70길 7",
-    "category": "중식",
-    "region": "서울",
-    "video_id": "JUIQs7ytf5U",
-    "video_title": "처음으로 먹다가 포기했어요.. 총 9단계 매운맛🔥 신림동 짬뽕갑 짜장 먹방",
-    "video_url": "https://www.youtube.com/watch?v=JUIQs7ytf5U",
-    "thumbnail": "https://i.ytimg.com/vi/JUIQs7ytf5U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDV03pzEcWrpPaniegxI8F2zX-uYQ",
-    "upload_date": "2021-04-01",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.48778,
-    "lng": 126.929218,
-    "kakao_verified": {
-      "name": "아리차이 신림점",
-      "address": "서울 관악구 신림동길 4",
-      "distance_m": 107,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "대게라면",
     "address": "경상북도 포항시 북구 죽도시장길 34",
     "category": "면류",
@@ -15181,27 +13945,6 @@
       "name": "루안",
       "address": "충북 영동군 영동읍 계산로2길 5",
       "distance_m": 79,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "술집",
-    "address": "부산광역시 수영구 광안해변로279번길 1",
-    "category": "기타",
-    "region": "부산",
-    "video_id": "uoVQb2OXhzM",
-    "video_title": "가게에 어묵 전부 털기👊🏻 명일동 부산진오뎅 먹방",
-    "video_url": "https://www.youtube.com/watch?v=uoVQb2OXhzM",
-    "thumbnail": "https://i.ytimg.com/vi/uoVQb2OXhzM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAusy8CFT7DMc2a9QoKULH8h0WO_w",
-    "upload_date": "2021-03-24",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.156131,
-    "lng": 129.124295,
-    "kakao_verified": {
-      "name": "루츠레코드바",
-      "address": "부산 수영구 민락본동로11번길 78-7",
-      "distance_m": 99,
       "similarity": 0.0
     }
   },
@@ -15610,27 +14353,6 @@
     "phone": "032-762-5930",
     "place_url": "http://place.map.kakao.com/21373373",
     "kakao_category": "음식점 > 한식 > 국수 > 칼국수"
-  },
-  {
-    "name": "김치볶음밥",
-    "address": "인천광역시 부평구 부평문화로80번길 35",
-    "category": "분식",
-    "region": "인천",
-    "video_id": "8hWQnvVvLHQ",
-    "video_title": "하루 4시간만 영업하는 집?😳 인천 40년 전통 튀김칼국수 떡볶이 김치볶음밥 먹방",
-    "video_url": "https://www.youtube.com/watch?v=8hWQnvVvLHQ",
-    "thumbnail": "https://i.ytimg.com/vi/8hWQnvVvLHQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBPiDcMfVqir-LGZu31d2r4Tmulrw",
-    "upload_date": "2021-01-20",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.492778,
-    "lng": 126.724274,
-    "kakao_verified": {
-      "name": "오술차 부평역점",
-      "address": "인천 부평구 시장로12번길 21",
-      "distance_m": 171,
-      "similarity": 0.0
-    }
   },
   {
     "name": "찐단골집",
@@ -16696,27 +15418,6 @@
     "kakao_category": "음식점 > 한식"
   },
   {
-    "name": "한국인이라면",
-    "address": "서울특별시 동작구 노량진로 174",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "rEzxA0cx9QI",
-    "video_title": "이걸 어떻게 다먹죠.. 노량진 대왕 낙곱새 먹방",
-    "video_url": "https://www.youtube.com/watch?v=rEzxA0cx9QI",
-    "thumbnail": "https://i.ytimg.com/vi/rEzxA0cx9QI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAe-WvNk8470xA9vb0fpK2nBARQcA",
-    "upload_date": "2020-08-25",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.513502,
-    "lng": 126.945307,
-    "kakao_verified": {
-      "name": "샤브로21",
-      "address": "서울 동작구 만양로18길 21",
-      "distance_m": 52,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "조개구이",
     "address": "충청남도 당진시 신평면 삽교천3길 72",
     "category": "해산물",
@@ -16794,27 +15495,6 @@
       "name": "백소정 전북대점",
       "address": "전북특별자치도 전주시 덕진구 명륜3길 22",
       "distance_m": 46,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "연탄불고기",
-    "address": "전북 전주시 덕진구 오공로 43-7",
-    "category": "분식",
-    "region": "전북",
-    "video_id": "TTlZQxQz0H4",
-    "video_title": "김밥을 상추에 싸먹는집?🤔 전주 45년 전통 연탄불고기 10접시 먹방",
-    "video_url": "https://www.youtube.com/watch?v=TTlZQxQz0H4",
-    "thumbnail": "https://i.ytimg.com/vi/TTlZQxQz0H4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNi8q0S5B8SKNKo6H8VB67c1CAsQ",
-    "upload_date": "2020-08-09",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.836955,
-    "lng": 127.059983,
-    "kakao_verified": {
-      "name": "봉평장터",
-      "address": "전북특별자치도 전주시 덕진구 오공로 43-52",
-      "distance_m": 112,
       "similarity": 0.0
     }
   },
@@ -17261,27 +15941,6 @@
     "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창"
   },
   {
-    "name": "대전막장집",
-    "address": "울산광역시 동구 진성6길 75",
-    "category": "기타",
-    "region": "울산",
-    "video_id": "uy7x69pauZE",
-    "video_title": "실제 뉴스에 나온 대한민국 1% 천재분과 먹방했습니다",
-    "video_url": "https://www.youtube.com/watch?v=uy7x69pauZE",
-    "thumbnail": "https://i.ytimg.com/vi/uy7x69pauZE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZSl9JluhYgakAB4ExFATamXGn4w",
-    "upload_date": "2020-05-11",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.506496,
-    "lng": 129.424602,
-    "kakao_verified": {
-      "name": "은월",
-      "address": "울산 동구 진성6길 59",
-      "distance_m": 109,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "전주초장집",
     "address": "울산 중구 번영로 329",
     "category": "기타",
@@ -17341,27 +16000,6 @@
       "name": "복정집",
       "address": "서울 중구 퇴계로 235",
       "distance_m": 50,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "백만불갈비",
-    "address": "서울 중구 을지로 186-12",
-    "category": "분식",
-    "region": "서울",
-    "video_id": "QEJYtqfLGvQ",
-    "video_title": "짜파게티와 군만두",
-    "video_url": "https://www.youtube.com/watch?v=QEJYtqfLGvQ",
-    "thumbnail": "https://i.ytimg.com/vi/QEJYtqfLGvQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKs6T6AoCpKIZJXi9qdzp5Gbatgg",
-    "upload_date": "2020-04-30",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.566026,
-    "lng": 126.998669,
-    "kakao_verified": {
-      "name": "한암동 을지점",
-      "address": "서울 중구 을지로 170",
-      "distance_m": 104,
       "similarity": 0.0
     }
   },
@@ -17484,27 +16122,6 @@
     "lng": 126.775218
   },
   {
-    "name": "매운갈비",
-    "address": "인천광역시 연수구 아트센터대로 107",
-    "category": "일식",
-    "region": "인천",
-    "video_id": "tKrnOGzewVI",
-    "video_title": "하루에 25그릇만 파는 돈까스집! 유튜브 최초",
-    "video_url": "https://www.youtube.com/watch?v=tKrnOGzewVI",
-    "thumbnail": "https://i.ytimg.com/vi/tKrnOGzewVI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBMCjOlHJexaT8ODlU-B3b3eCX7fA",
-    "upload_date": "2020-03-31",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.400948,
-    "lng": 126.638617,
-    "kakao_verified": {
-      "name": "조가네갑오징어 송도점",
-      "address": "인천 연수구 아트센터대로 107",
-      "distance_m": 105,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "정원분식",
     "address": "인천 서구 청마로 145",
     "category": "일식",
@@ -17621,27 +16238,6 @@
     "kakao_category": "음식점 > 분식"
   },
   {
-    "name": "닭꼬치집",
-    "address": "서울특별시 성북구 화랑로13길 10",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "hjYYEklZsgM",
-    "video_title": "서울역 37년 전통 뼈있는 닭꼬치집",
-    "video_url": "https://www.youtube.com/watch?v=hjYYEklZsgM",
-    "thumbnail": "https://i.ytimg.com/vi/hjYYEklZsgM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUJzVvgkgol4OLcJnVV8u8Rvo-dA",
-    "upload_date": "2020-03-09",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.603893,
-    "lng": 127.042747,
-    "kakao_verified": {
-      "name": "남매부대찌개",
-      "address": "서울 성북구 화랑로11길 27",
-      "distance_m": 102,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "특집",
     "address": "경기 평택시 평택5로20번길 8",
     "category": "기타",
@@ -17687,27 +16283,6 @@
     "phone": "063-653-1008",
     "place_url": "http://place.map.kakao.com/26157347",
     "kakao_category": "음식점 > 한식 > 한정식"
-  },
-  {
-    "name": "이사한집",
-    "address": "경기도 구리시 갈매중앙로 89-8",
-    "category": "면류",
-    "region": "경기",
-    "video_id": "Ypc1A5p1BQ0",
-    "video_title": "핫플 '장미맨숀' 라면 전메뉴 격파",
-    "video_url": "https://www.youtube.com/watch?v=Ypc1A5p1BQ0",
-    "thumbnail": "https://i.ytimg.com/vi/Ypc1A5p1BQ0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCO3hOG6AvA3LykaACeu5s3cRfJsA",
-    "upload_date": "2020-02-27",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.632866,
-    "lng": 127.117319,
-    "kakao_verified": {
-      "name": "장우갈비",
-      "address": "경기 구리시 경춘북로 252",
-      "distance_m": 67,
-      "similarity": 0.0
-    }
   },
   {
     "name": "바지락칼국수",
@@ -17770,21 +16345,6 @@
     "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게"
   },
   {
-    "name": "커피집",
-    "address": "세종 금남면 용담길 25",
-    "category": "해산물",
-    "region": "세종",
-    "video_id": "yz-mR2f4NfU",
-    "video_title": "제일비싼 조개라고 해서 조금만 먹을게요.. 새조개 먹방",
-    "video_url": "https://www.youtube.com/watch?v=yz-mR2f4NfU",
-    "thumbnail": "https://i.ytimg.com/vi/yz-mR2f4NfU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCW6qWFoL-a57Bj3XcfazykBXh_xA",
-    "upload_date": "2020-02-19",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.424597,
-    "lng": 127.286085
-  },
-  {
     "name": "대전막장집",
     "address": "대전 광역시 중구 선화서로 48-1",
     "category": "기타",
@@ -17807,27 +16367,6 @@
     "phone": "042-222-0324",
     "place_url": "http://place.map.kakao.com/316976275",
     "kakao_category": "음식점 > 한식 > 해물,생선"
-  },
-  {
-    "name": "해물라면",
-    "address": "경남통영시서촌아랫길112",
-    "category": "기타",
-    "region": "경남",
-    "video_id": "n7MkmyHrkKQ",
-    "video_title": "옆집 사장님 놀래키고 왔습니다",
-    "video_url": "https://www.youtube.com/watch?v=n7MkmyHrkKQ",
-    "thumbnail": "https://i.ytimg.com/vi/n7MkmyHrkKQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtjNKIean7_O7gbtDdCJjm6bfQ4Q",
-    "upload_date": "2020-02-16",
-    "duplicate": false,
-    "source": "search",
-    "lat": 34.634565,
-    "lng": 128.264681,
-    "kakao_verified": {
-      "name": "소풍",
-      "address": "경남 통영시 욕지면 서촌윗길 190",
-      "distance_m": 123,
-      "similarity": 0.0
-    }
   },
   {
     "name": "단골닭집",
@@ -17967,27 +16506,6 @@
     "phone": "0507-1339-0032",
     "place_url": "http://place.map.kakao.com/335111559",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 갈비"
-  },
-  {
-    "name": "이사한집",
-    "address": "충청남도 공주시 용당길 33",
-    "category": "기타",
-    "region": "충남",
-    "video_id": "dBb9tq3xMT4",
-    "video_title": "초콜렛 200개요..?? 사주세요 제발...",
-    "video_url": "https://www.youtube.com/watch?v=dBb9tq3xMT4",
-    "thumbnail": "https://i.ytimg.com/vi/dBb9tq3xMT4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9HYSBmXoc5n7SIWhuXd1WD9JqpQ",
-    "upload_date": "2020-02-08",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.458615,
-    "lng": 127.121173,
-    "kakao_verified": {
-      "name": "이대주소고기해물샤브샤브칼국수",
-      "address": "충남 공주시 봉황로 144",
-      "distance_m": 55,
-      "similarity": 0.07
-    }
   },
   {
     "name": "김치볶음밥",
@@ -18134,27 +16652,6 @@
     "phone": "0502-5552-9876",
     "place_url": "http://place.map.kakao.com/1530039759",
     "kakao_category": "음식점 > 한식 > 곰탕"
-  },
-  {
-    "name": "돼지갈비집",
-    "address": "서울특별시 중랑구 동일로 775",
-    "category": "중식",
-    "region": "서울",
-    "video_id": "_cZPPD-tbQw",
-    "video_title": "짜장면,탕수육 1인분 먹방ㅎ",
-    "video_url": "https://www.youtube.com/watch?v=_cZPPD-tbQw",
-    "thumbnail": "https://i.ytimg.com/vi/_cZPPD-tbQw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCV5EU7-T0bHcGhbuAqJ0wnFjujNw",
-    "upload_date": "2020-01-17",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.599689,
-    "lng": 127.079467,
-    "kakao_verified": {
-      "name": "우마루 서울중화점",
-      "address": "서울 중랑구 동일로 768",
-      "distance_m": 112,
-      "similarity": 0.0
-    }
   },
   {
     "name": "짜장",
@@ -18345,27 +16842,6 @@
       "name": "스시브로",
       "address": "경남 창원시 마산회원구 삼호로 80",
       "distance_m": 0,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "몽땅식품",
-    "address": "서울특별시 구로구 가마산로 245",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "0lXxX_NA-t4",
-    "video_title": "킹크랩은 귀여워",
-    "video_url": "https://www.youtube.com/watch?v=0lXxX_NA-t4",
-    "thumbnail": "https://i.ytimg.com/vi/0lXxX_NA-t4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlxU_I6gQ7Y0aPZqwoIWxduXpe3g",
-    "upload_date": "2019-12-31",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.495505,
-    "lng": 126.888292,
-    "kakao_verified": {
-      "name": "미청진국밥 구로구청점",
-      "address": "서울 구로구 가마산로23길 13",
-      "distance_m": 90,
       "similarity": 0.0
     }
   },
@@ -18925,27 +17401,6 @@
     "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
-    "name": "멍게비빔밥",
-    "address": "경상남도 통영시 통영해안로 363-1",
-    "category": "해산물",
-    "region": "경남",
-    "video_id": "meXc2Z83Mn4",
-    "video_title": "통영1탄 고등어회 10마리 먹었더니 반응이..욕지도 할아버님도 알아보심 Korean mukbang eating show",
-    "video_url": "https://www.youtube.com/watch?v=meXc2Z83Mn4",
-    "thumbnail": "https://i.ytimg.com/vi/meXc2Z83Mn4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVrMINwwZ1vgiRxeoIjQpnnVfLUA",
-    "upload_date": "2019-11-01",
-    "duplicate": false,
-    "source": "search",
-    "lat": 34.844554,
-    "lng": 128.427269,
-    "kakao_verified": {
-      "name": "대풍관",
-      "address": "경남 통영시 해송정2길 29",
-      "distance_m": 145,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "늘푸른횟집",
     "address": "경남 통영시 욕지면 욕지일주로 95-6",
     "category": "해산물",
@@ -18988,27 +17443,6 @@
       "address": "서울 강남구 언주로 536",
       "distance_m": 4,
       "similarity": 0.22
-    }
-  },
-  {
-    "name": "이사한집",
-    "address": "충청북도 괴산군 괴산읍 읍내로2길 78-2",
-    "category": "면류",
-    "region": "충북",
-    "video_id": "naJe3iWjUug",
-    "video_title": "이사한 집 공개합니다.. 오션뷰,오픈카 이사한집에서 라면 먹방 Korean mukbang eating show",
-    "video_url": "https://www.youtube.com/watch?v=naJe3iWjUug",
-    "thumbnail": "https://i.ytimg.com/vi/naJe3iWjUug/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDr0B_tTkD-ZOXq9d6KeL5TqOCCMQ",
-    "upload_date": "2019-10-19",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.811016,
-    "lng": 127.79425,
-    "kakao_verified": {
-      "name": "조개광장",
-      "address": "충북 괴산군 괴산읍 읍내로13길 9-6",
-      "distance_m": 89,
-      "similarity": 0.0
     }
   },
   {
@@ -19074,48 +17508,6 @@
       "name": "부산복칼국수",
       "address": "경기 안양시 동안구 귀인로190번길 61-21",
       "distance_m": 81,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "새우볶음밥",
-    "address": "인천 남동구 인하로507번길 63",
-    "category": "분식",
-    "region": "인천",
-    "video_id": "rCvknQgxzb8",
-    "video_title": "김밥천국에서 간단하게 사장님 놀래키기 돈까스,쫄면,라제비,라뽂이 먹방Korean mukbang eating show",
-    "video_url": "https://www.youtube.com/watch?v=rCvknQgxzb8",
-    "thumbnail": "https://i.ytimg.com/vi/rCvknQgxzb8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtM6UAxNLWtgS6T8jE_iY8Sra0pw",
-    "upload_date": "2019-10-10",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.446186,
-    "lng": 126.702834,
-    "kakao_verified": {
-      "name": "은행골 구월점",
-      "address": "인천 남동구 성말로13번길 15",
-      "distance_m": 112,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "간편식품",
-    "address": "대구 북구 구리로 188",
-    "category": "기타",
-    "region": "대구",
-    "video_id": "ndSTgDyMbVM",
-    "video_title": "짜파구리가 하나로! 앵그리 짜파구리7개와 자메이카 통다리,치즈볼 먹방 Korean mukbang eating show",
-    "video_url": "https://www.youtube.com/watch?v=ndSTgDyMbVM",
-    "thumbnail": "https://i.ytimg.com/vi/ndSTgDyMbVM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtUh3Wf7vCDqaccRIh4s9CRdjybA",
-    "upload_date": "2019-10-08",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.948027,
-    "lng": 128.5754,
-    "kakao_verified": {
-      "name": "황금코다리 대구칠곡점",
-      "address": "대구 북구 구리로 173",
-      "distance_m": 119,
       "similarity": 0.0
     }
   },
@@ -19200,27 +17592,6 @@
       "name": "일직식당",
       "address": "경북 안동시 경동로 676",
       "distance_m": 73,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "컵라면",
-    "address": "경기도 구리시 체육관로172번길 50-7",
-    "category": "기타",
-    "region": "경기",
-    "video_id": "llZr0XtbJKs",
-    "video_title": "카레+너구리 카구리! 맛있어서 10봉지만 먹방 Korean mukbang eating show",
-    "video_url": "https://www.youtube.com/watch?v=llZr0XtbJKs",
-    "thumbnail": "https://i.ytimg.com/vi/llZr0XtbJKs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBp_WKK4g0alt6fRc_OsK0h3SjnBQ",
-    "upload_date": "2019-09-16",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.599448,
-    "lng": 127.139086,
-    "kakao_verified": {
-      "name": "돌다리보쌈칼국수",
-      "address": "경기 구리시 안골로77번길 36-2",
-      "distance_m": 109,
       "similarity": 0.0
     }
   },
@@ -19584,27 +17955,6 @@
     "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
-    "name": "비빔라면",
-    "address": "서울특별시 마포구 동교로32길 3",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "bpfFbYjjS-Y",
-    "video_title": "도시락 100인분. 힘내요 우리 이겨낼수 있어요",
-    "video_url": "https://www.youtube.com/watch?v=bpfFbYjjS-Y",
-    "thumbnail": "https://i.ytimg.com/vi/bpfFbYjjS-Y/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJWeAwA9GixOB85N1K_lNDEEhzMA",
-    "upload_date": "2019-08-06",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.560843,
-    "lng": 126.924552,
-    "kakao_verified": {
-      "name": "최사장네닭",
-      "address": "서울 마포구 연남로 4-1",
-      "distance_m": 111,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "물막국수",
     "address": "강원특별자치도 철원군 갈말읍 명성로158번길 13",
     "category": "기타",
@@ -19768,27 +18118,6 @@
     "phone": "02-2699-0777",
     "place_url": "http://place.map.kakao.com/393030552",
     "kakao_category": "음식점 > 중식 > 양꼬치"
-  },
-  {
-    "name": "즉석떡볶이집",
-    "address": "경기 수원시 팔달구 화서문로32번길 15",
-    "category": "분식",
-    "region": "경기",
-    "video_id": "NmmIwEi-Ogg",
-    "video_title": "구의동 모르는 사람이 없다는 오래된 즉석떡볶이집 먹방! 치즈볶음밥 수준보소.. Korean mukbang eating show",
-    "video_url": "https://www.youtube.com/watch?v=NmmIwEi-Ogg",
-    "thumbnail": "https://i.ytimg.com/vi/NmmIwEi-Ogg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLFGsidyAIJ4KLLdq9VTmrN8RqEw",
-    "upload_date": "2019-07-04",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.284395,
-    "lng": 127.012043,
-    "kakao_verified": {
-      "name": "마담마담",
-      "address": "경기 수원시 팔달구 화서문로 27",
-      "distance_m": 131,
-      "similarity": 0.0
-    }
   },
   {
     "name": "치즈볶음밥",
@@ -20332,27 +18661,6 @@
     "kakao_category": "음식점 > 한식 > 해물,생선 > 회"
   },
   {
-    "name": "쯔양라면",
-    "address": "대전 중구 계백로1685번길 45",
-    "category": "기타",
-    "region": "대전",
-    "video_id": "57OCKKd9xsc",
-    "video_title": "욕지도9",
-    "video_url": "https://www.youtube.com/watch?v=57OCKKd9xsc",
-    "thumbnail": "https://i.ytimg.com/vi/57OCKKd9xsc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKDTvA6mbJ9mFo6kyQv1Ih9GiPaQ",
-    "upload_date": "2019-04-13",
-    "duplicate": false,
-    "source": "search",
-    "lat": 36.322598,
-    "lng": 127.405196,
-    "kakao_verified": {
-      "name": "계탄집 오류점",
-      "address": "대전 중구 계룡로874번길 109",
-      "distance_m": 100,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "산채정식",
     "address": "충청남도 예산군 덕산면 수덕사안길 37",
     "category": "기타",
@@ -20401,27 +18709,6 @@
     "phone": "053-351-8377",
     "place_url": "http://place.map.kakao.com/2146629368",
     "kakao_category": "음식점 > 일식 > 초밥,롤"
-  },
-  {
-    "name": "해녀포차",
-    "address": "경상남도 고성군 고성읍 중앙로25번길 58",
-    "category": "기타",
-    "region": "경남",
-    "video_id": "Q0SaiWwzmJ0",
-    "video_title": "욕지도5",
-    "video_url": "https://www.youtube.com/watch?v=Q0SaiWwzmJ0",
-    "thumbnail": "https://i.ytimg.com/vi/Q0SaiWwzmJ0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBP4pkxFvfz06uggUZMtr8NMni9ng",
-    "upload_date": "2019-04-02",
-    "duplicate": false,
-    "source": "search",
-    "lat": 34.976624,
-    "lng": 128.324958,
-    "kakao_verified": {
-      "name": "파리바게뜨 경남고성점",
-      "address": "경남 고성군 고성읍 동외로 169",
-      "distance_m": 111,
-      "similarity": 0.0
-    }
   },
   {
     "name": "욕지돼지갈비",
@@ -20557,21 +18844,6 @@
       "distance_m": 102,
       "similarity": 0.09
     }
-  },
-  {
-    "name": "이사한집",
-    "address": "부산광역시 기장군 기장읍 차성로190번길 33",
-    "category": "분식",
-    "region": "부산",
-    "video_id": "Om03_CPNF9Q",
-    "video_title": "좀더 구울걸 그랬어요.. 솥뚜껑 군만두 7봉지 먹방 Korean mukbang eating show",
-    "video_url": "https://www.youtube.com/watch?v=Om03_CPNF9Q",
-    "thumbnail": "https://i.ytimg.com/vi/Om03_CPNF9Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZh0MyWWqwB6sq7wF7MT0ciTMglg",
-    "upload_date": "2019-03-16",
-    "duplicate": false,
-    "source": "search",
-    "lat": 35.23437,
-    "lng": 129.214241
   },
   {
     "name": "용궁해물야채쟁반짜장",
@@ -21119,26 +19391,6 @@
     }
   },
   {
-    "name": "평양냉면",
-    "address": "대구 중구 국채보상로 125",
-    "category": "분식",
-    "region": "대구",
-    "video_id": "4aWsXmyZtOg",
-    "video_title": "방송용 아니냐고 의심하셔서 보여드렸습니다😂 평양냉면 수육 만두 10인분 먹방",
-    "video_url": "https://www.youtube.com/watch?v=4aWsXmyZtOg",
-    "thumbnail": "https://i.ytimg.com/vi/4aWsXmyZtOg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7clyyzHqKzqEM0uKlsFUQyqPWhA",
-    "upload_date": "2026-05-10",
-    "lat": 35.873805,
-    "lng": 128.603075,
-    "source": "search",
-    "kakao_verified": {
-      "name": "영미상회",
-      "address": "대구 북구 칠성시장로1길 48-4",
-      "distance_m": 95,
-      "similarity": 0.0
-    }
-  },
-  {
     "name": "바다식당",
     "address": "전북 부안군 변산면 격포중앙길 28-4",
     "category": "기타",
@@ -21432,26 +19684,6 @@
       "address": "전북특별자치도 전주시 완산구 팔달로 157-5",
       "distance_m": 7,
       "similarity": 0.2
-    }
-  },
-  {
-    "name": "우불식당",
-    "address": "서울 송파구 송파대로 28",
-    "category": "면류",
-    "region": "서울",
-    "video_id": "HvTLbeasXS4",
-    "video_title": "우동집에 갔더니 유명배우가 사장님..?🤫 가락동 우불식당 먹방",
-    "video_url": "https://www.youtube.com/watch?v=HvTLbeasXS4",
-    "thumbnail": "https://i.ytimg.com/vi/HvTLbeasXS4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC22b2Kmod8pKYmez_MFBGtAE7U3A",
-    "upload_date": "2022-07-08",
-    "lat": 37.54061,
-    "lng": 126.956438,
-    "source": "search",
-    "kakao_verified": {
-      "name": "오늘통닭 도화점",
-      "address": "서울 마포구 새창로 52",
-      "distance_m": 104,
-      "similarity": 0.0
     }
   },
   {
@@ -22042,46 +20274,6 @@
     "phone": "02-712-7462",
     "place_url": "http://place.map.kakao.com/20526340",
     "kakao_category": "음식점 > 한식 > 육류,고기"
-  },
-  {
-    "name": "중앙시장맛집",
-    "address": "충북 제천시 중앙로2",
-    "category": "기타",
-    "region": "충북",
-    "video_id": "4svzZO8Yi3o",
-    "video_title": "이만큼 먹어도 2등이라구요? 제천 빨간어묵 먹방",
-    "video_url": "https://www.youtube.com/watch?v=4svzZO8Yi3o",
-    "thumbnail": "https://i.ytimg.com/vi/4svzZO8Yi3o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD40k7xD092ztT8AKR8g5s8D6yPzQ",
-    "upload_date": "2020-05-03",
-    "lat": 36.6258,
-    "lng": 127.499961,
-    "source": "search",
-    "kakao_verified": {
-      "name": "한복남칼국수",
-      "address": "충북 청주시 상당구 산성로 16",
-      "distance_m": 103,
-      "similarity": 0.0
-    }
-  },
-  {
-    "name": "인생맛집",
-    "address": "경북 영주시 번영로173번길 7",
-    "category": "기타",
-    "region": "경북",
-    "video_id": "_mwL-KkeYxk",
-    "video_title": "인생맛집) 영주에서 제일 유명하다는 랜떡 먹방",
-    "video_url": "https://www.youtube.com/watch?v=_mwL-KkeYxk",
-    "thumbnail": "https://i.ytimg.com/vi/_mwL-KkeYxk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDzn4yDu5yDlpNf8e5U9LTrxb8VrA",
-    "upload_date": "2020-04-19",
-    "lat": 36.826396,
-    "lng": 128.624194,
-    "source": "search",
-    "kakao_verified": {
-      "name": "아테네레스토랑",
-      "address": "경북 영주시 영주로231번길 13",
-      "distance_m": 106,
-      "similarity": 0.0
-    }
   },
   {
     "name": "머리구이",

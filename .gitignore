@@ -4,3 +4,4 @@ __pycache__/
 scripts/subs/
 scripts/geocode_cache.json
 scripts/kakao_geo_cache.json
+public/data/restaurants_geo.json.bak
