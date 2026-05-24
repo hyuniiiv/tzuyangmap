@@ -58,21 +58,6 @@ OVERSEAS_KW = [
     "sydney","budapest","las vegas","vegas","jakarta","bali","macau","macao",
 ]
 
-# 비-식당 영상 키워드 (식당 식별 의미 없음)
-NON_RESTAURANT_KW = [
-    "해명영상","사과","사과문","입장표명","논란","구설",
-    "Q&A","질문","고민상담","브이로그","일상","근황","채널","구독자 만",
-    "유튜버를 만났","합쳐서","구독자님과","만남","인사",
-    "메이크업","화장","뷰티","쇼핑","언박싱","개봉기",
-    "운동","다이어트","헬스","요가","필라테스",
-]
-
-
-def is_non_restaurant_video(title: str) -> bool:
-    """식당 방문이 아닌 콘텐츠 자동 감지"""
-    t = title.lower()
-    return any(kw.lower() in t for kw in NON_RESTAURANT_KW)
-
 
 FOOD_KWS = [
     "떡볶이","냉면","닭갈비","게장","국밥","갈비","곱창","순대","칼국수",
@@ -471,9 +456,6 @@ def process_new_video(video: dict) -> dict | None:
 
     # 해외 스킵
     if any(k in title.lower() for k in OVERSEAS_KW): return None
-
-    # 식당 아닌 콘텐츠 스킵 (해명/만남/Q&A 등)
-    if is_non_restaurant_video(title): return None
 
     # 자막 수집
     sub_text = get_subtitle_text(video["id"])
