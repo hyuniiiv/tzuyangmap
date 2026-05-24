@@ -518,21 +518,40 @@ def process_new_video(video: dict) -> dict | None:
 
             print(f"    [LLM({conf}): {llm_name or llm_brand or '?'} @ {address or '?'} | {ev}]")
 
-    # 주소가 아직 없는데 LLM이 브랜드/매장명만 잡았으면 Kakao 검색으로 좌표 찾기
-    if not address and (llm_name or llm_brand):
+    # ── LLM 결과 Kakao 검증 ─────────────────────────────────────────────
+    # LLM이 매장명을 주면 Kakao에서 그 이름으로 검색해서 실제 좌표/주소로 대체.
+    # LLM 주소가 정확하면 유지, hallucination이면 실제 매장 주소로 교체.
+    if llm_name or llm_brand:
         candidate = llm_name or llm_brand
-        # 지역 정보가 있으면 함께 검색 → 정확도↑
-        results = kakao_search_brand(candidate, region or "", limit=3)
-        if results:
-            best = results[0]
+        kakao_results = kakao_search_brand(candidate, region or "", limit=5)
+
+        # 점수: 이름 유사도 + LLM 좌표 근접도
+        best = None
+        best_score = -1
+        for c in kakao_results:
             try:
-                lat = float(best["y"]); lng = float(best["x"])
-                address = best.get("road_address_name") or best.get("address_name", "")
-                name = best.get("place_name", name)
-                phone = best.get("phone", "") or phone
-                place_url = best.get("place_url", "") or place_url
-                kakao_category = best.get("category_name", "") or kakao_category
-                print(f"    [Kakao 브랜드 검색: {name} @ {address}]")
+                clat = float(c["y"]); clng = float(c["x"])
+                sim = name_similarity(candidate, c.get("place_name", ""))
+                dist_km = 0
+                if lat and lng:
+                    dist_km = ((clat-lat)**2 + (clng-lng)**2)**0.5 * 111
+                score = sim * 100 - (dist_km * 0.5)
+                if score > best_score:
+                    best_score = score
+                    best = (c, sim, dist_km)
+            except: continue
+
+        if best and best[1] >= 0.4:
+            c, sim, dist_km = best
+            try:
+                lat = float(c["y"])
+                lng = float(c["x"])
+                address = c.get("road_address_name") or c.get("address_name", "")
+                name = c.get("place_name", llm_name or llm_brand)
+                phone = c.get("phone", "") or phone
+                place_url = c.get("place_url", "") or place_url
+                kakao_category = c.get("category_name", "") or kakao_category
+                print(f"    [Kakao 검증: {name} @ {address} (sim={sim:.2f}, dist={dist_km:.1f}km)]")
             except: pass
 
     # ── 전략 1: 자막 NER → 가게명 → Kakao 검색 ──────────────────────────
