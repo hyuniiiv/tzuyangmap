@@ -554,7 +554,8 @@ def kakao_geocode(address: str) -> tuple | None:
     except: pass
     return None
 
-def naver_search_address(query: str) -> str | None:
+def naver_search_address(query: str, retries: int = 2) -> str | None:
+    """Naver 검색 결과에서 한국 주소 추출. 짧은 응답(캐시 미워밍) 시 재시도."""
     ADDR_RE = re.compile(
         r"((?:서울|부산|인천|대구|대전|광주|울산|세종|경기|강원|충북|충남|전북|전남|경북|경남|제주)"
         r"(?:특별시|광역시|특별자치시|특별자치도|도)?\s*"
@@ -562,15 +563,24 @@ def naver_search_address(query: str) -> str | None:
         r"[가-힣\d]+(?:로|길|번길)\s*\d{1,5}(?:-\d+)?)"
     )
     enc = urllib.parse.quote(query)
-    req = urllib.request.Request(
-        f"https://search.naver.com/search.naver?query={enc}", headers=HEADERS)
-    try:
-        with urllib.request.urlopen(req, timeout=8) as r:
-            html = r.read().decode("utf-8", errors="replace")
-        html = re.sub(r"<[^>]+>", " ", html)
-        ms = ADDR_RE.findall(html)
-        if ms: return re.sub(r"\s+", " ", Counter(ms).most_common(1)[0][0]).strip()
-    except: pass
+    for attempt in range(retries + 1):
+        try:
+            req = urllib.request.Request(
+                f"https://search.naver.com/search.naver?query={enc}", headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=10) as r:
+                html = r.read().decode("utf-8", errors="replace")
+            html_t = re.sub(r"<[^>]+>", " ", html)
+            ms = ADDR_RE.findall(html_t)
+            if ms:
+                return re.sub(r"\s+", " ", Counter(ms).most_common(1)[0][0]).strip()
+            # 응답은 받았으나 주소 없으면 — 짧은 페이지일 수 있어 재시도
+            if attempt < retries and len(html_t) < 4000:
+                time.sleep(0.5)
+                continue
+        except Exception:
+            if attempt < retries:
+                time.sleep(0.5)
+                continue
     return None
 
 # ── 자막 NER (방문 선언 패턴) ─────────────────────────────────────────────
