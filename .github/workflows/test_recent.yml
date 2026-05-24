@@ -1,0 +1,28 @@
+name: Test Recent N Videos Extraction
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: '최근 N개 영상 처리'
+        required: false
+        type: string
+        default: '10'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install yt-dlp
+        run: pip install yt-dlp
+
+      - name: Test recent videos
+        env:
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_JAVASCRIPT_KEY: ${{ secrets.KAKAO_JAVASCRIPT_KEY }}
+          OPEN_AI_API_KEY: ${{ secrets.OPEN_AI_API_KEY }}
+        run: python scripts/test_recent_videos.py "${{ inputs.count }}"
