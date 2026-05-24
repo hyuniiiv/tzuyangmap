@@ -4252,24 +4252,6 @@
     "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
-    "name": "괴산 두레학교",
-    "address": "서울 관악구 신림로 308",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "rFCjfGPFDpw",
-    "video_title": "제육볶음 10인분 먹었더니 할머님들 반응이..🤣",
-    "video_url": "https://www.youtube.com/watch?v=rFCjfGPFDpw",
-    "thumbnail": "https://i.ytimg.com/vi/rFCjfGPFDpw/hqdefault.jpg",
-    "upload_date": "2025-04-11",
-    "lat": 37.481736,
-    "lng": 126.930544,
-    "source": "auto_kakao",
-    "channel": "tzuyang",
-    "phone": "",
-    "place_url": "",
-    "kakao_category": ""
-  },
-  {
     "name": "즉석우동짜장",
     "address": "서울 영등포구 대방천로 260",
     "category": "면류",
@@ -6193,24 +6175,6 @@
     },
     "phone": "02-735-3361",
     "place_url": "http://place.map.kakao.com/11162975",
-    "kakao_category": "음식점 > 한식 > 수제비"
-  },
-  {
-    "name": "엄마손수제비",
-    "address": "대구 중구 종로 11-5",
-    "category": "기타",
-    "region": "대구",
-    "video_id": "ojZB1DHDzwE",
-    "video_title": "제가 정말 좋아하는 수제비 맛집이에요..😂 3대째 운영중인 33년전통 골목안 수제비집 먹방",
-    "video_url": "https://www.youtube.com/watch?v=ojZB1DHDzwE",
-    "thumbnail": "https://i.ytimg.com/vi/ojZB1DHDzwE/hqdefault.jpg",
-    "upload_date": "2024-06-26",
-    "lat": 35.866908,
-    "lng": 128.591955,
-    "source": "auto_kakao",
-    "channel": "tzuyang",
-    "phone": "053-255-7288",
-    "place_url": "http://place.map.kakao.com/21765809",
     "kakao_category": "음식점 > 한식 > 수제비"
   },
   {
