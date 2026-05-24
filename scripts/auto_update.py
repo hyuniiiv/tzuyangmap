@@ -127,6 +127,22 @@ def get_existing_video_ids() -> set:
 
 # ── 3. 매장명+주소 수집 ────────────────────────────────────────────────────
 
+def get_video_upload_date(vid_id: str) -> str:
+    """영상 실제 게시일 (YYYY-MM-DD). yt-dlp --print upload_date 사용."""
+    try:
+        r = subprocess.run(
+            ["yt-dlp", "--print", "upload_date", "--skip-download", "--no-warnings",
+             f"https://www.youtube.com/watch?v={vid_id}"],
+            capture_output=True, encoding="utf-8", errors="replace", timeout=15
+        )
+        raw = (r.stdout or "").strip()
+        if len(raw) == 8 and raw.isdigit():
+            return f"{raw[:4]}-{raw[4:6]}-{raw[6:8]}"
+    except Exception:
+        pass
+    return ""
+
+
 def get_video_description(vid_id: str) -> str:
     """영상 설명란 — 주소가 가장 자주 명시되는 신뢰도 높은 소스"""
     try:
@@ -204,6 +220,34 @@ def extract_address_from_text(text: str) -> str | None:
     ms = KOREAN_ADDR_RE.findall(text)
     if not ms: return None
     return re.sub(r"\s+", " ", Counter(ms).most_common(1)[0][0]).strip()
+
+
+# 댓글에서 지역명 단서 추출용 정규식
+_AREA_RE = re.compile(r"([가-힣]{2,4}(?:역|동|구|읍|면|시장|시|군))")
+# 행정 단위 끝맺음 패턴 - 너무 일반적인 것 제외
+_AREA_EXCLUDE = {
+    "지금","오늘","이번","저번","우리","그냥","마지막","처음","항상","역시",
+    "사장","사장님","유튜브","채널","요즘","꼭","역대","역대급","무역",
+}
+
+def extract_areas_from_comments(comments_text: str, top_n: int = 3) -> list[str]:
+    """댓글에서 지역명/동네 단서 추출 (빈도 + 도메인 키워드 가중치).
+    예) '노원구 쪽에 삼겹살이라' → '노원구' 추출.
+    영상에 매장명이 없을 때 폴백 검색용 지역 힌트."""
+    if not comments_text: return []
+    matches = _AREA_RE.findall(comments_text)
+    if not matches: return []
+    # 의미 있는 행정 단위 가중치 부여
+    weight_unit = {"구": 3, "시장": 3, "동": 2, "역": 2, "읍": 2, "면": 2, "시": 1, "군": 1}
+    cnt = Counter()
+    for m in matches:
+        if m in _AREA_EXCLUDE: continue
+        if len(m) < 3 and not m.endswith(("구","시장")): continue
+        # 마지막 글자로 가중치
+        suffix = m[-1] if m[-1] in weight_unit else (m[-2:] if m.endswith("시장") else m[-1])
+        w = weight_unit.get(suffix, 1)
+        cnt[m] += w
+    return [a for a, _ in cnt.most_common(top_n)]
 
 
 def naver_search_snippets(query: str, max_chars: int = 2500) -> str:
@@ -537,10 +581,11 @@ def extract_names_from_sub(text: str) -> list[str]:
 
 def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str,
                           region: str, food: str | None, web_snip: str,
-                          llm_r: dict) -> dict | None:
+                          llm_r: dict, comments_text: str = "") -> dict | None:
     """LLM이 추출한 단일 매장 정보를 Naver/Kakao로 검증해서 완성된 entry로 변환.
-    다중 매장 영상의 각 매장을 처리하기 위해 분리됨."""
-    upload_date = date.today().strftime("%Y-%m-%d")
+    다중 매장 영상의 각 매장을 처리하기 위해 분리됨.
+    comments_text: 댓글 지역 단서 폴백용."""
+    upload_date = get_video_upload_date(video["id"]) or date.today().strftime("%Y-%m-%d")
     address = None
     name = None
     lat = lng = None
@@ -551,6 +596,7 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     llm_name = (llm_r.get("restaurant_name") or "").strip()
     llm_brand = (llm_r.get("brand") or "").strip()
     llm_addr = (llm_r.get("address") or "").strip()
+    llm_menu = (llm_r.get("main_menu") or "").strip()
     conf = llm_r.get("confidence", "?")
     ev = (llm_r.get("evidence") or "")[:120]
 
@@ -592,6 +638,54 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
                     if not region: region = find_region(naver_addr) or region
                     print(f"    [Naver 보조 주소: '{q}' → {naver_addr}]")
                     break
+
+    # ── 폴백: 매장명 모를 때 댓글의 지역단서 + menu로 Naver 검색 → Kakao 근처 매장 ──
+    # 예) 매니저 영상: name=null, 댓글에서 '노원구' 추출, menu='삼겹살, 개성김치'
+    if not address and (llm_menu or food):
+        # 댓글에서 지역 후보 (빈도 가중) + 기존 region
+        area_candidates = extract_areas_from_comments(comments_text)
+        if region and region not in area_candidates:
+            area_candidates.insert(0, region)
+
+        if area_candidates:
+            menu_words = (llm_menu or food or "").replace(",", " ").split()
+            menu_q = " ".join(menu_words[:3])
+            primary_menu = menu_words[0] if menu_words else food
+
+            for area in area_candidates[:3]:
+                queries = [f"{area} {menu_q}"]
+                if food and food not in menu_q:
+                    queries.append(f"{area} {food}")
+                queries.append(f"쯔양 {area} {primary_menu}")
+                found_addr = None
+                for q in queries:
+                    naver_addr = naver_search_address(q)
+                    if naver_addr:
+                        coords = kakao_geocode(naver_addr)
+                        if coords:
+                            lat, lng = coords
+                            address = naver_addr
+                            if not region: region = find_region(naver_addr) or region
+                            print(f"    [댓글 지역 폴백: area='{area}' query='{q}' → {naver_addr}]")
+                            found_addr = naver_addr
+                            # 좌표 근처 동일 메뉴 매장 (50m 이내)
+                            nearby = kakao_search_nearby(lat, lng, query=primary_menu or "음식점", radius=50)
+                            if nearby:
+                                c = nearby[0]
+                                try:
+                                    cy, cx = float(c["y"]), float(c["x"])
+                                    d = ((cy-lat)**2 + (cx-lng)**2)**0.5 * 111000
+                                    if d < 60:
+                                        name = c.get("place_name", name)
+                                        address = c.get("road_address_name") or address
+                                        lat = cy; lng = cx
+                                        phone = c.get("phone", "") or phone
+                                        place_url = c.get("place_url", "") or place_url
+                                        kakao_category = c.get("category_name", "") or kakao_category
+                                        print(f"    [Kakao 근처 매장: {name} ({d:.0f}m)]")
+                                except: pass
+                            break
+                if found_addr: break
 
     # Kakao 검증 (LLM 이름으로 재검색해서 실제 매장 매칭)
     if llm_name or llm_brand:
@@ -713,7 +807,7 @@ def process_new_video(video: dict) -> list[dict]:
     # 자막 수집
     sub_text = get_subtitle_text(video["id"])
     region   = find_region(title + " " + sub_text[:500])
-    upload_date = date.today().strftime("%Y-%m-%d")
+    upload_date = get_video_upload_date(video["id"]) or date.today().strftime("%Y-%m-%d")
 
     address = None
     name    = None
@@ -759,19 +853,23 @@ def process_new_video(video: dict) -> list[dict]:
         thumb = video.get("thumbnail") or f"https://i.ytimg.com/vi/{video['id']}/hqdefault.jpg"
         llm_list = llm_extract_restaurant(title, sub_text, desc_text, comments_text, web_snip, thumb) or []
 
-    # ── 다중 매장 영상: LLM이 2개 이상 매장 반환했으면 각각 처리해서 list 반환 ──
-    if len(llm_list) > 1:
-        print(f"    [다중 매장 감지: {len(llm_list)}개]")
+    # ── LLM 결과(list)를 각각 _build_entry_from_llm로 처리 — 댓글 지역 폴백 포함 ──
+    if llm_list:
+        if len(llm_list) > 1:
+            print(f"    [다중 매장 감지: {len(llm_list)}개]")
         entries = []
         for llm_r in llm_list:
             e = _build_entry_from_llm(video, title, sub_text, desc_text,
-                                       region, food, web_snip, llm_r)
+                                       region, food, web_snip, llm_r, comments_text)
             if e:
                 entries.append(e)
-        print(f"    [다중 매장 결과: {len(entries)}/{len(llm_list)}개 추출 성공]")
-        return entries
+        if entries:
+            if len(llm_list) > 1:
+                print(f"    [다중 매장 결과: {len(entries)}/{len(llm_list)}개 추출 성공]")
+            return entries
+        # 모두 실패 → 아래 자막 NER + Naver 폴백 시도
 
-    # ── 단일 매장 (또는 LLM 결과 없음): 기존 흐름 ─────────────────────────
+    # ── 단일 매장 폴백 (LLM 결과 없거나 모두 실패): 자막 NER + Naver ─────
     llm_name = None
     llm_brand = None
     llm = llm_list[0] if llm_list else None
