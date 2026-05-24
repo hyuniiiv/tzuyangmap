@@ -1321,7 +1321,10 @@ function selectR(r, moveMap=true) {
     showOverlay(r, pos);
   }
 
-  if (window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('open');
+  if (window.innerWidth <= 768) {
+    document.getElementById('sidebar').classList.remove('open');
+    syncToggleButton();
+  }
 }
 
 function closeV() {
@@ -1486,13 +1489,20 @@ function moveToMyLocation() {
   );
 }
 
-function toggleSidebar() {
+// 버튼 텍스트와 sidebar 상태 동기화
+function syncToggleButton() {
   const sb = document.getElementById('sidebar');
   const btn = document.getElementById('stoggle');
+  if (sb && btn) btn.textContent = sb.classList.contains('open') ? '지도 보기' : '목록 보기';
+}
+
+function toggleSidebar() {
+  const sb = document.getElementById('sidebar');
+  const wasOpen = sb.classList.contains('open');
   const isOpen = sb.classList.toggle('open');
-  btn.textContent = isOpen ? '지도 보기' : '목록 보기';
-  // 모바일: 지도 보기로 전환 (sidebar 닫힘) 시 팝업도 닫아서 지도 가리지 않게
-  if (!isOpen) {
+  syncToggleButton();
+  // 모바일: 지도 보기로 전환 시 (목록→지도) 팝업도 닫아서 지도 가리지 않게
+  if (wasOpen && !isOpen) {
     clearSelection();
   }
 }
