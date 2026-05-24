@@ -1,0 +1,21 @@
+{
+  "name": "쯔양맵",
+  "short_name": "쯔양맵",
+  "description": "쯔양이 다녀간 모든 맛집 지도",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f5f7",
+  "theme_color": "#000000",
+  "lang": "ko",
+  "categories": ["food", "maps", "lifestyle"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>쯔양맵 - 쯔양이 다녀간 모든 맛집</title>
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="쯔양맵">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
 <style>
 :root {
@@ -157,16 +164,19 @@ body {
 #sort-bar {
   padding: 9px 14px;
   border-bottom: 1px solid var(--divider-soft);
-  display: flex; gap: 6px; align-items: center;
+  display: flex; gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 6px;
 }
 .sort-label {
   font-size: 11px;
   color: var(--ink-muted-48);
-  margin-right: 3px;
+  margin-right: 2px;
   letter-spacing: -0.01em;
 }
 .sb {
-  padding: 5px 11px;
+  padding: 5px 10px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--hairline);
   background: var(--canvas);
@@ -176,7 +186,8 @@ body {
   cursor: pointer;
   transition: all 0.15s;
   font-family: inherit;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
+  white-space: nowrap;
 }
 .sb.on {
   background: var(--primary-12);
@@ -187,6 +198,10 @@ body {
 .sb:hover:not(.on) {
   border-color: var(--ink-muted-48);
   color: var(--ink);
+}
+.sb.loading {
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 #result-count {
@@ -204,11 +219,12 @@ body {
 #restaurant-list::-webkit-scrollbar-thumb:hover { background: var(--ink-muted-48); }
 
 .ri {
-  padding: 12px 16px;
+  padding: 12px 16px 12px 16px;
   cursor: pointer;
   border-bottom: 1px solid var(--divider-soft);
   display: flex; gap: 11px; align-items: center;
   transition: background 0.12s;
+  position: relative;
 }
 .ri:hover { background: var(--canvas-parchment); }
 .ri.sel {
@@ -216,6 +232,8 @@ body {
   border-left: 3px solid var(--primary);
   padding-left: 13px;
 }
+.ri.visited .ri-thumb { opacity: 0.62; }
+.ri.visited .ri-name { color: var(--ink-muted-60); }
 .ri-thumb {
   width: 72px; height: 52px;
   border-radius: var(--radius-sm);
@@ -223,7 +241,7 @@ body {
   background: var(--canvas-parchment);
   flex-shrink: 0;
 }
-.ri-info { flex: 1; min-width: 0; }
+.ri-info { flex: 1; min-width: 0; padding-right: 26px; }
 .ri-name {
   font-size: 14px;
   font-weight: 600;
@@ -541,6 +559,120 @@ body {
   #map { left: 0; }
   #stoggle { display: flex; align-items: center; gap: 6px; }
 }
+
+/* ---- 즐겨찾기 / 방문 / 공유 / 거리 ---- */
+
+/* 즐겨찾기 별 (리스트 아이템 우상단) */
+.ri-fav {
+  position: absolute;
+  top: 11px; right: 12px;
+  width: 26px; height: 26px;
+  border: none; background: transparent;
+  cursor: pointer; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-muted-30);
+  transition: color .15s, transform .12s;
+  z-index: 2;
+  border-radius: 50%;
+}
+.ri-fav:hover { color: #f59e0b; background: rgba(245,158,11,0.08); }
+.ri-fav.on { color: #f59e0b; }
+.ri-fav:active { transform: scale(0.88); }
+.ri-fav svg { width: 18px; height: 18px; }
+
+/* 방문 뱃지 (썸네일 우하단) */
+.ri-thumb-wrap { position: relative; flex-shrink: 0; }
+.ri-visited-badge {
+  position: absolute;
+  bottom: 3px; right: 3px;
+  width: 16px; height: 16px;
+  background: rgba(31, 138, 60, 0.95);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 700;
+  border: 1.5px solid #fff;
+}
+
+/* 거리 표시 */
+.ri-distance {
+  font-size: 11px;
+  color: var(--primary);
+  font-weight: 500;
+  margin-top: 3px;
+  letter-spacing: -0.01em;
+  display: inline-flex; align-items: center; gap: 3px;
+}
+
+/* 즐겨찾기/방문 필터 칩 (다른 색상 강조) */
+.fb.fb-fav { color: #d97706; border-color: rgba(217, 119, 6, 0.35); }
+.fb.fb-fav.on { background: #f59e0b; border-color: #f59e0b; color: #fff; }
+.fb.fb-visited { color: #1f8a3c; border-color: rgba(31, 138, 60, 0.35); }
+.fb.fb-visited.on { background: #1f8a3c; border-color: #1f8a3c; color: #fff; }
+
+/* 팝업 공유 버튼 (X 옆) */
+#panel-share {
+  position: absolute; top: 10px; right: 44px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  border: 1px solid var(--hairline-soft);
+  cursor: pointer; z-index: 10; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, transform 0.12s;
+}
+#panel-share:hover { background: var(--canvas-parchment); }
+#panel-share:active { transform: scale(0.9); }
+#panel-share svg { width: 13px; height: 13px; }
+
+/* 팝업 방문 토글 */
+#panel-visited {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--hairline);
+  background: var(--canvas);
+  color: var(--ink-muted-80);
+  font-size: 12px; font-weight: 400;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: -0.01em;
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  width: 100%;
+  transition: all .15s, transform .12s;
+}
+#panel-visited:hover { border-color: var(--ink-muted-48); color: var(--ink); }
+#panel-visited.on {
+  background: rgba(31, 138, 60, 0.1);
+  border-color: #1f8a3c;
+  color: #1f8a3c;
+  font-weight: 500;
+}
+#panel-visited:active { transform: scale(0.97); }
+
+/* 토스트 */
+#toast {
+  position: fixed;
+  bottom: 32px; left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--surface-tile-1);
+  color: var(--on-dark);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 13px; font-weight: 500;
+  letter-spacing: -0.01em;
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s, transform 0.22s cubic-bezier(.2,.8,.2,1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  white-space: nowrap;
+}
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 </style>
 </head>
 <body>
@@ -558,6 +690,8 @@ body {
     <input id="search-input" type="text" placeholder="가게명, 지역, 음식 검색">
   </div>
   <div id="filter-bar">
+    <button class="fb fb-fav" data-toggle="fav">★ 즐겨찾기</button>
+    <button class="fb fb-visited" data-toggle="visited">✓ 방문</button>
     <button class="fb on" data-f="all">전체</button>
     <button class="fb" data-f="서울">서울</button>
     <button class="fb" data-f="경기">경기</button>
@@ -580,6 +714,7 @@ body {
   <div id="sort-bar">
     <span class="sort-label">정렬</span>
     <button class="sb on" data-sort="recent">최신순</button>
+    <button class="sb" data-sort="nearest">근처순</button>
     <button class="sb" data-sort="name">이름순</button>
     <button class="sb" data-sort="region">지역순</button>
   </div>
@@ -603,6 +738,13 @@ body {
 <!-- 지도 위 팝업 패널 (CustomOverlay 대신) -->
 <div id="map-panel">
   <button id="panel-close" onclick="clearSelection()">✕</button>
+  <button id="panel-share" onclick="sharePanel()" title="공유">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v12"></path>
+      <path d="M7 8l5-5 5 5"></path>
+      <path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path>
+    </svg>
+  </button>
   <div id="panel-thumb-wrap">
     <img id="panel-thumb" src="" alt="">
     <div class="panel-play">▶</div>
@@ -616,8 +758,11 @@ body {
       <button id="panel-yt" class="kp-btn p">▶ 영상보기</button>
       <button id="panel-navi" class="kp-btn s">길찾기</button>
     </div>
+    <button id="panel-visited" onclick="toggleVisitedFromPanel()">✓ 방문 완료</button>
   </div>
 </div>
+
+<div id="toast"></div>
 
 <div id="vmodal">
   <div id="vcont"></div>
@@ -634,6 +779,66 @@ const CAT_COLOR = {
   "기타":"#94a3b8",
 };
 const getC = c => CAT_COLOR[c] || CAT_COLOR["기타"];
+
+/* ===== 즐겨찾기 / 방문 / 위치 ===== */
+const STORAGE_FAV = 'tzuyangmap.favorites.v1';
+const STORAGE_VISIT = 'tzuyangmap.visited.v1';
+
+function loadSet(key) {
+  try { return new Set(JSON.parse(localStorage.getItem(key) || '[]')); }
+  catch { return new Set(); }
+}
+function saveSet(key, set) {
+  try { localStorage.setItem(key, JSON.stringify([...set])); } catch {}
+}
+let favorites = loadSet(STORAGE_FAV);
+let visited = loadSet(STORAGE_VISIT);
+let userLocation = null; // {lat, lng} - 근처순/내위치 공통
+
+/* 토스트 */
+let _toastTimer = null;
+function showToast(text) {
+  const t = document.getElementById('toast');
+  if (!t) return;
+  t.textContent = text;
+  t.classList.add('show');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+/* Haversine 거리 (km) */
+function calcDistance(lat1, lng1, lat2, lng2) {
+  if (!lat1 || !lng1 || !lat2 || !lng2) return Infinity;
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 +
+            Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) *
+            Math.sin(dLng/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+function fmtDistance(km) {
+  if (!isFinite(km)) return '';
+  if (km < 1) return `${Math.round(km * 1000)}m`;
+  if (km < 100) return `${km.toFixed(1)}km`;
+  return `${Math.round(km)}km`;
+}
+
+/* 위치 요청 (공유 캐시) */
+function requestLocation() {
+  return new Promise((resolve, reject) => {
+    if (userLocation) { resolve(userLocation); return; }
+    if (!navigator.geolocation) { reject(new Error('not supported')); return; }
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        resolve(userLocation);
+      },
+      err => reject(err),
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
+    );
+  });
+}
 
 let map, clusterer;
 let selectedMarker = null;       // 선택된 markerMap 키
@@ -680,7 +885,7 @@ kakao.maps.event.addListener(map, 'click', clearSelection);
 } // end initMap
 
 let allData = [], filtered = [], markerMap = {}, currentOverlay = null;
-let curFilter = { region:"all", cat:"", search:"", sort:"recent" };
+let curFilter = { region:"all", cat:"", search:"", sort:"recent", favOnly:false, visitedOnly:false };
 let selectedKey = null;
 
 // 마커 색상 — Apple Action Blue
@@ -755,6 +960,19 @@ async function load() {
   document.getElementById('stats').textContent = `맛집 ${allData.length.toLocaleString()}개`;
   apply();
 
+  // 공유 링크로 진입했으면 해당 맛집 선택, 아니면 최신
+  const shareKey = getShareTargetKey();
+  if (shareKey && allData.length > 0) {
+    const [shName, shAddr] = shareKey.split('|');
+    const target = allData.find(x =>
+      (x.name === shName && x.address === shAddr) ||
+      (shName && x.name === shName)
+    );
+    if (target) {
+      setTimeout(() => selectR(target, true), 600);
+      return;
+    }
+  }
   // 첫 접속: 최신 맛집 자동 선택
   if (allData.length > 0) {
     const latest = [...allData].sort((a,b) => (b.upload_date||'').localeCompare(a.upload_date||''))[0];
@@ -763,8 +981,11 @@ async function load() {
 }
 
 function getFiltered() {
-  const {region, cat, search, sort} = curFilter;
+  const {region, cat, search, sort, favOnly, visitedOnly} = curFilter;
   let result = allData.filter(r => {
+    const k = r.name + r.address;
+    if (favOnly && !favorites.has(k)) return false;
+    if (visitedOnly && !visited.has(k)) return false;
     if (region !== "all" && r.region !== region) return false;
     if (cat && r.category !== cat) return false;
     if (search) {
@@ -778,6 +999,13 @@ function getFiltered() {
   if (sort === "recent") result.sort((a,b) => (b.upload_date||'').localeCompare(a.upload_date||''));
   else if (sort === "name") result.sort((a,b) => (a.name||'').localeCompare(b.name||'','ko'));
   else if (sort === "region") result.sort((a,b) => (a.region||'').localeCompare(b.region||'','ko') || (a.name||'').localeCompare(b.name||'','ko'));
+  else if (sort === "nearest" && userLocation) {
+    result.sort((a,b) => {
+      const da = calcDistance(userLocation.lat, userLocation.lng, a.lat, a.lng);
+      const db = calcDistance(userLocation.lat, userLocation.lng, b.lat, b.lng);
+      return da - db;
+    });
+  }
   return result;
 }
 
@@ -792,15 +1020,26 @@ function renderList() {
   const el = document.getElementById('restaurant-list');
   el.innerHTML = '';
   const show = filtered.slice(0, 500);
+  const showDist = curFilter.sort === 'nearest' && userLocation;
   show.forEach((r, idx) => {
     const div = document.createElement('div');
     const key = r.name + r.address;
-    div.className = 'ri' + (key === selectedKey ? ' sel' : '');
+    const isFav = favorites.has(key);
+    const isVisited = visited.has(key);
+    div.className = 'ri' + (key === selectedKey ? ' sel' : '') + (isVisited ? ' visited' : '');
     const verified = r.source === 'websearch_manual';
     // 7일 이내 = NEW
     const isNew = r.upload_date && (new Date() - new Date(r.upload_date)) < 7*24*60*60*1000;
+    let distHtml = '';
+    if (showDist && r.lat && r.lng) {
+      const d = calcDistance(userLocation.lat, userLocation.lng, r.lat, r.lng);
+      if (isFinite(d)) distHtml = `<div class="ri-distance">▸ ${fmtDistance(d)}</div>`;
+    }
     div.innerHTML = `
-      <img class="ri-thumb" src="${r.thumbnail||''}" loading="lazy" onerror="this.style.background='#f5f5f7';this.src=''">
+      <div class="ri-thumb-wrap">
+        <img class="ri-thumb" src="${r.thumbnail||''}" loading="lazy" onerror="this.style.background='#f5f5f7';this.src=''">
+        ${isVisited ? '<div class="ri-visited-badge">✓</div>' : ''}
+      </div>
       <div class="ri-info">
         <div class="ri-name">${r.name||'(이름 없음)'}</div>
         <div class="ri-title">${(r.video_title||'').substring(0,48)}</div>
@@ -811,8 +1050,26 @@ function renderList() {
           <span class="tag tag-region">${r.region||''}</span>
           ${verified ? '<span class="tag tag-verified">✓ 확인</span>' : ''}
         </div>
+        ${distHtml}
         ${r.upload_date ? '<div class="ri-date">'+fmtDate(r.upload_date)+'</div>' : ''}
-      </div>`;
+      </div>
+      <button class="ri-fav${isFav ? ' on' : ''}" data-fkey="${key.replace(/"/g,'&quot;')}" aria-label="즐겨찾기" title="즐겨찾기">
+        <svg viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>`;
+    // 즐겨찾기 토글 (이벤트 버블링 방지)
+    const favBtn = div.querySelector('.ri-fav');
+    favBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleFavoriteByKey(key);
+      const nowFav = favorites.has(key);
+      favBtn.classList.toggle('on', nowFav);
+      favBtn.querySelector('svg').setAttribute('fill', nowFav ? 'currentColor' : 'none');
+      showToast(nowFav ? '즐겨찾기에 추가' : '즐겨찾기 해제');
+      // 즐겨찾기 필터 활성 중이면 리스트 갱신
+      if (curFilter.favOnly && !nowFav) apply();
+    });
     div.onclick = () => selectR(r);
     el.appendChild(div);
   });
@@ -822,6 +1079,17 @@ function renderList() {
     more.textContent = `+ ${(filtered.length-500).toLocaleString()}개 더 있음 (검색으로 좁혀주세요)`;
     el.appendChild(more);
   }
+}
+
+function toggleFavoriteByKey(key) {
+  if (favorites.has(key)) favorites.delete(key);
+  else favorites.add(key);
+  saveSet(STORAGE_FAV, favorites);
+}
+function toggleVisitedByKey(key) {
+  if (visited.has(key)) visited.delete(key);
+  else visited.add(key);
+  saveSet(STORAGE_VISIT, visited);
 }
 
 function renderMarkers() {
@@ -865,7 +1133,11 @@ function clearSelection() {
   }
   closePanel();
 }
+// 팝업에서 참조하는 현재 맛집 (공유/방문토글용)
+let panelCurrentR = null;
+
 function openPanel(r) {
+  panelCurrentR = r;
   const vid = r.video_id || '';
   const ytUrl   = vid ? `https://www.youtube.com/watch?v=${vid}` : 'https://www.youtube.com/@tzuyang6145';
   const naviUrl = `https://map.kakao.com/link/to/${encodeURIComponent(r.name||'맛집')},${r.lat},${r.lng}`;
@@ -879,6 +1151,17 @@ function openPanel(r) {
   document.getElementById('panel-addr').textContent  = r.address || '';
   document.getElementById('panel-title').textContent = (r.video_title||'').substring(0,55);
   document.getElementById('panel-date').textContent  = r.upload_date ? fmtDate(r.upload_date) : '';
+
+  // 방문 토글 버튼 상태
+  const visitBtn = document.getElementById('panel-visited');
+  const key = r.name + r.address;
+  if (visited.has(key)) {
+    visitBtn.classList.add('on');
+    visitBtn.textContent = '✓ 방문 완료';
+  } else {
+    visitBtn.classList.remove('on');
+    visitBtn.textContent = '○ 방문 체크';
+  }
 
   // 영상보기 → 팝업에서 인라인 재생 (원래 방식)
   const playVideo = () => {
@@ -1011,6 +1294,58 @@ function closeV() {
   document.getElementById('vmodal').classList.remove('open');
 }
 
+/* ===== 공유 링크 ===== */
+function makeShareUrl(r) {
+  const key = r.name + '|' + r.address;
+  const base = location.origin + location.pathname;
+  return `${base}?r=${encodeURIComponent(key)}`;
+}
+
+async function sharePanel() {
+  if (!panelCurrentR) return;
+  const r = panelCurrentR;
+  const url = makeShareUrl(r);
+  const title = `쯔양맵 - ${r.name||'맛집'}`;
+  const text = `${r.name||''} (${r.address||''})`;
+  // Web Share API 우선 (모바일)
+  if (navigator.share) {
+    try {
+      await navigator.share({ title, text, url });
+      return;
+    } catch (e) {
+      if (e && e.name === 'AbortError') return; // 사용자 취소
+    }
+  }
+  // 폴백: 클립보드 복사
+  try {
+    await navigator.clipboard.writeText(url);
+    showToast('링크가 복사되었어요');
+  } catch {
+    prompt('링크를 복사하세요', url);
+  }
+}
+
+function toggleVisitedFromPanel() {
+  if (!panelCurrentR) return;
+  const key = panelCurrentR.name + panelCurrentR.address;
+  toggleVisitedByKey(key);
+  const nowVisited = visited.has(key);
+  const btn = document.getElementById('panel-visited');
+  btn.classList.toggle('on', nowVisited);
+  btn.textContent = nowVisited ? '✓ 방문 완료' : '○ 방문 체크';
+  showToast(nowVisited ? '방문 체크됨' : '방문 해제');
+  // 리스트도 새로고침 (썸네일 뱃지/필터)
+  renderList();
+}
+
+/* URL 파라미터로 진입한 경우 해당 맛집 자동 선택 */
+function getShareTargetKey() {
+  const params = new URLSearchParams(location.search);
+  const raw = params.get('r');
+  if (!raw) return null;
+  try { return decodeURIComponent(raw); } catch { return raw; }
+}
+
 document.addEventListener('keydown', e => e.key==='Escape' && closeV());
 document.getElementById('vmodal').onclick = e => e.target===e.currentTarget && closeV();
 
@@ -1019,16 +1354,41 @@ document.getElementById('search-input').addEventListener('input', function() {
   curFilter.search = this.value; apply();
 });
 document.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', function() {
-  document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));
+  // 지역/카테고리 칩만 단일 선택 — 즐겨찾기/방문 토글 칩은 유지
+  document.querySelectorAll('.fb:not([data-toggle])').forEach(x=>x.classList.remove('on'));
   this.classList.add('on');
   curFilter.region = this.dataset.f; curFilter.cat = ''; apply();
 }));
 document.querySelectorAll('[data-c]').forEach(b => b.addEventListener('click', function() {
-  document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.fb:not([data-toggle])').forEach(x=>x.classList.remove('on'));
   this.classList.add('on');
   curFilter.cat = this.dataset.c; curFilter.region = 'all'; apply();
 }));
-document.querySelectorAll('[data-sort]').forEach(b => b.addEventListener('click', function() {
+// 즐겨찾기/방문 토글 (독립적, AND 결합)
+document.querySelectorAll('[data-toggle]').forEach(b => b.addEventListener('click', function() {
+  const t = this.dataset.toggle;
+  const on = !this.classList.contains('on');
+  this.classList.toggle('on', on);
+  if (t === 'fav') curFilter.favOnly = on;
+  else if (t === 'visited') curFilter.visitedOnly = on;
+  apply();
+}));
+document.querySelectorAll('[data-sort]').forEach(b => b.addEventListener('click', async function() {
+  // 근처순은 GPS 필요
+  if (this.dataset.sort === 'nearest') {
+    if (!userLocation) {
+      this.classList.add('loading');
+      try {
+        await requestLocation();
+      } catch (err) {
+        this.classList.remove('loading');
+        const msg = err && err.code === 1 ? '위치 권한이 필요해요' : '위치를 가져오지 못했어요';
+        showToast(msg);
+        return;
+      }
+      this.classList.remove('loading');
+    }
+  }
   document.querySelectorAll('.sb').forEach(x=>x.classList.remove('on'));
   this.classList.add('on');
   curFilter.sort = this.dataset.sort; apply();
@@ -1050,11 +1410,15 @@ function moveToMyLocation() {
     (pos) => {
       const lat = pos.coords.latitude;
       const lng = pos.coords.longitude;
+      userLocation = { lat, lng }; // 근처순 정렬과 공유
       const here = new kakao.maps.LatLng(lat, lng);
 
       // 지도 이동
       map.setLevel(5);
       map.setCenter(here);
+
+      // 근처순 정렬 활성 중이면 재정렬
+      if (curFilter.sort === 'nearest') apply();
 
       // 기존 위치 마커 제거
       if (myLocationMarker) myLocationMarker.setMap(null);
@@ -1098,6 +1462,13 @@ kakao.maps.load(function() {
   initMap();
   load();
 });
+
+/* PWA: Service Worker 등록 */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
