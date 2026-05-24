@@ -306,7 +306,11 @@ def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
     body = {
         "model": "gpt-4o-mini",  # vision + structured outputs 지원
         "messages": [
-            {"role": "system", "content": "한국 음식 영상 매장 정보 추출 전문가. 썸네일 이미지 분석. 정해진 JSON 스키마만 반환."},
+            {"role": "system", "content":
+                "한국 음식 영상 매장 정보 추출 전문가. JSON 스키마 준수. "
+                "★ restaurant_name/brand/address는 자막/댓글/웹검색에 실제 등장한 문자열을 한 글자도 바꾸지 않고 그대로 인용. "
+                "유사한 발음으로 변형 금지(예: '지고추만두' → '지코부만두' 금지). "
+                "evidence에 인용한 문구와 restaurant_name이 다른 단어면 잘못된 추출."},
             {"role": "user", "content": user_content},
         ],
         "temperature": 0.0,
