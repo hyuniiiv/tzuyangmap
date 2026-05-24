@@ -883,48 +883,6 @@
     "kakao_category": "음식점 > 한식"
   },
   {
-    "name": "이마트24 마곡프리미엄점",
-    "address": "서울특별시 강서구 공항대로 236",
-    "category": "분식",
-    "region": "서울",
-    "video_id": "pWKbRbXPT8A",
-    "video_title": "편의점 다 털었습니다🔥 두쫀쿠와 미친치즈폭탄 떡볶이?! 라면 치즈김밥 치즈김치볶음밥 먹방 ",
-    "video_url": "https://www.youtube.com/watch?v=pWKbRbXPT8A",
-    "thumbnail": "https://i.ytimg.com/vi/pWKbRbXPT8A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBi0YXTbKAS9nYs9YHYw495PX33ew",
-    "upload_date": "2026-02-21",
-    "lat": 37.558541,
-    "lng": 126.833754,
-    "source": "auto_kakao",
-    "channel": "tzuyang",
-    "phone": "",
-    "place_url": "",
-    "kakao_category": ""
-  },
-  {
-    "name": "떡볶이",
-    "address": "서울특별시 강남구 강남대로162길 40",
-    "category": "분식",
-    "region": "서울",
-    "video_id": "pWKbRbXPT8A",
-    "video_title": "편의점 다 털었습니다🔥 두쫀쿠와 미친치즈폭탄 떡볶이?! 라면 치즈김밥 치즈김치볶음밥 먹방 ",
-    "video_url": "https://www.youtube.com/watch?v=pWKbRbXPT8A",
-    "thumbnail": "https://i.ytimg.com/vi/pWKbRbXPT8A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBi0YXTbKAS9nYs9YHYw495PX33ew",
-    "upload_date": "2026-02-21",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.520702,
-    "lng": 127.021591,
-    "kakao_verified": {
-      "name": "안주집",
-      "address": "서울 강남구 도산대로11길 34",
-      "distance_m": 146,
-      "similarity": 0.0
-    },
-    "phone": "010-2764-9311",
-    "place_url": "http://place.map.kakao.com/332673367",
-    "kakao_category": "음식점 > 분식 > 떡볶이"
-  },
-  {
     "name": "싱싱조개구이횟집",
     "address": "충남 당진시 신평면 삽교천3길 9",
     "category": "구이",
