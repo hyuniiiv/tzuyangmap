@@ -30,6 +30,8 @@ ap.add_argument("--force", action="store_true", help="처리한 항목도 재처
 ap.add_argument("--grades", type=str, default="B,C,D", help="처리할 등급 (콤마)")
 ap.add_argument("--reset", action="store_true", help="state 초기화")
 ap.add_argument("--dry-run", action="store_true", help="저장 안 함")
+ap.add_argument("--failures-only", action="store_true",
+                help="이전 실패 목록(.rebuild_failures.json)만 재처리")
 args = ap.parse_args()
 
 # state 관리
@@ -63,15 +65,33 @@ print(f"이미 처리됨: {len(processed_ids)}개\n")
 # 대상 엔트리 선별 (우선순위: D → C → B → A → S)
 GRADE_PRIORITY = {"D": 0, "C": 1, "B": 2, "A": 3, "S": 4}
 candidates = []
+
+# --failures-only: 실패 목록의 video_id만 대상
+failure_vids = set()
+if args.failures_only:
+    if not FAIL_LOG_FILE.exists():
+        print("실패 로그 파일 없음 — 종료")
+        sys.exit(0)
+    failure_list = json.loads(FAIL_LOG_FILE.read_text(encoding="utf-8"))
+    failure_vids = {f["video_id"] for f in failure_list}
+    print(f"실패 재처리 모드: {len(failure_vids)}개 video_id 대상")
+    # state 초기화 (실패만 다시 처리하기 위해)
+    processed_ids = processed_ids - failure_vids
+
 for i, r in enumerate(data):
     g = audit_grade(r)
     if g not in target_grades: continue
     vid = r.get("video_id")
     if not vid: continue
+    if args.failures_only and vid not in failure_vids: continue
     if vid in processed_ids and not args.force: continue
     candidates.append((GRADE_PRIORITY.get(g, 5), i, r, g))
 
 candidates.sort(key=lambda x: x[0])  # 낮은 등급 먼저
+
+# --failures-only일 때 실패 목록 초기화 (다시 채울 거니까)
+if args.failures_only:
+    failures = []
 print(f"처리 대상: {len(candidates)}개 (이번 실행: 최대 {args.limit}개)\n")
 
 if not candidates:
