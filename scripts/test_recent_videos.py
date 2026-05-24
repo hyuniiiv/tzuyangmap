@@ -60,17 +60,17 @@ for i, v in enumerate(videos):
     print("─" * 70)
 
     t0 = time.time()
-    entry = au.process_new_video(v)
+    entries = au.process_new_video(v) or []
     elapsed = time.time() - t0
 
-    if entry:
-        print(f"  ✓ 성공 ({elapsed:.1f}s)")
-        print(f"    name      : {entry.get('name')}")
-        print(f"    address   : {entry.get('address')}")
-        print(f"    phone     : {entry.get('phone') or '(없음)'}")
-        print(f"    category  : {entry.get('category')} / {entry.get('region')}")
-        print(f"    place_url : {entry.get('place_url') or '(없음)'}")
-        results.append(("OK", v["title"][:40], entry.get("name"), entry.get("address")))
+    if entries:
+        print(f"  ✓ 성공 ({elapsed:.1f}s) — {len(entries)}개 매장")
+        for j, entry in enumerate(entries):
+            print(f"    [{j+1}] {entry.get('name')} @ {entry.get('address')}")
+            print(f"        phone={entry.get('phone') or '(없음)'} | {entry.get('category')}/{entry.get('region')}")
+        names = " | ".join(e.get("name","") for e in entries)
+        addrs = " | ".join((e.get("address","") or "") for e in entries)
+        results.append(("OK", v["title"][:40], names, addrs))
     else:
         print(f"  ✗ 거부됨 또는 추출 실패 ({elapsed:.1f}s)")
         results.append(("FAIL", v["title"][:40], None, None))
