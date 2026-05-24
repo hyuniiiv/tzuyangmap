@@ -213,6 +213,32 @@ for idx, (prio, data_i, r, g) in enumerate(candidates[:args.limit]):
                 encoding="utf-8")
             GEO_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
+# ── 다중 매장 추가 발견 처리 ──────────────────────────────────────────
+# LLM이 기존 데이터에 없는 매장을 발견했으면 새 entry로 추가
+appended_new = 0
+for vid, new_entries_list in llm_cache.items():
+    if not new_entries_list: continue
+    # 현재 data에 이 vid의 entries
+    current_for_vid = [r for r in data if r.get("video_id") == vid]
+    current_names = [r.get("name", "") or "" for r in current_for_vid]
+
+    for ne in new_entries_list:
+        ne_name = ne.get("name", "") or ""
+        if not ne_name: continue
+        # 기존 entries 중 이름 유사도 0.5 이상인 것 있나?
+        has_match = any(
+            au.name_similarity(ne_name, cn) >= 0.5 for cn in current_names
+        )
+        if not has_match:
+            # 새로 발견된 매장 → data에 추가
+            data.append(ne)
+            current_names.append(ne_name)
+            appended_new += 1
+            print(f"  [신규 발견 추가] vid={vid} name={ne_name}")
+
+if appended_new > 0:
+    print(f"\n다중 매장 추가 발견: {appended_new}개 신규 entry 추가\n")
+
 # 최종 저장
 if not args.dry_run:
     STATE_FILE.write_text(
