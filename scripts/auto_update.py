@@ -593,10 +593,16 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     place_url = ""
     kakao_category = ""
 
-    llm_name = (llm_r.get("restaurant_name") or "").strip()
-    llm_brand = (llm_r.get("brand") or "").strip()
-    llm_addr = (llm_r.get("address") or "").strip()
-    llm_menu = (llm_r.get("main_menu") or "").strip()
+    # LLM이 문자열 "null"/"None" 반환하는 경우 빈 값으로 정규화
+    def _clean(v):
+        if v is None: return ""
+        s = str(v).strip()
+        if s.lower() in ("null", "none", "undefined", "n/a", "na"): return ""
+        return s
+    llm_name = _clean(llm_r.get("restaurant_name"))
+    llm_brand = _clean(llm_r.get("brand"))
+    llm_addr = _clean(llm_r.get("address"))
+    llm_menu = _clean(llm_r.get("main_menu"))
     conf = llm_r.get("confidence", "?")
     ev = (llm_r.get("evidence") or "")[:120]
 
