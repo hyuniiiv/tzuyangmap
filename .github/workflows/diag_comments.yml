@@ -1,0 +1,24 @@
+name: Diagnose Comment Fetching
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: 'YouTube video ID'
+        required: true
+        type: string
+        default: 'xFGP21Xmn2w'
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install yt-dlp + alternatives
+        run: |
+          pip install yt-dlp youtube-comment-downloader
+      - name: Run diagnostic
+        run: python scripts/diag_comments.py "${{ inputs.video_id }}"
