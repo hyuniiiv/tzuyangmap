@@ -612,8 +612,23 @@ def process_new_video(video: dict) -> dict | None:
                     best = (c, sim, dist_km)
             except: continue
 
-        # 임계값: sim 0.4 이상 또는 (sim 0.3 + 거리 5km 이내 → 같은 매장 가능성 높음)
-        if best and (best[1] >= 0.4 or (best[1] >= 0.3 and best[2] <= 5)):
+        # 정밀 임계값 — 이름 유사도와 거리 모두 고려해서 false positive 방지
+        # - sim ≥ 0.85: 거리 무관 통과 (강한 이름 매칭)
+        # - sim 0.5~0.85: 거리 30km 이내
+        # - sim 0.4~0.5:  거리 10km 이내
+        # - sim 0.3~0.4:  거리 5km 이내 + LLM 좌표 존재
+        ok = False
+        if best:
+            sim_v, dist_v = best[1], best[2]
+            if sim_v >= 0.85:
+                ok = True
+            elif sim_v >= 0.5 and dist_v <= 30:
+                ok = True
+            elif sim_v >= 0.4 and dist_v <= 10:
+                ok = True
+            elif sim_v >= 0.3 and dist_v <= 5 and lat and lng:
+                ok = True
+        if ok:
             c, sim, dist_km = best
             try:
                 lat = float(c["y"])
