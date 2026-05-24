@@ -498,15 +498,60 @@ def get_subtitle_via_api(vid_id: str) -> str:
         return ""
 
 
+def get_subtitle_via_whisper(vid_id: str) -> str:
+    """오디오 다운로드 → Whisper STT (자막 없는 영상 폴백, 무거움).
+    GitHub Actions에서 CPU로 한국어 small 모델 사용. 1편당 ~3-5분."""
+    try:
+        from faster_whisper import WhisperModel
+    except ImportError:
+        print("    [Whisper 미설치 — STT 폴백 스킵]")
+        return ""
+
+    # 1) 오디오 다운로드 (m4a, 가벼움)
+    audio_path = SUB_DIR / f"{vid_id}.m4a"
+    if not audio_path.exists():
+        try:
+            r = subprocess.run([
+                "yt-dlp", "--no-warnings", "-q",
+                "-f", "bestaudio[ext=m4a]/bestaudio[ext=webm]/bestaudio",
+                "--extract-audio", "--audio-format", "m4a",
+                "-o", str(SUB_DIR / f"{vid_id}.%(ext)s"),
+                f"https://www.youtube.com/watch?v={vid_id}",
+            ], capture_output=True, encoding="utf-8", errors="replace", timeout=180)
+        except Exception as e:
+            print(f"    [Whisper 오디오 다운로드 실패: {e}]")
+            return ""
+
+    if not audio_path.exists():
+        return ""
+
+    # 2) Whisper STT (small 모델, int8 양자화 = CPU에서 빠름)
+    try:
+        print(f"    [Whisper STT 시작 (audio {audio_path.stat().st_size//1024}KB)]")
+        model = WhisperModel("small", device="cpu", compute_type="int8")
+        segments, info = model.transcribe(str(audio_path), language="ko", beam_size=1, vad_filter=True)
+        text = " ".join(s.text.strip() for s in segments if s.text)
+        print(f"    [Whisper STT 완료: {len(text)}자]")
+        return text
+    except Exception as e:
+        print(f"    [Whisper STT 실패: {e}]")
+        return ""
+    finally:
+        try: audio_path.unlink()
+        except: pass
+
+
 def get_subtitle_text(vid_id: str) -> str:
-    """자막 가져오기 — youtube-transcript-api 우선, yt-dlp 폴백.
-    GitHub Actions IP에서 yt-dlp 봇 차단으로 자막 0자 되는 문제 해결."""
-    # 1순위: youtube-transcript-api (봇 차단 우회)
+    """자막 가져오기 다단계 폴백:
+    1) youtube-transcript-api (봇 차단 우회)
+    2) yt-dlp --write-auto-subs
+    3) Whisper STT (오디오에서 직접 추출)"""
+    # 1순위: youtube-transcript-api
     text = get_subtitle_via_api(vid_id)
     if text and len(text) > 200:
         return text
 
-    # 폴백: yt-dlp
+    # 2순위: yt-dlp
     vtt_path = SUB_DIR / f"{vid_id}.ko.vtt"
     if not (vtt_path.exists() and vtt_path.stat().st_size > 300):
         subprocess.run([
@@ -515,16 +560,24 @@ def get_subtitle_text(vid_id: str) -> str:
             "-o", str(SUB_DIR / "%(id)s"), "--no-warnings",
             f"https://www.youtube.com/watch?v={vid_id}",
         ], capture_output=True, encoding="utf-8", errors="replace", timeout=30)
-    if not (vtt_path.exists() and vtt_path.stat().st_size > 300): return text or ""
-    raw = vtt_path.read_text(encoding="utf-8", errors="replace")
-    t = re.sub(r"<[^>]+>", "", raw)
-    t = re.sub(r"\d{2}:\d{2}:\d{2}\.\d{3}\s*-->\s*[^\n]+", "", t)
-    lines, prev = [], ""
-    for ln in t.splitlines():
-        ln = ln.strip()
-        if not ln or ln == prev: continue
-        prev = ln; lines.append(ln)
-    return " ".join(lines)
+    if vtt_path.exists() and vtt_path.stat().st_size > 300:
+        raw = vtt_path.read_text(encoding="utf-8", errors="replace")
+        t = re.sub(r"<[^>]+>", "", raw)
+        t = re.sub(r"\d{2}:\d{2}:\d{2}\.\d{3}\s*-->\s*[^\n]+", "", t)
+        lines, prev = [], ""
+        for ln in t.splitlines():
+            ln = ln.strip()
+            if not ln or ln == prev: continue
+            prev = ln; lines.append(ln)
+        ytdlp_text = " ".join(lines)
+        if len(ytdlp_text) > 200:
+            return ytdlp_text
+
+    # 3순위: Whisper STT (자막 자체가 없는 영상)
+    text2 = get_subtitle_via_whisper(vid_id)
+    if text2 and len(text2) > 100:
+        return text2
+    return text or ""
 
 def find_region(text: str) -> str:
     REGIONS = {

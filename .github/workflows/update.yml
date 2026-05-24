@@ -20,8 +20,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: ffmpeg 설치 (Whisper 오디오 처리용 — ubuntu-latest엔 보통 있음)
+        run: which ffmpeg || sudo apt-get install -y ffmpeg
+
       - name: 의존성 설치
-        run: pip install yt-dlp youtube-comment-downloader youtube-transcript-api
+        run: pip install yt-dlp youtube-comment-downloader youtube-transcript-api faster-whisper
 
       - name: 자동 업데이트 실행
         env:
