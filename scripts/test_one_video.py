@@ -69,30 +69,50 @@ print("─" * 60)
 addr_re = au.extract_address_from_text(desc_text)
 print(f"추출된 주소: {addr_re or '(없음)'}")
 
-# 단계 4: LLM 추출
+# 단계 4: 웹 검색 스니펫
 print()
 print("─" * 60)
-print("[4] LLM 추출 (GPT-4o-mini)")
+print("[4] Naver 웹검색 스니펫 (쯔양 + 영상 제목)")
 print("─" * 60)
+web_snip = au.naver_search_snippets(f"쯔양 {title}")
+print(f"스니펫 길이: {len(web_snip)}자")
+if web_snip:
+    print(f"앞부분: {web_snip[:400]}...")
+    # 주소 패턴 추출 시도
+    web_addr = au.extract_address_from_text(web_snip)
+    print(f"\n  → 추출된 주소: {web_addr or '(없음)'}")
+
+# 단계 5: LLM (vision + web)
+print()
+print("─" * 60)
+print("[5] LLM 추출 (GPT-4o-mini + Vision + 웹검색)")
+print("─" * 60)
+thumb_url = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
+print(f"썸네일 URL: {thumb_url}")
 if not au.OPENAI_KEY:
     print("OpenAI 키 없음 — 스킵")
     llm = None
 else:
-    llm = au.llm_extract_restaurant(title, sub_text, desc_text, "")
-    print(f"1차 결과: {llm}")
+    llm = au.llm_extract_restaurant(title, sub_text, desc_text, "", web_snip, thumb_url)
+    print(f"\n1차 결과:")
+    if llm:
+        for k, v in llm.items():
+            print(f"  {k}: {v}")
+    else:
+        print("  (실패)")
     if not llm or llm.get("confidence") == "low":
         print("\n→ confidence 낮음, 고정 댓글 추가 시도")
         pinned = au.get_top_pinned_comment(vid)
         print(f"  고정 댓글 길이: {len(pinned)}자")
         if pinned:
             print(f"  내용: {pinned[:200]}")
-            llm = au.llm_extract_restaurant(title, sub_text, desc_text, pinned)
+            llm = au.llm_extract_restaurant(title, sub_text, desc_text, pinned, web_snip, thumb_url)
             print(f"  2차 결과: {llm}")
 
-# 단계 5: 전체 파이프라인 실행
+# 단계 6: 전체 파이프라인 실행
 print()
 print("─" * 60)
-print("[5] process_new_video() 전체 실행")
+print("[6] process_new_video() 전체 실행")
 print("─" * 60)
 video = {
     "id": vid, "title": title,

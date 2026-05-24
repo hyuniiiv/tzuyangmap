@@ -184,38 +184,78 @@ def extract_address_from_text(text: str) -> str | None:
     return re.sub(r"\s+", " ", Counter(ms).most_common(1)[0][0]).strip()
 
 
-def llm_extract_restaurant(title: str, sub_text: str, desc_text: str, pinned_text: str = "") -> dict | None:
-    """OpenAI(GPT-4o-mini)로 영상에서 매장명/주소 동시 추출.
-    - 메뉴와 매장명 자연어 구분
-    - 약칭(엽떡 → 동대문엽기떡볶이) 이해
-    - JSON 응답: restaurant_name, address, main_menu, confidence
+def naver_search_snippets(query: str, max_chars: int = 2500) -> str:
+    """Naver 검색 결과 페이지 텍스트 추출 — LLM 컨텍스트로 사용.
+    블로그/뉴스 본문 일부가 검색결과 페이지에 노출되어 주소/매장명 단서 가능."""
+    enc = urllib.parse.quote(query)
+    req = urllib.request.Request(
+        f"https://search.naver.com/search.naver?query={enc}",
+        headers=HEADERS
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=8) as r:
+            html = r.read().decode("utf-8", errors="replace")
+        text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.DOTALL)
+        text = re.sub(r"<style[^>]*>.*?</style>",   " ", text, flags=re.DOTALL)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        return text[:max_chars]
+    except Exception:
+        return ""
+
+
+def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
+                           pinned_text: str = "", web_snippets: str = "",
+                           thumbnail_url: str = "") -> dict | None:
+    """OpenAI(GPT-4o-mini Vision)로 영상에서 매장명/주소 추출.
+    - 자막/설명/댓글 + 웹 검색 결과 + 썸네일 이미지 종합 분석
+    - 약칭(엽떡 → 동대문엽기떡볶이) 이해, 메뉴-매장명 구분
+    - JSON: restaurant_name, brand, address, main_menu, confidence, evidence
     """
     if not OPENAI_KEY: return None
 
-    sub  = (sub_text or "")[:2500]
-    desc = (desc_text or "")[:800]
+    sub  = (sub_text or "")[:2200]
+    desc = (desc_text or "")[:700]
     pin  = (pinned_text or "")[:500]
+    web  = (web_snippets or "")[:2200]
 
     prompt = (
-        "다음 한국 음식 먹방 유튜브 영상에서 방문한 실제 매장 정보를 추출하세요.\n\n"
+        "다음 한국 음식 먹방 유튜브 영상이 방문한 실제 매장 정보를 종합 분석해 추출하세요.\n\n"
         f"[영상 제목]\n{title}\n\n"
-        f"[자막 (앞부분)]\n{sub}\n\n"
-        f"[영상 설명]\n{desc}\n\n"
-        f"[고정 댓글]\n{pin}\n\n"
-        "규칙:\n"
-        "- restaurant_name은 실제 매장명 (예: '동대문엽기떡볶이 가락점', '곰탕한그릇')\n"
-        "- 메뉴명/일반명사 절대 금지 (X: '로제떡볶이', '분식', '삼겹살집', '시골마을')\n"
-        "- 매장명 못 찾으면 null (추측 금지)\n"
-        "- address는 한국 도로명 주소 (예: '서울 송파구 양재대로62길 16')\n"
-        "- confidence: high(영상에 명확) / medium(추론 가능) / low(불확실)\n\n"
-        'JSON 형식만 출력:\n{"restaurant_name": "...", "address": "...", "main_menu": "...", "confidence": "high|medium|low"}'
+        f"[자막 (앞부분)]\n{sub or '(없음)'}\n\n"
+        f"[영상 설명]\n{desc or '(없음)'}\n\n"
+        f"[고정 댓글]\n{pin or '(없음)'}\n\n"
+        f"[웹 검색 결과 — 'YouTube 영상 제목 + 쯔양'으로 검색한 페이지 본문]\n{web or '(없음)'}\n\n"
+        "[썸네일 이미지] (별도 첨부 — 간판/로고/음식/매장 외관 분석)\n\n"
+        "분석 지침:\n"
+        "1. 썸네일 이미지에서 매장 간판, 메뉴판 로고, 브랜드 표시를 읽어 매장명 추론\n"
+        "2. 약칭/별명을 정식 매장명으로 변환 (엽떡→동대문엽기떡볶이, 마라탕집→실제 상호)\n"
+        "3. 메뉴명/일반명사를 매장명으로 쓰지 말 것 (X: '로제떡볶이', '시골마을')\n"
+        "4. 웹 검색 결과의 블로그/뉴스에서 주소/지점 정보 찾기\n"
+        "5. 한국 도로명 주소 형식 (예: '서울 송파구 양재대로62길 16')\n"
+        "6. 체인점이면 지점명 포함 (예: '동대문엽기떡볶이 가락점')\n"
+        "7. 정보 부족하면 null, 단 브랜드만이라도 알 수 있으면 brand에 입력\n\n"
+        "JSON 형식:\n"
+        '{"restaurant_name": "정식 매장명+지점 or null", '
+        '"brand": "프랜차이즈 브랜드명 (있으면) or null", '
+        '"address": "도로명주소 or null", '
+        '"main_menu": "주력 메뉴 or null", '
+        '"confidence": "high|medium|low", '
+        '"evidence": "어떤 소스(썸네일/자막/웹)에서 어떤 단서를 얻었는지 간단히"}'
     )
 
+    user_content = [{"type": "text", "text": prompt}]
+    if thumbnail_url:
+        user_content.append({
+            "type": "image_url",
+            "image_url": {"url": thumbnail_url, "detail": "low"},
+        })
+
     body = {
-        "model": "gpt-4o-mini",
+        "model": "gpt-4o-mini",  # vision 지원
         "messages": [
-            {"role": "system", "content": "한국 음식 영상 매장 정보 추출 전문가. JSON만 반환."},
-            {"role": "user", "content": prompt},
+            {"role": "system", "content": "한국 음식 영상 매장 정보 추출 전문가. 썸네일 이미지도 분석. JSON만 반환."},
+            {"role": "user", "content": user_content},
         ],
         "temperature": 0.0,
         "response_format": {"type": "json_object"},
@@ -229,13 +269,26 @@ def llm_extract_restaurant(title: str, sub_text: str, desc_text: str, pinned_tex
                 "Content-Type": "application/json",
             }
         )
-        with urllib.request.urlopen(req, timeout=30) as r:
+        with urllib.request.urlopen(req, timeout=45) as r:
             res = json.loads(r.read().decode("utf-8"))
         content = res["choices"][0]["message"]["content"]
         return json.loads(content)
     except Exception as e:
-        print(f"    [LLM 실패: {type(e).__name__}: {str(e)[:80]}]")
+        print(f"    [LLM 실패: {type(e).__name__}: {str(e)[:120]}]")
         return None
+
+
+def kakao_search_brand(brand: str, region: str = "", limit: int = 5) -> list:
+    """브랜드명으로 Kakao Local 검색 (전국 매장 후보)"""
+    if not KAKAO_REST or not brand: return []
+    q = f"{region} {brand}" if region else brand
+    params = {"query": q, "category_group_code": "FD6", "size": limit}
+    url = "https://dapi.kakao.com/v2/local/search/keyword.json?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={"Authorization": f"KakaoAK {KAKAO_REST}"})
+    try:
+        with urllib.request.urlopen(req, timeout=5) as r:
+            return json.loads(r.read().decode("utf-8")).get("documents", [])
+    except: return []
 
 
 def name_similarity(a: str, b: str) -> float:
@@ -398,10 +451,10 @@ def process_new_video(video: dict) -> dict | None:
     place_url = ""
     kakao_category = ""
 
-    # ── 전략 0: 영상 설명 + (필요 시) 고정댓글 + 자막 → LLM에 통합 추출 ────
+    # ── 전략 0: 자막 + 설명 + 웹검색 + 썸네일을 LLM에 통합 분석 ──────────
     desc_text = get_video_description(video["id"])
 
-    # 정규식으로 description에서 먼저 주소 시도 (LLM 호출 절약 가능)
+    # description 정규식 주소 (LLM 없이도 작동)
     addr_from_desc = extract_address_from_text(desc_text)
     if addr_from_desc:
         coords = kakao_geocode(addr_from_desc)
@@ -411,32 +464,75 @@ def process_new_video(video: dict) -> dict | None:
             if not region: region = find_region(addr_from_desc) or region
             print(f"    [description 주소: {addr_from_desc}]")
 
-    # LLM 추출 (가장 정확) — 설명/자막 모두 활용
+    # 웹 검색 (Naver) — 영상 제목 + 쯔양으로 블로그/뉴스 본문 수집
+    web_snip = naver_search_snippets(f"쯔양 {title}")
+    if web_snip:
+        # 검색 결과에서 주소 패턴 직접 추출 시도 (보조)
+        web_addr = extract_address_from_text(web_snip)
+        if web_addr and not address:
+            coords = kakao_geocode(web_addr)
+            if coords:
+                lat, lng = coords
+                address = web_addr
+                print(f"    [웹검색 주소: {web_addr}]")
+
+    # LLM 통합 분석 (자막 + 설명 + 웹스니펫 + 썸네일 이미지)
     llm_name = None
+    llm_brand = None
     if OPENAI_KEY:
-        llm = llm_extract_restaurant(title, sub_text, desc_text, "")
-        # 첫 시도 실패 또는 confidence 낮으면 고정 댓글 추가해서 재시도
+        thumb = video.get("thumbnail") or f"https://i.ytimg.com/vi/{video['id']}/hqdefault.jpg"
+        llm = llm_extract_restaurant(title, sub_text, desc_text, "", web_snip, thumb)
+
+        # 첫 시도 confidence 낮으면 고정 댓글 추가 (느려서 fallback만)
         if not llm or llm.get("confidence") == "low":
             pinned = get_top_pinned_comment(video["id"])
             if pinned:
-                llm = llm_extract_restaurant(title, sub_text, desc_text, pinned)
+                llm = llm_extract_restaurant(title, sub_text, desc_text, pinned, web_snip, thumb)
 
-        if llm and llm.get("confidence") in ("high", "medium"):
-            nm = (llm.get("restaurant_name") or "").strip()
-            ad = (llm.get("address") or "").strip()
-            conf = llm.get("confidence")
+        if llm:
+            nm    = (llm.get("restaurant_name") or "").strip()
+            br    = (llm.get("brand") or "").strip()
+            ad    = (llm.get("address") or "").strip()
+            menu  = (llm.get("main_menu") or "").strip()
+            conf  = llm.get("confidence", "?")
+            ev    = (llm.get("evidence") or "")[:120]
+
             if nm and nm not in GENERIC_NAMES:
                 llm_name = nm
-            # LLM이 주소도 제공하면 사용 (description regex 결과보다 우선)
+            if br:
+                llm_brand = br
+
+            # 주소: LLM > web/desc regex > Kakao geocode
             if ad and not address:
                 coords = kakao_geocode(ad)
                 if coords:
                     lat, lng = coords
                     address = ad
                     if not region: region = find_region(ad) or region
+
             if llm_name:
                 name = llm_name
-            print(f"    [LLM({conf}): {llm_name or '?'} @ {address or '?'}]")
+            elif llm_brand and not name:
+                name = llm_brand  # 브랜드라도 placeholder
+
+            print(f"    [LLM({conf}): {llm_name or llm_brand or '?'} @ {address or '?'} | {ev}]")
+
+    # 주소가 아직 없는데 LLM이 브랜드/매장명만 잡았으면 Kakao 검색으로 좌표 찾기
+    if not address and (llm_name or llm_brand):
+        candidate = llm_name or llm_brand
+        # 지역 정보가 있으면 함께 검색 → 정확도↑
+        results = kakao_search_brand(candidate, region or "", limit=3)
+        if results:
+            best = results[0]
+            try:
+                lat = float(best["y"]); lng = float(best["x"])
+                address = best.get("road_address_name") or best.get("address_name", "")
+                name = best.get("place_name", name)
+                phone = best.get("phone", "") or phone
+                place_url = best.get("place_url", "") or place_url
+                kakao_category = best.get("category_name", "") or kakao_category
+                print(f"    [Kakao 브랜드 검색: {name} @ {address}]")
+            except: pass
 
     # ── 전략 1: 자막 NER → 가게명 → Kakao 검색 ──────────────────────────
     sub_names = extract_names_from_sub(sub_text) if sub_text else []
