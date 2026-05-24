@@ -23,16 +23,27 @@ print(f"테스트: https://www.youtube.com/watch?v={vid}")
 print(f"OpenAI 키: {'있음 (LLM 활성)' if au.OPENAI_KEY else '없음 (LLM 스킵, 기존 흐름만)'}")
 print("=" * 60)
 
-# 영상 정보 (제목/썸네일) — yt-dlp으로 가져오기
-import subprocess
-r = subprocess.run(
-    ["yt-dlp", "--print", "title", "--skip-download", "--no-warnings",
-     f"https://www.youtube.com/watch?v={vid}"],
-    capture_output=True, encoding="utf-8", errors="replace", timeout=20
-)
-title = (r.stdout or "").strip()
+# 영상 정보 (제목) — YouTube oEmbed API로 가져오기 (봇 차단 없음)
+import urllib.request, urllib.parse, json as _json
+title = ""
+try:
+    oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={vid}&format=json"
+    with urllib.request.urlopen(oembed_url, timeout=10) as r:
+        d = _json.loads(r.read().decode("utf-8"))
+    title = d.get("title", "")
+except Exception as e:
+    print(f"oEmbed 실패: {e}")
+    # 폴백: yt-dlp
+    import subprocess
+    r = subprocess.run(
+        ["yt-dlp", "--print", "title", "--skip-download", "--no-warnings",
+         f"https://www.youtube.com/watch?v={vid}"],
+        capture_output=True, encoding="utf-8", errors="replace", timeout=20
+    )
+    title = (r.stdout or "").strip()
+
 if not title:
-    print(f"영상 정보 못 가져옴: {r.stderr[:300]}")
+    print("영상 제목 가져오기 실패")
     sys.exit(1)
 
 thumbnail = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
