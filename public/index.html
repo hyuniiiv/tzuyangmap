@@ -180,22 +180,22 @@ body { font-family: 'Noto Sans KR', sans-serif; background: #0a0a0a; color: #fff
 #vclose { color: #fff; font-size: 14px; cursor: pointer; padding: 9px 22px; background: #333; border-radius: 22px; border: none; font-family: inherit; }
 #vclose:hover { background: #444; }
 
-/* 내 위치 버튼 */
+/* 내 위치 버튼 - 구글맵 스타일 */
 #my-loc {
   position: fixed; right: 20px; bottom: 90px; z-index: 1000;
-  width: 48px; height: 48px; border-radius: 50%;
-  background: #fff; color: #ff3366;
-  border: 2px solid #ff3366;
-  font-size: 20px; cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff; color: #333;
+  border: none; cursor: pointer; padding: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   display: flex; align-items: center; justify-content: center;
-  transition: transform 0.15s, background 0.2s;
+  transition: background 0.15s;
 }
-#my-loc:hover { transform: scale(1.08); background: #ff3366; color: #fff; }
-#my-loc.loading { animation: spin 1s linear infinite; }
+#my-loc:hover { background: #f5f5f5; color: #1a73e8; }
+#my-loc.active { color: #1a73e8; }
+#my-loc.loading svg { animation: spin 1s linear infinite; }
 @keyframes spin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
 @media (max-width: 768px) {
-  #my-loc { bottom: 80px; right: 16px; width: 44px; height: 44px; }
+  #my-loc { bottom: 80px; right: 16px; }
 }
 
 /* 모바일 토글 버튼 - 항상 우하단에 표시 */
@@ -266,7 +266,16 @@ body { font-family: 'Noto Sans KR', sans-serif; background: #0a0a0a; color: #fff
 </div>
 
 <div id="map"></div>
-<button id="my-loc" onclick="moveToMyLocation()" title="내 위치">📍</button>
+<button id="my-loc" onclick="moveToMyLocation()" title="내 위치">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"></circle>
+    <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+    <line x1="12" y1="2" x2="12" y2="5"></line>
+    <line x1="12" y1="19" x2="12" y2="22"></line>
+    <line x1="2" y1="12" x2="5" y2="12"></line>
+    <line x1="19" y1="12" x2="22" y2="12"></line>
+  </svg>
+</button>
 <button id="stoggle" onclick="toggleSidebar()">📋 목록 보기</button>
 
 <!-- 지도 위 팝업 패널 (CustomOverlay 대신) -->
@@ -711,7 +720,6 @@ function moveToMyLocation() {
   }
   const btn = document.getElementById('my-loc');
   btn.classList.add('loading');
-  btn.textContent = '⏳';
 
   navigator.geolocation.getCurrentPosition(
     (pos) => {
@@ -741,11 +749,10 @@ function moveToMyLocation() {
       myLocationMarker.setMap(map);
 
       btn.classList.remove('loading');
-      btn.textContent = '📍';
+      btn.classList.add('active');
     },
     (err) => {
       btn.classList.remove('loading');
-      btn.textContent = '📍';
       const msg = err.code === 1 ? '위치 권한을 허용해주세요' :
                   err.code === 2 ? '위치를 가져올 수 없습니다' :
                                    '시간 초과되었습니다';
