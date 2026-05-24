@@ -1491,6 +1491,10 @@ function toggleSidebar() {
   const btn = document.getElementById('stoggle');
   const isOpen = sb.classList.toggle('open');
   btn.textContent = isOpen ? '지도 보기' : '목록 보기';
+  // 모바일: 지도 보기로 전환 (sidebar 닫힘) 시 팝업도 닫아서 지도 가리지 않게
+  if (!isOpen) {
+    clearSelection();
+  }
 }
 
 kakao.maps.load(function() {
