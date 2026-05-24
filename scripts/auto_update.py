@@ -391,10 +391,8 @@ def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
         return []
 
 
-def kakao_search_brand(brand: str, region: str = "", limit: int = 5) -> list:
-    """브랜드명으로 Kakao Local 검색 (전국 매장 후보)"""
-    if not KAKAO_REST or not brand: return []
-    q = f"{region} {brand}" if region else brand
+def _kakao_keyword_query(q: str, limit: int = 5) -> list:
+    if not KAKAO_REST or not q: return []
     params = {"query": q, "category_group_code": "FD6", "size": limit}
     url = "https://dapi.kakao.com/v2/local/search/keyword.json?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"Authorization": f"KakaoAK {KAKAO_REST}"})
@@ -402,6 +400,36 @@ def kakao_search_brand(brand: str, region: str = "", limit: int = 5) -> list:
         with urllib.request.urlopen(req, timeout=5) as r:
             return json.loads(r.read().decode("utf-8")).get("documents", [])
     except: return []
+
+
+# 매장명 끝에 붙는 메뉴/음식 키워드 (제거 후 재검색용)
+_NAME_FOOD_SUFFIXES = (
+    "손짜장","짜장","짬뽕","돈까스","돈가스","비빔밥","국밥","칼국수","우동","라면","쌀국수",
+    "치킨","피자","순대","족발","보쌈","갈비","곱창","대창","막창","삼겹살","오겹살",
+    "냉면","떡볶이","해장국","감자탕","곰탕","설렁탕","순두부","찌개","전골","구이","숯불구이",
+    "초밥","스시","사시미","회","장어","조개","낙지","쭈꾸미","해물탕","매운탕",
+    "분식","제과","베이커리","빵집","제빵","카페","커피","디저트","케이크","호떡","만두",
+    "본점","지점","점",
+)
+
+
+def kakao_search_brand(brand: str, region: str = "", limit: int = 5) -> list:
+    """브랜드명으로 Kakao Local 검색.
+    1차: 원본 그대로, 2차: 메뉴 suffix 제거 후 재시도 (예: '신진원손짜장' → '신진원')"""
+    if not KAKAO_REST or not brand: return []
+    q1 = f"{region} {brand}" if region else brand
+    docs = _kakao_keyword_query(q1, limit)
+    if docs: return docs
+    # 2차: 끝의 메뉴/음식 키워드 제거
+    for suf in _NAME_FOOD_SUFFIXES:
+        if brand.endswith(suf) and len(brand) > len(suf) + 1:
+            shorter = brand[:-len(suf)].strip()
+            if len(shorter) >= 2:
+                q2 = f"{region} {shorter}" if region else shorter
+                docs = _kakao_keyword_query(q2, limit)
+                if docs: return docs
+                break
+    return []
 
 
 def name_similarity(a: str, b: str) -> float:

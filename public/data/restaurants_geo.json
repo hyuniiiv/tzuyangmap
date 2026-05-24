@@ -1285,21 +1285,22 @@
     "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
-    "name": "짜장",
-    "address": "서울 특별시 영등포구 영등포로53길 23",
+    "name": "신진원",
+    "address": "서울 성북구 지봉로20길 43",
     "category": "중식",
     "region": "서울",
     "video_id": "-qCYzNtjSYY",
     "video_title": "36년 전통의 수타 짜장면! 사장님이 남기지 말라고 하셔서 보여드렸습니다🔥 보문동 신진원손짜장 먹방",
     "video_url": "https://www.youtube.com/watch?v=-qCYzNtjSYY",
-    "thumbnail": "https://i.ytimg.com/vi/-qCYzNtjSYY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2uyHiFCY62PMjgVJRmEfRwI5SHQ",
+    "thumbnail": "https://i.ytimg.com/vi/-qCYzNtjSYY/hqdefault.jpg",
     "upload_date": "2026-01-20",
-    "duplicate": false,
-    "source": "search",
-    "lat": 37.520292,
-    "lng": 126.91014,
-    "place_url": "http://place.map.kakao.com/434745756",
-    "kakao_category": "음식점 > 중식 > 중국요리"
+    "lat": 37.583025,
+    "lng": 127.018998,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-923-4405",
+    "place_url": "",
+    "kakao_category": "음식점 > 중식"
   },
   {
     "name": "왕돈까스",
