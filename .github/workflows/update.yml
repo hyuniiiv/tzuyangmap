@@ -20,8 +20,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: yt-dlp + youtube-comment-downloader 설치
-        run: pip install yt-dlp youtube-comment-downloader
+      - name: 의존성 설치
+        run: pip install yt-dlp youtube-comment-downloader youtube-transcript-api
 
       - name: 자동 업데이트 실행
         env:

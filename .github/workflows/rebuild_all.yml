@@ -43,7 +43,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install yt-dlp youtube-comment-downloader
+        run: pip install yt-dlp youtube-comment-downloader youtube-transcript-api
 
       - name: Run rebuild
         env:

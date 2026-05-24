@@ -417,7 +417,42 @@ GENERIC_NAMES = {
 }
 
 
+def get_subtitle_via_api(vid_id: str) -> str:
+    """youtube-transcript-api로 자막 받기 — yt-dlp 봇 차단 우회.
+    별도 transcript endpoint 사용해서 GitHub IP에서도 작동."""
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+    except ImportError:
+        return ""
+    try:
+        api = YouTubeTranscriptApi()
+        # 한국어 우선, 자동 생성 자막 포함
+        transcript_list = api.list(vid_id)
+        # 수동 자막 한국어
+        try:
+            transcript = transcript_list.find_manually_created_transcript(['ko'])
+        except Exception:
+            # 자동 생성 자막 한국어
+            try:
+                transcript = transcript_list.find_generated_transcript(['ko'])
+            except Exception:
+                return ""
+        snippets = transcript.fetch()
+        text = " ".join(s.text for s in snippets if hasattr(s, 'text'))
+        return text
+    except Exception:
+        return ""
+
+
 def get_subtitle_text(vid_id: str) -> str:
+    """자막 가져오기 — youtube-transcript-api 우선, yt-dlp 폴백.
+    GitHub Actions IP에서 yt-dlp 봇 차단으로 자막 0자 되는 문제 해결."""
+    # 1순위: youtube-transcript-api (봇 차단 우회)
+    text = get_subtitle_via_api(vid_id)
+    if text and len(text) > 200:
+        return text
+
+    # 폴백: yt-dlp
     vtt_path = SUB_DIR / f"{vid_id}.ko.vtt"
     if not (vtt_path.exists() and vtt_path.stat().st_size > 300):
         subprocess.run([
@@ -426,7 +461,7 @@ def get_subtitle_text(vid_id: str) -> str:
             "-o", str(SUB_DIR / "%(id)s"), "--no-warnings",
             f"https://www.youtube.com/watch?v={vid_id}",
         ], capture_output=True, encoding="utf-8", errors="replace", timeout=30)
-    if not (vtt_path.exists() and vtt_path.stat().st_size > 300): return ""
+    if not (vtt_path.exists() and vtt_path.stat().st_size > 300): return text or ""
     raw = vtt_path.read_text(encoding="utf-8", errors="replace")
     t = re.sub(r"<[^>]+>", "", raw)
     t = re.sub(r"\d{2}:\d{2}:\d{2}\.\d{3}\s*-->\s*[^\n]+", "", t)

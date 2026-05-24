@@ -17,8 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install yt-dlp + youtube-comment-downloader
-        run: pip install yt-dlp youtube-comment-downloader
+      - name: Install deps
+        run: pip install yt-dlp youtube-comment-downloader youtube-transcript-api
 
       - name: Test recent videos
         env:
