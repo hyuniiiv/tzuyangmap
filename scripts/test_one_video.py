@@ -74,7 +74,7 @@ print()
 print("─" * 60)
 print("[4] 댓글 전체 (top 40 + replies 20)")
 print("─" * 60)
-comments_text = au.get_all_top_comments(vid, max_top=40, max_replies=20)
+comments_text = au.get_all_top_comments(vid, max_n=50)
 print(f"댓글 총 길이: {len(comments_text)}자")
 if comments_text:
     # 앞 600자만 미리보기

@@ -134,42 +134,52 @@ def get_video_description(vid_id: str) -> str:
         return ""
 
 
-def get_all_top_comments(vid_id: str, max_top: int = 40, max_replies: int = 20) -> str:
-    """상위 댓글 + 답글 모두 텍스트로 합쳐 반환 (LLM 컨텍스트용).
-    팬 댓글에 매장 지점/주소 정보가 자주 나타나서 가장 중요한 신호."""
-    info_path = SUB_DIR / f"{vid_id}.info.json"
+def get_all_top_comments(vid_id: str, max_n: int = 50) -> str:
+    """상위 댓글 + 하트 받은 댓글을 텍스트로 합쳐 반환.
+    yt-dlp이 GitHub IP에서 봇 차단당해서 youtube-comment-downloader 사용.
+    (web 스크래핑 방식 — 봇 차단 우회)"""
     try:
-        subprocess.run(
-            ["yt-dlp", "--skip-download", "--write-info-json", "--write-comments",
-             "--no-warnings",
-             "--extractor-args",
-             f"youtube:max_comments={max_top},{max_replies};comment_sort=top",
-             "-o", str(SUB_DIR / "%(id)s"),
-             f"https://www.youtube.com/watch?v={vid_id}"],
-            capture_output=True, encoding="utf-8", errors="replace", timeout=90
-        )
-        if not info_path.exists():
-            return ""
-        info = json.loads(info_path.read_text(encoding="utf-8"))
-        comments = info.get("comments") or []
-        # 우선순위 정렬: 업로더+고정 → 고정 → 업로더 → 좋아요 많은 순
+        from youtube_comment_downloader import YoutubeCommentDownloader, SORT_BY_POPULAR
+    except ImportError:
+        print("    [경고: youtube-comment-downloader 미설치]")
+        return ""
+
+    try:
+        dl = YoutubeCommentDownloader()
+        url = f"https://www.youtube.com/watch?v={vid_id}"
+        comments = []
+        for i, c in enumerate(dl.get_comments_from_url(url, sort_by=SORT_BY_POPULAR, language="ko")):
+            if i >= max_n: break
+            comments.append(c)
+
+        # 우선순위 정렬: 하트(업로더 좋아요) → 좋아요 수
         def rank(c):
             r = 0
-            if c.get("author_is_uploader"): r += 1000
-            if c.get("is_pinned"): r += 500
-            r += c.get("like_count") or 0
+            if c.get("heart"): r += 5000     # 쯔양이 직접 하트 누른 댓글
+            if c.get("paid"):  r += 2000     # 슈퍼챗
+            try:
+                # "1.2K" "354" 같은 문자열을 정수로
+                votes = c.get("votes", "0")
+                if isinstance(votes, str):
+                    s = votes.replace(",", "").upper()
+                    if s.endswith("K"): votes = int(float(s[:-1]) * 1000)
+                    elif s.endswith("M"): votes = int(float(s[:-1]) * 1000000)
+                    else: votes = int(s)
+                r += votes
+            except: pass
             return -r
         comments.sort(key=rank)
+
         parts = []
         for c in comments:
             text = (c.get("text") or "").strip()
             if not text: continue
             tag = ""
-            if c.get("is_pinned"): tag += "[고정] "
-            if c.get("author_is_uploader"): tag += "[업로더] "
+            if c.get("heart"): tag += "[♥쯔양추천] "
             parts.append(f"{tag}{text}")
         return "\n---\n".join(parts)
-    except Exception:
+    except Exception as e:
+        print(f"    [댓글 수집 실패: {type(e).__name__}: {str(e)[:80]}]")
         return ""
 
 
@@ -487,7 +497,7 @@ def process_new_video(video: dict) -> dict | None:
                 print(f"    [웹검색 주소: {web_addr}]")
 
     # 댓글 수집 — 매장 식별의 핵심 신호 (팬들이 지점/주소 언급)
-    comments_text = get_all_top_comments(video["id"], max_top=40, max_replies=20)
+    comments_text = get_all_top_comments(video["id"], max_n=50)
 
     # LLM 통합 분석 (제목 + 자막 + 설명 + 댓글전체 + 웹스니펫 + 썸네일)
     llm_name = None

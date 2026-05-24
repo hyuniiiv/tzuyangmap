@@ -27,8 +27,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install yt-dlp
-        run: pip install yt-dlp
+      - name: Install yt-dlp + youtube-comment-downloader
+        run: pip install yt-dlp youtube-comment-downloader
 
       - name: Run extraction test
         env:
