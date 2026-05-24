@@ -8,6 +8,11 @@ on:
         required: true
         type: string
         default: 'xFGP21Xmn2w'
+      title:
+        description: '영상 제목 (선택 — oEmbed 실패 시 사용)'
+        required: false
+        type: string
+        default: '엽떡 먹고싶어지는 영상'
 
 jobs:
   test:
@@ -30,4 +35,4 @@ jobs:
           KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
           KAKAO_JAVASCRIPT_KEY: ${{ secrets.KAKAO_JAVASCRIPT_KEY }}
           OPEN_AI_API_KEY: ${{ secrets.OPEN_AI_API_KEY }}
-        run: python scripts/test_one_video.py "${{ inputs.video_id }}"
+        run: python scripts/test_one_video.py "${{ inputs.video_id }}" "${{ inputs.title }}"

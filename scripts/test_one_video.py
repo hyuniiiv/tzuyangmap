@@ -14,36 +14,38 @@ sys.path.insert(0, str(__import__("pathlib").Path(__file__).parent))
 import auto_update as au
 
 if len(sys.argv) < 2:
-    print("사용법: python scripts/test_one_video.py <VIDEO_ID>")
+    print("사용법: python scripts/test_one_video.py <VIDEO_ID> [TITLE]")
     sys.exit(1)
 
 vid = sys.argv[1].strip()
+override_title = sys.argv[2].strip() if len(sys.argv) >= 3 else ""
 print("=" * 60)
 print(f"테스트: https://www.youtube.com/watch?v={vid}")
 print(f"OpenAI 키: {'있음 (LLM 활성)' if au.OPENAI_KEY else '없음 (LLM 스킵, 기존 흐름만)'}")
 print("=" * 60)
 
-# 영상 정보 (제목) — YouTube oEmbed API로 가져오기 (봇 차단 없음)
-import urllib.request, urllib.parse, json as _json
-title = ""
-try:
-    oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={vid}&format=json"
-    with urllib.request.urlopen(oembed_url, timeout=10) as r:
-        d = _json.loads(r.read().decode("utf-8"))
-    title = d.get("title", "")
-except Exception as e:
-    print(f"oEmbed 실패: {e}")
-    # 폴백: yt-dlp
-    import subprocess
-    r = subprocess.run(
-        ["yt-dlp", "--print", "title", "--skip-download", "--no-warnings",
-         f"https://www.youtube.com/watch?v={vid}"],
-        capture_output=True, encoding="utf-8", errors="replace", timeout=20
-    )
-    title = (r.stdout or "").strip()
+# 영상 제목: CLI 인자 → oEmbed → yt-dlp 순으로 시도
+title = override_title
+if not title:
+    import urllib.request, json as _json
+    try:
+        with urllib.request.urlopen(
+            f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={vid}&format=json",
+            timeout=10
+        ) as r:
+            title = _json.loads(r.read().decode("utf-8")).get("title", "")
+    except Exception as e:
+        print(f"oEmbed 실패 ({e}), yt-dlp 폴백 시도")
+        import subprocess
+        r = subprocess.run(
+            ["yt-dlp", "--print", "title", "--skip-download", "--no-warnings",
+             f"https://www.youtube.com/watch?v={vid}"],
+            capture_output=True, encoding="utf-8", errors="replace", timeout=20
+        )
+        title = (r.stdout or "").strip()
 
 if not title:
-    print("영상 제목 가져오기 실패")
+    print("영상 제목 가져오기 실패 — CLI에 제목을 직접 전달하세요")
     sys.exit(1)
 
 thumbnail = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
