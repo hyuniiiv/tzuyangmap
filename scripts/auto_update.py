@@ -48,14 +48,30 @@ CHANNELS = [
 ]
 
 OVERSEAS_KW = [
-    "이스탄불","홍콩","일본","홋카이도","삿포로","오사카","도쿄",
-    "인도네시아","반둥","대만","중국","베트남","태국","싱가포르",
-    "말레이시아","미국","파리","런던","유럽","몽골","인도","필리핀",
-    "뉴욕","두바이","하와이","호주","스페인","이탈리아","터키",
-    "istanbul","hong kong","japan","bandung","taiwan","vietnam",
-    "thailand","usa","paris","london","singapore","maldives",
-    "sydney","budapest","las vegas","jakarta","bali",
+    "이스탄불","홍콩","일본","홋카이도","삿포로","오사카","도쿄","교토","후쿠오카",
+    "인도네시아","반둥","대만","대만(타이","중국","베트남","태국","싱가포르","발리",
+    "말레이시아","미국","파리","런던","유럽","몽골","인도","필리핀","사이판","괌",
+    "뉴욕","두바이","하와이","호주","스페인","이탈리아","터키","라스베가스","베가스",
+    "캐나다","독일","프랑스","스위스","스웨덴","노르웨이","핀란드","러시아","우크라이나",
+    "istanbul","hong kong","japan","bandung","taiwan","vietnam","cambodia","laos",
+    "thailand","usa","paris","london","singapore","maldives","tokyo","osaka",
+    "sydney","budapest","las vegas","vegas","jakarta","bali","macau","macao",
 ]
+
+# 비-식당 영상 키워드 (식당 식별 의미 없음)
+NON_RESTAURANT_KW = [
+    "해명영상","사과","사과문","입장표명","논란","구설",
+    "Q&A","질문","고민상담","브이로그","일상","근황","채널","구독자 만",
+    "유튜버를 만났","합쳐서","구독자님과","만남","인사",
+    "메이크업","화장","뷰티","쇼핑","언박싱","개봉기",
+    "운동","다이어트","헬스","요가","필라테스",
+]
+
+
+def is_non_restaurant_video(title: str) -> bool:
+    """식당 방문이 아닌 콘텐츠 자동 감지"""
+    t = title.lower()
+    return any(kw.lower() in t for kw in NON_RESTAURANT_KW)
 
 
 FOOD_KWS = [
@@ -456,6 +472,9 @@ def process_new_video(video: dict) -> dict | None:
     # 해외 스킵
     if any(k in title.lower() for k in OVERSEAS_KW): return None
 
+    # 식당 아닌 콘텐츠 스킵 (해명/만남/Q&A 등)
+    if is_non_restaurant_video(title): return None
+
     # 자막 수집
     sub_text = get_subtitle_text(video["id"])
     region   = find_region(title + " " + sub_text[:500])
@@ -534,6 +553,28 @@ def process_new_video(video: dict) -> dict | None:
 
             print(f"    [LLM({conf}): {llm_name or llm_brand or '?'} @ {address or '?'} | {ev}]")
 
+    # ── Strategy 1.5: LLM이 매장명 줬는데 주소 없으면 Naver 보조 검색 ─────
+    # "고추명가", "우지커피" 같은 LLM이 정확히 잡은 이름을 Naver에서 직접 검색
+    if (llm_name or llm_brand) and not address:
+        name_q = llm_name or llm_brand
+        # 여러 쿼리 시도
+        queries = []
+        if region:
+            queries.append(f"{name_q} {region} 주소")
+            queries.append(f"쯔양 {name_q} {region}")
+        queries.append(f"{name_q} 주소")
+        queries.append(f"쯔양 {name_q}")
+        for q in queries:
+            naver_addr = naver_search_address(q)
+            if naver_addr:
+                coords = kakao_geocode(naver_addr)
+                if coords:
+                    lat, lng = coords
+                    address = naver_addr
+                    if not region: region = find_region(naver_addr) or region
+                    print(f"    [Naver 보조 주소: '{q}' → {naver_addr}]")
+                    break
+
     # ── LLM 결과 Kakao 검증 ─────────────────────────────────────────────
     # LLM이 매장명을 주면 Kakao에서 그 이름으로 검색해서 실제 좌표/주소로 대체.
     # LLM 주소가 정확하면 유지, hallucination이면 실제 매장 주소로 교체.
@@ -557,7 +598,8 @@ def process_new_video(video: dict) -> dict | None:
                     best = (c, sim, dist_km)
             except: continue
 
-        if best and best[1] >= 0.4:
+        # 임계값: sim 0.4 이상 또는 (sim 0.3 + 거리 5km 이내 → 같은 매장 가능성 높음)
+        if best and (best[1] >= 0.4 or (best[1] >= 0.3 and best[2] <= 5)):
             c, sim, dist_km = best
             try:
                 lat = float(c["y"])

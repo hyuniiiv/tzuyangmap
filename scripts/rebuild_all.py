@@ -19,9 +19,10 @@ import auto_update as au
 from audit_data_quality import grade as audit_grade
 
 ROOT = Path(__file__).parent.parent
-GEO_FILE   = ROOT / "public" / "data" / "restaurants_geo.json"
-STATE_FILE = ROOT / "scripts" / ".rebuild_state.json"
-BAK_FILE   = ROOT / "public" / "data" / "restaurants_geo.json.bak2"
+GEO_FILE      = ROOT / "public" / "data" / "restaurants_geo.json"
+STATE_FILE    = ROOT / "scripts" / ".rebuild_state.json"
+FAIL_LOG_FILE = ROOT / "scripts" / ".rebuild_failures.json"
+BAK_FILE      = ROOT / "public" / "data" / "restaurants_geo.json.bak2"
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--limit", type=int, default=300, help="이 실행 최대 처리 수")
@@ -40,6 +41,12 @@ state = {}
 if STATE_FILE.exists():
     state = json.loads(STATE_FILE.read_text(encoding="utf-8"))
 processed_ids = set(state.get("processed_video_ids", []))
+
+# 실패 로그 (재처리용)
+failures = []
+if FAIL_LOG_FILE.exists():
+    try: failures = json.loads(FAIL_LOG_FILE.read_text(encoding="utf-8"))
+    except: failures = []
 
 # 데이터 로드 + 백업
 data = json.loads(GEO_FILE.read_text(encoding="utf-8"))
@@ -105,6 +112,13 @@ for idx, (prio, data_i, r, g) in enumerate(candidates[:args.limit]):
 
     if not new_entry:
         failed += 1
+        failures.append({
+            "video_id": vid,
+            "title": title[:80],
+            "old_name": r.get("name", ""),
+            "old_address": r.get("address", ""),
+            "grade": g,
+        })
         print(f"  ✗ 추출 실패\n")
     else:
         old_meta = bool(r.get("phone") or r.get("place_url"))
@@ -163,12 +177,18 @@ for idx, (prio, data_i, r, g) in enumerate(candidates[:args.limit]):
             STATE_FILE.write_text(
                 json.dumps({"processed_video_ids": list(processed_ids)}, ensure_ascii=False),
                 encoding="utf-8")
+            FAIL_LOG_FILE.write_text(
+                json.dumps(failures, ensure_ascii=False, indent=2),
+                encoding="utf-8")
             GEO_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # 최종 저장
 if not args.dry_run:
     STATE_FILE.write_text(
         json.dumps({"processed_video_ids": list(processed_ids)}, ensure_ascii=False),
+        encoding="utf-8")
+    FAIL_LOG_FILE.write_text(
+        json.dumps(failures, ensure_ascii=False, indent=2),
         encoding="utf-8")
     GEO_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
