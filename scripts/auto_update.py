@@ -127,6 +127,22 @@ def get_existing_video_ids() -> set:
 
 # ── 3. 매장명+주소 수집 ────────────────────────────────────────────────────
 
+# 협찬/유료광고 감지용 키워드 (영상 설명에 명시되는 표준 문구)
+AD_KEYWORDS = [
+    "유료광고를 포함", "유료 광고를 포함",
+    "유료광고 포함", "유료 광고 포함",
+    "협찬을 받았", "협찬 받았", "협찬을 받아",
+    "광고를 포함합니다", "광고 포함합니다",
+    "Paid promotion", "paid promotion",
+    "PPL 협찬",
+]
+
+def is_sponsored_video(desc_text: str, title: str = "") -> bool:
+    """영상 설명/제목에 협찬/유료광고 표시 있는지 감지."""
+    text = (desc_text or "") + " " + (title or "")
+    return any(kw in text for kw in AD_KEYWORDS)
+
+
 def get_video_upload_date(vid_id: str) -> str:
     """영상 실제 게시일 (YYYY-MM-DD). yt-dlp --print upload_date 사용."""
     try:
@@ -865,6 +881,11 @@ def process_new_video(video: dict) -> list[dict]:
 
     # ── 전략 0: 자막 + 설명 + 웹검색 + 썸네일을 LLM에 통합 분석 ──────────
     desc_text = get_video_description(video["id"])
+
+    # 협찬/유료광고 영상 자동 거부 (광고 매장은 영상의 실제 방문지가 아니거나 모호함)
+    if is_sponsored_video(desc_text, title):
+        print(f"    [협찬/광고 영상 — 거부]")
+        return []
 
     # description 정규식 주소 (LLM 없이도 작동)
     addr_from_desc = extract_address_from_text(desc_text)
