@@ -2,7 +2,11 @@ name: TzuyangMap Auto Update
 
 on:
   schedule:
-    - cron: '17 15 * * *'  # 매일 KST 00:17 (UTC 15:17) — 정시 부하 회피
+    # GitHub Actions schedule은 부하로 자주 스킵 → 하루 3번 시도해서 한 번이라도 굴러가게
+    - cron: '17 15 * * *'  # KST 00:17 (UTC 15:17)
+    - cron: '23 21 * * *'  # KST 06:23 (UTC 21:23) — 새벽
+    - cron: '37 3 * * *'   # KST 12:37 (UTC 03:37) — 정오
+    # 같은 영상 중복 처리는 existing_ids로 자동 방지
   workflow_dispatch:        # 수동 실행 가능
 
 jobs:
