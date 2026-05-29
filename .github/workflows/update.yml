@@ -24,8 +24,13 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: ffmpeg 설치 (Whisper 오디오 처리용 — ubuntu-latest엔 보통 있음)
-        run: which ffmpeg || sudo apt-get install -y ffmpeg
+      - name: ffmpeg 확인 (Whisper용, 실패해도 진행)
+        continue-on-error: true
+        run: |
+          if ! which ffmpeg; then
+            sudo apt-get update -qq && sudo apt-get install -y ffmpeg || echo "[경고] ffmpeg 설치 실패 — Whisper 폴백 비활성"
+          fi
+          which ffmpeg && ffmpeg -version | head -1 || true
 
       - name: 의존성 설치
         run: pip install yt-dlp youtube-comment-downloader youtube-transcript-api faster-whisper
