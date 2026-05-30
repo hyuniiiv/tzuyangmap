@@ -410,8 +410,8 @@
     "kakao_category": "음식점 > 중식 > 중국요리"
   },
   {
-    "name": "아이돌치킨",
-    "address": "서울 강서구 허준로 55-20",
+    "name": "삼삼이네생고기 성수점",
+    "address": "서울 성동구 성덕정길 122",
     "category": "구이",
     "region": "서울",
     "video_id": "tX4IaSPGylw",
@@ -419,13 +419,13 @@
     "video_url": "https://www.youtube.com/watch?v=tX4IaSPGylw",
     "thumbnail": "https://i.ytimg.com/vi/tX4IaSPGylw/hqdefault.jpg",
     "upload_date": "2026-03-31",
-    "lat": 37.569687,
-    "lng": 126.848681,
+    "lat": 37.536641,
+    "lng": 127.056928,
     "source": "auto_kakao",
     "channel": "tzuyang",
-    "phone": "02-2658-5685",
-    "place_url": "http://place.map.kakao.com/20527420",
-    "kakao_category": "음식점 > 치킨"
+    "phone": "02-461-0946",
+    "place_url": "http://place.map.kakao.com/9809733",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   },
   {
     "name": "격포어촌계회센터 B동",
