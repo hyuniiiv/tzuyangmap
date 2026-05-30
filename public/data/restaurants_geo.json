@@ -19144,5 +19144,23 @@
     "phone": "",
     "place_url": "",
     "kakao_category": ""
+  },
+  {
+    "name": "양은이네 신도림본점",
+    "address": "서울 구로구 공원로8길 33",
+    "category": "냉면",
+    "region": "서울",
+    "video_id": "a8UqiECd_yQ",
+    "video_title": "50년 경력 김치명인이 만든 보쌈?!😱 역대급 김치와 냉면 동태탕 먹방",
+    "video_url": "https://www.youtube.com/watch?v=a8UqiECd_yQ",
+    "thumbnail": "https://i.ytimg.com/vi/a8UqiECd_yQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDe1hLkesSPtSP1L1pGvR5209fvxQ",
+    "upload_date": "2026-05-30",
+    "lat": 37.503646,
+    "lng": 126.89108,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-2678-4343",
+    "place_url": "http://place.map.kakao.com/114475274",
+    "kakao_category": "음식점 > 한식 > 찌개,전골 > 양은이네"
   }
 ]
