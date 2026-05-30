@@ -143,6 +143,27 @@ def is_sponsored_video(desc_text: str, title: str = "") -> bool:
     return any(kw in text for kw in AD_KEYWORDS)
 
 
+def extract_sponsor_brand(desc_text: str) -> str:
+    """협찬 description에서 sponsor 브랜드명 추출.
+    예: '본 영상은 GS25의 유료광고를 포함하고 있습니다' → 'GS25'"""
+    if not desc_text: return ""
+    m = re.search(r"본\s*영상은\s*(.+?)의?\s*(?:유료광고|광고)를?\s*포함", desc_text)
+    if m: return m.group(1).strip()
+    return ""
+
+
+def is_sponsor_brand_only(llm_name: str, sponsor_brand: str) -> bool:
+    """LLM 매장명이 sponsor 브랜드 단독 (지점 정보 없음)이면 True."""
+    if not sponsor_brand or not llm_name: return False
+    n = llm_name.replace(" ", "").lower()
+    s = sponsor_brand.replace(" ", "").lower()
+    if n == s: return True  # 완전 일치
+    # sponsor 포함 + 지점/본점/관 등 접미 없음
+    if s in n and not re.search(r"점$|본점|지점|직영|관$|동$|역점", llm_name):
+        return True
+    return False
+
+
 def get_video_upload_date(vid_id: str) -> str:
     """영상 실제 게시일 (YYYY-MM-DD). yt-dlp --print upload_date 사용."""
     try:
@@ -688,7 +709,8 @@ def extract_names_from_sub(text: str) -> list[str]:
 
 def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str,
                           region: str, food: str | None, web_snip: str,
-                          llm_r: dict, comments_text: str = "") -> dict | None:
+                          llm_r: dict, comments_text: str = "",
+                          sponsor_brand: str = "") -> dict | None:
     """LLM이 추출한 단일 매장 정보를 Naver/Kakao로 검증해서 완성된 entry로 변환.
     다중 매장 영상의 각 매장을 처리하기 위해 분리됨.
     comments_text: 댓글 지역 단서 폴백용."""
@@ -893,6 +915,10 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     if not phone and not place_url and name_clean in GENERIC_NAMES:
         print(f"    [거부: 검증 실패 + 일반명사 매장명 - {name_clean}]")
         return None
+    # 협찬 영상: sponsor brand 단독(지점명 없음)이면 거부
+    if sponsor_brand and is_sponsor_brand_only(name_clean, sponsor_brand):
+        print(f"    [거부: 협찬 브랜드 단독 매장명 - {name_clean} (sponsor='{sponsor_brand}')]")
+        return None
 
     return {
         "name": name, "address": address,
@@ -935,10 +961,11 @@ def process_new_video(video: dict) -> list[dict]:
     # ── 전략 0: 자막 + 설명 + 웹검색 + 썸네일을 LLM에 통합 분석 ──────────
     desc_text = get_video_description(video["id"])
 
-    # 협찬/유료광고 영상 자동 거부 (광고 매장은 영상의 실제 방문지가 아니거나 모호함)
-    if is_sponsored_video(desc_text, title):
-        print(f"    [협찬/광고 영상 — 거부]")
-        return []
+    # 협찬/유료광고 영상 감지 (거부 안 함, 최종 검증에서 sponsor brand 단독 케이스만 거부)
+    is_sponsored = is_sponsored_video(desc_text, title)
+    sponsor_brand = extract_sponsor_brand(desc_text) if is_sponsored else ""
+    if is_sponsored:
+        print(f"    [협찬 영상 감지 — sponsor='{sponsor_brand}', 매장 식별 시도 진행]")
 
     # description 정규식 주소 (LLM 없이도 작동)
     addr_from_desc = extract_address_from_text(desc_text)
@@ -978,7 +1005,8 @@ def process_new_video(video: dict) -> list[dict]:
         entries = []
         for llm_r in llm_list:
             e = _build_entry_from_llm(video, title, sub_text, desc_text,
-                                       region, food, web_snip, llm_r, comments_text)
+                                       region, food, web_snip, llm_r, comments_text,
+                                       sponsor_brand)
             if e:
                 entries.append(e)
         if entries:
@@ -1196,6 +1224,10 @@ def process_new_video(video: dict) -> list[dict]:
     name_clean = (name or "").strip()
     if not phone and not place_url and name_clean in GENERIC_NAMES:
         print(f"    [거부: 검증 실패 + 일반명사 매장명 - {name_clean}]")
+        return []
+    # 협찬 영상: sponsor brand 단독(지점명 없음)이면 거부
+    if sponsor_brand and is_sponsor_brand_only(name_clean, sponsor_brand):
+        print(f"    [거부: 협찬 브랜드 단독 매장명 - {name_clean} (sponsor='{sponsor_brand}')]")
         return []
 
     return [{
