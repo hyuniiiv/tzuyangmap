@@ -5238,6 +5238,24 @@
     "kakao_category": "음식점 > 한식 > 국수"
   },
   {
+    "name": "더미식",
+    "address": "서울 종로구 대학로8가길 56",
+    "category": "면류",
+    "region": "서울",
+    "video_id": "DMSwEVd1EyY",
+    "video_title": "대왕 솥뚜껑에 라면 10개와 묵은지 라죽까지 먹방",
+    "video_url": "https://www.youtube.com/watch?v=DMSwEVd1EyY",
+    "thumbnail": "https://i.ytimg.com/vi/DMSwEVd1EyY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAe4KiIlbxU_9xQ-bXrRvBj75ds3w",
+    "upload_date": "2024-12-05",
+    "lat": 37.583464,
+    "lng": 127.00303,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-742-9779",
+    "place_url": "http://place.map.kakao.com/10393425",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점"
+  },
+  {
     "name": "화룽마라룽샤",
     "address": "서울 영등포구 대림로29길 13 1층",
     "category": "기타",
@@ -8141,6 +8159,24 @@
       "distance_m": 64,
       "similarity": 0.0
     }
+  },
+  {
+    "name": "엄마네한우",
+    "address": "경북 구미시 금오산로 221",
+    "category": "한식",
+    "region": "경북",
+    "video_id": "m3HTdYfHpD4",
+    "video_title": "리뷰만 12만개?! 누적판매량 140만kg🫢 상위 0.1% 투뿔한우 먹방",
+    "video_url": "https://www.youtube.com/watch?v=m3HTdYfHpD4",
+    "thumbnail": "https://i.ytimg.com/vi/m3HTdYfHpD4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBAv6N6b4B9X25omrBFULTUj9XjUA",
+    "upload_date": "2023-09-16",
+    "lat": 36.120986,
+    "lng": 128.324059,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "054-453-6555",
+    "place_url": "http://place.map.kakao.com/1936035402",
+    "kakao_category": "음식점 > 한식 > 국밥"
   },
   {
     "name": "알촌 한양대점",
@@ -11922,6 +11958,24 @@
     "phone": "02-3390-4201",
     "place_url": "http://place.map.kakao.com/147017484",
     "kakao_category": "음식점 > 일식 > 돈까스,우동"
+  },
+  {
+    "name": "쇼미더크랩 압구정점",
+    "address": "서울 강남구 압구정로28길 22-6",
+    "category": "구이",
+    "region": "서울",
+    "video_id": "aYL9E6fKNLI",
+    "video_title": "랍스터 치즈 버터구이와 킹크랩🦀 먹방",
+    "video_url": "https://www.youtube.com/watch?v=aYL9E6fKNLI",
+    "thumbnail": "https://i.ytimg.com/vi/aYL9E6fKNLI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBXpTOvxP4JTA0LX9C1JQC7IgFkAQ",
+    "upload_date": "2022-06-04",
+    "lat": 37.525242,
+    "lng": 127.027026,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "0507-1385-4728",
+    "place_url": "http://place.map.kakao.com/1959091192",
+    "kakao_category": "음식점 > 양식 > 해산물"
   },
   {
     "name": "서울냉면",
