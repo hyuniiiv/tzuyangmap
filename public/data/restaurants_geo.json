@@ -19162,5 +19162,23 @@
     "phone": "02-2678-4343",
     "place_url": "http://place.map.kakao.com/114475274",
     "kakao_category": "음식점 > 한식 > 찌개,전골 > 양은이네"
+  },
+  {
+    "name": "얌샘김밥 안성휴게소점서울방향",
+    "address": "경기 안성시 원곡면 경부고속도로 372",
+    "category": "분식",
+    "region": "기타",
+    "video_id": "JnEBlLH2Bg8",
+    "video_title": "🔥소떡소떡의 원조 안성휴게소 털기🔥 짜장면 라면 우동 떡볶이 돈까스 만두 호떡 간단하게 먹었습니다",
+    "video_url": "https://www.youtube.com/watch?v=JnEBlLH2Bg8",
+    "thumbnail": "https://i.ytimg.com/vi/JnEBlLH2Bg8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBh3DuMozXYjenJjZ8v7WaEQoXJKg",
+    "upload_date": "2026-06-01",
+    "lat": 37.076773,
+    "lng": 127.132498,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-611-0024",
+    "place_url": "http://place.map.kakao.com/661492309",
+    "kakao_category": "음식점 > 분식 > 얌샘김밥"
   }
 ]
