@@ -19180,5 +19180,23 @@
     "phone": "031-611-0024",
     "place_url": "http://place.map.kakao.com/661492309",
     "kakao_category": "음식점 > 분식 > 얌샘김밥"
+  },
+  {
+    "name": "하이디라오에서 만든 꼬치집",
+    "address": "인천 연수구 송도과학로16번길 33-3",
+    "category": "기타",
+    "region": "인천",
+    "video_id": "AOvTwDyl9dU",
+    "video_title": "양꼬치 xxx개?! 인생 최고기록 세웠습니다😱 과연 몇꼬치?? 하이디라오에서 만든 꼬치집 먹방",
+    "video_url": "https://www.youtube.com/watch?v=AOvTwDyl9dU",
+    "thumbnail": "https://i.ytimg.com/vi/AOvTwDyl9dU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCV7p5lu6q0dwAqTx_CyoSTx4GztA",
+    "upload_date": "2026-06-05",
+    "lat": 37.379792,
+    "lng": 126.660955,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "032-310-9592",
+    "place_url": "http://place.map.kakao.com/863918455",
+    "kakao_category": "음식점 > 아시아음식 > 인도음식"
   }
 ]
