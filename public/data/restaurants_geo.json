@@ -19198,5 +19198,23 @@
     "phone": "032-310-9592",
     "place_url": "http://place.map.kakao.com/863918455",
     "kakao_category": "음식점 > 아시아음식 > 인도음식"
+  },
+  {
+    "name": "귀일만두",
+    "address": "서울 성동구 장터길 31",
+    "category": "분식",
+    "region": "서울",
+    "video_id": "LuqX8ARwwns",
+    "video_title": "길거리 만두가게 기록 도장깨기👊 대식가 사장님도 인정하셨습니다",
+    "video_url": "https://www.youtube.com/watch?v=LuqX8ARwwns",
+    "thumbnail": "https://i.ytimg.com/vi/LuqX8ARwwns/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDbFFnyBRzwFtgmBVcL-f4k0gDRxQ",
+    "upload_date": "2026-06-07",
+    "lat": 37.548442,
+    "lng": 127.019405,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "010-4310-1066",
+    "place_url": "http://place.map.kakao.com/14822825",
+    "kakao_category": "음식점 > 분식"
   }
 ]
