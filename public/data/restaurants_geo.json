@@ -19216,5 +19216,23 @@
     "phone": "010-4310-1066",
     "place_url": "http://place.map.kakao.com/14822825",
     "kakao_category": "음식점 > 분식"
+  },
+  {
+    "name": "새마을식당 청량리점",
+    "address": "서울 동대문구 왕산로 274-1",
+    "category": "기타",
+    "region": "서울",
+    "video_id": "DA7lvECQ3Ok",
+    "video_title": "이거 먹으려고 새벽 4시에 일어났습니다🥺 매일 새벽 2시에 나오는 사장님의 청량리 백반 먹방",
+    "video_url": "https://www.youtube.com/watch?v=DA7lvECQ3Ok",
+    "thumbnail": "https://i.ytimg.com/vi/DA7lvECQ3Ok/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsG2qXeTHqQpzoZLYJbEbubycoeg",
+    "upload_date": "2026-06-09",
+    "lat": 37.584628,
+    "lng": 127.050914,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-959-8480",
+    "place_url": "http://place.map.kakao.com/1070483094",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 새마을식당"
   }
 ]
