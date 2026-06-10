@@ -710,7 +710,9 @@ def extract_names_from_sub(text: str) -> list[str]:
 def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str,
                           region: str, food: str | None, web_snip: str,
                           llm_r: dict, comments_text: str = "",
-                          sponsor_brand: str = "") -> dict | None:
+                          sponsor_brand: str = "",
+                          subtitle_addr: str = "",
+                          subtitle_coords: tuple | None = None) -> dict | None:
     """LLM이 추출한 단일 매장 정보를 Naver/Kakao로 검증해서 완성된 entry로 변환.
     다중 매장 영상의 각 매장을 처리하기 위해 분리됨.
     comments_text: 댓글 지역 단서 폴백용."""
@@ -721,6 +723,11 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     phone = ""
     place_url = ""
     kakao_category = ""
+
+    # 자막 주소 우선 적용 (LLM 환각 방지 안전망)
+    if subtitle_addr and subtitle_coords:
+        address = subtitle_addr
+        lat, lng = subtitle_coords
 
     # LLM이 문자열 "null"/"None" 반환하는 경우 빈 값으로 정규화
     def _clean(v):
@@ -739,8 +746,8 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     if llm_name in GENERIC_NAMES:
         llm_name = ""
 
-    # LLM이 주소 줬으면 지오코딩
-    if llm_addr:
+    # LLM이 주소 줬으면 지오코딩 — 단 자막 주소 있으면 자막이 우선
+    if llm_addr and not subtitle_addr:
         coords = kakao_geocode(llm_addr)
         if coords:
             lat, lng = coords
@@ -843,16 +850,21 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
         ok = False
         if best:
             sim_v, dist_v = best[1], best[2]
-            if sim_v >= 0.85: ok = True
+            # 자막 주소가 있으면 그 좌표로부터 5km 이내만 허용 (엄격)
+            if subtitle_coords and dist_v > 5:
+                ok = False
+            elif sim_v >= 0.85: ok = True
             elif sim_v >= 0.5 and dist_v <= 30: ok = True
             elif sim_v >= 0.4 and dist_v <= 10: ok = True
             elif sim_v >= 0.3 and dist_v <= 5 and lat and lng: ok = True
         if ok:
             c, sim, dist_km = best
             try:
-                lat = float(c["y"])
-                lng = float(c["x"])
-                address = c.get("road_address_name") or c.get("address_name", "") or address
+                # 자막 주소가 있으면 lat/lng/address 유지, 메타데이터만 보강
+                if not subtitle_coords:
+                    lat = float(c["y"])
+                    lng = float(c["x"])
+                    address = c.get("road_address_name") or c.get("address_name", "") or address
                 name = c.get("place_name", name)
                 phone = c.get("phone", "") or phone
                 place_url = c.get("place_url", "") or place_url
@@ -953,6 +965,19 @@ def process_new_video(video: dict) -> list[dict]:
     lat = lng = None
     food = has_food_keyword(title)  # 함수 전반에서 사용 (category 매핑 등)
 
+    # ── 자막 우선 주소 추출 (LLM 보다 강한 신호) ──────────────────────
+    # 자막에 도로명 주소 명시되어 있으면 그게 정답. LLM 환각 방지용 안전망.
+    subtitle_addr = extract_address_from_text(sub_text) if sub_text else None
+    subtitle_coords = None
+    if subtitle_addr:
+        c = kakao_geocode(subtitle_addr)
+        if c:
+            subtitle_coords = c
+            lat, lng = c
+            address = subtitle_addr
+            if not region: region = find_region(subtitle_addr) or region
+            print(f"    [자막 주소 (강한 신호): {subtitle_addr}]")
+
     # 추가 메타데이터
     phone = ""
     place_url = ""
@@ -1006,7 +1031,9 @@ def process_new_video(video: dict) -> list[dict]:
         for llm_r in llm_list:
             e = _build_entry_from_llm(video, title, sub_text, desc_text,
                                        region, food, web_snip, llm_r, comments_text,
-                                       sponsor_brand)
+                                       sponsor_brand,
+                                       subtitle_addr or "",
+                                       subtitle_coords)
             if e:
                 entries.append(e)
         if entries:
