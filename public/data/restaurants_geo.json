@@ -19234,5 +19234,23 @@
     "phone": "",
     "place_url": "",
     "kakao_category": ""
+  },
+  {
+    "name": "서래마을이야기",
+    "address": "서울 서초구 서래로 50",
+    "category": "기타",
+    "region": "서울",
+    "video_id": "Jv43oMkVzDw",
+    "video_title": "도대체 뭘 먹었을까",
+    "video_url": "https://www.youtube.com/watch?v=Jv43oMkVzDw",
+    "thumbnail": "https://i.ytimg.com/vi/Jv43oMkVzDw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAardtO4evDxZWbX4Y2yBwE4zv4Cg",
+    "upload_date": "2026-06-11",
+    "lat": 37.499102,
+    "lng": 126.998862,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-534-3388",
+    "place_url": "http://place.map.kakao.com/12505740",
+    "kakao_category": "음식점 > 한식"
   }
 ]
