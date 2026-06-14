@@ -19252,5 +19252,23 @@
     "phone": "02-534-3388",
     "place_url": "http://place.map.kakao.com/12505740",
     "kakao_category": "음식점 > 한식"
+  },
+  {
+    "name": "요아정",
+    "address": "서울 서대문구 충정로 22-2",
+    "category": "기타",
+    "region": "서울",
+    "video_id": "iMz2KU10u2Q",
+    "video_title": "과연 1등은..?🏆 요아정 빙수 전메뉴 털었습니다",
+    "video_url": "https://www.youtube.com/watch?v=iMz2KU10u2Q",
+    "thumbnail": "https://i.ytimg.com/vi/iMz2KU10u2Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvwm3i2E5d2g8QpvUG8bNlkg6pFw",
+    "upload_date": "2026-06-14",
+    "lat": 37.561211,
+    "lng": 126.963932,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-312-3541",
+    "place_url": "http://place.map.kakao.com/12441941",
+    "kakao_category": "음식점 > 한식 > 육류,고기"
   }
 ]
