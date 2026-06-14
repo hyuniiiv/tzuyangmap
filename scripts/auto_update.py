@@ -164,6 +164,39 @@ def is_sponsor_brand_only(llm_name: str, sponsor_brand: str) -> bool:
     return False
 
 
+# 영상 음식 키워드 → 매장 Kakao 카테고리 기대 단어
+VIDEO_FOOD_TO_KAKAO_CAT = {
+    "빙수": ["빙수", "디저트", "카페", "간식", "아이스크림", "제과"],
+    "아이스크림": ["아이스크림", "디저트", "카페", "간식"],
+    "케이크": ["케이크", "제과", "베이커리", "디저트", "카페"],
+    "디저트": ["디저트", "카페", "제과", "베이커리", "간식"],
+    "빵": ["베이커리", "빵", "제과", "디저트"],
+    "커피": ["카페", "커피"],
+    "토스트": ["토스트", "분식", "간식", "카페"],
+    "삼겹살": ["고기", "육류", "삼겹", "구이"],
+    "회": ["회", "수산", "해산", "일식"],
+    "초밥": ["초밥", "스시", "일식"],
+    "치킨": ["치킨"],
+    "햄버거": ["햄버거", "버거"],
+    "피자": ["피자"],
+    "짜장": ["중식", "면", "반점"],
+    "짬뽕": ["중식", "면", "반점"],
+}
+
+def is_category_mismatch(video_title: str, kakao_category: str) -> tuple:
+    """영상 음식 키워드와 매장 Kakao 카테고리 불일치 검사.
+    Returns: (is_mismatch, matched_food, expected_cats)"""
+    if not video_title or not kakao_category:
+        return (False, None, [])
+    for food, expected in VIDEO_FOOD_TO_KAKAO_CAT.items():
+        if food in video_title:
+            # kakao_category에 expected 단어가 하나라도 있으면 OK
+            if not any(kw in kakao_category for kw in expected):
+                return (True, food, expected)
+            return (False, food, expected)
+    return (False, None, [])
+
+
 def get_video_upload_date(vid_id: str) -> str:
     """영상 실제 게시일 (YYYY-MM-DD). yt-dlp --print upload_date 사용."""
     try:
@@ -180,17 +213,22 @@ def get_video_upload_date(vid_id: str) -> str:
     return ""
 
 
-def get_video_description(vid_id: str) -> str:
-    """영상 설명란 — 주소가 가장 자주 명시되는 신뢰도 높은 소스"""
-    try:
-        r = subprocess.run(
-            ["yt-dlp", "--print", "description", "--skip-download", "--no-warnings",
-             f"https://www.youtube.com/watch?v={vid_id}"],
-            capture_output=True, encoding="utf-8", errors="replace", timeout=20
-        )
-        return (r.stdout or "").strip()
-    except Exception:
-        return ""
+def get_video_description(vid_id: str, retries: int = 2) -> str:
+    """영상 설명란 — 주소/협찬 표시가 자주 명시되는 소스. 재시도 포함."""
+    for attempt in range(retries + 1):
+        try:
+            r = subprocess.run(
+                ["yt-dlp", "--print", "description", "--skip-download", "--no-warnings",
+                 f"https://www.youtube.com/watch?v={vid_id}"],
+                capture_output=True, encoding="utf-8", errors="replace", timeout=20
+            )
+            text = (r.stdout or "").strip()
+            if text: return text
+        except Exception:
+            pass
+        if attempt < retries:
+            time.sleep(1.5)  # 일시적 봇 차단 회피용 대기
+    return ""
 
 
 def get_all_top_comments(vid_id: str, max_n: int = 150) -> str:
@@ -931,6 +969,11 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     if sponsor_brand and is_sponsor_brand_only(name_clean, sponsor_brand):
         print(f"    [거부: 협찬 브랜드 단독 매장명 - {name_clean} (sponsor='{sponsor_brand}')]")
         return None
+    # 영상 음식 카테고리와 매장 Kakao 카테고리 불일치 (빙수 영상 → 한식 매장 등)
+    mm = is_category_mismatch(title, kakao_category)
+    if mm[0]:
+        print(f"    [거부: 카테고리 불일치 - 영상은 '{mm[1]}'인데 매장 카테고리 '{kakao_category}']")
+        return None
 
     return {
         "name": name, "address": address,
@@ -1255,6 +1298,11 @@ def process_new_video(video: dict) -> list[dict]:
     # 협찬 영상: sponsor brand 단독(지점명 없음)이면 거부
     if sponsor_brand and is_sponsor_brand_only(name_clean, sponsor_brand):
         print(f"    [거부: 협찬 브랜드 단독 매장명 - {name_clean} (sponsor='{sponsor_brand}')]")
+        return []
+    # 영상 음식 카테고리와 매장 Kakao 카테고리 불일치
+    mm = is_category_mismatch(title, kakao_category)
+    if mm[0]:
+        print(f"    [거부: 카테고리 불일치 - 영상은 '{mm[1]}'인데 매장 카테고리 '{kakao_category}']")
         return []
 
     return [{
