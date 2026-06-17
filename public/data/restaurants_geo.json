@@ -19288,5 +19288,23 @@
     "phone": "",
     "place_url": "",
     "kakao_category": ""
+  },
+  {
+    "name": "1.5닭갈비",
+    "address": "강원특별자치도 춘천시 후만로 77",
+    "category": "닭갈비",
+    "region": "강원",
+    "video_id": "cyWp2zJDD3g",
+    "video_title": "춘천2탄) 36년만에 이런사람은 처음이래요🤣 춘천 현지인 추천 4단지 닭갈비 먹방",
+    "video_url": "https://www.youtube.com/watch?v=cyWp2zJDD3g",
+    "thumbnail": "https://i.ytimg.com/vi/cyWp2zJDD3g/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoOcgtdqFfHYAcgCXk96Snafi3fg",
+    "upload_date": "2026-06-17",
+    "lat": 37.876405,
+    "lng": 127.753569,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "033-251-0363",
+    "place_url": "http://place.map.kakao.com/7948675",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
   }
 ]
