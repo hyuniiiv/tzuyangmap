@@ -410,8 +410,13 @@ def llm_extract_restaurant(title: str, sub_text: str, desc_text: str,
                             "brand": {"type": ["string", "null"]},
                             "address": {"type": ["string", "null"]},
                             "main_menu": {"type": ["string", "null"]},
+                            "menus": {
+                                "type": ["array", "null"],
+                                "items": {"type": "string"},
+                                "description": "이 영상에서 먹은 메뉴들 (예: ['엽기떡볶이','매운만두']). 영상에 등장한 메뉴 모두."
+                            },
                         },
-                        "required": ["restaurant_name","brand","address","main_menu"],
+                        "required": ["restaurant_name","brand","address","main_menu","menus"],
                         "additionalProperties": False,
                     },
                 },
@@ -528,6 +533,29 @@ GENERIC_NAMES = {
     "삼겹살집","돼지국밥","간장게장","숯불구이","모듬구이","모듬떡볶이",
     "곱창막창대창","튀김칼국수","국물떡볶이","커피집","몽땅식품","두번째",
 }
+
+
+# menus 폴백: kakao_category leaf에서 메뉴 후보 파싱
+_GENERIC_CAT_WORDS = {
+    "한식","중식","일식","양식","분식","면류","간식","치킨","피자",
+    "음식점","육류,고기","해물,생선","술집","카페","제과,베이커리",
+    "패스트푸드","이탈리아음식","뷔페","요리주점","호프,요리주점",
+    "베이커리","제과","제빵","아이스크림","디저트","간식,분식",
+    "스시","찌개,전골","구이","유흥주점","쥬스","음료",
+}
+
+
+def menus_from_kakao_cat(cat: str) -> list:
+    if not cat: return []
+    parts = [p.strip() for p in cat.split(">") if p.strip()]
+    if not parts: return []
+    leaf = parts[-1]
+    items = []
+    for token in leaf.replace("/", ",").split(","):
+        token = token.strip()
+        if not token or token in _GENERIC_CAT_WORDS: continue
+        items.append(token)
+    return items
 
 
 def get_subtitle_via_api(vid_id: str) -> str:
@@ -777,6 +805,14 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     llm_brand = _clean(llm_r.get("brand"))
     llm_addr = _clean(llm_r.get("address"))
     llm_menu = _clean(llm_r.get("main_menu"))
+    # 다중 메뉴 (검색용)
+    llm_menus_raw = llm_r.get("menus")
+    if isinstance(llm_menus_raw, list):
+        llm_menus = [_clean(m) for m in llm_menus_raw if _clean(m)]
+    else:
+        llm_menus = []
+    if llm_menu and llm_menu not in llm_menus:
+        llm_menus.insert(0, llm_menu)
     conf = llm_r.get("confidence", "?")
     ev = (llm_r.get("evidence") or "")[:120]
 
@@ -987,6 +1023,7 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
         "phone": phone,
         "place_url": place_url,
         "kakao_category": kakao_category,
+        "menus": llm_menus,
     }
 
 
@@ -1305,6 +1342,17 @@ def process_new_video(video: dict) -> list[dict]:
         print(f"    [거부: 카테고리 불일치 - 영상은 '{mm[1]}'인데 매장 카테고리 '{kakao_category}']")
         return []
 
+    # menus 채우기 — LLM.menus 우선, 없으면 kakao_category leaf에서 파싱
+    fallback_menus = []
+    if llm and isinstance(llm.get("menus"), list):
+        fallback_menus = [m.strip() for m in llm.get("menus") if isinstance(m, str) and m.strip()]
+    if llm and (llm.get("main_menu") or "").strip():
+        mm = (llm.get("main_menu") or "").strip()
+        if mm not in fallback_menus:
+            fallback_menus.insert(0, mm)
+    if not fallback_menus:
+        fallback_menus = menus_from_kakao_cat(kakao_category)
+
     return [{
         "name": name, "address": address,
         "category": category, "region": region_val,
@@ -1317,6 +1365,7 @@ def process_new_video(video: dict) -> list[dict]:
         "phone": phone,
         "place_url": place_url,
         "kakao_category": kakao_category,
+        "menus": fallback_menus,
     }]
 
 

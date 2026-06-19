@@ -458,7 +458,13 @@ body {
   font-size: 11px; color: var(--ink-muted-48); margin-bottom: 5px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-#panel-date { font-size: 11px; color: var(--ink-muted-48); margin-bottom: 12px; }
+#panel-date { font-size: 11px; color: var(--ink-muted-48); margin-bottom: 8px; }
+#panel-menus { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+#panel-menus .menu-chip {
+  font-size: 11px; padding: 3px 8px; border-radius: 999px;
+  background: rgba(0,102,204,0.08); color: var(--primary);
+  font-weight: 500; letter-spacing: -0.01em;
+}
 #panel-meta {
   display: none;
   flex-wrap: wrap; gap: 10px;
@@ -771,6 +777,7 @@ body {
     <div id="panel-addr"></div>
     <div id="panel-title"></div>
     <div id="panel-date"></div>
+    <div id="panel-menus"></div>
     <div id="panel-meta"></div>
     <div id="panel-btns">
       <button id="panel-yt" class="kp-btn p">▶ 영상보기</button>
@@ -1008,8 +1015,9 @@ function getFiltered() {
     if (cat && r.category !== cat) return false;
     if (search) {
       const q = search.toLowerCase();
-      return [r.name, r.address, r.video_title, r.category]
-        .some(s => s && s.toLowerCase().includes(q));
+      const fields = [r.name, r.address, r.video_title, r.category, r.kakao_category];
+      if (Array.isArray(r.menus)) fields.push(...r.menus);
+      return fields.some(s => s && s.toLowerCase().includes(q));
     }
     return true;
   });
@@ -1169,6 +1177,17 @@ function openPanel(r) {
   document.getElementById('panel-addr').textContent  = r.address || '';
   document.getElementById('panel-title').textContent = (r.video_title||'').substring(0,55);
   document.getElementById('panel-date').textContent  = r.upload_date ? fmtDate(r.upload_date) : '';
+
+  // 메뉴 칩
+  const menusEl = document.getElementById('panel-menus');
+  if (Array.isArray(r.menus) && r.menus.length) {
+    menusEl.innerHTML = r.menus.slice(0, 6)
+      .map(m => `<span class="menu-chip">${m}</span>`).join('');
+    menusEl.style.display = 'flex';
+  } else {
+    menusEl.innerHTML = '';
+    menusEl.style.display = 'none';
+  }
 
   // 전화번호 + 카카오맵 상세 링크
   const metaEl = document.getElementById('panel-meta');
