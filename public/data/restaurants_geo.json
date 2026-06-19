@@ -19306,5 +19306,23 @@
     "phone": "033-251-0363",
     "place_url": "http://place.map.kakao.com/7948675",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리"
+  },
+  {
+    "name": "역전할머니맥주 서울사가정점",
+    "address": "서울 중랑구 사가정로51길 39",
+    "category": "분식",
+    "region": "서울",
+    "video_id": "gqql16bGdh8",
+    "video_title": "쯔양은 맥주도 많이 마실까?🤔 살면서 맥주 제일 많이 먹었습니다🔥 역할맥 짜빠구리 떡볶이 냉면",
+    "video_url": "https://www.youtube.com/watch?v=gqql16bGdh8",
+    "thumbnail": "https://i.ytimg.com/vi/gqql16bGdh8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvRPp7VypkjUfudHyzWrjqAHBOoQ",
+    "upload_date": "2026-06-19",
+    "lat": 37.582614,
+    "lng": 127.087696,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-432-5994",
+    "place_url": "http://place.map.kakao.com/1164758455",
+    "kakao_category": "음식점 > 술집 > 호프,요리주점 > 역전할머니맥주"
   }
 ]
