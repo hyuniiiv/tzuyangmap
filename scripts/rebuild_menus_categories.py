@@ -246,15 +246,19 @@ def main():
     menu_empty = 0
 
     for r in data:
-        # menus 재구성
+        # menus 재구성 — 기존 값(LLM 추출 등) 보존 + 제목/카카오 신호 합치기
         old_menus = r.get("menus") or []
         m_kakao = menus_from_kakao(r.get("kakao_category", "") or "")
         m_title = menus_from_title(r.get("video_title", "") or "")
-        # 합치기 (제목 키워드 우선 — 영상에서 실제로 먹은 거)
+        # 우선순위: 기존 → 제목 → 카카오. 모두 GENERIC 필터링
         new_menus = []
-        for x in m_title + m_kakao:
-            if x and x not in new_menus and x not in GENERIC_CAT_WORDS:
-                new_menus.append(x)
+        for x in list(old_menus) + m_title + m_kakao:
+            if not x: continue
+            x = x.strip()
+            if not x or x in new_menus: continue
+            if x in GENERIC_CAT_WORDS: continue
+            if len(x) == 1 and x not in {"회", "빵"}: continue
+            new_menus.append(x)
         # 최대 6개
         new_menus = new_menus[:6]
         if new_menus != old_menus:

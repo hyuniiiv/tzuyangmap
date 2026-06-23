@@ -1414,8 +1414,17 @@ def main():
 
     # menus + category 표준 매핑 재적용 (신규/기존 일관성 보장)
     rb = Path(__file__).parent / "rebuild_menus_categories.py"
+    fill = Path(__file__).parent / "llm_fill_menus.py"
     if rb.exists():
-        print("\n── menus/category 표준 매핑 재적용 ──")
+        print("\n── 1차: menus/category 표준 매핑 ──")
+        subprocess.run([sys.executable, str(rb)], check=False)
+    # 빈 menus를 LLM으로 보완 (kakao_category가 약하거나 카테고리어만 있는 케이스)
+    if fill.exists() and OPENAI_KEY:
+        print("\n── 2차: 빈 menus LLM 보완 ──")
+        subprocess.run([sys.executable, str(fill)], check=False)
+    # LLM 결과도 한 번 더 표준화 (GENERIC 단어 혹시 섞였으면 제거)
+    if rb.exists():
+        print("\n── 3차: LLM 결과 표준 매핑 재적용 ──")
         subprocess.run([sys.executable, str(rb)], check=False)
 
     print("=" * 60)

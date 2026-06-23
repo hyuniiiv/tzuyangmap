@@ -16,7 +16,9 @@
     "kakao_category": "",
     "source": "auto_kakao_manual",
     "channel": "tzuyang",
-    "menus": []
+    "menus": [
+      "청량리 백반"
+    ]
   },
   {
     "name": "귀일만두",
@@ -126,7 +128,9 @@
     "phone": "",
     "place_url": "http://place.map.kakao.com/455388326",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "500도 화덕 생선구이"
+    ]
   },
   {
     "name": "남영돈",
@@ -151,7 +155,10 @@
     "phone": "02-793-3598",
     "place_url": "http://place.map.kakao.com/1228257268",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "소화제",
+      "20,000칼로리 음식"
+    ]
   },
   {
     "name": "타코냠냠",
@@ -1019,7 +1026,10 @@
     "phone": "041-675-6878",
     "place_url": "http://place.map.kakao.com/8891473",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "간장게장",
+      "게국지"
+    ]
   },
   {
     "name": "싱싱조개구이횟집",
@@ -1225,7 +1235,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "소고기 풀코스"
+    ]
   },
   {
     "name": "하루방",
@@ -1512,7 +1524,10 @@
     "phone": "032-322-8780",
     "place_url": "http://place.map.kakao.com/7913509",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "초밥",
+      "튀김"
+    ]
   },
   {
     "name": "불집",
@@ -1636,7 +1651,9 @@
     "phone": "031-855-7676",
     "place_url": "http://place.map.kakao.com/1859967502",
     "kakao_category": "음식점 > 치킨",
-    "menus": []
+    "menus": [
+      "후라이드 치킨"
+    ]
   },
   {
     "name": "송옥 압구정분점",
@@ -1880,7 +1897,9 @@
     "phone": "064-803-7777",
     "place_url": "http://place.map.kakao.com/270232354",
     "kakao_category": "음식점 > 뷔페",
-    "menus": []
+    "menus": [
+      "돔베고기"
+    ]
   },
   {
     "name": "흑돼지라면",
@@ -2983,7 +3002,11 @@
     "phone": "053-654-9433",
     "place_url": "http://place.map.kakao.com/16973293",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "생고기",
+      "뭉티기",
+      "등골 주먹"
+    ]
   },
   {
     "name": "평양냉면",
@@ -3309,7 +3332,10 @@
     "phone": "032-746-7580",
     "place_url": "http://place.map.kakao.com/1548594535",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "반찬",
+      "백반"
+    ]
   },
   {
     "name": "동원",
@@ -3328,7 +3354,11 @@
     "phone": "010-4153-7714",
     "place_url": "http://place.map.kakao.com/713414250",
     "kakao_category": "음식점 > 술집",
-    "menus": []
+    "menus": [
+      "닭꼬치",
+      "어묵바",
+      "소세지"
+    ]
   },
   {
     "name": "육덕진",
@@ -3695,7 +3725,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "닭가슴살"
+    ]
   },
   {
     "name": "신짬뽕",
@@ -4139,7 +4171,10 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "치킨 100조각",
+      "하림 맥시칸치킨"
+    ]
   },
   {
     "name": "순대",
@@ -4682,7 +4717,13 @@
       "distance_m": 16,
       "similarity": 1.0
     },
-    "menus": []
+    "menus": [
+      "짜장면",
+      "탕수육",
+      "볶음밥",
+      "짬뽕",
+      "군만두"
+    ]
   },
   {
     "name": "당진제일꽃게장",
@@ -4723,7 +4764,10 @@
     "phone": "041-358-0868",
     "place_url": "http://place.map.kakao.com/16857859",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "쌈밥",
+      "우렁이 백반"
+    ]
   },
   {
     "name": "고추장구이",
@@ -5024,7 +5068,9 @@
     "phone": "02-964-7586",
     "place_url": "http://place.map.kakao.com/277022116",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "백반"
+    ]
   },
   {
     "name": "세븐일레븐",
@@ -5148,7 +5194,9 @@
     "phone": "0502-5551-8633",
     "place_url": "http://place.map.kakao.com/1045096704",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "치킨국수"
+    ]
   },
   {
     "name": "통돼지구이",
@@ -5173,7 +5221,10 @@
     "phone": "053-761-7008",
     "place_url": "http://place.map.kakao.com/18532862",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "통돼지구이",
+      "바비굴링 전부위"
+    ]
   },
   {
     "name": "라면타임",
@@ -5247,7 +5298,12 @@
       "distance_m": 84,
       "similarity": 0.0
     },
-    "menus": []
+    "menus": [
+      "누룽지 볶음밥",
+      "오리고기",
+      "철판 아이스크림",
+      "누룽지"
+    ]
   },
   {
     "name": "계획이시라면",
@@ -5269,7 +5325,12 @@
       "distance_m": 99,
       "similarity": 0.0
     },
-    "menus": []
+    "menus": [
+      "누룽지 볶음밥",
+      "오리고기",
+      "철판 아이스크림",
+      "누룽지"
+    ]
   },
   {
     "name": "창삼덕돌판오리구이",
@@ -5606,7 +5667,9 @@
     "phone": "052-298-9880",
     "place_url": "http://place.map.kakao.com/835715324",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "비빔짬짜면"
+    ]
   },
   {
     "name": "석관동떡볶이 수유점",
@@ -5738,7 +5801,9 @@
     "phone": "042-863-1207",
     "place_url": "http://place.map.kakao.com/2104990491",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "헝가리 음식"
+    ]
   },
   {
     "name": "옛날국수갤러리",
@@ -6062,7 +6127,11 @@
     "phone": "0507-1397-7758",
     "place_url": "http://place.map.kakao.com/10207672",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "대왕갈치",
+      "순살갈치조림",
+      "갈치통구이"
+    ]
   },
   {
     "name": "꽃게와꽃게집 본점",
@@ -6224,7 +6293,9 @@
     "phone": "064-773-7778",
     "place_url": "http://place.map.kakao.com/1994421978",
     "kakao_category": "음식점 > 한식 > 국수",
-    "menus": []
+    "menus": [
+      "5천원국수"
+    ]
   },
   {
     "name": "더미식",
@@ -6273,7 +6344,9 @@
     "phone": "02-832-1116",
     "place_url": "http://place.map.kakao.com/1993119440",
     "kakao_category": "음식점 > 중식",
-    "menus": []
+    "menus": [
+      "마라룽샤"
+    ]
   },
   {
     "name": "디지오라",
@@ -6387,7 +6460,9 @@
     "phone": "062-227-4717",
     "place_url": "http://place.map.kakao.com/21224205",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "쯔양세트"
+    ]
   },
   {
     "name": "영창식당",
@@ -6547,7 +6622,9 @@
     },
     "place_url": "http://place.map.kakao.com/1838820758",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "부침개"
+    ]
   },
   {
     "name": "할머니가 끓여주시는 냄비라면",
@@ -7138,7 +7215,10 @@
       "distance_m": 31,
       "similarity": 0.5
     },
-    "menus": []
+    "menus": [
+      "후라이드치킨",
+      "양념치킨"
+    ]
   },
   {
     "name": "국밥참맛있는집 대구교대점",
@@ -7364,7 +7444,10 @@
     "phone": "",
     "place_url": "http://place.map.kakao.com/1931086865",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "칠성사이다 제로",
+      "그린플럼"
+    ]
   },
   {
     "name": "능소화",
@@ -7418,7 +7501,10 @@
     "phone": "02-332-1618",
     "place_url": "http://place.map.kakao.com/158970766",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "대왕 고추튀김",
+      "막걸리"
+    ]
   },
   {
     "name": "막국수집",
@@ -7506,7 +7592,10 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "대왕 폭립",
+      "고기 무한리필"
+    ]
   },
   {
     "name": "장인라면 서울시청점",
@@ -8082,7 +8171,10 @@
     "phone": "02-6052-7826",
     "place_url": "http://place.map.kakao.com/1467670437",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "시도삭면",
+      "딤섬"
+    ]
   },
   {
     "name": "텐즈PC방(TENZ PC)",
@@ -8351,7 +8443,9 @@
     "phone": "031-908-4802",
     "place_url": "http://place.map.kakao.com/1943629731",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "김밥"
+    ]
   },
   {
     "name": "후라이드참잘하는집 삼성직영점",
@@ -8465,7 +8559,13 @@
     "phone": "02-755-3449",
     "place_url": "http://place.map.kakao.com/8670706",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "갈치",
+      "갈치조림",
+      "갈치구이",
+      "갈치회",
+      "갈치구이밥"
+    ]
   },
   {
     "name": "저스트스테이크",
@@ -8528,7 +8628,10 @@
     "phone": "02-3142-9282",
     "place_url": "http://place.map.kakao.com/26804105",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "어묵",
+      "곤약 물떡"
+    ]
   },
   {
     "name": "눈나무집",
@@ -8566,7 +8669,11 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "추어탕",
+      "삼겹살",
+      "푸드트럭 음식"
+    ]
   },
   {
     "name": "금성식당삼겹살",
@@ -8582,7 +8689,11 @@
     "source": "search",
     "lat": 35.157167,
     "lng": 126.857237,
-    "menus": []
+    "menus": [
+      "추어탕",
+      "삼겹살",
+      "푸드트럭 음식"
+    ]
   },
   {
     "name": "추어가 남원추어탕",
@@ -8936,7 +9047,10 @@
     "phone": "02-2275-9666",
     "place_url": "http://place.map.kakao.com/10785496",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리",
-    "menus": []
+    "menus": [
+      "백반",
+      "닭한마리"
+    ]
   },
   {
     "name": "지금이밤 성수본점",
@@ -9015,7 +9129,9 @@
     "phone": "070-4409-7400",
     "place_url": "http://place.map.kakao.com/636257011",
     "kakao_category": "음식점 > 양식",
-    "menus": []
+    "menus": [
+      "엽떡"
+    ]
   },
   {
     "name": "훠궈나라 강남점",
@@ -10358,7 +10474,9 @@
     "phone": "02-2268-8589",
     "place_url": "http://place.map.kakao.com/21409927",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "백반"
+    ]
   },
   {
     "name": "BBQ 진해이동점",
@@ -10579,7 +10697,9 @@
     "phone": "02-780-6108",
     "place_url": "http://place.map.kakao.com/8094563",
     "kakao_category": "음식점 > 한식 > 국수",
-    "menus": []
+    "menus": [
+      "콩국수"
+    ]
   },
   {
     "name": "돼지갈비집",
@@ -10744,7 +10864,9 @@
     "phone": "042-222-0324",
     "place_url": "http://place.map.kakao.com/316976275",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "김치볶음밥"
+    ]
   },
   {
     "name": "해물라면",
@@ -10793,7 +10915,9 @@
       "distance_m": 2,
       "similarity": 0.0
     },
-    "menus": []
+    "menus": [
+      "김치볶음밥"
+    ]
   },
   {
     "name": "칭따오양꼬치",
@@ -10980,7 +11104,9 @@
     "phone": "031-655-2225",
     "place_url": "http://place.map.kakao.com/11039136",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "길거리 음식"
+    ]
   },
   {
     "name": "제부도뻘",
@@ -11105,7 +11231,9 @@
     "phone": "02-3421-7255",
     "place_url": "http://place.map.kakao.com/1335492490",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리",
-    "menus": []
+    "menus": [
+      "닭구이"
+    ]
   },
   {
     "name": "마포화덕왕돌판구이 영등포구청역본점",
@@ -11195,7 +11323,10 @@
     "phone": "02-762-7491",
     "place_url": "http://place.map.kakao.com/26967162",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "비빔면",
+      "차돌박이"
+    ]
   },
   {
     "name": "곱창전골",
@@ -11669,7 +11800,9 @@
     "phone": "031-546-0423",
     "place_url": "http://place.map.kakao.com/823175033",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "양꼬치"
+    ]
   },
   {
     "name": "매운갈비",
@@ -11960,7 +12093,9 @@
     "phone": "02-2292-3335",
     "place_url": "http://place.map.kakao.com/21556603",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "대왕철판 빨간해물찜"
+    ]
   },
   {
     "name": "철수네매운갈비찜",
@@ -12155,7 +12290,9 @@
     "phone": "043-742-2163",
     "place_url": "http://place.map.kakao.com/10256508",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "우설"
+    ]
   },
   {
     "name": "소소라면닭꼬치",
@@ -12348,7 +12485,11 @@
     "address_kakao": "충북 제천시 풍양로17길 4",
     "place_url": "http://place.map.kakao.com/17685586",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "빨간어묵",
+      "매운어묵",
+      "물떡"
+    ]
   },
   {
     "name": "순삭이네",
@@ -12467,7 +12608,9 @@
     },
     "place_url": "http://place.map.kakao.com/152923216",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "짬짜면"
+    ]
   },
   {
     "name": "밴댕이천국연탄구이",
@@ -12591,7 +12734,10 @@
     },
     "place_url": "http://place.map.kakao.com/16529697",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "순쫄",
+      "순라"
+    ]
   },
   {
     "name": "모꼬지에",
@@ -12673,7 +12819,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "요거트"
+    ]
   },
   {
     "name": "고든램지 피자",
@@ -12692,7 +12840,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "무한리필 피자"
+    ]
   },
   {
     "name": "보정황소곱창",
@@ -12779,7 +12929,9 @@
     "phone": "02-6339-1552",
     "place_url": "http://place.map.kakao.com/1155031193",
     "kakao_category": "음식점 > 일식",
-    "menus": []
+    "menus": [
+      "전메뉴"
+    ]
   },
   {
     "name": "옛집국수",
@@ -12919,7 +13071,9 @@
     "phone": "02-414-8307",
     "place_url": "http://place.map.kakao.com/15606743",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "쫄라"
+    ]
   },
   {
     "name": "마장동한우촌",
@@ -12959,7 +13113,10 @@
     "phone": "02-6282-0320",
     "place_url": "http://place.map.kakao.com/1744813047",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "북경오리",
+      "베이징덕"
+    ]
   },
   {
     "name": "최우영스시",
@@ -13778,7 +13935,10 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "판모밀",
+      "메밀국수"
+    ]
   },
   {
     "name": "메밀국수",
@@ -13800,7 +13960,10 @@
       "distance_m": 41,
       "similarity": 0.0
     },
-    "menus": []
+    "menus": [
+      "판모밀",
+      "메밀국수"
+    ]
   },
   {
     "name": "두꺼비닷컴",
@@ -13939,7 +14102,9 @@
     "phone": "02-469-6684",
     "place_url": "http://place.map.kakao.com/19183006",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "김치볶음밥"
+    ]
   },
   {
     "name": "양다리바베큐",
@@ -13958,7 +14123,10 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "만화고기",
+      "양다리"
+    ]
   },
   {
     "name": "무교동 이북식 맛집",
@@ -14376,7 +14544,9 @@
     "phone": "02-473-9291",
     "place_url": "http://place.map.kakao.com/16678373",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "고추장구이"
+    ]
   },
   {
     "name": "전농곱창싱",
@@ -14532,7 +14702,12 @@
     "phone": "070-8834-0908",
     "place_url": "http://place.map.kakao.com/21329787",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "차돌박이",
+      "소고기",
+      "김치찌개",
+      "계란찜"
+    ]
   },
   {
     "name": "동원한방족발",
@@ -14581,7 +14756,9 @@
     "phone": "031-568-6866",
     "place_url": "http://place.map.kakao.com/10579219",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "돌판 묵은지 고등어찜"
+    ]
   },
   {
     "name": "김치우동",
@@ -14606,7 +14783,9 @@
     "phone": "010-3258-2028",
     "place_url": "http://place.map.kakao.com/1804957231",
     "kakao_category": "음식점 > 일식",
-    "menus": []
+    "menus": [
+      "돌판 묵은지 고등어찜"
+    ]
   },
   {
     "name": "나정순할매쭈꾸미",
@@ -14702,7 +14881,9 @@
     "phone": "",
     "place_url": "http://place.map.kakao.com/533074237",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "뭉티기"
+    ]
   },
   {
     "name": "굽네치킨 시흥신천점",
@@ -14859,7 +15040,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "대왕 점보탄탄면"
+    ]
   },
   {
     "name": "국물떡볶이집",
@@ -15449,7 +15632,13 @@
     "phone": "02-985-7333",
     "place_url": "http://place.map.kakao.com/16624169",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "떡볶이",
+      "순대",
+      "튀김",
+      "김밥",
+      "라면"
+    ]
   },
   {
     "name": "스시나마",
@@ -15833,7 +16022,9 @@
     "phone": "031-444-0532",
     "place_url": "http://place.map.kakao.com/11840767",
     "kakao_category": "음식점 > 한식 > 육류,고기 > 닭요리",
-    "menus": []
+    "menus": [
+      "닭꼬치"
+    ]
   },
   {
     "name": "집나간 편집자의 쿠키",
@@ -15880,7 +16071,13 @@
     "name_original": "달라집",
     "place_url": "http://place.map.kakao.com/1715134722",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "짜장면",
+      "탕수육",
+      "볶음밥",
+      "군만두",
+      "짬뽕"
+    ]
   },
   {
     "name": "우리나라만세한식뷔페",
@@ -16118,7 +16315,10 @@
     "phone": "055-715-1663",
     "place_url": "http://place.map.kakao.com/655805290",
     "kakao_category": "음식점 > 치킨",
-    "menus": []
+    "menus": [
+      "바베큐",
+      "후라이드 치킨"
+    ]
   },
   {
     "name": "서두산딤섬만두",
@@ -16663,7 +16863,11 @@
     "source": "search",
     "lat": 37.53663,
     "lng": 130.871544,
-    "menus": []
+    "menus": [
+      "50cm 계란프라이",
+      "달걀볶음밥",
+      "도시락"
+    ]
   },
   {
     "name": "울릉도분식집",
@@ -16910,7 +17114,10 @@
     "phone": "061-285-9353",
     "place_url": "http://place.map.kakao.com/364635436",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "소고기 탕탕이",
+      "볶음밥"
+    ]
   },
   {
     "name": "후라이드참잘하는집 마포점",
@@ -16951,7 +17158,9 @@
     "phone": "",
     "place_url": "http://place.map.kakao.com/18936696",
     "kakao_category": "음식점 > 한식 > 국수",
-    "menus": []
+    "menus": [
+      "장터국수"
+    ]
   },
   {
     "name": "진갈비",
@@ -17920,7 +18129,9 @@
     "phone": "033-573-7749",
     "place_url": "http://place.map.kakao.com/23791683",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "쫄면"
+    ]
   },
   {
     "name": "김포 수육집",
@@ -18053,7 +18264,9 @@
     "phone": "02-848-0777",
     "place_url": "http://place.map.kakao.com/670903042",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "과자"
+    ]
   },
   {
     "name": "옛날중국집",
@@ -18080,7 +18293,9 @@
     "phone": "02-764-0094",
     "place_url": "http://place.map.kakao.com/20944335",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "과자"
+    ]
   },
   {
     "name": "한성대옛날중국집",
@@ -18105,7 +18320,9 @@
     "phone": "02-764-0094",
     "place_url": "http://place.map.kakao.com/20944335",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "과자"
+    ]
   },
   {
     "name": "망원동 즉석우동 전문돈까스 본점",
@@ -18195,7 +18412,9 @@
     "phone": "053-421-9233",
     "place_url": "http://place.map.kakao.com/16266980",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "생고기"
+    ]
   },
   {
     "name": "회전초밥",
@@ -18548,7 +18767,9 @@
     "phone": "02-6958-8847",
     "place_url": "http://place.map.kakao.com/1014186276",
     "kakao_category": "음식점 > 일식",
-    "menus": []
+    "menus": [
+      "소고기"
+    ]
   },
   {
     "name": "장꼬방",
@@ -18567,7 +18788,10 @@
     "phone": "",
     "place_url": "http://place.map.kakao.com/1779746892",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "대형 철판 계란말이",
+      "묵은김치찌개"
+    ]
   },
   {
     "name": "장꼬방묵은김치찌개전문",
@@ -18586,7 +18810,10 @@
     "phone": "02-522-0035",
     "place_url": "http://place.map.kakao.com/8051506",
     "kakao_category": "음식점 > 한식 > 찌개,전골",
-    "menus": []
+    "menus": [
+      "대형 철판 계란말이",
+      "묵은김치찌개"
+    ]
   },
   {
     "name": "호산나의정부부대찌개",
@@ -18770,7 +18997,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "빨간어묵"
+    ]
   },
   {
     "name": "풀무원푸드앤컬처",
@@ -18933,7 +19162,9 @@
     "phone": "054-552-9288",
     "place_url": "http://place.map.kakao.com/9291322",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "석쇠구이"
+    ]
   },
   {
     "name": "동대문엽기떡볶이 대구지산점",
@@ -19194,7 +19425,13 @@
     "phone": "02-876-9293",
     "place_url": "http://place.map.kakao.com/410994613",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "편의점 도시락",
+      "김밥",
+      "치킨너겟",
+      "컵라면",
+      "과자"
+    ]
   },
   {
     "name": "산천어 양식장",
@@ -19213,7 +19450,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "산천어"
+    ]
   },
   {
     "name": "양념게장",
@@ -19266,7 +19505,10 @@
     "phone": "042-222-0324",
     "place_url": "http://place.map.kakao.com/316976275",
     "kakao_category": "음식점 > 한식 > 해물,생선",
-    "menus": []
+    "menus": [
+      "해물찜",
+      "생선구이"
+    ]
   },
   {
     "name": "단골닭집",
@@ -19382,7 +19624,13 @@
     "phone": "052-265-7110",
     "place_url": "http://place.map.kakao.com/12654917",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "김밥",
+      "떡볶이",
+      "순대",
+      "튀김",
+      "우동"
+    ]
   },
   {
     "name": "팔백집 본점",
@@ -19459,7 +19707,9 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "게장"
+    ]
   },
   {
     "name": "정육면체",
@@ -19915,7 +20165,9 @@
     "phone": "02-780-6108",
     "place_url": "http://place.map.kakao.com/8094563",
     "kakao_category": "음식점 > 한식 > 국수",
-    "menus": []
+    "menus": [
+      "물쫄면"
+    ]
   },
   {
     "name": "물쫄면",
@@ -19934,7 +20186,9 @@
     "phone": "043-732-1827",
     "place_url": "http://place.map.kakao.com/9536499",
     "kakao_category": "음식점 > 한식 > 국수",
-    "menus": []
+    "menus": [
+      "물쫄면"
+    ]
   },
   {
     "name": "짜장라면",
@@ -20005,7 +20259,10 @@
     "phone": "070-8860-7516",
     "place_url": "http://place.map.kakao.com/374782274",
     "kakao_category": "음식점 > 양식",
-    "menus": []
+    "menus": [
+      "동동주",
+      "막걸리"
+    ]
   },
   {
     "name": "십전갈비탕",
@@ -20053,7 +20310,13 @@
     "phone": "0507-1323-4322",
     "place_url": "http://place.map.kakao.com/15075810",
     "kakao_category": "음식점 > 샐러드",
-    "menus": []
+    "menus": [
+      "치즈퐁듀",
+      "닭꼬치",
+      "염통",
+      "은행",
+      "소떡"
+    ]
   },
   {
     "name": "들깨칼국수",
@@ -20401,7 +20664,10 @@
       "distance_m": 93,
       "similarity": 0.0
     },
-    "menus": []
+    "menus": [
+      "칠면조 다리",
+      "대왕치킨"
+    ]
   },
   {
     "name": "밥프로 갈매밥심 휴밸나인점",
@@ -20653,7 +20919,11 @@
       "distance_m": 0,
       "similarity": 0.08
     },
-    "menus": []
+    "menus": [
+      "하얀살",
+      "특수부위",
+      "대창불고기전골"
+    ]
   },
   {
     "name": "대창불고기전골",
@@ -20675,7 +20945,11 @@
       "distance_m": 95,
       "similarity": 0.14
     },
-    "menus": []
+    "menus": [
+      "하얀살",
+      "특수부위",
+      "대창불고기전골"
+    ]
   },
   {
     "name": "부라더고깃집",
@@ -20702,7 +20976,11 @@
     "phone": "052-258-7005",
     "place_url": "http://place.map.kakao.com/26878626",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "하얀살",
+      "특수부위",
+      "대창불고기전골"
+    ]
   },
   {
     "name": "와규몽 구월점",
@@ -20748,7 +21026,10 @@
     "source": "search",
     "lat": 37.530232,
     "lng": 126.986639,
-    "menus": []
+    "menus": [
+      "냉삼",
+      "비빔면"
+    ]
   },
   {
     "name": "우미남",
@@ -20948,7 +21229,9 @@
     "phone": "02-900-1377",
     "place_url": "http://place.map.kakao.com/21392443",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "치즈밥"
+    ]
   },
   {
     "name": "중곡동곱창",
@@ -21020,7 +21303,11 @@
       "distance_m": 0,
       "similarity": 0.0
     },
-    "menus": []
+    "menus": [
+      "대왕 계란말이",
+      "후라이",
+      "앵그리 너구리"
+    ]
   },
   {
     "name": "학곡리막국수닭갈비",
@@ -21626,7 +21913,9 @@
     "phone": "033-463-3566",
     "place_url": "http://place.map.kakao.com/396685839",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "짬뽕"
+    ]
   },
   {
     "name": "욕지도 참치 양식장",
@@ -21666,7 +21955,13 @@
     "phone": "010-9240-3740",
     "place_url": "http://place.map.kakao.com/283087337",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "떡볶이",
+      "순대",
+      "튀김",
+      "김밥",
+      "라면"
+    ]
   },
   {
     "name": "산채정식",
@@ -21691,7 +21986,9 @@
     "phone": "010-2123-9275",
     "place_url": "http://place.map.kakao.com/913945028",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "산채정식"
+    ]
   },
   {
     "name": "시민초밥",
@@ -21739,7 +22036,13 @@
     "phone": "055-641-5166",
     "place_url": "http://place.map.kakao.com/1960404683",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "해물탕",
+      "전복죽",
+      "회덮밥",
+      "낙지볶음",
+      "문어숙회"
+    ]
   },
   {
     "name": "욕지도수제막국수",
@@ -21758,7 +22061,9 @@
     "phone": "010-4085-8558",
     "place_url": "http://place.map.kakao.com/934718757",
     "kakao_category": "음식점 > 한식 > 국수",
-    "menus": []
+    "menus": [
+      "수제막국수"
+    ]
   },
   {
     "name": "신태루",
@@ -21785,7 +22090,13 @@
     "phone": "041-673-8901",
     "place_url": "http://place.map.kakao.com/10604998",
     "kakao_category": "음식점 > 중식 > 중국요리",
-    "menus": []
+    "menus": [
+      "탕수육",
+      "짬뽕",
+      "볶음밥",
+      "깐풍기",
+      "양장피"
+    ]
   },
   {
     "name": "소한마리",
@@ -21804,7 +22115,13 @@
     "phone": "031-762-2248",
     "place_url": "http://place.map.kakao.com/894350898",
     "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": []
+    "menus": [
+      "소고기",
+      "양념갈비",
+      "돼지갈비",
+      "삼겹살",
+      "불고기"
+    ]
   },
   {
     "name": "돼지갈비",
@@ -22207,7 +22524,13 @@
     "phone": "042-523-1380",
     "place_url": "http://place.map.kakao.com/26847058",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "떡볶이",
+      "순대",
+      "튀김",
+      "김밥",
+      "오뎅"
+    ]
   },
   {
     "name": "인도정식",
@@ -22229,7 +22552,9 @@
       "distance_m": 3,
       "similarity": 0.17
     },
-    "menus": []
+    "menus": [
+      "인도정식"
+    ]
   },
   {
     "name": "새조개",
@@ -22472,7 +22797,13 @@
     "phone": "",
     "place_url": "",
     "kakao_category": "",
-    "menus": []
+    "menus": [
+      "해물탕",
+      "전복죽",
+      "회덮밥",
+      "낙지볶음",
+      "새우튀김"
+    ]
   },
   {
     "name": "서래마을이야기",
@@ -22491,7 +22822,13 @@
     "phone": "02-534-3388",
     "place_url": "http://place.map.kakao.com/12505740",
     "kakao_category": "음식점 > 한식",
-    "menus": []
+    "menus": [
+      "불고기",
+      "비빔밥",
+      "김치찌개",
+      "잡채",
+      "갈비찜"
+    ]
   },
   {
     "name": "혜리네스넥",
@@ -22510,7 +22847,10 @@
     "phone": "033-262-4030",
     "place_url": "http://place.map.kakao.com/11197464",
     "kakao_category": "음식점 > 분식",
-    "menus": []
+    "menus": [
+      "떡꼬치",
+      "닭강정"
+    ]
   },
   {
     "name": "요아정",
