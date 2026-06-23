@@ -19363,7 +19363,10 @@
     "phone": "063-653-1008",
     "place_url": "http://place.map.kakao.com/26157347",
     "kakao_category": "음식점 > 한식 > 한정식",
-    "menus": []
+    "menus": [
+      "고기5kg",
+      "순창 주민들"
+    ]
   },
   {
     "name": "정선 아리랑",
@@ -22916,6 +22919,27 @@
       "냉면",
       "맥주",
       "역전할머니맥주"
+    ]
+  },
+  {
+    "name": "온정",
+    "address": "서울 중구 청구로 64",
+    "category": "기타",
+    "region": "서울",
+    "video_id": "dJONr8ZpwhM",
+    "video_title": "할머니께서 맛이 그저 그렇다고 했는데.. 김치찜 먹다 눈물날뻔 했습니다😂 가평 숨은맛집 온정식당",
+    "video_url": "https://www.youtube.com/watch?v=dJONr8ZpwhM",
+    "thumbnail": "https://i.ytimg.com/vi/dJONr8ZpwhM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC8xg=&rs=AOn4CLBlKsfsPvTEQzgqvrtYq0bs2psFcw",
+    "upload_date": "2026-06-23",
+    "lat": 37.55996,
+    "lng": 127.015451,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/184391581",
+    "kakao_category": "음식점",
+    "menus": [
+      "김치찜"
     ]
   }
 ]
