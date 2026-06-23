@@ -1412,6 +1412,12 @@ def main():
     else:
         print("\n신규 맛집 없음")
 
+    # menus + category 표준 매핑 재적용 (신규/기존 일관성 보장)
+    rb = Path(__file__).parent / "rebuild_menus_categories.py"
+    if rb.exists():
+        print("\n── menus/category 표준 매핑 재적용 ──")
+        subprocess.run([sys.executable, str(rb)], check=False)
+
     print("=" * 60)
     return len(new_entries)
 

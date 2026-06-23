@@ -726,13 +726,20 @@ body {
     <button class="fb" data-f="경북">경북</button>
     <button class="fb" data-f="제주">제주</button>
     <button class="fb" data-f="대전">대전</button>
+    <button class="fb" data-c="한식">한식</button>
     <button class="fb" data-c="분식">분식</button>
-    <button class="fb" data-c="구이">구이</button>
-    <button class="fb" data-c="냉면">냉면</button>
-    <button class="fb" data-c="닭갈비">닭갈비</button>
-    <button class="fb" data-c="해산물">해산물</button>
     <button class="fb" data-c="중식">중식</button>
+    <button class="fb" data-c="구이">구이</button>
     <button class="fb" data-c="일식">일식</button>
+    <button class="fb" data-c="해산물">해산물</button>
+    <button class="fb" data-c="양식">양식</button>
+    <button class="fb" data-c="치킨">치킨</button>
+    <button class="fb" data-c="면류">면류</button>
+    <button class="fb" data-c="냉면">냉면</button>
+    <button class="fb" data-c="술집">술집</button>
+    <button class="fb" data-c="카페">카페</button>
+    <button class="fb" data-c="국밥">국밥</button>
+    <button class="fb" data-c="닭갈비">닭갈비</button>
   </div>
   <div id="sort-bar">
     <span class="sort-label">정렬</span>
@@ -798,10 +805,11 @@ body {
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aeb30d9bbde501a7f622e5ced1e4283f&autoload=false&libraries=clusterer"></script>
 <script>
 const CAT_COLOR = {
-  "분식":"#f472b6","냉면":"#60a5fa","닭갈비":"#fb923c","구이":"#f87171",
-  "중식":"#facc15","해산물":"#34d399","일식":"#a78bfa","한식":"#fb7185",
-  "치킨":"#fbbf24","피자":"#f97316","양식":"#818cf8","국밥":"#6ee7b7",
-  "기타":"#94a3b8",
+  "한식":"#fb7185","분식":"#f472b6","중식":"#facc15","구이":"#f87171",
+  "일식":"#a78bfa","해산물":"#34d399","양식":"#818cf8","치킨":"#fbbf24",
+  "면류":"#22d3ee","냉면":"#60a5fa","술집":"#c084fc","카페":"#fcd34d",
+  "국밥":"#6ee7b7","닭갈비":"#fb923c","피자":"#f97316","뷔페":"#94e2d5",
+  "아시아음식":"#84cc16","기타":"#94a3b8",
 };
 const getC = c => CAT_COLOR[c] || CAT_COLOR["기타"];
 
