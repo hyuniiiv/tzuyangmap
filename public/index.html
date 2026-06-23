@@ -163,7 +163,12 @@ body {
   margin-bottom: 5px;
   letter-spacing: -0.01em;
 }
-/* 메뉴 칩: primary 색 살짝 띤 디자인으로 차별화 */
+/* 큰 분류 칩 — 진하게 (앞쪽 노출) */
+.fb.fb-cat {
+  font-weight: 500;
+  color: var(--ink);
+}
+/* 메뉴 칩 — primary 색 살짝 (뒤쪽 다양성) */
 .fb.fb-menu {
   background: rgba(0,102,204,0.06);
   border-color: rgba(0,102,204,0.18);
@@ -174,10 +179,19 @@ body {
   background: rgba(0,102,204,0.12);
   border-color: rgba(0,102,204,0.32);
 }
-.fb.fb-menu.on {
+.fb.fb-menu.on,
+.fb.fb-cat.on {
   background: var(--primary);
   border-color: var(--primary);
   color: var(--on-dark);
+}
+/* 분류 ↔ 메뉴 사이 구분점 */
+.fb-divider {
+  display: inline-block;
+  width: 1px; height: 14px;
+  background: var(--hairline);
+  margin: 0 6px 5px;
+  vertical-align: middle;
 }
 .fb.on {
   background: var(--primary);
@@ -769,26 +783,9 @@ body {
       <button class="fb" data-f="제주">제주</button>
       <button class="fb" data-f="대전">대전</button>
     </div>
-    <div class="fb-section">
-      <span class="fb-label">분류</span>
-      <button class="fb" data-c="한식">한식</button>
-      <button class="fb" data-c="분식">분식</button>
-      <button class="fb" data-c="중식">중식</button>
-      <button class="fb" data-c="구이">구이</button>
-      <button class="fb" data-c="일식">일식</button>
-      <button class="fb" data-c="해산물">해산물</button>
-      <button class="fb" data-c="양식">양식</button>
-      <button class="fb" data-c="치킨">치킨</button>
-      <button class="fb" data-c="면류">면류</button>
-      <button class="fb" data-c="냉면">냉면</button>
-      <button class="fb" data-c="술집">술집</button>
-      <button class="fb" data-c="카페">카페</button>
-      <button class="fb" data-c="국밥">국밥</button>
-      <button class="fb" data-c="닭갈비">닭갈비</button>
-    </div>
     <div class="fb-section" id="menu-section">
-      <span class="fb-label">메뉴</span>
-      <!-- 동적 생성 -->
+      <span class="fb-label" title="큰 종류부터 구체 음식까지 — 클릭으로 검색">음식</span>
+      <!-- 동적 생성: 큰 분류 + 인기 메뉴 통합 -->
     </div>
   </div>
   <div id="sort-bar">
@@ -1249,9 +1246,9 @@ function openPanel(r) {
       const input = document.getElementById('search-input');
       input.value = menu;
       curFilter.search = menu;
-      // 카테고리/지역 필터 해제 (메뉴로만 좁힘)
+      // 지역은 전체로, 분류 필터 해제 (메뉴로만 좁힘)
       curFilter.cat = ''; curFilter.region = 'all';
-      document.querySelectorAll('.fb:not([data-toggle]):not(.fb-menu)').forEach(x => x.classList.remove('on'));
+      document.querySelectorAll('[data-f]').forEach(x => x.classList.remove('on'));
       document.querySelector('[data-f="all"]')?.classList.add('on');
       syncMenuChipActive(menu);
       apply();
@@ -1478,44 +1475,62 @@ function getShareTargetKey() {
 document.addEventListener('keydown', e => e.key==='Escape' && closeV());
 document.getElementById('vmodal').onclick = e => e.target===e.currentTarget && closeV();
 
-// 인기 메뉴 Top N 동적 렌더링 — 클릭하면 검색창에 입력 + 필터
-function renderTopMenus(N=12) {
+// 음식 칩 동적 렌더링 — 큰 분류 + 인기 메뉴 통합 (모두 클릭으로 검색)
+const BIG_CATEGORIES = ['한식','분식','중식','일식','양식','구이','해산물','치킨','카페','술집'];
+function renderFoodChips(menuTopN=18) {
   const sec = document.getElementById('menu-section');
   if (!sec) return;
+  // 인기 메뉴 카운트 (현재 필터된 카테고리는 제외해서 다양성 확보)
   const cnt = {};
   for (const r of allData) {
-    for (const m of (r.menus || [])) cnt[m] = (cnt[m]||0) + 1;
+    for (const m of (r.menus || [])) {
+      if (BIG_CATEGORIES.includes(m)) continue;  // 큰 분류는 별도로 노출
+      cnt[m] = (cnt[m]||0) + 1;
+    }
   }
-  const top = Object.entries(cnt)
+  const topMenus = Object.entries(cnt)
     .sort((a,b) => b[1]-a[1])
-    .slice(0, N)
+    .slice(0, menuTopN)
     .map(([m]) => m);
-  sec.innerHTML = '<span class="fb-label">메뉴</span>' +
-    top.map(m => `<button class="fb fb-menu" data-m="${m}">${m}</button>`).join('');
-  sec.querySelectorAll('[data-m]').forEach(b => b.addEventListener('click', function() {
-    const menu = this.dataset.m;
+
+  // HTML 조립: 큰 분류 먼저(굵게), 인기 메뉴 뒤(옅게)
+  const catChips = BIG_CATEGORIES
+    .map(c => `<button class="fb fb-cat" data-q="${c}">${c}</button>`).join('');
+  const menuChips = topMenus
+    .map(m => `<button class="fb fb-menu" data-q="${m}">${m}</button>`).join('');
+  sec.innerHTML =
+    '<span class="fb-label" title="큰 종류부터 구체 음식까지 — 클릭으로 검색">음식</span>' +
+    catChips +
+    '<span class="fb-divider"></span>' +
+    menuChips;
+
+  // 클릭 핸들러 — 분류/메뉴 모두 같은 동작: 검색창에 텍스트 입력
+  sec.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', function() {
+    const q = this.dataset.q;
     const input = document.getElementById('search-input');
-    const already = input.value === menu && this.classList.contains('on');
+    const already = input.value === q && this.classList.contains('on');
     if (already) {
       input.value = '';
       curFilter.search = '';
       this.classList.remove('on');
     } else {
-      input.value = menu;
-      curFilter.search = menu;
-      sec.querySelectorAll('[data-m]').forEach(x => x.classList.remove('on'));
+      input.value = q;
+      curFilter.search = q;
+      sec.querySelectorAll('[data-q]').forEach(x => x.classList.remove('on'));
       this.classList.add('on');
     }
     apply();
   }));
 }
+// 기존 함수명 호환 (renderTopMenus 호출 위치들)
+const renderTopMenus = renderFoodChips;
 
-// 검색창 입력에 따라 메뉴 칩 active 동기화
+// 검색창 입력에 따라 음식 칩 active 동기화
 function syncMenuChipActive(searchVal) {
   const sec = document.getElementById('menu-section');
   if (!sec) return;
-  sec.querySelectorAll('[data-m]').forEach(x => {
-    x.classList.toggle('on', x.dataset.m === searchVal);
+  sec.querySelectorAll('[data-q]').forEach(x => {
+    x.classList.toggle('on', x.dataset.q === searchVal);
   });
 }
 
