@@ -22961,5 +22961,68 @@
     "menus": [
       "김치찜"
     ]
+  },
+  {
+    "name": "금강막국수",
+    "address": "경기 가평군 조종면 현등사길 22",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "IS6z1fyxCyI",
+    "video_title": "가평 3대 막국수🔥 어디가 제일 맛있을까..? 50년 전통 4대째 내려오는 막국수 먹방",
+    "video_url": "https://www.youtube.com/watch?v=IS6z1fyxCyI",
+    "thumbnail": "https://i.ytimg.com/vi/IS6z1fyxCyI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAsAdWBfz07VCMYvS7okaYF8LnYeg",
+    "upload_date": "2026-06-25",
+    "lat": 37.865223,
+    "lng": 127.348201,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-585-2235",
+    "place_url": "http://place.map.kakao.com/15513842",
+    "kakao_category": "음식점 > 한식 > 국수",
+    "menus": [
+      "막국수"
+    ]
+  },
+  {
+    "name": "송원막국수",
+    "address": "경기 가평군 가평읍 가화로 76-1",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "IS6z1fyxCyI",
+    "video_title": "가평 3대 막국수🔥 어디가 제일 맛있을까..? 50년 전통 4대째 내려오는 막국수 먹방",
+    "video_url": "https://www.youtube.com/watch?v=IS6z1fyxCyI",
+    "thumbnail": "https://i.ytimg.com/vi/IS6z1fyxCyI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAsAdWBfz07VCMYvS7okaYF8LnYeg",
+    "upload_date": "2026-06-25",
+    "lat": 37.826638,
+    "lng": 127.515235,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-582-1408",
+    "place_url": "http://place.map.kakao.com/7963193",
+    "kakao_category": "음식점 > 한식 > 국수",
+    "menus": [
+      "막국수"
+    ]
+  },
+  {
+    "name": "두메막국수",
+    "address": "경기 가평군 가평읍 가화로 332",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "IS6z1fyxCyI",
+    "video_title": "가평 3대 막국수🔥 어디가 제일 맛있을까..? 50년 전통 4대째 내려오는 막국수 먹방",
+    "video_url": "https://www.youtube.com/watch?v=IS6z1fyxCyI",
+    "thumbnail": "https://i.ytimg.com/vi/IS6z1fyxCyI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAsAdWBfz07VCMYvS7okaYF8LnYeg",
+    "upload_date": "2026-06-25",
+    "lat": 37.847639,
+    "lng": 127.506328,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "010-7178-4188",
+    "place_url": "http://place.map.kakao.com/644973085",
+    "kakao_category": "음식점 > 한식 > 국수",
+    "menus": [
+      "막국수"
+    ]
   }
 ]
