@@ -11149,7 +11149,12 @@
     "phone": "02-503-9555",
     "place_url": "http://place.map.kakao.com/9567240",
     "kakao_category": "음식점 > 한식 > 찌개,전골",
-    "menus": []
+    "menus": [
+      "김치찌개",
+      "불고기",
+      "잡채",
+      "계란찜"
+    ]
   },
   {
     "name": "황금이네",
@@ -11174,7 +11179,12 @@
     "phone": "031-885-6999",
     "place_url": "http://place.map.kakao.com/26814887",
     "kakao_category": "음식점 > 한식 > 한정식",
-    "menus": []
+    "menus": [
+      "김치찌개",
+      "불고기",
+      "잡채",
+      "계란찜"
+    ]
   },
   {
     "name": "김밥나라 남성역점",
