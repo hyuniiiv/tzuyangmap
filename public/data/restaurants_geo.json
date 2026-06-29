@@ -23034,5 +23034,28 @@
     "menus": [
       "막국수"
     ]
+  },
+  {
+    "name": "우정",
+    "address": "서울 종로구 인사동16길 11-1",
+    "category": "한식",
+    "region": "서울",
+    "video_id": "KS_53b_YcvA",
+    "video_title": "먹다가 짜증났습니다😡 평일 밤 12시에 웨이팅?! 극한의 매운 닭발! 신당동 떡볶이골목 우정",
+    "video_url": "https://www.youtube.com/watch?v=KS_53b_YcvA",
+    "thumbnail": "https://i.ytimg.com/vi/KS_53b_YcvA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNDKwBj6Vrl2ZlT-ZxIaDe-Iluow",
+    "upload_date": "2026-06-29",
+    "lat": 37.575073,
+    "lng": 126.983975,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-732-1008",
+    "place_url": "http://place.map.kakao.com/11180381",
+    "kakao_category": "음식점 > 한식 > 한정식",
+    "menus": [
+      "매운 닭발",
+      "떡볶이",
+      "닭발"
+    ]
   }
 ]
