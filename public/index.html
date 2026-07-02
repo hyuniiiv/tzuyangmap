@@ -1344,16 +1344,12 @@ function openPanel(r) {
     visitBtn.textContent = '○ 방문 체크';
   }
 
-  // 영상보기 → 팝업에서 인라인 재생 (원래 방식)
+  // 영상보기 → YouTube 새 탭에서 열기 (임베드 차단 회피)
   const playVideo = () => {
-    if (vid) {
-      document.getElementById('vcont').innerHTML =
-        `<iframe src="https://www.youtube.com/embed/${vid}?autoplay=1"
-         allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-      document.getElementById('vmodal').classList.add('open');
-    } else {
-      window.open('https://www.youtube.com/@tzuyang6145', '_blank');
-    }
+    const url = vid
+      ? `https://www.youtube.com/watch?v=${vid}`
+      : 'https://www.youtube.com/@tzuyang6145';
+    window.open(url, '_blank', 'noopener');
   };
   document.getElementById('panel-thumb-wrap').onclick = playVideo;
   document.getElementById('panel-yt').onclick = playVideo;
