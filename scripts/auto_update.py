@@ -684,6 +684,49 @@ def find_region(text: str) -> str:
         if r in text: return r
     return ""
 
+
+# 세부 지역명(수원/춘천/성수 등) → 광역시/도 매핑
+_REGION_TO_BROAD = {
+    # 광역 그대로
+    "서울":"서울","부산":"부산","인천":"인천","대구":"대구","대전":"대전",
+    "광주":"광주","울산":"울산","세종":"세종","제주":"제주",
+    # 경기
+    "수원":"경기","성남":"경기","고양":"경기","용인":"경기","안산":"경기",
+    "안양":"경기","구리":"경기","평택":"경기","파주":"경기","광명":"경기",
+    "시흥":"경기","양평":"경기","가평":"경기",
+    # 강원
+    "춘천":"강원","강릉":"강원","원주":"강원","속초":"강원","태백":"강원",
+    # 충북/충남
+    "청주":"충북","천안":"충남","아산":"충남","공주":"충남","논산":"충남",
+    "서산":"충남","당진":"충남","보령":"충남","홍성":"충남","태안":"충남","부여":"충남",
+    # 전북/전남
+    "전주":"전북","군산":"전북","익산":"전북",
+    "여수":"전남","순천":"전남","목포":"전남","광양":"전남","나주":"전남",
+    # 경북/경남
+    "포항":"경북","경주":"경북","구미":"경북","안동":"경북","영주":"경북",
+    "창원":"경남","진주":"경남","통영":"경남","거제":"경남","양산":"경남",
+    "서귀포":"제주",
+    # 서울 세부 동네
+    "홍대":"서울","강남":"서울","명동":"서울","이태원":"서울","신촌":"서울",
+    "건대":"서울","청량리":"서울","성수":"서울","방이":"서울","잠실":"서울",
+    "망원":"서울","신사":"서울","여의도":"서울","을지로":"서울","수유":"서울","남영":"서울",
+    "신당동":"서울","신당":"서울","인사동":"서울",
+}
+
+
+def broad_region_of(text: str) -> str:
+    """텍스트/주소에서 광역시/도 추출. 없으면 ''."""
+    if not text: return ""
+    # 광역시/도 직접 매칭 (긴 이름 우선)
+    BROAD = ["서울","부산","인천","대구","대전","광주","울산","세종",
+             "경기","강원","충북","충남","전북","전남","경북","경남","제주"]
+    for b in BROAD:
+        if b in text: return b
+    # 세부 지역명으로 역매핑
+    for name, broad in _REGION_TO_BROAD.items():
+        if name in text: return broad
+    return ""
+
 def kakao_search_nearby(lat: float, lng: float, query: str = "", radius: int = 200) -> list:
     if not KAKAO_REST: return []
     params = {
@@ -1009,6 +1052,13 @@ def _build_entry_from_llm(video: dict, title: str, sub_text: str, desc_text: str
     mm = is_category_mismatch(title, kakao_category)
     if mm[0]:
         print(f"    [거부: 카테고리 불일치 - 영상은 '{mm[1]}'인데 매장 카테고리 '{kakao_category}']")
+        return None
+    # 자막/제목의 광역 지역과 매장 주소의 광역 지역이 다르면 거부
+    # (예: 자막 '수원' → '경기'인데 매장 주소 '부산 부산진구...' → '부산')
+    sub_broad = broad_region_of((sub_text or "") + " " + (title or ""))
+    addr_broad = broad_region_of(address or "")
+    if sub_broad and addr_broad and sub_broad != addr_broad:
+        print(f"    [거부: 지역 불일치 - 영상 지역 '{sub_broad}' vs 매장 주소 '{addr_broad}' ({address})]")
         return None
 
     return {
@@ -1340,6 +1390,12 @@ def process_new_video(video: dict) -> list[dict]:
     mm = is_category_mismatch(title, kakao_category)
     if mm[0]:
         print(f"    [거부: 카테고리 불일치 - 영상은 '{mm[1]}'인데 매장 카테고리 '{kakao_category}']")
+        return []
+    # 자막/제목의 광역 지역과 매장 주소의 광역 지역이 다르면 거부
+    sub_broad = broad_region_of((sub_text or "") + " " + (title or ""))
+    addr_broad = broad_region_of(address or "")
+    if sub_broad and addr_broad and sub_broad != addr_broad:
+        print(f"    [거부: 지역 불일치 - 영상 지역 '{sub_broad}' vs 매장 주소 '{addr_broad}' ({address})]")
         return []
 
     # menus 채우기 — LLM.menus 우선, 없으면 kakao_category leaf에서 파싱
