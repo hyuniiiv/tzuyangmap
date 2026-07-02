@@ -133,34 +133,6 @@
     ]
   },
   {
-    "name": "남영돈",
-    "address": "서울 용산구 한강대로80길 17",
-    "category": "한식",
-    "region": "서울",
-    "video_id": "xDgE1PZMVmM",
-    "video_title": "소화제 드시고 중도포기..?🥺 약 20,000칼로리 음식을 비님에게 바쳤습니다",
-    "video_url": "https://www.youtube.com/watch?v=xDgE1PZMVmM",
-    "thumbnail": "https://i.ytimg.com/vi/xDgE1PZMVmM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjKX-mO1FjIdNrEQgFU6cKL3cC1Q",
-    "upload_date": "2026-05-12",
-    "duplicate": false,
-    "source": "websearch_manual",
-    "lat": 37.542749,
-    "lng": 126.973776,
-    "kakao_verified": {
-      "name": "남영돈",
-      "address": "서울 용산구 한강대로80길 17",
-      "distance_m": 0,
-      "similarity": 1.0
-    },
-    "phone": "02-793-3598",
-    "place_url": "http://place.map.kakao.com/1228257268",
-    "kakao_category": "음식점 > 한식 > 육류,고기",
-    "menus": [
-      "소화제",
-      "20,000칼로리 음식"
-    ]
-  },
-  {
     "name": "타코냠냠",
     "address": "서울 종로구 지봉로 7",
     "category": "양식",
@@ -22839,31 +22811,6 @@
     ]
   },
   {
-    "name": "서래마을이야기",
-    "address": "서울 서초구 서래로 50",
-    "category": "한식",
-    "region": "서울",
-    "video_id": "Jv43oMkVzDw",
-    "video_title": "도대체 뭘 먹었을까",
-    "video_url": "https://www.youtube.com/watch?v=Jv43oMkVzDw",
-    "thumbnail": "https://i.ytimg.com/vi/Jv43oMkVzDw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAardtO4evDxZWbX4Y2yBwE4zv4Cg",
-    "upload_date": "2026-06-11",
-    "lat": 37.499102,
-    "lng": 126.998862,
-    "source": "auto_kakao",
-    "channel": "tzuyang",
-    "phone": "02-534-3388",
-    "place_url": "http://place.map.kakao.com/12505740",
-    "kakao_category": "음식점 > 한식",
-    "menus": [
-      "불고기",
-      "비빔밥",
-      "김치찌개",
-      "잡채",
-      "갈비찜"
-    ]
-  },
-  {
     "name": "혜리네스넥",
     "address": "강원특별자치도 춘천시 우석로85번길 20-15",
     "category": "분식",
@@ -22883,27 +22830,6 @@
     "menus": [
       "떡꼬치",
       "닭강정"
-    ]
-  },
-  {
-    "name": "요아정",
-    "address": "서울 서대문구 충정로3",
-    "category": "카페",
-    "region": "서울",
-    "video_id": "iMz2KU10u2Q",
-    "video_title": "과연 1등은..?🏆 요아정 빙수 전메뉴 털었습니다",
-    "video_url": "https://www.youtube.com/watch?v=iMz2KU10u2Q",
-    "thumbnail": "https://i.ytimg.com/vi/iMz2KU10u2Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvwm3i2E5d2g8QpvUG8bNlkg6pFw",
-    "upload_date": "2026-06-15",
-    "lat": 37.561211,
-    "lng": 126.963932,
-    "source": "auto_kakao",
-    "channel": "tzuyang",
-    "phone": "",
-    "place_url": "",
-    "kakao_category": "",
-    "menus": [
-      "빙수"
     ]
   },
   {
@@ -22949,27 +22875,6 @@
       "냉면",
       "맥주",
       "역전할머니맥주"
-    ]
-  },
-  {
-    "name": "온정",
-    "address": "서울 중구 청구로 64",
-    "category": "기타",
-    "region": "서울",
-    "video_id": "dJONr8ZpwhM",
-    "video_title": "할머니께서 맛이 그저 그렇다고 했는데.. 김치찜 먹다 눈물날뻔 했습니다😂 가평 숨은맛집 온정식당",
-    "video_url": "https://www.youtube.com/watch?v=dJONr8ZpwhM",
-    "thumbnail": "https://i.ytimg.com/vi/dJONr8ZpwhM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC8xg=&rs=AOn4CLBlKsfsPvTEQzgqvrtYq0bs2psFcw",
-    "upload_date": "2026-06-23",
-    "lat": 37.55996,
-    "lng": 127.015451,
-    "source": "auto_kakao",
-    "channel": "tzuyang",
-    "phone": "",
-    "place_url": "http://place.map.kakao.com/184391581",
-    "kakao_category": "음식점",
-    "menus": [
-      "김치찜"
     ]
   },
   {
@@ -23036,29 +22941,6 @@
     ]
   },
   {
-    "name": "우정",
-    "address": "서울 종로구 인사동16길 11-1",
-    "category": "한식",
-    "region": "서울",
-    "video_id": "KS_53b_YcvA",
-    "video_title": "먹다가 짜증났습니다😡 평일 밤 12시에 웨이팅?! 극한의 매운 닭발! 신당동 떡볶이골목 우정",
-    "video_url": "https://www.youtube.com/watch?v=KS_53b_YcvA",
-    "thumbnail": "https://i.ytimg.com/vi/KS_53b_YcvA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNDKwBj6Vrl2ZlT-ZxIaDe-Iluow",
-    "upload_date": "2026-06-29",
-    "lat": 37.575073,
-    "lng": 126.983975,
-    "source": "auto_kakao",
-    "channel": "tzuyang",
-    "phone": "02-732-1008",
-    "place_url": "http://place.map.kakao.com/11180381",
-    "kakao_category": "음식점 > 한식 > 한정식",
-    "menus": [
-      "매운 닭발",
-      "떡볶이",
-      "닭발"
-    ]
-  },
-  {
     "name": "라면의 달인",
     "address": "부산 부산진구 가야대로784번길 41",
     "category": "분식",
@@ -23077,6 +22959,98 @@
     "kakao_category": "음식점 > 분식",
     "menus": [
       "라면"
+    ]
+  },
+  {
+    "name": "야미도",
+    "address": "서울 서초구 서래로8길 16",
+    "category": "일식",
+    "region": "서울",
+    "video_id": "Jv43oMkVzDw",
+    "video_title": "도대체 뭘 먹었을까",
+    "video_url": "https://www.youtube.com/watch?v=Jv43oMkVzDw",
+    "thumbnail": "https://i.ytimg.com/vi/Jv43oMkVzDw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAardtO4evDxZWbX4Y2yBwE4zv4Cg",
+    "upload_date": "2026-06-11",
+    "lat": 37.498524,
+    "lng": 126.9992,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-599-6620",
+    "place_url": "http://place.map.kakao.com/16676213",
+    "kakao_category": "음식점 > 일식 > 일식집",
+    "menus": [
+      "알밥",
+      "우동",
+      "알탕",
+      "일식집"
+    ]
+  },
+  {
+    "name": "영화장",
+    "address": "서울 동대문구 휘경로 3-8",
+    "category": "중식",
+    "region": "서울",
+    "video_id": "xDgE1PZMVmM",
+    "video_title": "소화제 드시고 중도포기..?🥺 약 20,000칼로리 음식을 비님에게 바쳤습니다",
+    "video_url": "https://www.youtube.com/watch?v=xDgE1PZMVmM",
+    "thumbnail": "https://i.ytimg.com/vi/xDgE1PZMVmM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjKX-mO1FjIdNrEQgFU6cKL3cC1Q",
+    "upload_date": "2026-05-12",
+    "lat": 37.596579,
+    "lng": 127.060943,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-967-9595",
+    "place_url": "http://place.map.kakao.com/9316895",
+    "kakao_category": "음식점 > 중식 > 중국요리",
+    "menus": [
+      "대겐살, 짜장면, 짬뽕",
+      "대겐살",
+      "짜장면",
+      "짬뽕"
+    ]
+  },
+  {
+    "name": "우정",
+    "address": "서울 중구 퇴계로76길 55",
+    "category": "분식",
+    "region": "서울",
+    "video_id": "KS_53b_YcvA",
+    "video_title": "먹다가 짜증났습니다😡 평일 밤 12시에 웨이팅?! 극한의 매운 닭발! 신당동 떡볶이골목 우정",
+    "video_url": "https://www.youtube.com/watch?v=KS_53b_YcvA",
+    "thumbnail": "https://i.ytimg.com/vi/KS_53b_YcvA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNDKwBj6Vrl2ZlT-ZxIaDe-Iluow",
+    "upload_date": "2026-06-29",
+    "lat": 37.562796,
+    "lng": 127.01491,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-2233-0669",
+    "place_url": "http://place.map.kakao.com/27388900",
+    "kakao_category": "음식점 > 분식 > 떡볶이",
+    "menus": [
+      "매운닭발",
+      "닭발",
+      "떡볶이"
+    ]
+  },
+  {
+    "name": "온정식당",
+    "address": "경기 가평군 가평읍 태봉안길 21-18",
+    "category": "한식",
+    "region": "경기",
+    "video_id": "dJONr8ZpwhM",
+    "video_title": "할머니께서 맛이 그저 그렇다고 했는데.. 김치찜 먹다 눈물날뻔 했습니다😂 가평 숨은맛집 온정식당",
+    "video_url": "https://www.youtube.com/watch?v=dJONr8ZpwhM",
+    "thumbnail": "https://i.ytimg.com/vi/dJONr8ZpwhM/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC8xg=&rs=AOn4CLBlKsfsPvTEQzgqvrtYq0bs2psFcw",
+    "upload_date": "2026-06-23",
+    "lat": 37.804847,
+    "lng": 127.487881,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-581-1861",
+    "place_url": "http://place.map.kakao.com/17038315",
+    "kakao_category": "음식점 > 한식",
+    "menus": [
+      "김치찜"
     ]
   }
 ]
