@@ -23054,5 +23054,28 @@
     "menus": [
       "김치찜"
     ]
+  },
+  {
+    "name": "풍년비빔국수 천호점",
+    "address": "서울 강동구 천호대로158길 9",
+    "category": "한식",
+    "region": "서울",
+    "video_id": "nB6QYKjrGyw",
+    "video_title": "제 방송이 거짓인줄 아셨다고 해서 증명했습니다🔥 천호역 숨은맛집 풍년비빔국수",
+    "video_url": "https://www.youtube.com/watch?v=nB6QYKjrGyw",
+    "thumbnail": "https://i.ytimg.com/vi/nB6QYKjrGyw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrvRkv0sxv4ugo6T9sHZ-yuIOFqg",
+    "upload_date": "2026-07-03",
+    "lat": 37.537096,
+    "lng": 127.126166,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-475-8078",
+    "place_url": "http://place.map.kakao.com/16057416",
+    "kakao_category": "음식점 > 한식 > 국수",
+    "menus": [
+      "비빔국수",
+      "열무국수",
+      "칼국수"
+    ]
   }
 ]
