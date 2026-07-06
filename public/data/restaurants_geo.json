@@ -12300,8 +12300,8 @@
     ]
   },
   {
-    "name": "여의도 성지",
-    "address": "서울특별시 영등포구 여의공원로 68",
+    "name": "가양칼국수버섯매운탕",
+    "address": "서울 영등포구 국제금융로 78",
     "category": "면류",
     "region": "서울",
     "video_id": "f0CLSz_6LDE",
@@ -12311,12 +12311,13 @@
     "upload_date": "2022-12-30",
     "lat": 37.526809,
     "lng": 126.922284,
-    "source": "auto_kakao",
+    "source": "websearch_manual",
     "channel": "tzuyang",
-    "phone": "",
+    "phone": "0507-1399-0438",
     "place_url": "",
     "kakao_category": "",
     "menus": [
+      "버섯매운탕",
       "칼국수"
     ]
   },
