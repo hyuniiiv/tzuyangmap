@@ -23077,5 +23077,30 @@
       "열무국수",
       "칼국수"
     ]
+  },
+  {
+    "name": "만선호프 을지로본점",
+    "address": "서울 광진구 천호대로 634",
+    "category": "분식",
+    "region": "서울",
+    "video_id": "AxFqN2pg4DE",
+    "video_title": "사장님이 제 구독자면 XX 공짜래요!!😱 인생 최초 슬러시 생맥주와 라면 치킨 떡볶이 먹방",
+    "video_url": "https://www.youtube.com/watch?v=AxFqN2pg4DE",
+    "thumbnail": "https://i.ytimg.com/vi/AxFqN2pg4DE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoVAOE1_8R_gIPP0j_YZzVUUjtHw",
+    "upload_date": "2026-07-06",
+    "lat": 37.553599,
+    "lng": 127.087558,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "테라 제로",
+      "생맥주",
+      "라면",
+      "떡볶이",
+      "맥주"
+    ]
   }
 ]
