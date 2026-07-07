@@ -23102,5 +23102,27 @@
       "떡볶이",
       "맥주"
     ]
+  },
+  {
+    "name": "정준하 샤브샤브",
+    "address": "서울 강남구 도산대로49길 23",
+    "category": "중식",
+    "region": "서울",
+    "video_id": "O2TPP2TUvJo",
+    "video_title": "정준하님이 밥 사주신다해서 20인분 먹었더니..🤣 짜장면 대결 성사됐습니다🔥",
+    "video_url": "https://www.youtube.com/watch?v=O2TPP2TUvJo",
+    "thumbnail": "https://i.ytimg.com/vi/O2TPP2TUvJo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCOfUePtLZ7tGnkEcMt6QC1qGC9CA",
+    "upload_date": "2026-07-07",
+    "lat": 37.524434,
+    "lng": 127.036899,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "샤브샤브",
+      "짜장"
+    ]
   }
 ]
