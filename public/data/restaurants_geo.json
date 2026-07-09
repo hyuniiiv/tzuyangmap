@@ -23124,5 +23124,30 @@
       "샤브샤브",
       "짜장"
     ]
+  },
+  {
+    "name": "정원분식",
+    "address": "경기 시흥시 거북섬둘레길 42",
+    "category": "분식",
+    "region": "경기",
+    "video_id": "FMF0BGNbA-k",
+    "video_title": "망한줄 아셨죠..?😂 가게를 전부 정리한 이유..🤦‍♂️ 정원분식 불시점검 왔습니다",
+    "video_url": "https://www.youtube.com/watch?v=FMF0BGNbA-k",
+    "thumbnail": "https://i.ytimg.com/vi/FMF0BGNbA-k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDb7DOdBXHkCV2kmTWtXkGIzLWVhQ",
+    "upload_date": "2026-07-09",
+    "lat": 37.324067,
+    "lng": 126.680693,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/1480953362",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "불고기 떡볶이",
+      "김밥",
+      "순대",
+      "튀김",
+      "라면"
+    ]
   }
 ]
