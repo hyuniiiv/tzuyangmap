@@ -23149,5 +23149,57 @@
       "튀김",
       "라면"
     ]
+  },
+  {
+    "name": "다사랑치킨피자 원대본점",
+    "address": "전북특별자치도 익산시 동서로5길 94",
+    "category": "치킨",
+    "region": "전북",
+    "video_id": "JPEWVoGyT6s",
+    "video_title": "익산을 재패한 치킨집..?!😳 먹으면 깜짝 놀란다는 다사랑치킨 8가지 메뉴 먹었습니다",
+    "video_url": "https://www.youtube.com/watch?v=JPEWVoGyT6s",
+    "thumbnail": "https://i.ytimg.com/vi/JPEWVoGyT6s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzY_Y2RcnnNTXG5loZo24dDWAzwA",
+    "upload_date": "2026-07-11",
+    "lat": 35.960805,
+    "lng": 126.957781,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "063-854-1436",
+    "place_url": "http://place.map.kakao.com/18444388",
+    "kakao_category": "음식점 > 치킨 > 다사랑치킨",
+    "menus": [
+      "후라이드",
+      "양념",
+      "화살치킨",
+      "강정",
+      "순살후라이드",
+      "다사랑치킨"
+    ]
+  },
+  {
+    "name": "다사랑치킨 부송점",
+    "address": "전북특별자치도 익산시 선화로73길 27",
+    "category": "치킨",
+    "region": "전북",
+    "video_id": "JPEWVoGyT6s",
+    "video_title": "익산을 재패한 치킨집..?!😳 먹으면 깜짝 놀란다는 다사랑치킨 8가지 메뉴 먹었습니다",
+    "video_url": "https://www.youtube.com/watch?v=JPEWVoGyT6s",
+    "thumbnail": "https://i.ytimg.com/vi/JPEWVoGyT6s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzY_Y2RcnnNTXG5loZo24dDWAzwA",
+    "upload_date": "2026-07-11",
+    "lat": 35.958249,
+    "lng": 126.996702,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "063-833-9008",
+    "place_url": "http://place.map.kakao.com/13265648",
+    "kakao_category": "음식점 > 치킨 > 다사랑치킨",
+    "menus": [
+      "후라이드",
+      "양념",
+      "화살치킨",
+      "강정",
+      "순살후라이드",
+      "다사랑치킨"
+    ]
   }
 ]
