@@ -23201,5 +23201,27 @@
       "순살후라이드",
       "다사랑치킨"
     ]
+  },
+  {
+    "name": "라면",
+    "address": "경남 통영시 욕지면 서촌아랫길 112",
+    "category": "해산물",
+    "region": "경남",
+    "video_id": "UmyzuxLkMqc",
+    "video_title": "연평도1탄) 오늘 잡은 꽃게 다 털었더니 섬 전체가 난리났습니다🤣 게새키 대왕라면과 꽃게먹방",
+    "video_url": "https://www.youtube.com/watch?v=UmyzuxLkMqc",
+    "thumbnail": "https://i.ytimg.com/vi/UmyzuxLkMqc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRdmeTuUwQ4seEVHk7Mse62Yx9Rg",
+    "upload_date": "2026-07-13",
+    "lat": 34.634565,
+    "lng": 128.264681,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "055-644-0277",
+    "place_url": "http://place.map.kakao.com/16251592",
+    "kakao_category": "음식점 > 한식 > 해물,생선",
+    "menus": [
+      "라면",
+      "꽃게"
+    ]
   }
 ]
