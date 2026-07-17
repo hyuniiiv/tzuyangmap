@@ -23223,5 +23223,30 @@
       "라면",
       "꽃게"
     ]
+  },
+  {
+    "name": "보물섬",
+    "address": "서울 강남구 강남대로120길 40",
+    "category": "해산물",
+    "region": "서울",
+    "video_id": "5brnQKkvSr4",
+    "video_title": "연평도3탄) 사장님이 저보고 알아서 문잠그고 가래요🤣 모든 주민이 추천한 섬 1등맛집?! 제육 칼국수 먹방",
+    "video_url": "https://www.youtube.com/watch?v=5brnQKkvSr4",
+    "thumbnail": "https://i.ytimg.com/vi/5brnQKkvSr4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmymVKbp0d-x1ya0v_Pot7oOk00w",
+    "upload_date": "2026-07-17",
+    "lat": 37.507633,
+    "lng": 127.026579,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-540-3563",
+    "place_url": "http://place.map.kakao.com/16705705",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회",
+    "menus": [
+      "제육 칼국수",
+      "칼제비",
+      "수제비",
+      "칼국수",
+      "회"
+    ]
   }
 ]
