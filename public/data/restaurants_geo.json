@@ -23248,5 +23248,28 @@
       "칼국수",
       "회"
     ]
+  },
+  {
+    "name": "소림마라 마포점",
+    "address": "서울 마포구 와우산로29길 8",
+    "category": "중식",
+    "region": "서울",
+    "video_id": "G-4AtmmJ9BQ",
+    "video_title": "마라탕 먹고싶어지는 영상",
+    "video_url": "https://www.youtube.com/watch?v=G-4AtmmJ9BQ",
+    "thumbnail": "https://i.ytimg.com/vi/G-4AtmmJ9BQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDM44zSBDA6zCh6stsGE-MpblYOFQ",
+    "upload_date": "2026-07-19",
+    "lat": 37.555031,
+    "lng": 126.929601,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-337-3733",
+    "place_url": "http://place.map.kakao.com/2110867044",
+    "kakao_category": "음식점 > 중식 > 중국요리 > 소림마라",
+    "menus": [
+      "마라탕",
+      "샹궈",
+      "소림마라"
+    ]
   }
 ]
