@@ -23271,5 +23271,30 @@
       "샹궈",
       "소림마라"
     ]
+  },
+  {
+    "name": "별미식당",
+    "address": "충북 괴산군 괴산읍 읍내로6길 20-5",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "Hw2IzWvWDGM",
+    "video_title": "연평도4탄) 아침부터 고기 10인분 먹었더니 도민분들 반응이..🤣 너무 맛있어서 하루에 두번갔습니다",
+    "video_url": "https://www.youtube.com/watch?v=Hw2IzWvWDGM",
+    "thumbnail": "https://i.ytimg.com/vi/Hw2IzWvWDGM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCrOOY4Mi-JQBX8Z_oYvZGTQ6dDOw",
+    "upload_date": "2026-07-21",
+    "lat": 36.809476,
+    "lng": 127.791841,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "043-833-2116",
+    "place_url": "http://place.map.kakao.com/11057433",
+    "kakao_category": "음식점 > 한식",
+    "menus": [
+      "삼겹살",
+      "갈빗살",
+      "김치찌개",
+      "열무국수",
+      "된장찌개"
+    ]
   }
 ]
