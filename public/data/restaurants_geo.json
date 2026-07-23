@@ -23296,5 +23296,30 @@
       "열무국수",
       "된장찌개"
     ]
+  },
+  {
+    "name": "대왕족발",
+    "address": "인천 계양구 안남로553번길 10",
+    "category": "한식",
+    "region": "인천",
+    "video_id": "N5bkiunc3uw",
+    "video_title": "연평도5탄) 이거 다먹으면 xx할수도 있대요😰 섬에 유일한 대왕매운족발과 김치우동 먹방",
+    "video_url": "https://www.youtube.com/watch?v=N5bkiunc3uw",
+    "thumbnail": "https://i.ytimg.com/vi/N5bkiunc3uw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCz7GB8PmoQyMokz4k4Z959qsmUw",
+    "upload_date": "2026-07-23",
+    "lat": 37.532695,
+    "lng": 126.709498,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "032-547-9175",
+    "place_url": "http://place.map.kakao.com/21227843",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈",
+    "menus": [
+      "대왕매운족발",
+      "김치우동",
+      "족발",
+      "우동",
+      "보쌈"
+    ]
   }
 ]
