@@ -23321,5 +23321,26 @@
       "우동",
       "보쌈"
     ]
+  },
+  {
+    "name": "피자헛 방이점",
+    "address": "서울 송파구 가락로 272",
+    "category": "양식",
+    "region": "서울",
+    "video_id": "5dx66EjCG4I",
+    "video_title": "쓰리스타킬러 셰프님이 만든 피자.. 맛있을까?🤔",
+    "video_url": "https://www.youtube.com/watch?v=5dx66EjCG4I",
+    "thumbnail": "https://i.ytimg.com/vi/5dx66EjCG4I/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC8xg=&rs=AOn4CLAIHFIJ1YOravjaPXJ2dV7msuy26A",
+    "upload_date": "2026-07-25",
+    "lat": 37.51249,
+    "lng": 127.119768,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-443-2123",
+    "place_url": "http://place.map.kakao.com/8136886",
+    "kakao_category": "음식점 > 양식 > 피자 > 피자헛",
+    "menus": [
+      "피자헛"
+    ]
   }
 ]
