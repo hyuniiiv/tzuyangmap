@@ -23342,5 +23342,31 @@
     "menus": [
       "피자헛"
     ]
+  },
+  {
+    "name": "김밥천국",
+    "address": "서울 중구 퇴계로 114-3",
+    "category": "분식",
+    "region": "서울",
+    "video_id": "uc8P7dz-tFg",
+    "video_title": "메뉴만 400가지?!😱 간장게장 파는 섬의 유일한 김밥천국..? 새우라면 김밥 떡볶이 냉면 돈까스",
+    "video_url": "https://www.youtube.com/watch?v=uc8P7dz-tFg",
+    "thumbnail": "https://i.ytimg.com/vi/uc8P7dz-tFg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdLJ3Le0BWHpSsXeQRnAG6vjIY3A",
+    "upload_date": "2026-07-27",
+    "lat": 37.560556,
+    "lng": 126.984476,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-771-9565",
+    "place_url": "http://place.map.kakao.com/454212635",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "간장게장",
+      "새우라면",
+      "김밥",
+      "떡볶이",
+      "냉면",
+      "돈까스"
+    ]
   }
 ]
