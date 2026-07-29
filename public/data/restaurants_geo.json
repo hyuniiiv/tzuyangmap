@@ -23368,5 +23368,30 @@
       "냉면",
       "돈까스"
     ]
+  },
+  {
+    "name": "상록분식",
+    "address": "서울 강동구 양재대로87길 35",
+    "category": "분식",
+    "region": "서울",
+    "video_id": "W8zkwvIrWoY",
+    "video_title": "서울에 4000원 백반집?!😱 말도안되는 가격의 상록분식 청국장 라면 오징어볶음 뚝불 털었습니다",
+    "video_url": "https://www.youtube.com/watch?v=W8zkwvIrWoY",
+    "thumbnail": "https://i.ytimg.com/vi/W8zkwvIrWoY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnDd6Q0Hkzpb01IQ17VFoKCqwGbg",
+    "upload_date": "2026-07-29",
+    "lat": 37.525765,
+    "lng": 127.133093,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-475-4394",
+    "place_url": "http://place.map.kakao.com/20749964",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "청국장",
+      "라면",
+      "오징어볶음",
+      "뚝불",
+      "오징어"
+    ]
   }
 ]
