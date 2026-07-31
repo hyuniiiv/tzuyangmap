@@ -23393,5 +23393,28 @@
       "뚝불",
       "오징어"
     ]
+  },
+  {
+    "name": "나정순할매쭈꾸미",
+    "address": "서울 동대문구 무학로 144",
+    "category": "해산물",
+    "region": "서울",
+    "video_id": "Vo0o025xUKE",
+    "video_title": "끝까지 안 믿던 사장님이 결국.. 인정 하셨습니다🤣 용두동 철판 쭈꾸미 먹방",
+    "video_url": "https://www.youtube.com/watch?v=Vo0o025xUKE",
+    "thumbnail": "https://i.ytimg.com/vi/Vo0o025xUKE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbwc89ZldaBj8-gWv4PEY8UrxDNw",
+    "upload_date": "2026-07-31",
+    "lat": 37.577075,
+    "lng": 127.03069,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-928-0231",
+    "place_url": "http://place.map.kakao.com/27175293",
+    "kakao_category": "음식점 > 한식 > 해물,생선",
+    "menus": [
+      "쭈꾸미",
+      "볶음밥",
+      "삼겹살"
+    ]
   }
 ]
