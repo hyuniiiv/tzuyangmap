@@ -23542,5 +23542,26 @@
     "menus": [
       "짬뽕"
     ]
+  },
+  {
+    "name": "김삿갓",
+    "address": "전북특별자치도 무주군 설천면 하평지길 5",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "KiWU8i-lwlU",
+    "video_title": "사장님 그만주세요..😰 음식이 끝도없이 나오는 역대 최고의 식당에서 만취했습니다",
+    "video_url": "https://www.youtube.com/watch?v=KiWU8i-lwlU",
+    "thumbnail": "https://i.ytimg.com/vi/KiWU8i-lwlU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLxLE9jfsvq2wMbYZgRs0-Y-cRMQ",
+    "upload_date": "2026-08-06",
+    "lat": 36.010816,
+    "lng": 127.786873,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "063-324-5992",
+    "place_url": "http://place.map.kakao.com/21247702",
+    "kakao_category": "음식점 > 한식 > 순대",
+    "menus": [
+      "순대"
+    ]
   }
 ]
