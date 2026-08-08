@@ -23563,5 +23563,27 @@
     "menus": [
       "순대"
     ]
+  },
+  {
+    "name": "정읍한우",
+    "address": "전북특별자치도 정읍시 북면 화평길 2",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "jkMs-U187T0",
+    "video_title": "전국에서 소가 가장 많은 지역?!😳 최고급 한우가 반값인 정읍 소고기 XX인분 먹방  ",
+    "video_url": "https://www.youtube.com/watch?v=jkMs-U187T0",
+    "thumbnail": "https://i.ytimg.com/vi/jkMs-U187T0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuRWrKxE41pD4pdShJpPtgBae46A",
+    "upload_date": "2026-08-08",
+    "lat": 35.603325,
+    "lng": 126.884343,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "063-534-6492",
+    "place_url": "http://place.map.kakao.com/23733127",
+    "kakao_category": "음식점 > 한식 > 육류,고기",
+    "menus": [
+      "소고기",
+      "한우"
+    ]
   }
 ]
