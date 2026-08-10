@@ -23585,5 +23585,30 @@
       "소고기",
       "한우"
     ]
+  },
+  {
+    "name": "까치기사식당 본점",
+    "address": "인천 부평구 백범로 526",
+    "category": "일식",
+    "region": "인천",
+    "video_id": "kwYy3vzJaeE",
+    "video_title": "살려는 드렸습니다..😂 박성웅님 단골 기사식당 털기🔥 돈까스 제육 청국장 먹방",
+    "video_url": "https://www.youtube.com/watch?v=kwYy3vzJaeE",
+    "thumbnail": "https://i.ytimg.com/vi/kwYy3vzJaeE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgfTn4KPmMlRBPebIxNvaexslbLw",
+    "upload_date": "2026-08-10",
+    "lat": 37.471704,
+    "lng": 126.694145,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "032-426-0613",
+    "place_url": "http://place.map.kakao.com/15838026",
+    "kakao_category": "음식점 > 기사식당",
+    "menus": [
+      "돈까스, 제육, 청국장",
+      "돈까스",
+      "제육",
+      "청국장",
+      "기사식당"
+    ]
   }
 ]
