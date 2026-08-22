@@ -23610,5 +23610,27 @@
       "청국장",
       "기사식당"
     ]
+  },
+  {
+    "name": "24시전주콩각시콩나물국밥 다산점",
+    "address": "경기 남양주시 다산중앙로123번길 22-18",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "VYv06RZqe8k",
+    "video_title": "24시 무인라면가게 털기🔥",
+    "video_url": "https://www.youtube.com/watch?v=VYv06RZqe8k",
+    "thumbnail": "https://i.ytimg.com/vi/VYv06RZqe8k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkmi33tMPrUkuCoOQogiqJzr7IJA",
+    "upload_date": "2026-08-22",
+    "lat": 37.624794,
+    "lng": 127.151185,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-558-9904",
+    "place_url": "http://place.map.kakao.com/389728438",
+    "kakao_category": "음식점 > 한식 > 국밥",
+    "menus": [
+      "라면",
+      "국밥"
+    ]
   }
 ]
