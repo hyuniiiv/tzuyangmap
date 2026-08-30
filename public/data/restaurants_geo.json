@@ -23632,5 +23632,30 @@
       "라면",
       "국밥"
     ]
+  },
+  {
+    "name": "아웃백스테이크하우스 울산삼산점",
+    "address": "울산 남구 삼산로 231",
+    "category": "기타",
+    "region": "울산",
+    "video_id": "fvYDGXvibQ0",
+    "video_title": "추억의 아웃백 스테이크 오랜만에 가봤더니..🤔 티본 스테이크와 치즈폭탄 폭립 먹방",
+    "video_url": "https://www.youtube.com/watch?v=fvYDGXvibQ0",
+    "thumbnail": "https://i.ytimg.com/vi/fvYDGXvibQ0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA1s-yu2RerrxIjjBKjqsvnp0Hfig",
+    "upload_date": "2026-08-30",
+    "lat": 35.538673,
+    "lng": 129.332134,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "052-256-1491",
+    "place_url": "http://place.map.kakao.com/1777085496",
+    "kakao_category": "음식점 > 패밀리레스토랑 > 아웃백스테이크하우스",
+    "menus": [
+      "티본 스테이크와 치즈폭탄 폭립",
+      "티본 스테이크",
+      "치즈폭탄 폭립",
+      "스테이크",
+      "아웃백스테이크하우스"
+    ]
   }
 ]
