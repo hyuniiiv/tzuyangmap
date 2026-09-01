@@ -23657,5 +23657,31 @@
       "스테이크",
       "아웃백스테이크하우스"
     ]
+  },
+  {
+    "name": "옛날국시",
+    "address": "서울 용산구 녹사평대로32길 24",
+    "category": "한식",
+    "region": "서울",
+    "video_id": "Cm_16LY1v-g",
+    "video_title": "50년 동안 3대째 내려온 부침개 김밥?!😳 정읍 옛날김밥 라뽂이 비빔밥 돈까스 라면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=Cm_16LY1v-g",
+    "thumbnail": "https://i.ytimg.com/vi/Cm_16LY1v-g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLChf8yV1X7gBBMfqSQMToxwPnZxyQ",
+    "upload_date": "2026-09-01",
+    "lat": 37.533478,
+    "lng": 126.989981,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-798-7997",
+    "place_url": "http://place.map.kakao.com/26825806",
+    "kakao_category": "음식점 > 한식",
+    "menus": [
+      "부침개 김밥",
+      "부침개",
+      "김밥",
+      "라볶이",
+      "비빔밥",
+      "돈까스"
+    ]
   }
 ]
