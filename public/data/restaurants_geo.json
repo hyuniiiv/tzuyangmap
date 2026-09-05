@@ -23683,5 +23683,30 @@
       "비빔밥",
       "돈까스"
     ]
+  },
+  {
+    "name": "닭한마리와일산칼국수 종로점",
+    "address": "서울 종로구 삼일대로15길 6",
+    "category": "면류",
+    "region": "서울",
+    "video_id": "uv03TZWk1QE",
+    "video_title": "육수추가만 15번 하는 배달 단골집 찾아갔더니 사장님이..😂 등촌 샤브칼국수 먹방",
+    "video_url": "https://www.youtube.com/watch?v=uv03TZWk1QE",
+    "thumbnail": "https://i.ytimg.com/vi/uv03TZWk1QE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCOlFkeGWxRdUJTfzRt4BdYjJr35A",
+    "upload_date": "2026-09-05",
+    "lat": 37.568763,
+    "lng": 126.987273,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-734-9491",
+    "place_url": "http://place.map.kakao.com/10374829",
+    "kakao_category": "음식점 > 샤브샤브 > 등촌샤브칼국수",
+    "menus": [
+      "샤브칼국수",
+      "볶음밥",
+      "칼국수",
+      "샤브",
+      "등촌샤브칼국수"
+    ]
   }
 ]
