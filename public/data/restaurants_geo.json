@@ -23708,5 +23708,27 @@
       "샤브",
       "등촌샤브칼국수"
     ]
+  },
+  {
+    "name": "곱창촌",
+    "address": "충주",
+    "category": "구이",
+    "region": "기타",
+    "video_id": "4PAsguFePuw",
+    "video_title": "저랑 똑같이 먹는다는 옆손님..?!😨 곱창 총 17미터 대결했습니다🔥 충주 소곱창 먹방",
+    "video_url": "https://www.youtube.com/watch?v=4PAsguFePuw",
+    "thumbnail": "https://i.ytimg.com/vi/4PAsguFePuw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgNpie9j1X1nSDl0uV7Z-TqsPDMQ",
+    "upload_date": "2026-09-07",
+    "lat": 36.991049,
+    "lng": 127.925961,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "소곱창",
+      "곱창"
+    ]
   }
 ]
