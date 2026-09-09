@@ -23730,5 +23730,28 @@
       "소곱창",
       "곱창"
     ]
+  },
+  {
+    "name": "충주자유시장",
+    "address": "충북 충주시 충인6길 2",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "gV9QMjeRV8s",
+    "video_title": "5일에 한번 장사하는 숨은맛집?!😨 먹는게 사기라고 하셔서 보여드렸습니다🔥시장 비빔밥 국수 부침개",
+    "video_url": "https://www.youtube.com/watch?v=gV9QMjeRV8s",
+    "thumbnail": "https://i.ytimg.com/vi/gV9QMjeRV8s/hq720.jpg?sqp=-oaymwEgCNAFEJQDSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLA00zweJPoXrqnqSEp-YzZglEIaeQ",
+    "upload_date": "2026-09-09",
+    "lat": 36.974183,
+    "lng": 127.929298,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "비빔밥, 국수, 부침개",
+      "비빔밥",
+      "부침개"
+    ]
   }
 ]
