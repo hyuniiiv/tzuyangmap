@@ -23753,5 +23753,30 @@
       "비빔밥",
       "부침개"
     ]
+  },
+  {
+    "name": "땡겨요",
+    "address": "서울 광진구 자양로13길 63",
+    "category": "중식",
+    "region": "서울",
+    "video_id": "DQB0zc9PBnA",
+    "video_title": "뭐가 올지 모르는 랜덤 배달음식?!🔥 과연 감당할수 있을까..?",
+    "video_url": "https://www.youtube.com/watch?v=DQB0zc9PBnA",
+    "thumbnail": "https://i.ytimg.com/vi/DQB0zc9PBnA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeLZxPJJ35UBo2hMbWDh9Zi_XxSg",
+    "upload_date": "2026-09-13",
+    "lat": 37.534133,
+    "lng": 127.081357,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/1897744035",
+    "kakao_category": "음식점 > 중식 > 중국요리",
+    "menus": [
+      "짜장면",
+      "탕수육",
+      "볶음밥",
+      "군만두",
+      "짬뽕"
+    ]
   }
 ]
