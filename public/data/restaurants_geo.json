@@ -23778,5 +23778,54 @@
       "군만두",
       "짬뽕"
     ]
+  },
+  {
+    "name": "유선분식",
+    "address": "충북 충주시 예성로 165-1",
+    "category": "분식",
+    "region": "기타",
+    "video_id": "ZHK1z15iLYg",
+    "video_title": "충주 쫄면 양대산맥?! 어디가 더 맛있을까..?🤔 60년전통 분식집과 떡볶이 라면 김밥 먹방",
+    "video_url": "https://www.youtube.com/watch?v=ZHK1z15iLYg",
+    "thumbnail": "https://i.ytimg.com/vi/ZHK1z15iLYg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8O2sMrGnPKcOFuC4-789yAipRuQ",
+    "upload_date": "2026-09-13",
+    "lat": 36.971764,
+    "lng": 127.933094,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "043-847-2003",
+    "place_url": "http://place.map.kakao.com/24162114",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "쫄면",
+      "떡볶이",
+      "김밥",
+      "오뎅국물",
+      "라면"
+    ]
+  },
+  {
+    "name": "오뚜기",
+    "address": "서울 강동구 올림픽로62길 18",
+    "category": "한식",
+    "region": "서울",
+    "video_id": "ZHK1z15iLYg",
+    "video_title": "충주 쫄면 양대산맥?! 어디가 더 맛있을까..?🤔 60년전통 분식집과 떡볶이 라면 김밥 먹방",
+    "video_url": "https://www.youtube.com/watch?v=ZHK1z15iLYg",
+    "thumbnail": "https://i.ytimg.com/vi/ZHK1z15iLYg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8O2sMrGnPKcOFuC4-789yAipRuQ",
+    "upload_date": "2026-09-13",
+    "lat": 37.536459,
+    "lng": 127.123769,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-473-1129",
+    "place_url": "http://place.map.kakao.com/16270103",
+    "kakao_category": "음식점 > 한식 > 육류,고기",
+    "menus": [
+      "떡볶이",
+      "쫄면",
+      "김밥",
+      "라면"
+    ]
   }
 ]
