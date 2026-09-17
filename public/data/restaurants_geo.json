@@ -23827,5 +23827,29 @@
       "김밥",
       "라면"
     ]
+  },
+  {
+    "name": "명동무등산정육식당",
+    "address": "서울 중구 명동10길 10-1",
+    "category": "한식",
+    "region": "서울",
+    "video_id": "jkDzCwDpfV8",
+    "video_title": "주문즉시 망치로 두드리는 즉석돈까스?! 사장님이 저보고 생각보다 못먹는대요😭 순두부 쫄면 제육 명동식당",
+    "video_url": "https://www.youtube.com/watch?v=jkDzCwDpfV8",
+    "thumbnail": "https://i.ytimg.com/vi/jkDzCwDpfV8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwe3L6pVG4ISi7DBOgg3Wbwkkgrg",
+    "upload_date": "2026-09-17",
+    "lat": 37.562917,
+    "lng": 126.985173,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-752-9292",
+    "place_url": "http://place.map.kakao.com/1033428727",
+    "kakao_category": "음식점 > 한식 > 육류,고기",
+    "menus": [
+      "돈까스, 쫄면",
+      "돈까스",
+      "쫄면",
+      "순두부"
+    ]
   }
 ]
