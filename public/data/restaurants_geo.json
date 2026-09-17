@@ -23851,5 +23851,31 @@
       "쫄면",
       "순두부"
     ]
+  },
+  {
+    "name": "프레드피자 부평점",
+    "address": "인천 부평구 부평문화로 18",
+    "category": "양식",
+    "region": "인천",
+    "video_id": "8UGfYqX9HbM",
+    "video_title": "여고 급식실에서 먹방했더니.. 학생들 반응이🤣",
+    "video_url": "https://www.youtube.com/watch?v=8UGfYqX9HbM",
+    "thumbnail": "https://i.ytimg.com/vi/8UGfYqX9HbM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDX5CtwcmV1QEAKtdDwCLyGYkN45w",
+    "upload_date": "2026-09-17",
+    "lat": 37.492276,
+    "lng": 126.719397,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "032-288-5882",
+    "place_url": "http://place.map.kakao.com/1538684102",
+    "kakao_category": "음식점 > 양식 > 피자 > 프레드피자",
+    "menus": [
+      "쉬림플렉스피자",
+      "더블직화불고기피자",
+      "메가콤비네이션 피자",
+      "스윗 골드콘 고구마피자",
+      "흑미 도우",
+      "프레드피자"
+    ]
   }
 ]
