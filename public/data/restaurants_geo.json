@@ -23877,5 +23877,26 @@
       "흑미 도우",
       "프레드피자"
     ]
+  },
+  {
+    "name": "변가네옹진냉면",
+    "address": "인천 미추홀구 한나루로586번길 92",
+    "category": "냉면",
+    "region": "인천",
+    "video_id": "Ck5UrobZuKA",
+    "video_title": "냉면이 유명하다는 인천 냉면 투어🔥 과연 어디가 맛있을까? 80년 전통과 백령도식 냉면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=Ck5UrobZuKA",
+    "thumbnail": "https://i.ytimg.com/vi/Ck5UrobZuKA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQgFVSVGJDhwAjge7a06VbU7nwnA",
+    "upload_date": "2026-09-19",
+    "lat": 37.457675,
+    "lng": 126.677122,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "032-875-0410",
+    "place_url": "http://place.map.kakao.com/8454303",
+    "kakao_category": "음식점 > 한식 > 냉면",
+    "menus": [
+      "냉면"
+    ]
   }
 ]
