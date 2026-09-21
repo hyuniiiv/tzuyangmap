@@ -23898,5 +23898,26 @@
     "menus": [
       "냉면"
     ]
+  },
+  {
+    "name": "타르트야 신포시장본점",
+    "address": "인천 제물포구 신포로46번길 8-6",
+    "category": "카페",
+    "region": "인천",
+    "video_id": "DNGGl1-jFcU",
+    "video_title": "인천 신포시장 다 못털었습니다😂 어딜가나 50년 전통?! 닭강정 떡볶이 핫바 길거리음식 먹방",
+    "video_url": "https://www.youtube.com/watch?v=DNGGl1-jFcU",
+    "thumbnail": "https://i.ytimg.com/vi/DNGGl1-jFcU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBe_-nolHNXToxj1Pq4hcVbHZ363A",
+    "upload_date": "2026-09-21",
+    "lat": 37.471611,
+    "lng": 126.626607,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "070-8829-4510",
+    "place_url": "http://place.map.kakao.com/1826742127",
+    "kakao_category": "음식점 > 간식 > 제과,베이커리",
+    "menus": [
+      "떡볶이"
+    ]
   }
 ]
