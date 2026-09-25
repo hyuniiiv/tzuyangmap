@@ -23919,5 +23919,31 @@
     "menus": [
       "떡볶이"
     ]
+  },
+  {
+    "name": "알로하보일링크랩 을왕본점",
+    "address": "인천 영종구 용유서로423번길 7",
+    "category": "한식",
+    "region": "인천",
+    "video_id": "xRf_bhPFZrY",
+    "video_title": "산처럼 쌓인 랍스타와 초대왕 가리비?!😱 대게 전복 해산물 파티! 인천 보일링크랩 먹방",
+    "video_url": "https://www.youtube.com/watch?v=xRf_bhPFZrY",
+    "thumbnail": "https://i.ytimg.com/vi/xRf_bhPFZrY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbESnA1XZ2o5WOW1n8qBf_tiUMIQ",
+    "upload_date": "2026-09-25",
+    "lat": 37.455771,
+    "lng": 126.37049,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "010-4572-3661",
+    "place_url": "http://place.map.kakao.com/1449139964",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 게,대게",
+    "menus": [
+      "해산물",
+      "랍스터",
+      "가리비",
+      "대게",
+      "전복",
+      "랍스타"
+    ]
   }
 ]
