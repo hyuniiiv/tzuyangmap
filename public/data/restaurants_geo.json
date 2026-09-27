@@ -23945,5 +23945,27 @@
       "전복",
       "랍스타"
     ]
+  },
+  {
+    "name": "라면세상",
+    "address": "경기 구리시 체육관로172번길 50",
+    "category": "분식",
+    "region": "기타",
+    "video_id": "Tsy8xRjMpB0",
+    "video_title": "촬영 3번 거절당했는데 드디어..😥 30년 전통의 라면가게?! 3단계 매운맛 라면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=Tsy8xRjMpB0",
+    "thumbnail": "https://i.ytimg.com/vi/Tsy8xRjMpB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCrA-JjrRt0wpQZbIVWHaHI1QWrVw",
+    "upload_date": "2026-09-27",
+    "lat": 37.599726,
+    "lng": 127.138996,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/13337636",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "3단계 매운맛 라면",
+      "라면"
+    ]
   }
 ]
