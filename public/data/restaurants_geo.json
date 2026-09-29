@@ -23967,5 +23967,31 @@
       "3단계 매운맛 라면",
       "라면"
     ]
+  },
+  {
+    "name": "만석중철판집",
+    "address": "서울 영등포구 영등포로 250",
+    "category": "한식",
+    "region": "서울",
+    "video_id": "-C4280KT3S4",
+    "video_title": "핵불닭급 매운맛 대왕 철판쭈꾸미?!🔥 진심으로 코박고 먹었습니다.. 들기름막국수 파스타 볶음밥 먹방",
+    "video_url": "https://www.youtube.com/watch?v=-C4280KT3S4",
+    "thumbnail": "https://i.ytimg.com/vi/-C4280KT3S4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAX2VNbiOgUeCIjj0SIWzK_14xj4Q",
+    "upload_date": "2026-09-29",
+    "lat": 37.51854,
+    "lng": 126.908834,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-2634-5508",
+    "place_url": "http://place.map.kakao.com/26576095",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 족발,보쌈",
+    "menus": [
+      "대왕 철판 쭈꾸미",
+      "파스타",
+      "쭈꾸미",
+      "막국수",
+      "불닭",
+      "족발"
+    ]
   }
 ]
