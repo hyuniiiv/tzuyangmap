@@ -23993,5 +23993,30 @@
       "불닭",
       "족발"
     ]
+  },
+  {
+    "name": "의문의 포장마차",
+    "address": "인천 제물포구 답동로 27",
+    "category": "분식",
+    "region": "인천",
+    "video_id": "BTyT60UWiLc",
+    "video_title": "지도에도 가게이름도 없는 의문의 포장마차?🤔 주인할머니도 놀란 짜장면 떡볶이 라면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=BTyT60UWiLc",
+    "thumbnail": "https://i.ytimg.com/vi/BTyT60UWiLc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0B37uNgIL4JoYLdPZRoWTSwCFig",
+    "upload_date": "2026-10-01",
+    "lat": 37.471362,
+    "lng": 126.631181,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "짜장면, 떡볶이, 라면",
+      "짜장면",
+      "떡볶이",
+      "라면",
+      "짜장"
+    ]
   }
 ]
