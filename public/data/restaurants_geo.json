@@ -24018,5 +24018,27 @@
       "라면",
       "짜장"
     ]
+  },
+  {
+    "name": "진심왕돈까스 성성점",
+    "address": "충남 천안시 서북구 성성6로 2-1",
+    "category": "일식",
+    "region": "충남",
+    "video_id": "F93TnnxCNvY",
+    "video_title": "다 먹으면 평생 공짜?! 사장님이 성공은 힘들것 같대요😅 제한시간 25분! 초대왕 돈까스 도전먹방",
+    "video_url": "https://www.youtube.com/watch?v=F93TnnxCNvY",
+    "thumbnail": "https://i.ytimg.com/vi/F93TnnxCNvY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB48TEtm98_vN1I2E0CnqdJH_uEHw",
+    "upload_date": "2026-10-05",
+    "lat": 36.839839,
+    "lng": 127.122389,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/1502847157",
+    "kakao_category": "음식점 > 일식 > 돈까스,우동 > 진심왕돈까스",
+    "menus": [
+      "돈까스",
+      "진심왕돈까스"
+    ]
   }
 ]
