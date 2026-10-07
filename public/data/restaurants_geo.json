@@ -24046,5 +24046,26 @@
       "돈까스",
       "진심왕돈까스"
     ]
+  },
+  {
+    "name": "냉면권가",
+    "address": "강원특별자치도 동해시 중앙로 236-1",
+    "category": "냉면",
+    "region": "기타",
+    "video_id": "FOmKdeHoFIs",
+    "video_title": "평양에서 시작된 100년 넘은 냉면집?!😳 인생 평냉 찾았습니다.. 통닭파는 냉면집 동해 권가냉면",
+    "video_url": "https://www.youtube.com/watch?v=FOmKdeHoFIs",
+    "thumbnail": "https://i.ytimg.com/vi/FOmKdeHoFIs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_DUYLv_Iy9RNIt14dzdtyJwJIcg",
+    "upload_date": "2026-10-07",
+    "lat": 37.521979,
+    "lng": 129.115045,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/2068573458",
+    "kakao_category": "음식점 > 한식 > 냉면",
+    "menus": [
+      "냉면"
+    ]
   }
 ]
