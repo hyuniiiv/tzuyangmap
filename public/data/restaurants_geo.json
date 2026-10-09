@@ -24067,5 +24067,29 @@
     "menus": [
       "냉면"
     ]
+  },
+  {
+    "name": "육거리소문난만두",
+    "address": "충북 청주시 상당구 상당로1번길 36",
+    "category": "분식",
+    "region": "충북",
+    "video_id": "IUfQCYRP6b0",
+    "video_title": "시장에서 한끼에 10000kcal 가능할까..?🤔 육거리시장 떡볶이 칼국수 만두 닭강정 길거리음식 먹방",
+    "video_url": "https://www.youtube.com/watch?v=IUfQCYRP6b0",
+    "thumbnail": "https://i.ytimg.com/vi/IUfQCYRP6b0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCReZJo4yCikespMtZRfxrKt0rVQ",
+    "upload_date": "2026-10-09",
+    "lat": 36.628332,
+    "lng": 127.488857,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "043-252-1195",
+    "place_url": "http://place.map.kakao.com/367735226",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "만두",
+      "떡볶이",
+      "칼국수",
+      "닭강정"
+    ]
   }
 ]
