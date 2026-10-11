@@ -24091,5 +24091,27 @@
       "칼국수",
       "닭강정"
     ]
+  },
+  {
+    "name": "오양불양태창",
+    "address": "서울 서초구 서초대로 350",
+    "category": "한식",
+    "region": "서울",
+    "video_id": "vNNa3zLy01Q",
+    "video_title": "너무 맛있어서 재방문 후 곱창 22인분 먹었더니..🤣",
+    "video_url": "https://www.youtube.com/watch?v=vNNa3zLy01Q",
+    "thumbnail": "https://i.ytimg.com/vi/vNNa3zLy01Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCrOoDDmyRMISFwYNcJwdhwZvJeWQ",
+    "upload_date": "2026-10-11",
+    "lat": 37.49471,
+    "lng": 127.020156,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "070-8676-0069",
+    "place_url": "http://place.map.kakao.com/1956981951",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 곱창,막창 > 곱분이곱창",
+    "menus": [
+      "곱창",
+      "곱분이곱창"
+    ]
   }
 ]
