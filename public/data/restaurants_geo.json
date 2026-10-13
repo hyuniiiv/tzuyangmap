@@ -24113,5 +24113,29 @@
       "곱창",
       "곱분이곱창"
     ]
+  },
+  {
+    "name": "미카도스시 충북오송점",
+    "address": "충북 청주시 흥덕구 오송읍 오송생명11로 48",
+    "category": "일식",
+    "region": "충북",
+    "video_id": "PdPIk3B93H0",
+    "video_title": "1900원 회전초밥 몇접시 먹었을까?🤔 메뉴만 100가지?! 엄청난 인기의 청주 3단 회전초밥",
+    "video_url": "https://www.youtube.com/watch?v=PdPIk3B93H0",
+    "thumbnail": "https://i.ytimg.com/vi/PdPIk3B93H0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVB5gaKY0ud1wen4Zq8uuZREhaDQ",
+    "upload_date": "2026-10-13",
+    "lat": 36.619198,
+    "lng": 127.3161,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "043-231-6788",
+    "place_url": "http://place.map.kakao.com/162061917",
+    "kakao_category": "음식점 > 일식 > 초밥,롤 > 미카도스시",
+    "menus": [
+      "회전초밥",
+      "초밥",
+      "회",
+      "미카도스시"
+    ]
   }
 ]
