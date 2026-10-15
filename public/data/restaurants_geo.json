@@ -24137,5 +24137,91 @@
       "회",
       "미카도스시"
     ]
+  },
+  {
+    "name": "늘해랑",
+    "address": "양정",
+    "category": "국밥",
+    "region": "부산",
+    "video_id": "lYMgU_nJYQE",
+    "video_title": "진짜 아무데나 들어가도 맛있을까?🤔 맛없으면 살아남을수 없다는 부산 돼지국밥 투어🔥",
+    "video_url": "https://www.youtube.com/watch?v=lYMgU_nJYQE",
+    "thumbnail": "https://i.ytimg.com/vi/lYMgU_nJYQE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9VfOmDfOiRA8Kvycur-ANZtfGVQ",
+    "upload_date": "2026-10-15",
+    "lat": 37.610195,
+    "lng": 127.191127,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "국밥",
+      "수육"
+    ]
+  },
+  {
+    "name": "신창국밥",
+    "address": "부산 해운대구 세실로27번길 21",
+    "category": "한식",
+    "region": "부산",
+    "video_id": "lYMgU_nJYQE",
+    "video_title": "진짜 아무데나 들어가도 맛있을까?🤔 맛없으면 살아남을수 없다는 부산 돼지국밥 투어🔥",
+    "video_url": "https://www.youtube.com/watch?v=lYMgU_nJYQE",
+    "thumbnail": "https://i.ytimg.com/vi/lYMgU_nJYQE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9VfOmDfOiRA8Kvycur-ANZtfGVQ",
+    "upload_date": "2026-10-15",
+    "lat": 35.168595,
+    "lng": 129.177948,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "051-702-4779",
+    "place_url": "http://place.map.kakao.com/9908779",
+    "kakao_category": "음식점 > 한식 > 국밥",
+    "menus": [
+      "국밥",
+      "순대"
+    ]
+  },
+  {
+    "name": "합천국밥",
+    "address": "용호동",
+    "category": "국밥",
+    "region": "부산",
+    "video_id": "lYMgU_nJYQE",
+    "video_title": "진짜 아무데나 들어가도 맛있을까?🤔 맛없으면 살아남을수 없다는 부산 돼지국밥 투어🔥",
+    "video_url": "https://www.youtube.com/watch?v=lYMgU_nJYQE",
+    "thumbnail": "https://i.ytimg.com/vi/lYMgU_nJYQE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9VfOmDfOiRA8Kvycur-ANZtfGVQ",
+    "upload_date": "2026-10-15",
+    "lat": 36.440386,
+    "lng": 127.451483,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "국밥"
+    ]
+  },
+  {
+    "name": "엄용백 돼지구이 동래점",
+    "address": "부산 동래구 명륜로117번길 31",
+    "category": "한식",
+    "region": "부산",
+    "video_id": "lYMgU_nJYQE",
+    "video_title": "진짜 아무데나 들어가도 맛있을까?🤔 맛없으면 살아남을수 없다는 부산 돼지국밥 투어🔥",
+    "video_url": "https://www.youtube.com/watch?v=lYMgU_nJYQE",
+    "thumbnail": "https://i.ytimg.com/vi/lYMgU_nJYQE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9VfOmDfOiRA8Kvycur-ANZtfGVQ",
+    "upload_date": "2026-10-15",
+    "lat": 35.203195,
+    "lng": 129.081979,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "051-556-8092",
+    "place_url": "http://place.map.kakao.com/919303333",
+    "kakao_category": "음식점 > 한식 > 육류,고기",
+    "menus": [
+      "국밥"
+    ]
   }
 ]
