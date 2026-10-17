@@ -24223,5 +24223,27 @@
     "menus": [
       "국밥"
     ]
+  },
+  {
+    "name": "장흥식당",
+    "address": "경기 의정부시 호국로 1309",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "HXJ510U46AY",
+    "video_title": "라면 한봉지 한입에 다먹기 도전했습니다🔥 의정부 부대찌개 거리 첫번째집 먹방",
+    "video_url": "https://www.youtube.com/watch?v=HXJ510U46AY",
+    "thumbnail": "https://i.ytimg.com/vi/HXJ510U46AY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfUDyxNvkQBZ0ZwOcUJ0HZUfkqvA",
+    "upload_date": "2026-10-17",
+    "lat": 37.743938,
+    "lng": 127.04965,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-846-1449",
+    "place_url": "http://place.map.kakao.com/8062485",
+    "kakao_category": "음식점 > 한식 > 찌개,전골",
+    "menus": [
+      "부대찌개",
+      "라면"
+    ]
   }
 ]
