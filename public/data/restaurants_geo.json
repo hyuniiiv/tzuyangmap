@@ -24245,5 +24245,79 @@
       "부대찌개",
       "라면"
     ]
+  },
+  {
+    "name": "조원냉면",
+    "address": "경기 의정부시 태평로73번길 20",
+    "category": "냉면",
+    "region": "기타",
+    "video_id": "GxqXHXb91O4",
+    "video_title": "여기 먹을거 천국이에요..🥹 초대형 의정부 제일시장 털기🔥 김밥 떡볶이 비빕밥 통닭 냉면",
+    "video_url": "https://www.youtube.com/watch?v=GxqXHXb91O4",
+    "thumbnail": "https://i.ytimg.com/vi/GxqXHXb91O4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAra5Bq5aiIOLTIfh0tiCA4hyKfRg",
+    "upload_date": "2026-10-19",
+    "lat": 37.739338,
+    "lng": 127.050547,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-846-1340",
+    "place_url": "http://place.map.kakao.com/26027282",
+    "kakao_category": "음식점 > 한식 > 냉면",
+    "menus": [
+      "냉면",
+      "물냉면",
+      "비빔냉면",
+      "김치만두",
+      "떡볶이",
+      "김밥"
+    ]
+  },
+  {
+    "name": "의정부통닭",
+    "address": "경기 의정부시 태평로89번길 8",
+    "category": "치킨",
+    "region": "기타",
+    "video_id": "GxqXHXb91O4",
+    "video_title": "여기 먹을거 천국이에요..🥹 초대형 의정부 제일시장 털기🔥 김밥 떡볶이 비빕밥 통닭 냉면",
+    "video_url": "https://www.youtube.com/watch?v=GxqXHXb91O4",
+    "thumbnail": "https://i.ytimg.com/vi/GxqXHXb91O4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAra5Bq5aiIOLTIfh0tiCA4hyKfRg",
+    "upload_date": "2026-10-19",
+    "lat": 37.740537,
+    "lng": 127.051177,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-848-3426",
+    "place_url": "http://place.map.kakao.com/17811467",
+    "kakao_category": "음식점 > 치킨",
+    "menus": [
+      "통닭",
+      "똥집튀김",
+      "떡볶이",
+      "냉면",
+      "김밥"
+    ]
+  },
+  {
+    "name": "땅스떡볶이 제일시장점",
+    "address": "서울 광진구 긴고랑로9길 20",
+    "category": "치킨",
+    "region": "서울",
+    "video_id": "GxqXHXb91O4",
+    "video_title": "여기 먹을거 천국이에요..🥹 초대형 의정부 제일시장 털기🔥 김밥 떡볶이 비빕밥 통닭 냉면",
+    "video_url": "https://www.youtube.com/watch?v=GxqXHXb91O4",
+    "thumbnail": "https://i.ytimg.com/vi/GxqXHXb91O4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAra5Bq5aiIOLTIfh0tiCA4hyKfRg",
+    "upload_date": "2026-10-19",
+    "lat": 37.564741,
+    "lng": 127.081573,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "02-462-8599",
+    "place_url": "http://place.map.kakao.com/1060737067",
+    "kakao_category": "음식점 > 치킨",
+    "menus": [
+      "떡볶이",
+      "냉면",
+      "김밥"
+    ]
   }
 ]
