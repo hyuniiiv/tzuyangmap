@@ -24319,5 +24319,76 @@
       "냉면",
       "김밥"
     ]
+  },
+  {
+    "name": "남원집",
+    "address": "대전 중구 보문산로227번길 57",
+    "category": "한식",
+    "region": "대전",
+    "video_id": "XKnsjvdI468",
+    "video_title": "의정부 지하던전..? 사장님이 50년동안 이런 손님은 처음이래요🤣 포장마차 라면 국밥 쫄면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=XKnsjvdI468",
+    "thumbnail": "https://i.ytimg.com/vi/XKnsjvdI468/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9E-GSAl4FDR-rRkvbMQ7QIFETgA",
+    "upload_date": "2026-10-21",
+    "lat": 36.308226,
+    "lng": 127.404159,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "042-251-8577",
+    "place_url": "http://place.map.kakao.com/642899344",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 추어",
+    "menus": [
+      "해산물",
+      "라면",
+      "국밥",
+      "쫄면",
+      "추어"
+    ]
+  },
+  {
+    "name": "충남집",
+    "address": "경기 수원시 팔달구 창룡대로8번길 36-1",
+    "category": "한식",
+    "region": "경기",
+    "video_id": "XKnsjvdI468",
+    "video_title": "의정부 지하던전..? 사장님이 50년동안 이런 손님은 처음이래요🤣 포장마차 라면 국밥 쫄면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=XKnsjvdI468",
+    "thumbnail": "https://i.ytimg.com/vi/XKnsjvdI468/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9E-GSAl4FDR-rRkvbMQ7QIFETgA",
+    "upload_date": "2026-10-21",
+    "lat": 37.280036,
+    "lng": 127.017591,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-243-3284",
+    "place_url": "http://place.map.kakao.com/21359631",
+    "kakao_category": "음식점 > 한식 > 국밥",
+    "menus": [
+      "만둣국",
+      "국밥",
+      "라면"
+    ]
+  },
+  {
+    "name": "밥친구",
+    "address": "경남 밀양시 삼문중앙로 27",
+    "category": "분식",
+    "region": "기타",
+    "video_id": "XKnsjvdI468",
+    "video_title": "의정부 지하던전..? 사장님이 50년동안 이런 손님은 처음이래요🤣 포장마차 라면 국밥 쫄면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=XKnsjvdI468",
+    "thumbnail": "https://i.ytimg.com/vi/XKnsjvdI468/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9E-GSAl4FDR-rRkvbMQ7QIFETgA",
+    "upload_date": "2026-10-21",
+    "lat": 35.484762,
+    "lng": 128.755195,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "055-353-1022",
+    "place_url": "http://place.map.kakao.com/19163272",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "만둣국",
+      "국밥",
+      "라면"
+    ]
   }
 ]
