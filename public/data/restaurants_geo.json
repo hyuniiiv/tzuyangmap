@@ -24390,5 +24390,28 @@
       "국밥",
       "라면"
     ]
+  },
+  {
+    "name": "땡땡상회",
+    "address": "대구 북구 경대로5길 10",
+    "category": "구이",
+    "region": "대구",
+    "video_id": "vaHLBpVaabg",
+    "video_title": "집에있는 밥통 다 털었습니다🔥 대왕 양푼 비빔밥과 삼겹살 칼국수 먹방",
+    "video_url": "https://www.youtube.com/watch?v=vaHLBpVaabg",
+    "thumbnail": "https://i.ytimg.com/vi/vaHLBpVaabg/hq720_custom_2.jpg?sqp=CPCP89YG-oaymwEgCNAFEJQDSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC8xg=&rs=AOn4CLCw28Si6UDv3WmFnl_-htLnfEyHSg",
+    "upload_date": "2026-10-24",
+    "lat": 35.884886,
+    "lng": 128.612699,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/76169115",
+    "kakao_category": "음식점 > 한식 > 육류,고기 > 삼겹살",
+    "menus": [
+      "참기름",
+      "삼겹살",
+      "칼국수"
+    ]
   }
 ]
