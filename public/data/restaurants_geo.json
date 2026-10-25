@@ -24413,5 +24413,29 @@
       "삼겹살",
       "칼국수"
     ]
+  },
+  {
+    "name": "옛날할머니분식",
+    "address": "서울 중랑구 중랑역로 14-1",
+    "category": "분식",
+    "region": "서울",
+    "video_id": "o5PQwP4GyzY",
+    "video_title": "단돈 100원 튀김에 300원 떡볶이?!😱 사장님께 촬영 거부 당했다가 결국...",
+    "video_url": "https://www.youtube.com/watch?v=o5PQwP4GyzY",
+    "thumbnail": "https://i.ytimg.com/vi/o5PQwP4GyzY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyLGFSzQnCu4rnKFgMlJOd8BWh9g",
+    "upload_date": "2026-10-25",
+    "lat": 37.59552,
+    "lng": 127.076573,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/333458431",
+    "kakao_category": "음식점 > 분식",
+    "menus": [
+      "떡볶이",
+      "튀김",
+      "어묵",
+      "닭꼬치"
+    ]
   }
 ]
