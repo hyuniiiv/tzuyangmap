@@ -24437,5 +24437,26 @@
       "어묵",
       "닭꼬치"
     ]
+  },
+  {
+    "name": "송백보리밥",
+    "address": "경기 여주시 강천면 강문로 267",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "vUYH6hv0JxE",
+    "video_title": "먹방하다가 사장님한테 혼났습니다..😥 여주 송백보리밥 비빔밥 먹방",
+    "video_url": "https://www.youtube.com/watch?v=vUYH6hv0JxE",
+    "thumbnail": "https://i.ytimg.com/vi/vUYH6hv0JxE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmPPz1dgMd24iUDHKFri2MQhK4_A",
+    "upload_date": "2026-10-27",
+    "lat": 37.287019,
+    "lng": 127.684975,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-883-1257",
+    "place_url": "http://place.map.kakao.com/15724467",
+    "kakao_category": "음식점 > 한식",
+    "menus": [
+      "비빔밥"
+    ]
   }
 ]
