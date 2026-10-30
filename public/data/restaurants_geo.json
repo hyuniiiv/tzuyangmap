@@ -24458,5 +24458,31 @@
     "menus": [
       "비빔밥"
     ]
+  },
+  {
+    "name": "정선 아리랑 시장",
+    "address": "강원도 정선군 정선읍",
+    "category": "중식",
+    "region": "기타",
+    "video_id": "hCctC02b808",
+    "video_title": "250년 전통 시장 털었더니.. 저보고 양심 없대요😂 정선시장 짜장면 짬뽕 콧등치기 옹심이 호떡",
+    "video_url": "https://www.youtube.com/watch?v=hCctC02b808",
+    "thumbnail": "https://i.ytimg.com/vi/hCctC02b808/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVsjSFNzD08-O43OhMwNsOxAfaqA",
+    "upload_date": "2026-10-30",
+    "lat": 37.379769,
+    "lng": 128.661694,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "",
+    "kakao_category": "",
+    "menus": [
+      "짜장면, 짬뽕, 옹심이, 호떡",
+      "짜장면",
+      "짬뽕",
+      "옹심이",
+      "호떡",
+      "짜장"
+    ]
   }
 ]
