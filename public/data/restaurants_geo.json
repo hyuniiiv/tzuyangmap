@@ -24484,5 +24484,26 @@
       "호떡",
       "짜장"
     ]
+  },
+  {
+    "name": "금성식당",
+    "address": "전남광주통합특별시 동구 제봉로222번길 2",
+    "category": "한식",
+    "region": "광주",
+    "video_id": "tm4JNmIi-C0",
+    "video_title": "총 xx인분..?!😱 대식가 구독자 5명과 1vs5 삼겹살 대결🔥",
+    "video_url": "https://www.youtube.com/watch?v=tm4JNmIi-C0",
+    "thumbnail": "https://i.ytimg.com/vi/tm4JNmIi-C0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAC0ii_Lzx5d8aoH0vAhJ4Gpd1Eiw",
+    "upload_date": "2026-10-31",
+    "lat": 35.155035,
+    "lng": 126.913875,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "062-227-4717",
+    "place_url": "http://place.map.kakao.com/21224205",
+    "kakao_category": "음식점 > 한식 > 육류,고기",
+    "menus": [
+      "삼겹살"
+    ]
   }
 ]
