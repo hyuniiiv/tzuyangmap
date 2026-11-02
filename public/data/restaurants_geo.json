@@ -24505,5 +24505,68 @@
     "menus": [
       "삼겹살"
     ]
+  },
+  {
+    "name": "강계봉진막국수",
+    "address": "경기 여주시 대신면 천서리길 26",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "xONMxhv5514",
+    "video_title": "여주에서 유명하다는 3대 막국수 털기🔥 천서리 막국수 어디가 맛있을까?🤔",
+    "video_url": "https://www.youtube.com/watch?v=xONMxhv5514",
+    "thumbnail": "https://i.ytimg.com/vi/xONMxhv5514/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvpSM6ChQ871l5Am1jhc-tbzBRvA",
+    "upload_date": "2026-11-02",
+    "lat": 37.403196,
+    "lng": 127.548946,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-882-8300",
+    "place_url": "http://place.map.kakao.com/10116792",
+    "kakao_category": "음식점 > 한식 > 국수",
+    "menus": [
+      "막국수"
+    ]
+  },
+  {
+    "name": "홍원막국수",
+    "address": "경기 여주시 대신면 여양1로 14",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "xONMxhv5514",
+    "video_title": "여주에서 유명하다는 3대 막국수 털기🔥 천서리 막국수 어디가 맛있을까?🤔",
+    "video_url": "https://www.youtube.com/watch?v=xONMxhv5514",
+    "thumbnail": "https://i.ytimg.com/vi/xONMxhv5514/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvpSM6ChQ871l5Am1jhc-tbzBRvA",
+    "upload_date": "2026-11-02",
+    "lat": 37.403188,
+    "lng": 127.547374,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-882-8259",
+    "place_url": "http://place.map.kakao.com/857045881",
+    "kakao_category": "음식점 > 한식 > 국수",
+    "menus": [
+      "막국수"
+    ]
+  },
+  {
+    "name": "천서리막국수",
+    "address": "경기 이천시 부발읍 경충대로 1891",
+    "category": "한식",
+    "region": "기타",
+    "video_id": "xONMxhv5514",
+    "video_title": "여주에서 유명하다는 3대 막국수 털기🔥 천서리 막국수 어디가 맛있을까?🤔",
+    "video_url": "https://www.youtube.com/watch?v=xONMxhv5514",
+    "thumbnail": "https://i.ytimg.com/vi/xONMxhv5514/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvpSM6ChQ871l5Am1jhc-tbzBRvA",
+    "upload_date": "2026-11-02",
+    "lat": 37.241727,
+    "lng": 127.506384,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "031-632-9933",
+    "place_url": "http://place.map.kakao.com/20997370",
+    "kakao_category": "음식점 > 한식 > 국수",
+    "menus": [
+      "막국수"
+    ]
   }
 ]
