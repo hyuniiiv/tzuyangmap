@@ -24568,5 +24568,26 @@
     "menus": [
       "막국수"
     ]
+  },
+  {
+    "name": "한성 정육점",
+    "address": "울산 북구 진장로 85",
+    "category": "한식",
+    "region": "울산",
+    "video_id": "TkBA45C7r-w",
+    "video_title": "영업정보도 없는 동네 숨은 정육점.. 다 떨어질때까지 먹었더니 사장님 반응이🤣 역대급 삼겹살에 김치 먹방",
+    "video_url": "https://www.youtube.com/watch?v=TkBA45C7r-w",
+    "thumbnail": "https://i.ytimg.com/vi/TkBA45C7r-w/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_CER9oajmBfzoJ0WKV2Bq5oGbUg",
+    "upload_date": "2026-11-04",
+    "lat": 35.568284,
+    "lng": 129.356684,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "052-287-1777",
+    "place_url": "http://place.map.kakao.com/26345203",
+    "kakao_category": "음식점 > 한식 > 육류,고기",
+    "menus": [
+      "삼겹살"
+    ]
   }
 ]
