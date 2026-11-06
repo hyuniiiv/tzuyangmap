@@ -24589,5 +24589,31 @@
     "menus": [
       "삼겹살"
     ]
+  },
+  {
+    "name": "벌떼집",
+    "address": "부산 연제구 월드컵대로111번길 6-16",
+    "category": "해산물",
+    "region": "부산",
+    "video_id": "wBhWVuuKkYI",
+    "video_title": "\"다 못먹을텐데..\" 부산 아저씨의 성지에서 해산물 잔뜩 시켰더니..🤣 산낙지와 해물라면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=wBhWVuuKkYI",
+    "thumbnail": "https://i.ytimg.com/vi/wBhWVuuKkYI/hq720_custom_2.jpg?sqp=CPDWt9cG-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBED3FtlvB4EU8XIBs9QXDJ6CkW6w",
+    "upload_date": "2026-11-06",
+    "lat": 35.184539,
+    "lng": 129.081789,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "",
+    "place_url": "http://place.map.kakao.com/222793026",
+    "kakao_category": "음식점 > 한식 > 해물,생선 > 회",
+    "menus": [
+      "해물탕",
+      "산낙지",
+      "해물라면",
+      "해물파전",
+      "라면",
+      "낙지"
+    ]
   }
 ]
