@@ -24615,5 +24615,26 @@
       "라면",
       "낙지"
     ]
+  },
+  {
+    "name": "가마치통닭 밀양시청점",
+    "address": "경남 밀양시 시청서길 18-2",
+    "category": "치킨",
+    "region": "기타",
+    "video_id": "Ci7WkMb-rZQ",
+    "video_title": "더는 못먹겠어요..🥵 누적 84000스코빌 도전🔥 매운맛 축제에서 혼쭐나고 왔습니다",
+    "video_url": "https://www.youtube.com/watch?v=Ci7WkMb-rZQ",
+    "thumbnail": "https://i.ytimg.com/vi/Ci7WkMb-rZQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBi71mSH41nfi2z9kKUKIPDDYMW6g",
+    "upload_date": "2026-11-10",
+    "lat": 35.502179,
+    "lng": 128.743969,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "055-355-5030",
+    "place_url": "http://place.map.kakao.com/1413613245",
+    "kakao_category": "음식점 > 치킨 > 가마치통닭",
+    "menus": [
+      "가마치통닭"
+    ]
   }
 ]
