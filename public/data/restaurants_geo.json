@@ -24636,5 +24636,27 @@
     "menus": [
       "가마치통닭"
     ]
+  },
+  {
+    "name": "동면식밀면",
+    "address": "부산 수영구 광안해변로 251",
+    "category": "한식",
+    "region": "부산",
+    "video_id": "ZI6nTSMCel4",
+    "video_title": "사심방송 2탄..🥺 이거 먹으러 광안리 왔습니다🔥 부산 바다 앞 만두와 밀면 먹방",
+    "video_url": "https://www.youtube.com/watch?v=ZI6nTSMCel4",
+    "thumbnail": "https://i.ytimg.com/vi/ZI6nTSMCel4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNEBYcyl9VvGzodr-RHCevyoLYXw",
+    "upload_date": "2026-11-12",
+    "lat": 35.155257,
+    "lng": 129.121368,
+    "source": "auto_kakao",
+    "channel": "tzuyang",
+    "phone": "051-761-5770",
+    "place_url": "http://place.map.kakao.com/621172721",
+    "kakao_category": "음식점 > 한식",
+    "menus": [
+      "밀면",
+      "만두"
+    ]
   }
 ]
